@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Dany Hertiz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Estilos para la galería */
+        #image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .gallery-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-card .description {
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+
+        .gallery-card .description p {
+            margin: 0;
+            color: #333;
+        }
+
+        /* Estilos para el Lightbox */
+        #lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        #lightbox.show {
+            display: flex;
+        }
+
+        #lightbox-image {
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 5px;
+        }
+
+        #close-lightbox {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Dany Hertiz</h1>
+        <nav class="main-nav">
+            <button class="hamburger-menu" id="hamburger-menu" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="historias.html">Historias</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="videos.html">Videos</a></li>
+            </ul>
+            <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Activar modo oscuro">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <div id="image-gallery">
+            <div class="gallery-card">
+                <img src="https://picsum.photos/seed/11/400/200" alt="Imagen de la galería 1">
+                <div class="description"><p>Descripción de la foto 1</p></div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://picsum.photos/seed/12/400/200" alt="Imagen de la galería 2">
+                <div class="description"><p>Descripción de la foto 2</p></div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://picsum.photos/seed/13/400/200" alt="Imagen de la galería 3">
+                <div class="description"><p>Descripción de la foto 3</p></div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://picsum.photos/seed/14/400/200" alt="Imagen de la galería 4">
+                <div class="description"><p>Descripción de la foto 4</p></div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://picsum.photos/seed/15/400/200" alt="Imagen de la galería 5">
+                <div class="description"><p>Descripción de la foto 5</p></div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://picsum.photos/seed/16/400/200" alt="Imagen de la galería 6">
+                <div class="description"><p>Descripción de la foto 6</p></div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://picsum.photos/seed/17/400/200" alt="Imagen de la galería 7">
+                <div class="description"><p>Descripción de la foto 7</p></div>
+            </div>
+            <div class="gallery-card">
+                <img src="https.picsum.photos/seed/18/400/200" alt="Imagen de la galería 8">
+                <div class="description"><p>Descripción de la foto 8</p></div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://picsum.photos/seed/19/400/200" alt="Imagen de la galería 9">
+                <div class="description"><p>Descripción de la foto 9</p></div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://picsum.photos/seed/20/400/200" alt="Imagen de la galería 10">
+                <div class="description"><p>Descripción de la foto 10</p></div>
+            </div>
+        </div>
+    </main>
+
+    <div id="lightbox">
+        <span id="close-lightbox">&times;</span>
+        <img id="lightbox-image" src="" alt="Imagen ampliada">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Dany Hertiz</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const galleryImages = document.querySelectorAll('.gallery-card img');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            const closeLightbox = document.getElementById('close-lightbox');
+
+            galleryImages.forEach(img => {
+                img.addEventListener('click', () => {
+                    const highResSrc = img.src.replace(/\/\d+\/\d+$/, '/1200/800');
+                    lightboxImage.src = highResSrc;
+                    lightbox.classList.add('show');
+                });
+            });
+
+            closeLightbox.addEventListener('click', () => {
+                lightbox.classList.remove('show');
+            });
+
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    lightbox.classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
