@@ -1,15 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Sitio web cargado y listo.');
 
-    const hamburger = document.getElementById('hamburger-menu');
-    const navLinks = document.getElementById('nav-links');
     const darkModeToggle = document.getElementById('dark-mode-toggle');
-
-    if (hamburger && navLinks) {
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    }
 
     const enableDarkMode = () => {
         document.body.classList.add('dark-mode');

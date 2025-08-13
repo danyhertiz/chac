@@ -112,6 +112,9 @@ main {
 .main-nav {
     background-color: var(--nav-bg);
     padding: 0.25rem 1rem; /* Barra más delgada */
+    display: flex;
+    align-items: center;
+    /* Removed justify-content: space-between; */
 }
 
 .nav-links {
@@ -119,6 +122,11 @@ main {
     display: flex;
     justify-content: center;
     gap: 1rem;
+    flex-grow: 1; /* Make nav-links take available space */
+}
+
+.dark-mode-toggle {
+    margin-left: auto; /* Push to the right */
 }
 
 .nav-links a {
@@ -135,59 +143,30 @@ main {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.hamburger-menu {
-    display: none; /* Oculto en pantallas grandes */
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-}
-
-.hamburger-menu .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: white;
-    transition: all 0.3s ease-in-out;
-}
-
 /* --- Responsividad y Menú Hamburguesa --- */
 @media (max-width: 768px) {
     body {
-        padding-top: 0; /* Remove padding-top for mobile as header is relative */
+        padding-top: 140px; /* Adjusted padding for fixed header on mobile */
     }
 
     header {
         padding: 1rem;
-        position: relative;
+        position: fixed; /* Make header fixed on mobile */
+        top: 0;
+        width: 100%;
+        z-index: 1000;
     }
 
     .main-nav {
         padding: 0.5rem 1rem;
         display: flex;
-        justify-content: flex-start; /* Alinea la hamburguesa a la izquierda */
-    }
-
-    .hamburger-menu {
-        display: block;
-        z-index: 1001; /* Asegura que esté por encima del menú desplegable */
+        justify-content: center; /* Center the nav links */
     }
 
     .nav-links {
-        display: none; /* Oculta la lista por defecto */
-        flex-direction: column;
-        position: absolute;
-        top: 100%; /* Se despliega desde abajo del header */
-        left: 0;
-        width: 100%;
-        background-color: var(--nav-bg);
-        padding: 1rem 0;
-        z-index: 1000;
-    }
-
-    .nav-links.active {
-        display: flex; /* Muestra la lista cuando tiene la clase active */
+        display: flex; /* Always show the list */
+        flex-direction: row;
+        gap: 1rem; /* Add some space between horizontal links */
     }
 
     #story-gallery {
