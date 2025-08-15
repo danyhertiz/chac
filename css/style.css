@@ -197,29 +197,11 @@ main {
 }
 
 .story-full img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    max-height: 450px;
-    object-fit: cover;
+    max-height: 80vh;
+    display: block;
+    margin: 1.5rem auto;
     border-radius: 8px;
-    margin: 1rem 0;
-}
-
-.story-body p {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    line-height: 1.7;
-}
-
-.back-link {
-    display: inline-block;
-    margin-top: 1rem;
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
-    transition: transform 0.3s ease;
-}
-
-.back-link:hover {
-    transform: translateX(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
