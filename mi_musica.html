@@ -6,6 +6,14 @@
     <title>El intento de hacer galletas - Dany Hertiz</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/hertiz_ico.ico" type="image/x-icon">
+    <script>
+        (function() {
+            const darkMode = localStorage.getItem('darkMode');
+            if (darkMode === 'enabled') {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
 </head>
 <body>
 
@@ -18,7 +26,13 @@
                 <li><a href="galeria.html">Galería</a></li>
                 <li><a href="videos.html">Videos</a></li>
             </ul>
-            <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Activar modo oscuro">🌙</button>
+            <div class="switch" id="modeSwitch">
+                <div class="slider">
+                    <div class="icon">☀️</div>
+                    <div class="icon">🌙</div>
+                    <div class="circle"></div>
+                </div>
+            </div>
         </nav>
     </header>
 

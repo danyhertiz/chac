@@ -6,6 +6,14 @@
     <title>Videos - Dany Hertiz</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/lite-yt-embed.css">
+    <script>
+        (function() {
+            const darkMode = localStorage.getItem('darkMode');
+            if (darkMode === 'enabled') {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
     <style>
         /* Estilos para la sección de videos */
         #video-gallery {
@@ -51,7 +59,13 @@
                 <li><a href="galeria.html">Galería</a></li>
                 <li><a href="videos.html">Videos</a></li>
             </ul>
-            <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Activar modo oscuro">🌙</button>
+            <div class="switch" id="modeSwitch">
+                <div class="slider">
+                    <div class="icon">☀️</div>
+                    <div class="icon">🌙</div>
+                    <div class="circle"></div>
+                </div>
+            </div>
         </nav>
     </header>
 
