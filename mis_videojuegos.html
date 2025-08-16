@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construyendo el kart - Dany Hertiz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/hertiz_ico.ico" type="image/x-icon">
+    <script>
+        (function() {
+            const darkMode = localStorage.getItem('darkMode');
+            if (darkMode === 'enabled') {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Dany Hertiz</h1>
+        <nav class="main-nav">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="historias.html" class="active">Historias</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="mi_musica.html">Mi música</a></li>
+            </ul>
+            <div class="switch" id="modeSwitch">
+                <div class="slider">
+                    <div class="icon">☀️</div>
+                    <div class="icon">🌙</div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <article class="story-full">
+            <h1>Construyendo el kart con ruedas de carrito</h1>
+            <p class="story-date">10 de Agosto, 2021</p>
+            <img src="https://picsum.photos/800/400?random=4" alt="Imagen de la historia 3">
+            <div class="story-body">
+                <p>La idea surgió en una tarde de verano aburrida. Teníamos un viejo carrito de la compra, un par de tablas de madera y un montón de cinta adhesiva. La conclusión era obvia: íbamos a construir el vehículo más rápido y espectacular que el barrio hubiera visto jamás.</p>
+                <p>El proceso de construcción fue caótico. Las ruedas se salían, la dirección no funcionaba y el asiento era una tabla incómoda. Pero para nosotros, era una máquina de carreras de última generación. El día de la prueba, empujamos nuestro kart hasta la cima de la colina más alta de la calle, listos para hacer historia.</p>
+                <p>El descenso fue... memorable. Perdimos una rueda a los tres segundos, la dirección nos llevó directamente contra el seto del vecino y terminamos en un montón de madera y risas. No batimos ningún récord de velocidad, pero la imagen de nosotros dos saliendo de un arbusto, cubiertos de hojas, se convirtió en una de nuestras anécdotas favoritas.</p>
+                <a href="historias.html" class="back-link">← Volver a Historias</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Dany Hertiz</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

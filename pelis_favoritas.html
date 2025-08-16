@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La "obra de arte" en la pared - Dany Hertiz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/hertiz_ico.ico" type="image/x-icon">
+    <script>
+        (function() {
+            const darkMode = localStorage.getItem('darkMode');
+            if (darkMode === 'enabled') {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Dany Hertiz</h1>
+        <nav class="main-nav">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="historias.html" class="active">Historias</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="mi_musica.html">Mi música</a></li>
+            </ul>
+            <div class="switch" id="modeSwitch">
+                <div class="slider">
+                    <div class="icon">☀️</div>
+                    <div class="icon">🌙</div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <article class="story-full">
+            <h1>La "obra de arte" en la pared del salón</h1>
+            <p class="story-date">2 de Enero, 2023</p>
+            <img src="https://picsum.photos/800/400?random=3" alt="Imagen de la historia 2">
+            <div class="story-body">
+                <p>Todo comenzó con una caja de rotuladores permanentes que papá había dejado olvidada. Para nosotros, no eran simples rotuladores; eran varitas mágicas capaces de transformar cualquier superficie. Y la superficie más tentadora era, por supuesto, la pared blanca e inmaculada del salón.</p>
+                <p>Nuestra obra maestra era un mural épico: un dragón, un castillo y dos valientes caballeros (nosotros, obviamente). Trabajamos en silencio y con una concentración absoluta durante casi una hora. Estábamos increíblemente orgullosos de nuestro trabajo. El problema fue cuando mamá entró en la habitación. Su silencio fue más aterrador que cualquier grito.</p>
+                <p>Pasamos la siguiente semana frotando la pared con todo tipo de productos de limpieza, sin éxito. La pared tuvo que ser repintada, y nuestros días como artistas de murales llegaron a un abrupto final. Aunque no recibimos aplausos por nuestra creatividad, la historia se convirtió en una leyenda familiar.</p>
+                <a href="historias.html" class="back-link">← Volver a Historias</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Dany Hertiz</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
