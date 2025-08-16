@@ -136,6 +136,7 @@ main {
     border-radius: 5px;
     transition: background-color 0.3s ease;
     display: block;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
 
 .nav-links a:hover, .nav-links a.active {
@@ -165,6 +166,7 @@ main {
     .nav-links {
         display: flex; /* Always show the list */
         flex-direction: row;
+        justify-content: flex-start; /* Align items to the left */
         gap: 1rem; /* Add some space between horizontal links */
         overflow-x: auto;
         -ms-overflow-style: none;  /* IE and Edge */
