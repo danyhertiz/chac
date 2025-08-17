@@ -48,6 +48,10 @@ header {
     z-index: 1000; /* Ensure it stays on top of other content */
 }
 
+header img {
+    margin-bottom: 10px;
+}
+
 header h1 {
     font-weight: 700;
     margin-bottom: 1rem;
