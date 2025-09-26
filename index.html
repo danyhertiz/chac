@@ -105,6 +105,8 @@
 </head>
 <body>
 
+<div id="protected-content" style="display:none;">
+
     <header>
         <!-- <h1>Dany Hertiz</h1> -->
         <img src="img/dany_hertiz_titulo.png" alt="Dany Hertiz" style="max-width: 100%; height: auto;">
@@ -219,5 +221,20 @@
             setInterval(nextImage, 5000);
         });
     </script>
+</div>
+
+<script>
+    (function() {
+        var content = document.getElementById('protected-content');
+        var password = prompt("Hola Chac, introduce la contraseña:", "");
+        if (password === "fozolurdo") {
+            content.style.display = 'block';
+        } else {
+            alert("Contraseña incorrecta.");
+            document.body.innerHTML = '<h1 style="text-align:center; margin-top: 50px;">Acceso Denegado</h1>';
+        }
+    })();
+</script>
+
 </body>
 </html>
