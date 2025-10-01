@@ -3,6 +3,7 @@
     --primary-color: #2979FF; /* Un azul alegre */
     --header-bg: #2979FF; /* Azul para el H1 */
     --nav-bg: #2264D3; /* Un azul más oscuro para contraste */
+    --nav-button-bg: #4A90E2; /* Azul más claro para botones */
     --secondary-color: #FF4081; /* Un rosa vibrante */
     --text-color: #333;
     --bg-color: #f4f4f9;
@@ -14,6 +15,7 @@
     --primary-color: #448AFF; /* Un azul más claro para el modo oscuro */
     --header-bg: #1a1a2e; /* Un azul oscuro casi negro */
     --nav-bg: #16213e; /* Un azul más oscuro */
+    --nav-button-bg: #4A90E2; /* Azul más claro para botones */
     --secondary-color: #E91E63; /* Un rosa más oscuro */
     --text-color: #e0e0e0; /* Un gris claro para el texto */
     --bg-color: #0f1624; /* Un fondo muy oscuro */
@@ -136,11 +138,13 @@ main {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+    padding: 0.25rem 1rem;
+    border-radius: 50px;
+    background-color: var(--nav-button-bg);
     transition: background-color 0.3s ease;
     display: block;
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .nav-links a:hover, .nav-links a.active {
