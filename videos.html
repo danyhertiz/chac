@@ -16,17 +16,20 @@
             }
         })();
     </script>
+    <script src="js/auth.js"></script>
+    <script src="js/binary-background.js"></script>
     <style>
         /* Estilos para la galería de videos */
         #video-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
-            padding: 20px;
+            padding: 0px;
+            margin-top: 0rem;
         }
 
         .video-card {
-            border: 1px solid #ddd;
+            background-color: var(--card-bg-color);
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -47,50 +50,9 @@
             margin: 0;
             color: var(--text-color);
         }
-    </style>
-    <script src="js/auth.js"></script>
-    <style>
+
         .nav-links a {
             border-radius: 50px;
-        }
-        .header-main h1 {
-            position: relative;
-            z-index: 10;
-            font-size: 3rem;
-            font-weight: bold;
-            background: linear-gradient(
-                45deg,
-                #a8a8a8 0%,
-                #e8e8e8 25%,
-                #ffffff 50%,
-                #e8e8e8 75%,
-                #a8a8a8 100%
-            );
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-            animation: shimmer 3s linear infinite, float 4s ease-in-out infinite;
-            letter-spacing: 0.1em;
-        }
-
-        @keyframes shimmer {
-            0% {
-                background-position: 0% center;
-            }
-            100% {
-                background-position: 200% center;
-            }
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
         }
     </style>
 </head>
@@ -100,20 +62,20 @@
         <div class="header-main">
             <div class="binary-container"></div>
             <h1><a href="index.html" style="text-decoration: none; color: inherit;">Dany Hertiz</a></h1>
-        </div>
-        <nav class="main-nav">
-            <ul class="nav-links" id="nav-links">
-                <li><a href="historias.html">Historias</a></li>
-                <li><a href="videos.html">Videos</a></li>
-            </ul>
-            <div class="switch" id="modeSwitch">
-                <div class="slider">
-                    <div class="icon">☀️</div>
-                    <div class="icon">🌙</div>
-                    <div class="circle"></div>
+            <nav class="main-nav">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="historias.html">Historias</a></li>
+                    <li><a href="videos.html" class="active">Videos</a></li>
+                </ul>
+                <div class="switch" id="modeSwitch">
+                    <div class="slider">
+                        <div class="icon">☀️</div>
+                        <div class="icon">🌙</div>
+                        <div class="circle"></div>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
 
     <main class="video-page-main">

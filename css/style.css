@@ -33,7 +33,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
-    padding-top: 100px; /* Adjusted padding for better spacing */
+    padding-top: 130px; /* Adjusted padding to match header height */
 }
 
 
@@ -42,17 +42,32 @@ body {
 header {
     color: white;
     text-align: center;
-    position: fixed; /* Make the header fixed */
-    top: 0; /* Position it at the top */
-    width: 100%; /* Make it span the full width */
-    z-index: 1000; /* Ensure it stays on top of other content */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .header-main {
     background: linear-gradient(135deg, #0a1828 0%, #1e3a5f 50%, #2c5f8d 100%);
-    padding: 10px 1rem;
+    padding: 10px 1rem 0;
     position: relative;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
+}
+
+.header-main h1 {
+    background: linear-gradient(45deg, #e0f0ff 0%, #f0f8ff 25%, #ffffff 50%, #f0f8ff 75%, #e0f0ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    z-index: 10;
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+    padding: 0.5rem 0;
 }
 
 header img {
@@ -62,6 +77,16 @@ header img {
 header h1 {
     font-weight: 700;
     margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+    text-shadow:
+        0 0 10px rgba(0, 200, 255, 1),
+        0 0 20px rgba(0, 200, 255, 0.8),
+        0 0 30px rgba(0, 200, 255, 0.6),
+        0 0 40px rgba(0, 150, 255, 0.5),
+        0 0 60px rgba(0, 100, 255, 0.4),
+        0 0 80px rgba(0, 50, 255, 0.3);
+    animation: shimmer 3s linear infinite, float 4s ease-in-out infinite, neonPulse 2s ease-in-out infinite;
 }
 
 footer {
@@ -75,15 +100,19 @@ footer {
 
 main {
     text-align: justify;
-    padding: 2rem 1rem;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 2rem 1rem 1rem 1rem; /* Padding general para todo el contenido principal */
 }
 
-#story-gallery {
+/* Grid layout para galerías (historias y videos) */
+main#story-gallery,
+main.video-page-main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 1.5rem;
+    padding: 2rem; /* Increased padding for galleries */
+    margin-top: 1.5rem; /* More space from header */
 }
 
 /* --- Estilos de las Tarjetas de Historia --- */
@@ -124,11 +153,18 @@ main {
 
 /* --- Estilos del Menú de Navegación --- */
 .main-nav {
-    background-color: var(--nav-bg);
-    padding: 0.25rem 1rem; /* Barra más delgada */
+    background-color: rgba(34, 100, 211, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
-    /* Removed justify-content: space-between; */
+    margin-top: auto;
+    position: relative;
+    z-index: 2;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    margin-bottom: -1px;
 }
 
 .nav-links {
@@ -145,15 +181,19 @@ main {
     font-weight: 500;
     padding: 0.25rem 1rem;
     border-radius: 50px;
-    background-color: var(--nav-button-bg);
-    transition: background-color 0.3s ease;
+    background-color: rgba(74, 144, 226, 0.5);
+    transition: all 0.3s ease;
     display: block;
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
 }
 
 .nav-links a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 /* Estilos específicos para el modo oscuro */
@@ -164,7 +204,16 @@ main {
 /* --- Ajustes para Dispositivos Móviles --- */
 @media (max-width: 768px) {
     body {
-        padding-top: 130px; /* Padding superior reducido para móviles */
+        padding-top: 140px; /* Unified padding for mobile */
+    }
+
+    main {
+        padding: 1.5rem 0.5rem 0.5rem 0.5rem; /* Padding general para móvil */
+    }
+    
+    main#story-gallery,
+    main.video-page-main {
+        padding-top: 1.5rem; /* Mismo padding superior para galerías en móvil */
     }
 
     header {
@@ -175,7 +224,8 @@ main {
     }
 
     .header-main {
-        padding: 0.75rem;
+        padding: 0.75rem 0.75rem 0;
+        min-height: 0;
     }
 
     .main-nav {
@@ -278,4 +328,25 @@ main {
 
 .dark .circle {
     transform: translateX(40px);
+}
+
+@keyframes neonPulse {
+    0%, 100% {
+        text-shadow:
+            0 0 10px rgba(0, 200, 255, 1),
+            0 0 20px rgba(0, 200, 255, 0.8),
+            0 0 30px rgba(0, 200, 255, 0.6),
+            0 0 40px rgba(0, 150, 255, 0.5),
+            0 0 60px rgba(0, 100, 255, 0.4),
+            0 0 80px rgba(0, 50, 255, 0.3);
+    }
+    50% {
+        text-shadow:
+            0 0 20px rgba(0, 200, 255, 1),
+            0 0 40px rgba(0, 200, 255, 1),
+            0 0 60px rgba(0, 200, 255, 0.8),
+            0 0 80px rgba(0, 150, 255, 0.7),
+            0 0 100px rgba(0, 100, 255, 0.6),
+            0 0 120px rgba(0, 50, 255, 0.5);
+    }
 }

@@ -34,34 +34,7 @@
         .nav-links a {
             border-radius: 50px;
         }
-        .header-main h1 {
-            position: relative;
-            z-index: 10;
-            font-size: 3rem;
-            font-weight: bold;
-            background: linear-gradient(
-                45deg,
-                #a8a8a8 0%,
-                #e8e8e8 25%,
-                #ffffff 50%,
-                #e8e8e8 75%,
-                #a8a8a8 100%
-            );
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-            animation: shimmer 3s linear infinite, float 4s ease-in-out infinite;
-            letter-spacing: 0.1em;
-        }
-
-        @keyframes shimmer {
-            0% {
-                background-position: 0% center;
-            }
-            100% {
-                background-position: 200% center;
+    </style>
             }
         }
 
@@ -81,15 +54,14 @@
         <div class="header-main">
             <div class="binary-container"></div>
             <h1><a href="index.html" style="text-decoration: none; color: inherit;">Dany Hertiz</a></h1>
-        </div>
-        <nav class="main-nav">
-            <ul class="nav-links" id="nav-links">
-                <li><a href="historias.html">Historias</a></li>
-                <li><a href="videos.html">Videos</a></li>
-            </ul>
-            <div class="switch" id="modeSwitch">
-                <div class="slider">
-                    <div class="icon">☀️</div>
+            <nav class="main-nav">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="historias.html">Historias</a></li>
+                    <li><a href="videos.html">Videos</a></li>
+                </ul>
+                <div class="switch" id="modeSwitch">
+                    <div class="slider">
+                        <div class="icon">☀️</div>
                     <div class="icon">🌙</div>
                     <div class="circle"></div>
                 </div>
