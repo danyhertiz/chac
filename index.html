@@ -41,56 +41,7 @@
             margin-bottom: 10px;
         }
 
-        .carousel {
-            position: relative;
-            max-width: 500px;
-            margin: 20px auto;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
 
-        .carousel-inner {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-
-        .carousel-item {
-            min-width: 100%;
-            box-sizing: border-box;
-        }
-
-        .carousel-item img {
-            width: 100%;
-            display: block;
-        }
-
-        .carousel-control {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 0;
-            cursor: pointer;
-            border-radius: 50%;
-            font-size: 24px;
-            z-index: 100;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .prev {
-            left: 10px;
-        }
-
-        .next {
-            right: 10px;
-        }
 
         @media (max-width: 768px) {
             .main-container {
@@ -103,7 +54,7 @@
             }
         }
         
-        /* Estilos para el formulario de login */
+        /* Estilos para el formulario de inicio de sesión */
         #login-container {
             position: fixed;
             top: 0;
@@ -254,23 +205,7 @@ h1 {
                         de contenido interesante.</b></p>
                 </div>
             </div>
-        <!-- <div id="story-gallery">
-            <article class="story-card">
-                <img width="100px" height="100px" src="img/webmaster.jpg" alt="Imagen de la historia">
-                <div class="story-content">
-                    <h2>Título de la Anécdota</h2>
-                    <p>Un breve extracto de la historia para dar una idea de qué trata. Esta es solo una tarjeta de ejemplo...</p>
-                </div>
 
-            </article>
-            </div>
-            <div class="carousel">
-                <div class="carousel-inner">
-                </div>
-                <button class="carousel-control prev">&#10094;</button>
-                <button class="carousel-control next">&#10095;</button>
-            </div>
-        -->
         </div>
     </main>
 
@@ -279,61 +214,6 @@ h1 {
     </footer>
 
     <script src="js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const carouselInner = document.querySelector('.carousel-inner');
-            const prevButton = document.querySelector('.carousel-control.prev');
-            const nextButton = document.querySelector('.carousel-control.next');
-            
-            const imageUrls = [
-                'img/carrusel/foto01.jpg',
-                'img/carrusel/foto02.jpg',
-                'img/carrusel/foto03.jpg',
-                'img/carrusel/foto04.jpg',
-                'img/carrusel/foto05.jpg',
-                'img/carrusel/foto06.jpg',
-                'img/carrusel/foto07.jpg',
-                'img/carrusel/foto08.jpg',
-                'img/carrusel/foto09.jpg',
-                'img/carrusel/foto10.jpg',
-            ];
-
-            const totalImages = imageUrls.length;
-            let currentIndex = 0;
-
-            // Generar imágenes del carrusel
-            imageUrls.forEach((url, index) => {
-                const item = document.createElement('div');
-                item.className = 'carousel-item';
-                const img = document.createElement('img');
-                img.src = url;
-                img.alt = `Imagen del carrusel ${index + 1}`;
-                item.appendChild(img);
-                carouselInner.appendChild(item);
-            });
-
-            function updateCarousel() {
-                const offset = -currentIndex * 100;
-                carouselInner.style.transform = `translateX(${offset}%)`;
-            }
-
-            function nextImage() {
-                currentIndex = (currentIndex < totalImages - 1) ? currentIndex + 1 : 0;
-                updateCarousel();
-            }
-
-            prevButton.addEventListener('click', () => {
-                currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalImages - 1;
-                updateCarousel();
-            });
-
-            nextButton.addEventListener('click', nextImage);
-
-            updateCarousel();
-
-            setInterval(nextImage, 5000);
-        });
-    </script>
 </div>
 
 <script>

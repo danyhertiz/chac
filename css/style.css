@@ -161,10 +161,10 @@ main {
     background-color: rgba(255, 255, 255, 0.15);
 }
 
-/* --- Responsividad y Menú Hamburguesa --- */
+/* --- Ajustes para Dispositivos Móviles --- */
 @media (max-width: 768px) {
     body {
-        padding-top: 130px; /* Further reduced padding for mobile only */
+        padding-top: 130px; /* Padding superior reducido para móviles */
     }
 
     header {
@@ -183,15 +183,11 @@ main {
     }
 
     .nav-links {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        gap: 0.75rem;
-        overflow-x: auto;
         padding: 0.25rem;
-        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* Desplazamiento suave en iOS */
+        -ms-overflow-style: none;  /* Ocultar scrollbar en IE y Edge */
+        scrollbar-width: none;  /* Ocultar scrollbar en Firefox */
     }
 
     .nav-links::-webkit-scrollbar {

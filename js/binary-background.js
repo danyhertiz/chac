@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         column.className = 'binary-column';
         
         let binaryString = '';
-        for (let j = 0; j < 40; j++) { // Create a long string of binary digits
+        for (let j = 0; j < 40; j++) { // Crea una cadena larga de dígitos binarios
             binaryString += Math.random() > 0.5 ? '1<br>' : '0<br>';
         }
         column.innerHTML = binaryString;
