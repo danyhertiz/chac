@@ -33,7 +33,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
-    padding-top: 100px; /* Adjusted padding to prevent content from being hidden behind fixed header */
+    padding-top: 100px; /* Adjusted padding for better spacing */
 }
 
 
@@ -164,32 +164,32 @@ main {
 /* --- Responsividad y Menú Hamburguesa --- */
 @media (max-width: 768px) {
     body {
-        padding-top: 100px; /* Adjusted padding for fixed header on mobile */
+        padding-top: 130px; /* Further reduced padding for mobile only */
     }
 
     header {
-        position: fixed; /* Make header fixed on mobile */
+        position: fixed;
         top: 0;
         width: 100%;
         z-index: 1000;
     }
 
     .header-main {
-        padding: 1rem;
+        padding: 0.75rem;
     }
 
     .main-nav {
-        padding: 0.5rem 1rem;
-        display: flex;
-        align-items: center;
+        padding: 0.5rem;
     }
 
     .nav-links {
-        display: flex; /* Always show the list */
+        display: flex;
         flex-direction: row;
-        justify-content: flex-start; /* Align items to the left */
-        gap: 1rem; /* Add some space between horizontal links */
+        justify-content: flex-start;
+        gap: 0.75rem;
         overflow-x: auto;
+        padding: 0.25rem;
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
     }
