@@ -33,21 +33,26 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
-    padding-top: 140px; /* Adjusted padding to prevent content from being hidden behind fixed header */
+    padding-top: 100px; /* Adjusted padding to prevent content from being hidden behind fixed header */
 }
 
 
 
 /* --- Layout y Contenedores --- */
 header {
-    background-color: var(--header-bg);
     color: white;
-    padding: 1.5rem 1rem 0; /* Quitado el padding inferior para unir la nav */
     text-align: center;
     position: fixed; /* Make the header fixed */
     top: 0; /* Position it at the top */
     width: 100%; /* Make it span the full width */
     z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+.header-main {
+    background: linear-gradient(135deg, #0a1828 0%, #1e3a5f 50%, #2c5f8d 100%);
+    padding: 10px 1rem;
+    position: relative;
+    overflow: hidden;
 }
 
 header img {
@@ -56,7 +61,7 @@ header img {
 
 header h1 {
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
 }
 
 footer {
@@ -147,22 +152,30 @@ main {
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Estilos específicos para el modo oscuro */
+.dark .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 /* --- Responsividad y Menú Hamburguesa --- */
 @media (max-width: 768px) {
     body {
-        padding-top: 140px; /* Adjusted padding for fixed header on mobile */
+        padding-top: 100px; /* Adjusted padding for fixed header on mobile */
     }
 
     header {
-        padding: 1rem;
         position: fixed; /* Make header fixed on mobile */
         top: 0;
         width: 100%;
         z-index: 1000;
+    }
+
+    .header-main {
+        padding: 1rem;
     }
 
     .main-nav {
