@@ -350,3 +350,12 @@ main.video-page-main {
             0 0 120px rgba(0, 50, 255, 0.5);
     }
 }
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
