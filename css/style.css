@@ -34,6 +34,7 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     padding-top: 130px; /* Adjusted padding to match header height */
+    font-size: 1.3rem;
 }
 
 
@@ -188,6 +189,7 @@ main.video-page-main {
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
+    font-size: 1rem;
 }
 
 .nav-links a:hover {
