@@ -8,6 +8,7 @@
     --text-color: #333;
     --bg-color: #f4f4f9;
     --card-bg-color: #ffffff;
+    --card-bg-color-alpha: rgba(255, 255, 255, 0.7);
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
@@ -20,6 +21,7 @@
     --text-color: #e0e0e0; /* Un gris claro para el texto */
     --bg-color: #0f1624; /* Un fondo muy oscuro */
     --card-bg-color: #1a1a2e; /* Un color de tarjeta oscuro */
+    --card-bg-color-alpha: rgba(26, 26, 46, 0.7);
 }
 
 * {
@@ -106,6 +108,13 @@ main {
     padding: 2rem 1rem 1rem 1rem; /* Padding general para todo el contenido principal */
 }
 
+.card {
+    background-color: var(--card-bg-color-alpha);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+}
+
 /* Grid layout para galerías (historias y videos) */
 main#story-gallery,
 main.video-page-main {
@@ -116,9 +125,105 @@ main.video-page-main {
     margin-top: 1.5rem; /* More space from header */
 }
 
+/* Galería de videos: 3 columnas cuando sea posible, 1 columna en móvil (<768px).
+   Sólo afecta al contenedor de la galería (.content-wrapper #video-gallery) — no toca el header. */
+.content-wrapper #video-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;              /* espacio (padding) entre tarjetas */
+    align-items: start;
+    padding: 8px 0;        /* separación arriba/abajo dentro del contenido principal */
+    box-sizing: border-box;
+}
+
+/* Reglas específicas para la subpágina videos.html:
+   3 columnas cuando el ancho lo permita, espacio entre tarjetas y 1 columna <768px.
+   No afecta al header (selectores limitados a .video-page-main). */
+.video-page-main #video-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;               /* espacio entre tarjetas */
+    align-items: start;
+    padding: 8px 0;
+    box-sizing: border-box;
+}
+
+/* Reducir espacio entre tarjeta introductoria y galería de videos */
+.content-wrapper .intro-card {
+    margin-bottom: 12px !important; /* antes era 2rem en inline style */
+}
+
+/* También reducir el padding superior de la galería para mayor compactación */
+.content-wrapper #video-gallery {
+    padding: 8px 0; /* antes 16px 0 */
+}
+
+/* Asegurar que cada tarjeta use la misma superficie translúcida y tenga padding interior */
+.content-wrapper .video-card {
+    background-color: var(--card-bg-color-alpha);
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+/* Misma apariencia translúcida y padding que el resto de las tarjetas */
+.video-page-main .video-card {
+    background-color: var(--card-bg-color-alpha);
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+/* Que los vídeos ocupen todo el ancho de la tarjeta y mantengan proporción */
+.content-wrapper #video-gallery .video-card video,
+.content-wrapper #video-gallery .video-card iframe,
+.content-wrapper #video-gallery .video-card lite-youtube {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+/* Multimedia dentro de cada tarjeta ocupa todo el ancho y mantiene proporción */
+.video-page-main .video-card video,
+.video-page-main .video-card lite-youtube,
+.video-page-main .video-card iframe {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+/* Descripción dentro de la tarjeta */
+.content-wrapper #video-gallery .video-card .description {
+    margin-top: 8px;
+    padding: 0 4px 4px;
+}
+
+/* Separación de la descripción dentro de la tarjeta */
+.video-page-main .video-card .description {
+    margin-top: 8px;
+    padding: 0 4px 4px;
+}
+
+/* Responsive: una sola columna en pantallas menores a 768px (no afecta header) */
+@media (max-width: 767px) {
+    .content-wrapper #video-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .video-page-main #video-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* --- Estilos de las Tarjetas de Historia --- */
 .story-card {
-    background-color: var(--card-bg-color);
+    background-color: var(--card-bg-color-alpha);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow: hidden;
@@ -262,7 +367,7 @@ main.video-page-main {
 .story-full {
     max-width: 800px;
     margin: 0 auto;
-    background-color: var(--card-bg-color);
+    background-color: var(--card-bg-color-alpha);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -360,4 +465,150 @@ main.video-page-main {
     50% {
         transform: translateY(-10px);
     }
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.welcome-section {
+    margin-right: 20px;
+}
+
+.welcome-content::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.welcome-section img {
+    float: left;
+    height: 350px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .welcome-section {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* Estilos para el formulario de inicio de sesión */
+#login-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+#login-form {
+    background: var(--card-bg-color-alpha);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
+    width: 320px;
+}
+
+#login-form h2 {
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+#login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#login-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5cb85c;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#login-form button:hover {
+    background-color: #4cae4c;
+}
+
+#login-error {
+    color: #d9534f;
+    margin-top: 10px;
+    height: 20px;
+}
+
+/* --- Superficie de tarjetas unificada (transparencia centralizada) --- */
+/* Usa --card-bg-color-alpha para controlar la transparencia de todas las tarjetas */
+.card-surface,
+.card,
+.story-card,
+.story-full,
+#login-form,
+.video-card,
+.video-item,
+.video-container {
+    background-color: var(--card-bg-color-alpha);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* --- Ajuste: descripciones de tarjetas de video se muestran como texto normal sobre la tarjeta --- */
+.video-card .video-desc,
+.video-card .description,
+.video-item .video-desc,
+.video-item .description,
+.video-container .video-desc,
+.video-container .description,
+.video-overlay,
+.video-caption {
+    background-color: transparent; /* sin fondo independiente */
+    color: var(--text-color);
+    padding: 1.5rem;               /* que se integren con el padding del contenedor */
+    border-radius: 0;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    display: block;          /* comportamiento de bloque como un párrafo normal */
+    max-width: 100%;
+    box-shadow: none;
+    margin: 0;    /* separación superior mínima */
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Si tus tarjetas de video tienen un contenedor de contenido, dale el mismo padding que .story-content */
+.video-content {
+    padding: 1.5rem;
+}
+
+/* Asegura que los párrafos dentro queden consistentes */
+.video-card .video-desc p,
+.video-item .video-desc p,
+.video-container .video-desc p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }

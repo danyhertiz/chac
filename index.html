@@ -19,106 +19,6 @@
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7J12ZH76S"></script>
 <script src="js/analytics.js"></script>
-    <style>
-        .main-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 20px;
-        }
-
-        .welcome-section {
-            margin-right: 20px;
-        }
-
-        .welcome-content::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
-        .welcome-section img {
-            float: left;
-            height: 350px;
-            margin-right: 15px;
-            margin-bottom: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .main-container {
-                flex-direction: column;
-            }
-
-            .welcome-section {
-                margin-right: 0;
-                margin-bottom: 20px;
-            }
-        }
-        
-        /* Estilos para el formulario de inicio de sesión */
-        #login-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 2000;
-        }
-
-        #login-form {
-            background: var(--card-bg-color);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            text-align: center;
-            width: 320px;
-        }
-
-        #login-form h2 {
-            margin-bottom: 20px;
-            color: var(--text-color);
-        }
-
-        #login-form input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-
-        #login-form button {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #5cb85c;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        #login-form button:hover {
-            background-color: #4cae4c;
-        }
-
-        #login-error {
-            color: #d9534f;
-            margin-top: 10px;
-            height: 20px;
-        }
-    </style>
-    <style>
-        .nav-links a {
-            border-radius: 50px;
-        }
-    </style>
     </style>
 </head>
 <body>
@@ -155,6 +55,7 @@
 
     <main>
         <div class="main-container">
+        <div class="card">
             <div class="welcome-section">
                 <div class="welcome-content">
                     <img src="img/danyhertiz1.png" alt="Dany Hertiz">
@@ -168,6 +69,7 @@
                         de contenido interesante.</b></p>
                 </div>
             </div>
+        </div>
 
         </div>
     </main>
