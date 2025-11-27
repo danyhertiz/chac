@@ -120,7 +120,7 @@ main#story-gallery,
 main.video-page-main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 1.5rem;
+    gap: 0.5rem; /* Reducido para disminuir espacio vertical entre los artículos */
     padding: 2rem; /* Increased padding for galleries */
     margin-top: 1.5rem; /* More space from header */
 }
@@ -144,8 +144,10 @@ main.video-page-main {
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;               /* espacio entre tarjetas */
     align-items: start;
-    padding: 8px 0;
+    padding: 4px 0; /* ligeramente reducido para compactar aún más */
+    margin-top: 0;  /* asegurar que no haya margen extra sobre la galería */
     box-sizing: border-box;
+    grid-column: 1 / -1; /* aseguramos que la galería quede debajo del artículo y ocupe todo el ancho */
 }
 
 /* Reducir espacio entre tarjeta introductoria y galería de videos */
@@ -365,12 +367,16 @@ main.video-page-main {
 
 /* --- Estilos para la Página de Historia Individual --- */
 .story-full {
-    max-width: 800px;
-    margin: 0 auto;
+    /* Ocupa el 100% del ancho del contenedor principal y se sitúa como fila completa en la grid */
+    max-width: none; /* elimina la restricción anterior */
+    width: 100%;
+    margin: 0; /* eliminar centrado para ocupar todo el ancho */
     background-color: var(--card-bg-color-alpha);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 0.5rem; /* Reducido para compactar la separación con la galería */
+    grid-column: 1 / -1; /* forzar a ocupar todas las columnas del grid */
 }
 
 .story-full h1 {
