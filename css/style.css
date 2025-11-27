@@ -375,8 +375,14 @@ main.video-page-main {
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-bottom: 0.5rem; /* Reducido para compactar la separación con la galería */
+    margin-bottom: 1.5rem; /* Reducido para compactar la separación con la galería */
     grid-column: 1 / -1; /* forzar a ocupar todas las columnas del grid */
+}
+
+/* --- Ajuste específico para videos.html: reducir espacio entre el artículo introductorio y la galería --- */
+/* No modifica .story-full global para evitar afectar otras páginas que la usan */
+.video-page-main .story-full {
+    margin-bottom: 0.5rem; /* espacio reducido solo en la página de videos */
 }
 
 .story-full h1 {
