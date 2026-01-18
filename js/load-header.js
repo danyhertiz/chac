@@ -11,14 +11,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const insertionPoint = protectedContent || document.body;
     
     // Crear el header HTML
+    const isGitHubPages = window.location.hostname === 'danyhertiz.github.io';
+    const basePath = isGitHubPages ? '/chac/' : '';
+    
     const headerHTML = `<header>
         <div class="header-main">
             <div class="binary-container"></div>
-            <h1><a href="index.html" style="text-decoration: none; color: inherit;">Dany Hertiz</a></h1>
+            <h1><a href="${basePath}index.html" style="text-decoration: none; color: inherit;">Dany Hertiz</a></h1>
             <nav class="main-nav">
                 <ul class="nav-links" id="nav-links">
-                    <li><a href="historias.html">Historias</a></li>
-                    <li><a href="videos.html">Videos</a></li>
+                    <li><a href="${basePath}historias.html">Historias</a></li>
+                    <li><a href="${basePath}videos.html">Videos</a></li>
                 </ul>
                 <div class="switch" id="modeSwitch">
                     <div class="slider">
