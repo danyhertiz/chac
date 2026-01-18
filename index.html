@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/hertiz_ico.ico" type="image/x-icon">
+    <title>Dany Hertiz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/binary-background.css">
+    <link rel="stylesheet" href="css/snow-background.css">
+    <script>
+        (function() {
+            const darkMode = localStorage.getItem('darkMode');
+            if (darkMode === 'enabled') {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R7J12ZH76S"></script>
+<script src="js/analytics.js"></script>
+    </style>
+</head>
+<body>
+
+<div id="login-container" style="display: none;">
+    <form id="login-form">
+        <h2>Hola Chac<br>Introduce la contraseña: 🔐</h2>
+        <input type="password" id="password-input" required>
+        <button type="submit">Entrar</button>
+        <p id="login-error"></p>
+    </form>
+</div>
+
+<div id="protected-content" style="display:none;">
+
+    <header>
+        <div class="header-main">
+            <div class="binary-container"></div>
+            <h1><a href="index.html" style="text-decoration: none; color: inherit;">Dany Hertiz</a></h1>
+            <nav class="main-nav">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="historias.html">Historias</a></li>
+                    <li><a href="videos.html">Videos</a></li>
+                </ul>
+                <div class="switch" id="modeSwitch">
+                    <div class="slider">
+                        <div class="icon">☀️</div>
+                    <div class="icon">🌙</div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-container">
+        <div class="card">
+            <div class="welcome-section">
+                <div class="welcome-content">
+                    <img src="img/dany_hertiz_navid_sinlentes.png" alt="Dany Hertiz">
+                    <p><b>¡Hola Chac!, Bienvenido a mi pequeño rincón en la Web. 
+                        Es un espacio que he creado para organizar y compartir contigo
+                        todas las historias y anécdotas que tengo para contar.<br><br>
+                        Espero que disfrutes esta página tanto como yo disfruté creándola.
+                        La actualizaré tan constantemente como me sea posible. Es un
+                        proyecto sencillo pero que me hacía mucha ilusión poder completarlo.
+                        Y ahora que por fin está en línea, me emociona mucho llenar esta página
+                        de contenido interesante.</b></p>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Dany Hertiz</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const loginContainer = document.getElementById('login-container');
+        const loginForm = document.getElementById('login-form');
+        const passwordInput = document.getElementById('password-input');
+        const loginError = document.getElementById('login-error');
+        const content = document.getElementById('protected-content');
+
+        function showContent() {
+            loginContainer.style.display = 'none';
+            content.style.display = 'block';
+        }
+
+        if (sessionStorage.getItem('isLoggedIn') === 'true') {
+            showContent();
+            return;
+        } else {
+            loginContainer.style.display = 'flex';
+        }
+
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const password = passwordInput.value;
+
+            if (password === "fozolurdo") {
+                sessionStorage.setItem('isLoggedIn', 'true');
+                showContent();
+            } else {
+                loginError.textContent = 'Contraseña incorrecta.';
+                passwordInput.value = '';
+                loginForm.style.animation = 'shake 0.5s';
+                setTimeout(() => loginForm.style.animation = '', 500);
+            }
+        });
+
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes shake {
+                0% { transform: translateX(0); }
+                25% { transform: translateX(-5px); }
+                50% { transform: translateX(5px); }
+                75% { transform: translateX(-5px); }
+                100% { transform: translateX(0); }
+            }
+        `;
+        document.head.appendChild(style);
+    });
+</script>
+<script src="js/binary-background.js"></script>
+<script src="js/snow-background.js"></script>
+</body>
+</html>

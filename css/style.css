@@ -1,0 +1,567 @@
+/* --- Reset Básico y Configuración General --- */
+:root {
+    --primary-color: #2979FF; /* Un azul alegre */
+    --header-bg: #2979FF; /* Azul para el H1 */
+    --nav-bg: #2264D3; /* Un azul más oscuro para contraste */
+    --nav-button-bg: #4A90E2; /* Azul más claro para botones */
+    --secondary-color: #FF4081; /* Un rosa vibrante */
+    --text-color: #333;
+    --bg-color: #f4f4f9;
+    --card-bg-color: #ffffff;
+    --card-bg-color-alpha: rgba(255, 255, 255, 0.7);
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.dark {
+    --primary-color: #448AFF; /* Un azul más claro para el modo oscuro */
+    --header-bg: #1a1a2e; /* Un azul oscuro casi negro */
+    --nav-bg: #16213e; /* Un azul más oscuro */
+    --nav-button-bg: #4A90E2; /* Azul más claro para botones */
+    --secondary-color: #E91E63; /* Un rosa más oscuro */
+    --text-color: #e0e0e0; /* Un gris claro para el texto */
+    --bg-color: #0f1624; /* Un fondo muy oscuro */
+    --card-bg-color: #1a1a2e; /* Un color de tarjeta oscuro */
+    --card-bg-color-alpha: rgba(26, 26, 46, 0.7);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-top: 130px; /* Adjusted padding to match header height */
+    font-size: 1.3rem;
+}
+
+
+
+/* --- Layout y Contenedores --- */
+header {
+    color: white;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-main {
+    background: linear-gradient(135deg, #0a1828 0%, #1e3a5f 50%, #2c5f8d 100%);
+    padding: 10px 1rem 0;
+    position: relative;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.header-main h1 {
+    background: linear-gradient(45deg, #e0f0ff 0%, #f0f8ff 25%, #ffffff 50%, #f0f8ff 75%, #e0f0ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    z-index: 10;
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+    padding: 0.5rem 0;
+}
+
+header img {
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-weight: 700;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+    text-shadow:
+        0 0 10px rgba(0, 200, 255, 1),
+        0 0 20px rgba(0, 200, 255, 0.8),
+        0 0 30px rgba(0, 200, 255, 0.6),
+        0 0 40px rgba(0, 150, 255, 0.5),
+        0 0 60px rgba(0, 100, 255, 0.4),
+        0 0 80px rgba(0, 50, 255, 0.3);
+    animation: shimmer 3s linear infinite, float 4s ease-in-out infinite, neonPulse 2s ease-in-out infinite;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem;
+}
+
+main {
+    text-align: justify;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem 1rem 1rem; /* Padding general para todo el contenido principal */
+}
+
+.card {
+    background-color: var(--card-bg-color-alpha);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+}
+
+/* Grid layout para galerías (historias y videos) */
+main#story-gallery,
+main.video-page-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 0.5rem; /* Reducido para disminuir espacio vertical entre los artículos */
+    padding: 2rem; /* Increased padding for galleries */
+    margin-top: 1.5rem; /* More space from header */
+}
+
+/* NOTE: Rules for .content-wrapper were removed and backed up in css/unused.css */
+
+/* Reglas específicas para la subpágina videos.html:
+   3 columnas cuando el ancho lo permita, espacio entre tarjetas y 1 columna <768px.
+   No afecta al header (selectores limitados a .video-page-main). */
+.video-page-main #video-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;               /* espacio entre tarjetas */
+    align-items: start;
+    padding: 4px 0; /* ligeramente reducido para compactar aún más */
+    margin-top: 0;  /* asegurar que no haya margen extra sobre la galería */
+    box-sizing: border-box;
+    grid-column: 1 / -1; /* aseguramos que la galería quede debajo del artículo y ocupe todo el ancho */
+}
+
+/* NOTE: Rule for .content-wrapper .intro-card removed and backed up in css/unused.css */
+
+/* NOTE: Rule for .content-wrapper #video-gallery removed and backed up in css/unused.css */
+
+/* NOTE: Rule for .content-wrapper .video-card removed and backed up in css/unused.css */
+
+/* Misma apariencia translúcida y padding que el resto de las tarjetas */
+.video-page-main .video-card {
+    background-color: var(--card-bg-color-alpha);
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+/* NOTE: Rules for .content-wrapper video embedding removed and backed up in css/unused.css */
+
+/* Multimedia dentro de cada tarjeta ocupa todo el ancho y mantiene proporción */
+.video-page-main .video-card video,
+.video-page-main .video-card lite-youtube,
+.video-page-main .video-card iframe {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+/* NOTE: Rule for .content-wrapper .video-card .description removed and backed up in css/unused.css */
+
+/* Separación de la descripción dentro de la tarjeta */
+.video-page-main .video-card .description {
+    margin-top: 8px;
+    padding: 0 4px 4px;
+}
+
+/* Responsive: una sola columna en pantallas menores a 768px (no afecta header) */
+@media (max-width: 767px) {
+    /* NOTE: Responsive rules for .content-wrapper removed and backed up in css/unused.css */
+
+    .video-page-main #video-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Estilos de las Tarjetas de Historia --- */
+.story-card {
+    background-color: var(--card-bg-color-alpha);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.story-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+}
+
+.story-content {
+    padding: 1.5rem;
+}
+
+.story-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.story-content p {
+    font-size: 0.95rem;
+}
+
+/* --- Estilos del Menú de Navegación --- */
+.main-nav {
+    background-color: rgba(34, 100, 211, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    position: relative;
+    z-index: 2;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    margin-bottom: -1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-grow: 1; /* Make nav-links take available space */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.25rem 1rem;
+    border-radius: 50px;
+    background-color: rgba(74, 144, 226, 0.5);
+    transition: all 0.3s ease;
+    display: block;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Estilos específicos para el modo oscuro */
+.dark .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* --- Ajustes para Dispositivos Móviles --- */
+@media (max-width: 768px) {
+    body {
+        padding-top: 140px; /* Unified padding for mobile */
+    }
+
+    main {
+        padding: 1.5rem 0.5rem 0.5rem 0.5rem; /* Padding general para móvil */
+    }
+    
+    main#story-gallery,
+    main.video-page-main {
+        padding-top: 1.5rem; /* Mismo padding superior para galerías en móvil */
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .header-main {
+        padding: 0.75rem 0.75rem 0;
+        min-height: 0;
+    }
+
+    .main-nav {
+        padding: 0.5rem;
+    }
+
+    .nav-links {
+        padding: 0.25rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* Desplazamiento suave en iOS */
+        -ms-overflow-style: none;  /* Ocultar scrollbar en IE y Edge */
+        scrollbar-width: none;  /* Ocultar scrollbar en Firefox */
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none;
+    }
+
+    #story-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Estilos para Tarjetas como Enlaces --- */
+.story-card-link {
+    text-decoration: none;
+    color: inherit; /* Hereda el color del texto para que no se vea azul por defecto */
+    display: block; /* Asegura que el enlace ocupe todo el espacio de la tarjeta */
+}
+
+/* --- Estilos para la Página de Historia Individual --- */
+.story-full {
+    /* Ocupa el 100% del ancho del contenedor principal y se sitúa como fila completa en la grid */
+    max-width: none; /* elimina la restricción anterior */
+    width: 100%;
+    margin: 0; /* eliminar centrado para ocupar todo el ancho */
+    background-color: var(--card-bg-color-alpha);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem; /* Reducido para compactar la separación con la galería */
+    grid-column: 1 / -1; /* forzar a ocupar todas las columnas del grid */
+}
+
+/* --- Ajuste específico para videos.html: reducir espacio entre el artículo introductorio y la galería --- */
+/* No modifica .story-full global para evitar afectar otras páginas que la usan */
+.video-page-main .story-full {
+    margin-bottom: 0.5rem; /* espacio reducido solo en la página de videos */
+}
+
+.story-full h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.story-full img {
+    max-width: 100%;
+    height: auto;
+    max-height: 80vh;
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* --- Dark Mode Switch --- */
+.switch {
+    width: 80px;
+    min-width: 80px; /* Añadido para evitar que se encoja */
+    height: 40px;
+    background-color: #87ceeb;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.4s ease;
+    margin-left: auto;
+}
+
+.dark .switch {
+    background-color: #1a237e;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+    position: relative;
+}
+
+.icon {
+    font-size: 18px;
+    z-index: 1;
+}
+
+.circle {
+    width: 36px;
+    height: 36px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.4s ease;
+}
+
+.dark .circle {
+    transform: translateX(40px);
+}
+
+@keyframes neonPulse {
+    0%, 100% {
+        text-shadow:
+            0 0 10px rgba(0, 200, 255, 1),
+            0 0 20px rgba(0, 200, 255, 0.8),
+            0 0 30px rgba(0, 200, 255, 0.6),
+            0 0 40px rgba(0, 150, 255, 0.5),
+            0 0 60px rgba(0, 100, 255, 0.4),
+            0 0 80px rgba(0, 50, 255, 0.3);
+    }
+    50% {
+        text-shadow:
+            0 0 20px rgba(0, 200, 255, 1),
+            0 0 40px rgba(0, 200, 255, 1),
+            0 0 60px rgba(0, 200, 255, 0.8),
+            0 0 80px rgba(0, 150, 255, 0.7),
+            0 0 100px rgba(0, 100, 255, 0.6),
+            0 0 120px rgba(0, 50, 255, 0.5);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.welcome-section {
+    margin-right: 20px;
+}
+
+.welcome-content::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.welcome-section img {
+    float: left;
+    height: 350px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .welcome-section {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* Estilos para el formulario de inicio de sesión */
+#login-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+#login-form {
+    background: var(--card-bg-color-alpha);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
+    width: 320px;
+}
+
+#login-form h2 {
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+#login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#login-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5cb85c;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#login-form button:hover {
+    background-color: #4cae4c;
+}
+
+#login-error {
+    color: #d9534f;
+    margin-top: 10px;
+    height: 20px;
+}
+
+/* --- Superficie de tarjetas unificada (transparencia centralizada) --- */
+/* Usa --card-bg-color-alpha para controlar la transparencia de todas las tarjetas */
+/* NOTE: We removed unused selectors .card-surface, .video-item, .video-container */
+.card,
+.story-card,
+.story-full,
+#login-form,
+.video-card {
+    background-color: var(--card-bg-color-alpha);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* --- Ajuste: descripciones de tarjetas de video se muestran como texto normal sobre la tarjeta --- */
+/* NOTE: Preserving styling for used selector .video-card .description only */
+.video-card .description {
+    background-color: transparent; /* sin fondo independiente */
+    color: var(--text-color);
+    padding: 1.5rem;               /* que se integren con el padding del contenedor */
+    border-radius: 0;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    display: block;          /* comportamiento de bloque como un párrafo normal */
+    max-width: 100%;
+    box-shadow: none;
+    margin: 0;    /* separación superior mínima */
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
