@@ -6,10 +6,8 @@
     post = post.split('/').pop().replace(/[^a-zA-Z0-9_.-]/g, '');
     if (!/\.md$/i.test(post)) post += '.md';
     
-    // Determinar la ruta base dinámicamente
-    const pathname = window.location.pathname;
-    const basePath = pathname.endsWith('/') ? pathname : pathname + '/';
-    const mdPath = basePath + 'content/stories/';
+    // Usar ruta relativa que funciona en local y GitHub Pages
+    const mdPath = 'content/stories/';
     
     const load = (filename) => {
         return fetch(mdPath + filename).then(resp => {
