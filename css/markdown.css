@@ -1,0 +1,151 @@
+/* Estilos de lectura minimalistas aplicados únicamente a #content */
+#content {
+  /* Variables de color (scopeado a #content para no afectar el resto del sitio) */
+  --md-text: #000000;
+  --md-bg: rgba(26, 26, 26, 0.9); /* fondo gris claro y transparencia del cuadro de texto*/
+  --md-accent: #0b5fff;
+  --md-muted: rgba(0,0,0,0.08);
+  --md-blockquote-bg: rgba(0,0,0,0.02);
+  --md-code-bg: rgba(27,31,35,0.05);
+  --md-pre-bg: #0f1720;
+  --md-code-fg: #e6eef8;
+
+  width: 100%;
+  max-width: 90vw; /* ocupa casi todo en pantallas grandes */
+  margin: 2.25rem auto; /* centrar y dar separación */
+  padding: 2rem 2rem; /* espacio interior */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--md-text);
+  line-height: 1.65; /* ritmo vertical cómodo */
+  font-size: 1.3rem;
+  background: var(--md-bg);
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+/* En pantallas pequeñas: ancho máximo con padding cómodo */
+@media (max-width: 768px) {
+  #content {
+    max-width: 100vw;
+    padding: 1rem 1rem;
+  }
+}
+
+/* Modos: preferencia del usuario */
+@media (prefers-color-scheme: dark) {
+  #content {
+    --md-text: #e6eef8;
+    --md-bg: rgba(60, 61, 63, 0.7);
+    --md-accent: #59a6ff;
+    --md-muted: rgba(255,255,255,0.06);
+    --md-blockquote-bg: rgba(255,255,255,0.02);
+    --md-code-bg: rgba(255,255,255,0.03);
+    --md-pre-bg: #071019;
+    --md-code-fg: #e6eef8;
+  }
+}
+
+/* Soporte sencillo para cuando el sitio activa modo oscuro mediante una clase
+   (ej. `document.documentElement.classList.add('dark')`) */
+html.dark #content,
+body.dark #content,
+.dark #content {
+  --md-text: #e6eef8;
+  --md-bg: rgba(60, 61, 63, 0.7);
+  --md-accent: #59a6ff;
+  --md-muted: rgba(255,255,255,0.06);
+  --md-blockquote-bg: rgba(255,255,255,0.02);
+  --md-code-bg: rgba(255,255,255,0.03);
+  --md-pre-bg: #071019;
+  --md-code-fg: #e6eef8;
+}
+
+#content h1,
+#content h2,
+#content h3,
+#content h4 {
+  color: inherit;
+  line-height: 1.2;
+  margin: 1.6rem 0 0.6rem;
+  font-weight: 700;
+}
+
+#content h1 { 
+  color: var(--md-accent);
+  font-size: 2.1rem; 
+  margin-top: 0; 
+}
+#content h2 { 
+  color: var(--md-accent);
+}
+#content h2 { font-size: 1.6rem; }
+#content h3 { font-size: 1.25rem; }
+#content h4 { font-size: 1.05rem; }
+
+#content p {
+  margin: 0 0 1.15rem 0;
+  widows: 2;
+  orphans: 2;
+}
+
+#content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+#content blockquote {
+  margin: 1.1rem 0;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid var(--md-muted);
+  background: var(--md-blockquote-bg);
+  color: var(--md-text);
+}
+
+#content pre {
+  background: var(--md-pre-bg);
+  color: var(--md-code-fg);
+  padding: 0.9rem;
+  overflow: auto;
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  font-size: 0.92rem;
+  line-height: 1.4;
+  margin: 1rem 0;
+}
+
+#content code {
+  background: var(--md-code-bg);
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  font-size: 0.95em;
+}
+
+#content pre code { 
+  background: transparent; /* evitar doble fondo dentro de pre */
+  padding: 0;
+}
+
+/* List spacing */
+#content ul,
+#content ol {
+  margin: 0 0 1rem 1.25rem;
+}
+
+/* Tables minimal */
+#content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 0 1rem 0;
+}
+#content table th,
+#content table td {
+  border: 1px solid var(--md-muted);
+  padding: 0.45rem 0.6rem;
+}
+
+/* Make sure these styles don't affect other parts */
+#content * { box-sizing: inherit; }
