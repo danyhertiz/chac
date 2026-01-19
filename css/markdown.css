@@ -1,9 +1,9 @@
 /* Estilos de lectura minimalistas aplicados únicamente a #content */
 #content {
-  /* Variables de color (scopeado a #content para no afectar el resto del sitio) */
-  --md-text: #000000;
-  --md-bg: rgba(26, 26, 26, 0.9); /* fondo gris claro y transparencia del cuadro de texto*/
-  --md-accent: #0b5fff;
+  /* Variables de color - usando CSS custom properties globales para darkmode */
+  --md-text: var(--text-color);
+  --md-bg: var(--card-bg-color-alpha);
+  --md-accent: var(--primary-color);
   --md-muted: rgba(0,0,0,0.08);
   --md-blockquote-bg: rgba(0,0,0,0.02);
   --md-code-bg: rgba(27,31,35,0.05);
@@ -20,6 +20,7 @@
   font-size: 1.3rem;
   background: var(--md-bg);
   border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   box-sizing: border-box;
 }
 
@@ -31,34 +32,9 @@
   }
 }
 
-/* Modos: preferencia del usuario */
-@media (prefers-color-scheme: dark) {
-  #content {
-    --md-text: #e6eef8;
-    --md-bg: rgba(60, 61, 63, 0.7);
-    --md-accent: #59a6ff;
-    --md-muted: rgba(255,255,255,0.06);
-    --md-blockquote-bg: rgba(255,255,255,0.02);
-    --md-code-bg: rgba(255,255,255,0.03);
-    --md-pre-bg: #071019;
-    --md-code-fg: #e6eef8;
-  }
-}
-
-/* Soporte sencillo para cuando el sitio activa modo oscuro mediante una clase
-   (ej. `document.documentElement.classList.add('dark')`) */
-html.dark #content,
-body.dark #content,
-.dark #content {
-  --md-text: #e6eef8;
-  --md-bg: rgba(60, 61, 63, 0.7);
-  --md-accent: #59a6ff;
-  --md-muted: rgba(255,255,255,0.06);
-  --md-blockquote-bg: rgba(255,255,255,0.02);
-  --md-code-bg: rgba(255,255,255,0.03);
-  --md-pre-bg: #071019;
-  --md-code-fg: #e6eef8;
-}
+/* Las variables globales (--text-color, --card-bg-color-alpha, --primary-color) 
+   ya se actualizan automáticamente con darkmode en style.css, 
+   por lo que #content responde sin necesidad de @media queries adicionales */
 
 #content h1,
 #content h2,
