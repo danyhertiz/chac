@@ -5,7 +5,7 @@
     // Sanitizar: permitir solo nombre de archivo básico
     post = post.split('/').pop().replace(/[^a-zA-Z0-9_.-]/g, '');
     if (!/\.md$/i.test(post)) post += '.md';
-    const basePath = '/content/stories/';
+    const basePath = 'content/stories/';
     const load = (filename) => {
         return fetch(basePath + filename).then(resp => {
             if (!resp.ok) throw new Error('Not found');
