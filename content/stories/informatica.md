@@ -57,7 +57,7 @@ Poco tiempo después de haber armado esa PC sencilla de la que te contaba, tuve 
 
 En aquella época no me perdía ningún número de la revista PC Magazine, y me sorprendí mucho cuando, un par de meses después de haber armado esa PC, leí en la revista que esa misma configuración había sido recomendada por uno de sus expertos en hardware. Fue una gran satisfacción para mí saber que había hecho una buena elección.
 
-![Foto posada](img/historias/informatica/15-dic-2005.jpg)
+![Foto posada](img/historias/informatica/GA-MA69VM-S2.jpg)
 
 ## Mi primera Laptop
 
