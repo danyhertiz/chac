@@ -67,7 +67,7 @@ En 2008, cuando Pá y yo nos mudamos para Veracruz, estuve un tiempo sin computa
 
 Pero cuando entré a la carrera de ingeniería en sistemas computacionales, Pá me compró mi primera laptop, fuimos a un Ofix en la ciudad de Xalapa, y elegí una Toshiba con procesador Athlon, muy parecido al de mi PC de escritorio. La laptop traía instalado Windows Vista, y aunque funcionaba muy bien, incluía sus DVD de instalación de Windows XP como muchas computadoras de la época, para que el usuario pudiera hacer el downgrade si es que Windows Vista no le gustaba o no funcionaba bien. En esa época era todo un relajo porque los controladores de XP no eran compatibles con Vista, así que muchos dispositivos simplemente no funcionaban hasta que el fabricante ofreciera controladores compatibles con Vista, también hubo muchos programas que tenían errores o directamente no funcionaban en Vista. Pero aun así nunca hice el downgrade, me quedé con Vista en mi laptop y la verdad lo disfruté mucho.
 
-![Laptop Toshiba 2008](img/historias/informatica/Lap Toshiba 2008.jpg)
+![Laptop Toshiba 2008](img/historias/informatica/Lap.jpg)
 
 Con esa laptop aprendí muchas cosas interesantes tanto en la escuela como en casa. En el tecnológico hacíamos experimentos conectando nuestras laptops en red para jugar o para compartir juegos y archivos, también aprendí un poco más de programación, de sistemas operativos y de la gestión de redes.
 
