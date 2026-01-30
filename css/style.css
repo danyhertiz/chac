@@ -231,8 +231,12 @@ main.video-page-main {
     text-overflow: ellipsis;
 }
 
+#story-gallery .story-content h2 {
+    font-size: 1.4rem;
+}
+
 .story-content p {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     line-height: 1.4;
     display: -webkit-box;
     -webkit-line-clamp: 2;
