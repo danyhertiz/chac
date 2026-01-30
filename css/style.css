@@ -226,7 +226,6 @@ main.video-page-main {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -238,10 +237,6 @@ main.video-page-main {
 .story-content p {
     font-size: 0.9rem;
     line-height: 1.4;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
 }
 
 /* --- Estilos del Menú de Navegación --- */
@@ -513,8 +508,12 @@ main.video-page-main {
 
 @media (max-width: 480px) {
     .story-card {
-        flex-direction: column;
         height: auto;
+        padding: 10px;
+    }
+    .story-card img {
+        width: 80px;
+        height: 80px;
     }
 }
 
