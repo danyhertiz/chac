@@ -30,6 +30,7 @@
     color: var(--text-color);
     font-size: 1.3rem;
     line-height: 1.6;
+    margin-top: 1.5rem;
 }
 
 .collapsible-story .story-content p {
@@ -37,6 +38,11 @@
     font-size: 1.3rem;
     line-height: 1.6;
 }
+
+.collapsible-story .story-content ul,
+.collapsible-story .story-content ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;}
 
 .collapsible-story .story-content img {
     max-width: 100%;
