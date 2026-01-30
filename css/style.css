@@ -1,18 +1,5 @@
 /* --- Reset Básico y Configuración General --- */
 :root {
-    --primary-color: #2979FF; /* Un azul alegre */
-    --header-bg: #2979FF; /* Azul para el H1 */
-    --nav-bg: #2264D3; /* Un azul más oscuro para contraste */
-    --nav-button-bg: #4A90E2; /* Azul más claro para botones */
-    --secondary-color: #FF4081; /* Un rosa vibrante */
-    --text-color: #333;
-    --bg-color: #f4f4f9;
-    --card-bg-color: #ffffff;
-    --card-bg-color-alpha: rgba(255, 255, 255, 0.7);
-    transition: background-color 0.4s ease, color 0.4s ease;
-}
-
-.dark {
     --primary-color: #448AFF; /* Un azul más claro para el modo oscuro */
     --header-bg: #1a1a2e; /* Un azul oscuro casi negro */
     --nav-bg: #16213e; /* Un azul más oscuro */
@@ -22,6 +9,7 @@
     --bg-color: #0f1624; /* Un fondo muy oscuro */
     --card-bg-color: #1a1a2e; /* Un color de tarjeta oscuro */
     --card-bg-color-alpha: rgba(26, 26, 46, 0.7);
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 * {
@@ -268,11 +256,6 @@ main.video-page-main {
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-/* Estilos específicos para el modo oscuro */
-.dark .nav-links a:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-}
-
 /* --- Ajustes para Dispositivos Móviles --- */
 @media (max-width: 768px) {
     body {
@@ -361,55 +344,6 @@ main.video-page-main {
     margin: 1.5rem auto;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-/* --- Dark Mode Switch --- */
-.switch {
-    width: 80px;
-    min-width: 80px; /* Añadido para evitar que se encoja */
-    height: 40px;
-    background-color: #87ceeb;
-    border-radius: 50px;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-    transition: background-color 0.4s ease;
-    margin-left: auto;
-}
-
-.dark .switch {
-    background-color: #1a237e;
-}
-
-.slider {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 8px;
-    position: relative;
-}
-
-.icon {
-    font-size: 18px;
-    z-index: 1;
-}
-
-.circle {
-    width: 36px;
-    height: 36px;
-    background: white;
-    border-radius: 50%;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transition: transform 0.4s ease;
-}
-
-.dark .circle {
-    transform: translateX(40px);
 }
 
 @keyframes neonPulse {

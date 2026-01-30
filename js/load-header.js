@@ -23,13 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="${basePath}historias.html">Historias</a></li>
                     <li><a href="${basePath}videos.html">Videos</a></li>
                 </ul>
-                <div class="switch" id="modeSwitch">
-                    <div class="slider">
-                        <div class="icon">☀️</div>
-                        <div class="icon">🌙</div>
-                        <div class="circle"></div>
-                    </div>
-                </div>
             </nav>
         </div>
     </header>`;
