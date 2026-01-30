@@ -11,7 +11,7 @@
   --md-code-fg: #e6eef8;
 
   width: 100%;
-  max-width: 90vw; /* ocupa casi todo en pantallas grandes */
+  max-width: 70vw; /* ocupa casi todo en pantallas grandes */
   margin: 2.25rem auto; /* centrar y dar separación */
   padding: 2rem 2rem; /* espacio interior */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -27,7 +27,7 @@
 /* En pantallas pequeñas: ancho máximo con padding cómodo */
 @media (max-width: 768px) {
   #content {
-    max-width: 100vw;
+    max-width: 90vw;
     padding: 1rem 1rem;
   }
 }
