@@ -6,6 +6,7 @@
     <link rel="icon" href="img/hertiz_ico.ico" type="image/x-icon">
     <title>Informática - Dany Hertiz</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/collapsible-cards.css">
     <link rel="stylesheet" href="css/binary-background.css">
     <link rel="stylesheet" href="css/snow-background.css">
     <script src="js/auth.js"></script>
@@ -27,9 +28,11 @@
                     principio.
                 </p>
         </article>
-        <article class="story-full">
-                    <h2>Mi primera PC</h2>
-                    <br>
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Mi primera PC</h2>
+            </div>
+            <div class="story-content">
                 <p>Aunque ya llevaba años siendo un asiduo videojugador, mi época en el CCH, me dio la libertad de jugar 
                     un poco de todo, además de poder destinar el tiempo que quisiera para jugar. La computadora verde que tuve en aquél entonces, fue la que 
                     me permitió experimentar muchos videojuegos, que ya poco o nada tenían que ver con lo que estábamos acostumbrados 
@@ -51,10 +54,14 @@
                     pero esta vez, con mucho más cuidado.
                 </p>
                 <img src="img/historias/informatica/pc_verde.jpg" alt="Primer PC">
+            </div>
         </article>
-        <article class="story-full">
-            <h2>Un tiempo sin computadora</h2>
-            27 de Noviembre, 2025<br><br>
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Un tiempo sin computadora</h2>
+                <p class="date">27 de Noviembre, 2025</p>
+            </div>
+            <div class="story-content">
                 <p>
                     Desde que dejé de vivir en casa de Mima, pasé un tiempo sin computadora. 
                     Iba constantemente a los laboratorios de computo del CCH a experimaentar 
@@ -90,10 +97,14 @@
                     del CCH o en sus laboratorios de cómputo. Lo que sí me frustraba era no tener 
                     una consola para jugar. Pero bueno, eso ya es parte de otra historia, jejeje.
                 </p>
+            </div>
         </article>
-        <article class="story-full">
-            <h2>Mi segunda PC</h2>
-                27 de Noviembre, 2025<br><br>
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Mi segunda PC</h2>
+                <p class="date">27 de Noviembre, 2025</p>
+            </div>
+            <div class="story-content">
                 <p>
                     Cuando Pá y yo nos mudamos a Iztapalapa (aproximadamente en 2004), hubo oportunidad de armar 
                     una PC muy modesta, así que fui a pa plaza de la computación y elegí los 
@@ -114,10 +125,14 @@
                     un día que le estaba enseñando a usarla.
                 </p>
                 <img src="img/historias/informatica/PC2.jpg" alt="Segunda PC">
+            </div>
         </article>
-        <article class="story-full">
-            <h2>La PC gamer</h2>
-                17 de Diciembre, 2025<br><br>
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>La PC gamer</h2>
+                <p class="date">17 de Diciembre, 2025</p>
+            </div>
+            <div class="story-content">
                 <p>
                     Poco tiempo después de haber armado esa PC sencilla de la que te contaba, tuve también mis 
                     primeras tarjetas de crédito, una era de Inbursa y la otra de Banamex, así que una de las 
@@ -148,10 +163,14 @@
                     el monitor que ya tenía. Lo que sí tengo son fotos de aquella época, cuando aún había posadas en casa de Mima.
                 </p>
                 <img src="img/historias/informatica/15-dic-2005.jpg" alt="Segunda PC">
+            </div>
         </article>
-        <article class="story-full">
-            <h2>Mi primera Laptop</h2>
-                17 de Diciembre, 2025<br><br>
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Mi primera Laptop</h2>
+                <p class="date">17 de Diciembre, 2025</p>
+            </div>
+            <div class="story-content">
                 <p>
                     En 2008, cuando Pá y yo nos mudamos para Veracruz, estuve un tiempo sin computadora, ya que, a pesar de que ya vivíamos acá, 
                     tardamos como tres meses en poder trasladar nuestras cosas desde Iztapalapa, y cuando lo hicimos, ya casi no usaba mi computadora, 
@@ -195,10 +214,14 @@
                     a mi cuñada le gustaba jugar Los Sims 3, o grabarse con la webcam.
                 </p>
                 <img src="img/historias/informatica/Sims3.jpg" alt="Sims 3">
+            </div>
         </article>
-        <article class="story-full">
-            <h2>El tercer ensamble</h2>
-                18 de Diciembre, 2025<br><br>
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>El tercer ensamble</h2>
+                <p class="date">18 de Diciembre, 2025</p>
+            </div>
+            <div class="story-content">
                 <p>
                     Poco antes de casarme, decidí que era hora de renovar mi PC de escritotio, acababa de empezar 
                     la carrera de administración en la Universidad Veracruzana, y mi laptop ya estaba quedandose un 
@@ -219,6 +242,7 @@
                 </p>
                 <img src="img/historias/informatica/asrock.jpg" alt="Motherboard AsRock">
                 <img src="img/historias/informatica/GT730.jpg" alt="Tarjeta gráfica GT730">
+            </div>
         </article>
     <a href="historias.html" class="back-link">← Volver a Historias</a>
     </main>
@@ -229,5 +253,15 @@
 
     <script src="js/snow-background.js"></script>
     <script src="js/load-header.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.collapsible-story');
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.classList.toggle('expanded');
+                });
+            });
+        });
+    </script>
 </body>
 </html>

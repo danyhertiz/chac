@@ -1,0 +1,53 @@
+/* Estilos para tarjetas colapsables */
+.collapsible-story {
+    background-color: var(--card-bg-color-alpha);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collapsible-story:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.collapsible-story .story-header h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.collapsible-story .date {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+}
+
+.collapsible-story .story-content {
+    display: none;
+    color: var(--text-color);
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+.collapsible-story .story-content p {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+.collapsible-story .story-content img {
+    max-width: 100%;
+    height: auto;
+    max-height: 80vh;
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.collapsible-story.expanded .story-content {
+    display: block;
+}
