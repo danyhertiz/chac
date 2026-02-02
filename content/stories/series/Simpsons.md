@@ -1,0 +1,3 @@
+![Los Simpsons](img/historias/series/simpsons.jpg)
+
+Como ya sabes, solo me gustan las primeras temporadas. Sería difícil definir exactamente cuáles, pero considero que, de la temporada 7 en adelante hubo cada vez menos capítulos que me gustaran, hasta llegar a la 11 más o menos, donde ya ningún capítulo me gustó. Alguna vez te mencioné que, si tuviera que elegir un personaje favorito, estaría entre el Sr. Burns y el director Skinner. De esa serie disfruto mucho los primeros especiales de noche de brujas, pero casi ningún capítulo de las primeras temporadas tiene desperdicio. Todos son excelentes.
