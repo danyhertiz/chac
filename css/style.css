@@ -1,4 +1,4 @@
-/* --- Reset Básico y Configuración General --- */
+/* --- Reset Básico y Configuración General (Global) --- */
 :root {
     --primary-color: #448AFF; /* Un azul más claro para el modo oscuro */
     --header-bg: #1a1a2e; /* Un azul oscuro casi negro */
@@ -29,7 +29,7 @@ body {
 
 
 
-/* --- Layout y Contenedores --- */
+/* --- Layout y Contenedores (Global) --- */
 header {
     color: white;
     text-align: center;
@@ -120,9 +120,9 @@ main.video-page-main {
     margin-top: 1.5rem;
 }
 
-/* NOTE: Rules for .content-wrapper were removed and backed up in css/unused.css */
 
-/* Reglas específicas para la subpágina videos.html:
+
+/* --- Reglas específicas para la subpágina videos.html (videos.html):
    3 columnas cuando el ancho lo permita, espacio entre tarjetas y 1 columna <768px.
    No afecta al header (selectores limitados a .video-page-main). */
 .video-page-main #video-gallery {
@@ -136,12 +136,6 @@ main.video-page-main {
     grid-column: 1 / -1; /* aseguramos que la galería quede debajo del artículo y ocupe todo el ancho */
 }
 
-/* NOTE: Rule for .content-wrapper .intro-card removed and backed up in css/unused.css */
-
-/* NOTE: Rule for .content-wrapper #video-gallery removed and backed up in css/unused.css */
-
-/* NOTE: Rule for .content-wrapper .video-card removed and backed up in css/unused.css */
-
 /* Misma apariencia translúcida y padding que el resto de las tarjetas */
 .video-page-main .video-card {
     background-color: var(--card-bg-color-alpha);
@@ -151,7 +145,7 @@ main.video-page-main {
     overflow: hidden;
 }
 
-/* NOTE: Rules for .content-wrapper video embedding removed and backed up in css/unused.css */
+
 
 /* Multimedia dentro de cada tarjeta ocupa todo el ancho y mantiene proporción */
 .video-page-main .video-card video,
@@ -164,7 +158,7 @@ main.video-page-main {
     object-fit: cover;
 }
 
-/* NOTE: Rule for .content-wrapper .video-card .description removed and backed up in css/unused.css */
+
 
 /* Separación de la descripción dentro de la tarjeta */
 .video-page-main .video-card .description {
@@ -174,14 +168,13 @@ main.video-page-main {
 
 /* Responsive: una sola columna en pantallas menores a 768px (no afecta header) */
 @media (max-width: 767px) {
-    /* NOTE: Responsive rules for .content-wrapper removed and backed up in css/unused.css */
 
     .video-page-main #video-gallery {
         grid-template-columns: 1fr;
     }
-}
+} 
 
-/* --- Estilos de las Tarjetas de Historia --- */
+/* --- Estilos de las Tarjetas de Historia (historias.html, story.html) --- */
 .story-card {
     background-color: var(--card-bg-color-alpha);
     border-radius: 8px;
@@ -340,7 +333,7 @@ main.video-page-main {
     display: block; /* Asegura que el enlace ocupe todo el espacio de la tarjeta */
 }
 
-/* --- Estilos para la Página de Historia Individual --- */
+/* --- Estilos para la Página de Historia Individual (story.html) --- */
 .story-full {
     /* Ocupa el 100% del ancho del contenedor principal y se sitúa como fila completa en la grid */
     max-width: none; /* elimina la restricción anterior */
@@ -519,7 +512,7 @@ main.video-page-main {
 
 /* --- Superficie de tarjetas unificada (transparencia centralizada) --- */
 /* Usa --card-bg-color-alpha para controlar la transparencia de todas las tarjetas */
-/* NOTE: We removed unused selectors .card-surface, .video-item, .video-container */
+
 .card,
 .story-card,
 .story-full,
@@ -531,7 +524,7 @@ main.video-page-main {
 }
 
 /* --- Ajuste: descripciones de tarjetas de video se muestran como texto normal sobre la tarjeta --- */
-/* NOTE: Preserving styling for used selector .video-card .description only */
+/* --- Estilos de descripción de tarjetas de video (videos.html) --- */
 .video-card .description {
     background-color: transparent; /* sin fondo independiente */
     color: var(--text-color);
