@@ -1,0 +1,3 @@
+![Lincoln](img/historias/cine/lincoln.jpg)
+
+Esta película narra la historia de cómo el expresidente Abraham Lincoln luchó por abolir la esclavitud en Estados Unidos. Me gustó mucho cómo manejaron la trama para hacerla interesante y atrapante. A pesar de que la película es bastante larga, no se me hizo pesada en ningún momento. No sé si en realidad, la personalidad de ese expresidente era así, pero en la película es muy inteligente, carismático y diplomático. Se dice que Steven Spielberg fue muy obsesivo en retratar con toda fidelidad el estilo de vida de aquella época, como los muebles, vestuario, iluminación, etc., incluso hasta el tic-tac del reloj debía sonar como los de aquél entonces. Te la recomiendo si es que no la has visto.

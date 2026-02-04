@@ -6,6 +6,7 @@
     <link rel="icon" href="img/hertiz_ico.ico" type="image/x-icon">
     <title>Mis películas favoritas - Dany Hertiz</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/collapsible-cards.css">
     <link rel="stylesheet" href="css/binary-background.css">
     <link rel="stylesheet" href="css/snow-background.css">
     <script src="js/auth.js"></script>
@@ -17,87 +18,66 @@
 
     <main style="margin-top: 1.5rem;">
         <article class="story-full">
-            <h1>Películas favoritas</h1>
-                26 de Septiembre, 2025
+            <h1>🎞️ Películas favoritas</h1>
                 <p>                    
                     Me preguntabas cuál es mi película favorita, pero es que son varias las películas que me gustan tanto, que a todas las 
                     podría considerar mis favoritas. Es imposible que elija solo una. Así que te hablaré de todas las que me 
                     gustan. El orden en el que las menciono no tiene relación con su importancia o nivel de gusto. Quiero empezar con sagas completas.
                 </p>
         </article>
-        <article class="story-full">
-                <p>
-                    <h2>Volver al Futuro.</h2> 
-                    <img src="img/historias/cine/backtothefuture.jpg" alt="Volver al futuro">
-                    Tal vez no sea perfecta pero es una de las que mas disfruto ver. Y no puedo elegir una sóla, tengo que ver la trilogía 
-                    completa.<br>
-                    Dato curioso: En algún video de YouTube escuché que los realizadores de esa trilogía (Spilberg y Zemeckis) se niegan 
-                    rotundamente a hacer una continuación, precuela o remake, porque consideran que les quedó tan bien que 
-                    no necesitan moverle nada más.
-                </p>
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Volver al Futuro</h2>
+            </div>
+            <div class="story-content" data-md="volver_al_futuro.md"></div>
         </article>
-        <article class="story-full">
-                    <h2>Star Wars</h2>
-                    <img src="img/historias/cine/starwars_trilogy.jpg" alt="Star Wars">
-                    La otra trilogía que me gusta bastante es la de precuelas de Star Wars (episodios 1, 2 y 3). Y aunque sé que muchos las odian, 
-                    creo que el hecho de que soy de la generacion que le tocó verlas en el cine, me hace apreciarlas más. 
-                    También me gustan las de la trilogía original (episodios 4, 5 y 6), pero la verdad esas me daban sueño 
-                    cuando las pasaban en la tele, jeje.
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Star Wars</h2>
+            </div>
+            <div class="story-content" data-md="star_wars.md"></div>
         </article>
-        <article class="story-full">
-                    <h2>El Señor de los Anillos</h2>
-                    <img src="img/historias/cine/tlotr.jpg" alt="El señor de los anillos">
-                    La trilogía del Señor de los Anillos también es bastante buena. Solo que admito que sí es un poco densa, 
-                    por lo mismo de que tiene una mitología muy rica y un mundo gigantesco muy variado, el querer meter todo eso 
-                    en las películas, las hizo muy largas y pesadas de ver para algunos espectadores. Pero tanto la historia como la 
-                    calidad de las adaptaciones al cine son de lo mejor que he visto.
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>El Señor de los Anillos</h2>
+            </div>
+            <div class="story-content" data-md="el_senor_de_los_anillos.md"></div>
         </article>
-        <article class="story-full">
-                    <h2>Terminator</h2>
-                    <img src="img/historias/cine/terminator.jpg" alt="Terminator">
-                    Aunque no se trata de una "trilogía", las primeras dos de Terminator son de lo mejor que he visto en cine de acción ochentero o noventero. También las consideraría parte de mis favoritas.
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Terminator</h2>
+            </div>
+            <div class="story-content" data-md="terminator.md"></div>
         </article>
-        <article class="story-full">
-                    <h2>Los Cazafantasmas</h2>
-                    <img src="img/historias/cine/ghostbusters_1y2.jpg" alt="Cazafantasmas">
-                    Otras dos que no son trilogía pero que sí son de las que más disfruto son las de los Cazafantasmas 1 y 2. 
-                    Aunque son algo distintas una de otra, la primera tiene un humor como que más para adultos y la segunda parece 
-                    estar hecha más para niños. De hecho para mí, el videjuego (que me regalaste en Steam) sigue siendo la tercera parte 
-                    de esa historia, es decir, la secuela de las dos primeras películas. Aunque las nuevas películas ya no tomaron en cuenta la trama del videojuego pero estuvieron bien también. Aún así, 
-                    me sigo quedando con las primeras dos.<br>                    
-                    NOTA: A pesar de mi gusto por las películas, sigo disfrutando mucho más la serie animada 
-                    de los Cazafantasmas. Abordaré el tema cuando hable de series.
-                    <img src="img/historias/cine/gb_animated.jpg" alt="Cazafantasmas Serie animada">
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Los Cazafantasmas</h2>
+            </div>
+            <div class="story-content" data-md="los_cazafantasmas.md"></div>
         </article>
-        <article class="story-full">
-                    <h2>Las Tortugas Ninja</h2>
-                    <img src="img/historias/cine/tmnt.jpg" alt="Tortugas Ninja">
-                    Una situación muy parecida me pasa con las Tortugas Ninja, ya que me gustan mucho las primeras dos películas 
-                    (más la primera), pero no me llama la atención la tercera ni las nuevas que han hecho que se 
-                    ven horribles. Respecto a la caricatura, esa de plano no me gusta tanto. Era chistosa pero algo boba.                    
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Las Tortugas Ninja</h2>
+            </div>
+            <div class="story-content" data-md="las_tortugas_ninja.md"></div>
         </article>
-        <article class="story-full">
-                    <h2>El Viaje de Chihiro</h2>
-                    <img src="img/historias/cine/chihiro.jpg" alt="El viaje de Chihiro">
-                    Y pues ya dejando de lado las películas que forman sagas o trilogías, hay muchas películas que 
-                    podría considerar mis favoritas, ya que soy capás de veras una y otra vez, casi sin cansarme.<br><br>
-                    Empezando por las de Studio Ghibli, esas películas de verdad que son obras maestras. Empezando por 
-                    El viaje de Chihiro. Es la primera que vi del estudio y quedé maravillado por la calidad de sus dibujos 
-                    y por lo atrapantes que son sus historias, a pesar de ser medio extrañas. Algo tienen esas 
-                    películas que me hacen sentir bien, me transmiten una sensación de calma.
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>El Viaje de Chihiro</h2>
+            </div>
+            <div class="story-content" data-md="el_viaje_de_chihiro.md"></div>
         </article>
-        <article class="story-full">
-                    <h2>Mi vecino Totoro</h2>
-                    <img src="img/historias/cine/totoro.jpg" alt="Mi vecino Totoro">
-                    Es una de las películas mas tiernas y a la vez sencillas a nivel narrativo que he visto. 
-                    Pero está tan bien hecha, que en ningun momento se me hace aburrida. Me hace desear vivir en una casa de campo 
-                    como la de los protagonistas.
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Mi vecino Totoro</h2>
+            </div>
+            <div class="story-content" data-md="mi_vecino_totoro.md"></div>
         </article>
-        <article class="story-full">
-                    <h2>Porco Rosso</h2>
-                    <img src="img/historias/cine/porco.jpg" alt="Porco Rosso">
-                    Aunque es un poco extraña, me cae super bien el protagonista. Y me gusta que su mensaje, como en la mayoría 
-                    de las películas de Miyasaki es anti bélico. Me gusta mucho esa película.
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Porco Rosso</h2>
+            </div>
+            <div class="story-content" data-md="porco_rosso.md"></div>
         </article>
         <article class="story-full">            
                 <p>
@@ -107,114 +87,83 @@
                     todas me hacen llorar irremediablemente. A pesar de haberlas visto una y otra vez.
                 </p>
         </article>
-        <article class="story-full">
-                    <h2>Hachiko</h2>
-                    <img src="img/historias/cine/hachiko.jpg" alt="Hachiko">
-                    Aunque no me gusta tener mascotas, esta película me conmueve mucho. Refleja lo que 
-                    pasa cuando una persona crea un vinculo muy especial con su mascota. Muchos animales suelen ser 
-                    muy nobles y muy fieles.
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Hachiko</h2>
+            </div>
+            <div class="story-content" data-md="hachiko.md"></div>
         </article>
-        <article class="story-full">
-                    <h2>Milagros inesperados</h2>
-                    <img src="img/historias/cine/green_mile.jpg" alt="Milagros inesperados">
-                    Es una de esas películas que disfruto tanto que no se me hacen 
-                    pesadas las tres horas que dura. Toda la historia de principio a fin es muy interesante 
-                    y sobre todo, muy conmovedora.
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Milagros inesperados</h2>
+            </div>
+            <div class="story-content" data-md="milagros_inesperados.md"></div>
         </article>
-        <article class="story-full">
-                    <h2>Que bello es vivir</h2>
-                    <img src="img/historias/cine/bello_vivir.jpg" alt="Qué bello es vivir">
-                    Este drama navideño de 1946 me hizo pensar mucho sobre cómo nuestras acciones 
-                    por muy insignificantes que parezcan, pueden cambiar la vida de todos los que nos rodean. Te la 
-                    recomiendo mucho si no la haz visto.
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Que bello es vivir</h2>
+            </div>
+            <div class="story-content" data-md="que_bello_es_vivir.md"></div>
         </article>
-        <article class="story-full">
-                    <h2>Milagro en la celda 7</h2>
-                    <img src="img/historias/cine/milagro_celda7.jpg" alt="Milagro en la celda 7">
-                    Me refiero a la version original, la coreana del año 2013, no al remake turco. Es la 
-                    película mas desgarradora que he visto y por mucho. Me conmovió tanto que,
-                    durante las escenas finales, o sea las más dramáticas, no puedo evitar chillar como nena. 🤣
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Milagro en la celda 7</h2>
+            </div>
+            <div class="story-content" data-md="milagro_en_la_celda_7.md"></div>
         </article>
-        <article class="story-full">
-                    <h2>Harry Potter</h2>
-                    <img src="img/historias/cine/harry.jpg" alt="Harry Potter">
-                    Aunque te sorprenda, no soy fan de toda la saga. Sí me gusta verla completa, porque es entretenida toda la historia, 
-                    pero de todas las películas, las que más me gustan son las primeras tres, y de 
-                    esas sólo puedo considerar mi favorita la primera. Me caía mucho mejor el director Dumbledore cuando era interpretado por Richard Harris, 
-                    le daba una personalidad mucho más amable, sabia, hasta graciosa, en fin, era más simpatico.
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Harry Potter</h2>
+            </div>
+            <div class="story-content" data-md="harry_potter.md"></div>
         </article>
-        <article class="story-full">
-                    <h2>Top Gun: Maverick</h2>
-                    <img src="img/historias/cine/maverick.jpg" alt="Top Gun Maverick">
-                    No sé si sea mi gusto por los aviones, pero esta película me encantó. En alguna ocasión ya te conté 
-                    que la primera aunque me había gustado, se me hacía más un drama disfrazado de película de aviones, había unas partes 
-                    muy aburridas la verdad. Pero esta no tiene ningún desperdicio, es una buena película de acción, con una historia sencilla, 
-                    y sin muchas pretenciones.
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Top Gun: Maverick</h2>
+            </div>
+            <div class="story-content" data-md="top_gun_maverick.md"></div>
         </article>
-        <article class="story-full">
-                    <h2>Entre navajas y secretos</h2>
-                    <img src="img/historias/cine/navajas.jpg" alt="Entre navajas y secretos">
-                    Disfruté mucho de esta película de corte detectivesco. Está bastante entretenida y muy 
-                    bien armada. Los personajes principales tienen mucho carisma. Lástima que su secuela ya no estuvo tan buena.
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Entre navajas y secretos</h2>
+            </div>
+            <div class="story-content" data-md="entre_navajas_y_secretos.md"></div>
         </article>
-        <article class="story-full">
-                    <h2>Your Name</h2>
-                    <img src="img/historias/cine/your_name.jpg" alt="Your Name">
-                    Esta película de anime me pareció muy original. La historia es bastante interesante y está muy bien
-                    contada. La animación es de lo mejor que he visto en anime. Y la banda sonora es excelente. Esta es una de las 
-                    películas que sin ser especialmente dramática, me dejó un nudo en la garganta al final.
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Your Name</h2>
+            </div>
+            <div class="story-content" data-md="your_name.md"></div>
         </article>
-        <article class="story-full">
-                    <h2>Lincoln</h2>
-                    <img src="img/historias/cine/lincoln.jpg" alt="Lincoln">
-                    Esta película narra la historia de cómo el expresidente Abraham Lincoln luchó por abolir la esclavitud en
-                    Estados Unidos. Me gustó mucho cómo manejaron la trama para hacerla interesante y atrapante. A pesar de que la película
-                    es bastante larga, no se me hizo pesada en ningún momento. No sé si en realidad, la personalidad de ese expresidente era así, 
-                    pero en la película es muy inteligente, carismático y diplomático. Se dice que Steven Spielberg fue muy 
-                    obsesivo en retratar con toda fidelidad el estilo de vida de quella epoca, como los muebles, vestuario, iluminación, etc., 
-                    incluso hasta el tic-tac del reloj debía sonar como los de aquél entonces. Te la recomiendo si es que no la has visto.
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Lincoln</h2>
+            </div>
+            <div class="story-content" data-md="lincoln.md"></div>
         </article>
-        <article class="story-full">
-                    <h2>Scooby Doo y los hermanos Boo</h2>
-                    <img src="img/historias/cine/scooby_doo.jpg" alt="Scooby Doo y los hermanos Boo">
-                    Un clásico inolvidable de mi infancia. Si la hubiera visto hoy en día, me había parecido 
-                    tonta y aburrida. Pero en su momento me encantó. La he visto tantas veces que ya me sé los diálogos de memoria. De hecho recuerdo 
-                    una pequeña anéctoda de la primera vez que la ví. Pá la había rentado junto con otra película que no recuerdo cual era. 
-                    Vimos la otra y como ya era muy noche, no nos dejaron ver la de Scooby Doo. Nos mandaron a dormir porque al otro día había escuela. 
-                    Incluso hasta recuerdo la caja en la que venía, el color y todo. Ya ves que la rentar películas nunca te daban la caja original, sino 
-                    una caja genérica de cartón. Pues al día siguiente yo estuve ansioso todo el tiempo por llegar de la escuela para ver esa película.
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Scooby Doo y los hermanos Boo</h2>
+            </div>
+            <div class="story-content" data-md="scooby_doo_y_los_hermanos_boo.md"></div>
         </article>
-        <article class="story-full">
-                    <h2>Scream</h2>
-                    <img src="img/historias/cine/scream.jpg" alt="Scream">
-                    Aunque no soy fan de las películas de terror, esta me gustó mucho. Tiene un buen balance entre
-                    el suspenso y el humor. Ya vi toda la saga pero ninguna me gustó tanto como la primera. Es otra que puedo  
-                    incluir en mi lista de favoritas.
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Scream</h2>
+            </div>
+            <div class="story-content" data-md="scream.md"></div>
         </article>
-        <article class="story-full">
-                    <h2>Clásicos de Disney</h2>
-                    <img src="img/historias/cine/clasicos_disney.jpg" alt="Clásicos de Disney">
-                    Pondré en un sólo bloque las películas de disney, ya que muchas de ellas marcaron mi 
-                    infancia y no puedo dejar de considerar muchas de ellas como mis favoritas de todos los tiempos.
-                    Las películas que salieron en los años 90 eran práctimamente una garantía de satisfacción. 
-                    (con algunas excepciones, claro está).
-                    <b>La Sirenita, La bella y la bestia, Aladdin, el Rey León y Hercules</b> son obras maestras de la animación de aquél entonces. Son bastante coloridas,
-                    con historias muy entretenidas y con canciones que se quedan en la mente por mucho tiempo.
-                    Y no puedo dejar de mencionar también aquellas películas que son muchísimo más viejas 
-                    pero que también formaron parte de mi infancia temprana. Me refiero a las películas clásicas de Disney como
-                    <b>Blancanieves, Cenicienta, Dumbo, Pinocho, Robin Hood, La bella durmiente, La espada en la piedra etc.</b>
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Clásicos de Disney</h2>
+            </div>
+            <div class="story-content" data-md="clasicos_de_disney.md"></div>
         </article>
-        <article class="story-full">
-                    <h2>Películas Navideñas</h2>
-                    <img src="img/historias/cine/origen_guardianes.jpg" alt="El Origen de los Guardianes">
-                    Cambiando de tema, hacia las películas navideñas, también hay algunas que no puedo dejar de ver por lo menos una vez al año. 
-                    Como las dos primeras de <b>"Mi pobre angelito"</b> (terrible adaptación del nombre original, jejeje), 
-                    la de <b>Una Navidad con Mickey</b> tambén se ha vuelto una de mis favoritas, y de hecho, me gusta tanto ese 
-                    cuento de navidad, que me he visto casi todas sus adaptaciónes y hasta algunas parodias. La del <b>Grinch</b> con Jim Carrey 
-                    me trae muy buenos recuerdos de cuando Paco nos llevaba al cine a Plaza Aragón. <b>El Expresso Polar</b> es un gusto culposo 
-                    ya que, aunque la animación es un tanto rara, sí me gustó mucho la historia. Y por ultimo, aunque no es una película 
-                    propiamente navideña, no puedo dejar de mencionar la de <b>El Origen de los Guardianes</b>, esa la vi en el 
-                    cine y automáticamente cayó entre mi listado de favoritas.
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Películas Navideñas</h2>
+            </div>
+            <div class="story-content" data-md="peliculas_navidenas.md"></div>
         </article>
         <article class="story-full">
                 <p>
@@ -233,7 +182,36 @@
         <p>&copy; 2025 Dany Hertiz</p>
     </footer>
 
+    <script src="js/marked.min.js"></script>
     <script src="js/snow-background.js"></script>
     <script src="js/load-header.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.collapsible-story');
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.classList.toggle('expanded');
+                });
+            });
+
+            const loadMarkdown = async (filename) => {
+                try {
+                    const response = await fetch('content/stories/peliculas/' + encodeURIComponent(filename));
+                    if (!response.ok) throw new Error('Not found: ' + filename);
+                    const text = await response.text();
+                    return marked.parse(text);
+                } catch (err) {
+                    console.error('Error loading MD:', err);
+                    return '<p>Error loading content: ' + err.message + '</p>';
+                }
+            };
+
+            document.querySelectorAll('[data-md]').forEach(async (el) => {
+                const filename = el.getAttribute('data-md');
+                const html = await loadMarkdown(filename);
+                el.innerHTML = html;
+            });
+        });
+    </script>
 </body>
 </html>
