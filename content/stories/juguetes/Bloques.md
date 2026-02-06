@@ -10,4 +10,4 @@ Hasta la fecha se venden ese tipo de troncos, tal vez algún día me compre unos
 
 ![Lincoln Logs](img/historias/juguetes/troncos.jpg)
 
-![Lincoln Logs](img/historias/juguetes/troncos2.jpg)
+![Lincoln Logs](img/historias/juguetes/troncos2.JPG)
