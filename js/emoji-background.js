@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.prepend(emojiContainer);
 
     const emojiCount = 50;
-    const emojiChars = ['🎮', '🍿', '🎵', '🍕'];
+    const emojiChars = ['🎮', '💾', '🎵', '🛸'];
 
     for (let i = 0; i < emojiCount; i++) {
         const emoji = document.createElement('div');

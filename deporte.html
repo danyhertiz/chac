@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/hertiz_ico.ico" type="image/x-icon">
+    <title>Deporte - Dany Hertiz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/collapsible-cards.css">
+    <link rel="stylesheet" href="css/binary-background.css">
+    <link rel="stylesheet" href="css/emoji-background.css">
+    <script src="js/auth.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7J12ZH76S"></script>
+    <script src="js/analytics.js"></script>
+</head>
+<body>
+
+    <main style="margin-top: 1.5rem;">
+        <article class="story-full">
+        <h1>⚽ Deporte</h1>
+            <p>
+            Mi vida no ha estado marcada de manera particular por el deporte, pero sí tengo algunas historias que contar sobre eso.
+            </p>
+        </article>
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Fútbol en la escuela</h2>
+            </div>
+            <div class="story-content" data-md="futbol_escuela.md"></div>
+        </article>
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Básquetbol</h2>
+            </div>
+            <div class="story-content" data-md="basquetbol.md"></div>
+        </article>
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Educación física</h2>
+            </div>
+            <div class="story-content" data-md="educacion_fisica.md"></div>
+        </article>
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Danza</h2>
+            </div>
+            <div class="story-content" data-md="danza.md"></div>
+        </article>
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Alameda oriente</h2>
+            </div>
+            <div class="story-content" data-md="alameda_oriente.md"></div>
+        </article>
+        <article class="collapsible-story">
+            <div class="story-header">
+                <h2>Karate</h2>
+            </div>
+            <div class="story-content" data-md="karate.md"></div>
+        </article>
+    <a href="historias.html" class="back-link">← Volver a Historias</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Dany Hertiz</p>
+    </footer>
+
+    <script src="js/marked.min.js"></script>
+    <script src="js/emoji-background.js"></script>
+    <script src="js/load-header.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.collapsible-story');
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.classList.toggle('expanded');
+                });
+            });
+
+            const loadMarkdown = async (filename) => {
+                try {
+                    const response = await fetch('content/stories/deporte/' + encodeURIComponent(filename));
+                    if (!response.ok) throw new Error('Not found: ' + filename);
+                    const text = await response.text();
+                    return marked.parse(text);
+                } catch (err) {
+                    console.error('Error loading MD:', err);
+                    return '<p>Error loading content: ' + err.message + '</p>';
+                }
+            };
+
+            document.querySelectorAll('[data-md]').forEach(async (el) => {
+                const filename = el.getAttribute('data-md');
+                const html = await loadMarkdown(filename);
+                el.innerHTML = html;
+            });
+        });
+    </script>
+</body>
+</html>
+
