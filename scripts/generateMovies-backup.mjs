@@ -33,20 +33,6 @@ async function searchMovie(title, year) {
   return data.results?.[0] || null;
 }
 
-// Fetch detailed movie data with Spanish localization
-async function getMovieDetails(movieId) {
-  const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&language=es-MX`;
-  
-  try {
-    const res = await fetch(url);
-    const data = await res.json();
-    return data || null;
-  } catch (error) {
-    console.error(`❌ Error fetching details for movie ${movieId}:`, error.message);
-    return null;
-  }
-}
-
 async function downloadPoster(posterPath, tmdbId) {
   if (!posterPath) {
     return null;
@@ -119,12 +105,6 @@ async function main() {
       continue;
     }
 
-    // Increase delay to respect API rate limits
-    await new Promise(r => setTimeout(r, 350));
-
-    // Fetch Spanish localized data
-    const movieES = await getMovieDetails(movieData.id);
-
     // Descarga el poster si existe
     let posterPath = null;
     if (movieData.poster_path) {
@@ -132,17 +112,15 @@ async function main() {
     }
 
     movies.push({
-      title: movieES?.title ?? movieData.title,
-      originalTitle: movieData.original_title,
+      title: movieData.title,
       year: movieData.release_date?.split("-")[0],
-      overview: movieES?.overview ?? movieData.overview,
-      originalOverview: movieData.overview,
+      overview: movieData.overview,
       poster: posterPath,
       tmdbId: movieData.id
     });
 
-    // Increase delay between API calls to avoid rate limiting
-    await new Promise(r => setTimeout(r, 350));
+    // Evita saturar la API
+    await new Promise(r => setTimeout(r, 250));
   }
 
   await fs.writeJson(OUTPUT_JSON, movies, { spaces: 2 });
