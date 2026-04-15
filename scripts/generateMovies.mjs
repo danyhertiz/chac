@@ -47,6 +47,14 @@ async function getMovieDetails(movieId) {
   }
 }
 
+// Transform genres array to Spanish names
+function transformGenres(genresArray) {
+  if (!genresArray || !Array.isArray(genresArray)) {
+    return [];
+  }
+  return genresArray.map(genre => genre.name);
+}
+
 async function downloadPoster(posterPath, tmdbId) {
   if (!posterPath) {
     return null;
@@ -138,6 +146,7 @@ async function main() {
       overview: movieES?.overview ?? movieData.overview,
       originalOverview: movieData.overview,
       poster: posterPath,
+      genres: transformGenres(movieES?.genres),
       tmdbId: movieData.id
     });
 
