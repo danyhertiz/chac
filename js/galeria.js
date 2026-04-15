@@ -4,8 +4,8 @@ const PLACEHOLDER_IMAGE = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/20
 
 const moviesGrid = document.getElementById('movies-grid');
 const searchInput = document.getElementById('search-input');
-const yearFilter = document.getElementById('year-filter');
 const genreFilter = document.getElementById('genre-filter');
+const yearFilter = document.getElementById('year-filter');
 const paginationControls = document.getElementById('pagination-controls');
 const modalOverlay = document.getElementById('movie-modal');
 const modalPoster = document.getElementById('modal-poster');
@@ -20,8 +20,8 @@ const state = {
     filteredMovies: [],
     currentPage: 1,
     searchQuery: '',
+    selectedGenre: 'Todos',
     selectedYear: 'all',
-    selectedGenre: 'all',
 };
 
 function debounce(fn, delay = 180) {
@@ -87,7 +87,6 @@ function renderMovies(movies) {
 function openModal(movie) {
     const displayTitle = movie.title || movie.originalTitle || 'Título no disponible';
     const originalTitle = movie.originalTitle && movie.originalTitle !== displayTitle ? movie.originalTitle : '';
-    const genres = Array.isArray(movie.genres) ? movie.genres.filter(Boolean) : [];
 
     modalPoster.src = movie.poster || PLACEHOLDER_IMAGE;
     modalPoster.alt = `${displayTitle} - cartel`;
@@ -106,21 +105,18 @@ function openModal(movie) {
         originalTitleElement.remove();
     }
 
-    if (genres.length) {
-        modalGenres.innerHTML = '';
-        genres.forEach((genre) => {
-            const genrePill = document.createElement('span');
-            genrePill.className = 'genre-chip';
-            genrePill.textContent = genre;
-            modalGenres.appendChild(genrePill);
-        });
+    modalYear.textContent = movie.year ? `Año: ${movie.year}` : 'Año desconocido';
+
+    if (Array.isArray(movie.genres) && movie.genres.length) {
+        modalGenres.innerHTML = movie.genres
+            .map((genre) => `<span class="genre-chip">${genre}</span>`)
+            .join('');
         modalGenres.hidden = false;
     } else {
         modalGenres.innerHTML = '';
         modalGenres.hidden = true;
     }
 
-    modalYear.textContent = movie.year ? `Año: ${movie.year}` : 'Año desconocido';
     modalOverview.textContent = movie.overview || movie.originalOverview || 'No hay descripción disponible.';
     modalOverlay.classList.remove('hidden');
     modalOverlay.classList.add('visible');
@@ -195,10 +191,11 @@ function setupPagination() {
 function updateFilteredMovies() {
     const titleQuery = state.searchQuery.trim().toLowerCase();
     state.filteredMovies = state.fullMovies.filter((movie) => {
-        const matchesTitle = movie.title ? movie.title.toLowerCase().includes(titleQuery) : false;
-        const matchesYear = state.selectedYear === 'all' || movie.year === state.selectedYear;
-        const movieGenres = Array.isArray(movie.genres) ? movie.genres : [];
-        const matchesGenre = state.selectedGenre === 'all' || movieGenres.includes(state.selectedGenre);
+        const title = movie.title || movie.originalTitle || '';
+        const matchesTitle = title.toLowerCase().includes(titleQuery);
+        const matchesYear = state.selectedYear === 'all' || String(movie.year) === state.selectedYear;
+        const genres = Array.isArray(movie.genres) ? movie.genres : [];
+        const matchesGenre = state.selectedGenre === 'Todos' || genres.includes(state.selectedGenre);
         return matchesTitle && matchesYear && matchesGenre;
     });
     state.currentPage = 1;
@@ -213,7 +210,7 @@ function populateYearFilter() {
     yearFilter.innerHTML = '<option value="all">Todos los años</option>';
     years.forEach((year) => {
         const option = document.createElement('option');
-        option.value = year;
+        option.value = String(year);
         option.textContent = year;
         yearFilter.appendChild(option);
     });
@@ -221,11 +218,11 @@ function populateYearFilter() {
 
 function populateGenreFilter() {
     const genres = Array.from(new Set(state.fullMovies
-        .flatMap((movie) => Array.isArray(movie.genres) ? movie.genres : [])
-        .filter(Boolean)))
+        .flatMap((movie) => Array.isArray(movie.genres) ? movie.genres : [])))
+        .filter(Boolean)
         .sort((a, b) => a.localeCompare(b, 'es', { sensitivity: 'base' }));
 
-    genreFilter.innerHTML = '<option value="all">Todos</option>';
+    genreFilter.innerHTML = '<option value="Todos">Todos</option>';
     genres.forEach((genre) => {
         const option = document.createElement('option');
         option.value = genre;
@@ -264,8 +261,8 @@ async function loadMovies() {
             return;
         }
 
-        populateYearFilter();
         populateGenreFilter();
+        populateYearFilter();
         updateFilteredMovies();
         renderCurrentPage();
     } catch (error) {
@@ -337,8 +334,8 @@ window.addEventListener('DOMContentLoaded', () => {
     moviesGrid.addEventListener('click', handleGridClick);
     paginationControls.addEventListener('click', handlePaginationClick);
     searchInput.addEventListener('input', debounce(handleSearchInput));
-    yearFilter.addEventListener('change', handleYearFilterChange);
     genreFilter.addEventListener('change', handleGenreFilterChange);
+    yearFilter.addEventListener('change', handleYearFilterChange);
     modalOverlay.addEventListener('click', handleOverlayClick);
     modalClose.addEventListener('click', closeModal);
     document.addEventListener('keydown', handleKeyDown);
