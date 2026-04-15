@@ -30,16 +30,19 @@ function debounce(fn, delay = 180) {
 }
 
 function createMovieCard(movie) {
+    const displayTitle = movie.title || movie.originalTitle || 'Título desconocido';
+    const hasOriginalTitle = movie.originalTitle && movie.originalTitle !== displayTitle;
+
     const card = document.createElement('button');
     card.type = 'button';
     card.className = 'movie-card';
-    card.dataset.movieId = movie.tmdbId != null ? String(movie.tmdbId) : movie.title || '';
-    card.title = `Ver detalles de ${movie.title || 'esta película'}`;
+    card.dataset.movieId = movie.tmdbId != null ? String(movie.tmdbId) : displayTitle;
+    card.title = `Ver detalles de ${displayTitle}`;
 
     const poster = document.createElement('img');
     poster.className = 'movie-poster';
     poster.src = movie.poster || PLACEHOLDER_IMAGE;
-    poster.alt = movie.title ? `${movie.title} - cartel` : 'Cartel no disponible';
+    poster.alt = `${displayTitle} - cartel`;
     poster.loading = 'lazy';
     poster.addEventListener('error', () => {
         poster.src = PLACEHOLDER_IMAGE;
@@ -47,10 +50,18 @@ function createMovieCard(movie) {
 
     const title = document.createElement('div');
     title.className = 'movie-title';
-    title.textContent = movie.title || 'Título desconocido';
+    title.textContent = displayTitle;
 
     card.appendChild(poster);
     card.appendChild(title);
+
+    if (hasOriginalTitle) {
+        const originalTitle = document.createElement('div');
+        originalTitle.className = 'movie-original-title';
+        originalTitle.textContent = movie.originalTitle;
+        card.appendChild(originalTitle);
+    }
+
     return card;
 }
 
@@ -71,11 +82,28 @@ function renderMovies(movies) {
 }
 
 function openModal(movie) {
+    const displayTitle = movie.title || movie.originalTitle || 'Título no disponible';
+    const originalTitle = movie.originalTitle && movie.originalTitle !== displayTitle ? movie.originalTitle : '';
+
     modalPoster.src = movie.poster || PLACEHOLDER_IMAGE;
-    modalPoster.alt = movie.title ? `${movie.title} - cartel` : 'Cartel no disponible';
-    modalTitle.textContent = movie.title || 'Título no disponible';
+    modalPoster.alt = `${displayTitle} - cartel`;
+    modalTitle.textContent = displayTitle;
+
+    let originalTitleElement = modalOverlay.querySelector('#modal-original-title');
+    if (originalTitle) {
+        if (!originalTitleElement) {
+            originalTitleElement = document.createElement('p');
+            originalTitleElement.id = 'modal-original-title';
+            originalTitleElement.className = 'modal-original-title';
+            modalTitle.insertAdjacentElement('afterend', originalTitleElement);
+        }
+        originalTitleElement.textContent = originalTitle;
+    } else if (originalTitleElement) {
+        originalTitleElement.remove();
+    }
+
     modalYear.textContent = movie.year ? `Año: ${movie.year}` : 'Año desconocido';
-    modalOverview.textContent = movie.overview || 'No hay descripción disponible.';
+    modalOverview.textContent = movie.overview || movie.originalOverview || 'No hay descripción disponible.';
     modalOverlay.classList.remove('hidden');
     modalOverlay.classList.add('visible');
     modalOverlay.setAttribute('aria-hidden', 'false');
