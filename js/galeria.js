@@ -5,11 +5,13 @@ const PLACEHOLDER_IMAGE = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/20
 const moviesGrid = document.getElementById('movies-grid');
 const searchInput = document.getElementById('search-input');
 const yearFilter = document.getElementById('year-filter');
+const genreFilter = document.getElementById('genre-filter');
 const paginationControls = document.getElementById('pagination-controls');
 const modalOverlay = document.getElementById('movie-modal');
 const modalPoster = document.getElementById('modal-poster');
 const modalTitle = document.getElementById('modal-title');
 const modalYear = document.getElementById('modal-year');
+const modalGenres = document.getElementById('modal-genres');
 const modalOverview = document.getElementById('modal-overview');
 const modalClose = document.querySelector('.modal-close');
 
@@ -19,6 +21,7 @@ const state = {
     currentPage: 1,
     searchQuery: '',
     selectedYear: 'all',
+    selectedGenre: 'all',
 };
 
 function debounce(fn, delay = 180) {
@@ -84,6 +87,7 @@ function renderMovies(movies) {
 function openModal(movie) {
     const displayTitle = movie.title || movie.originalTitle || 'Título no disponible';
     const originalTitle = movie.originalTitle && movie.originalTitle !== displayTitle ? movie.originalTitle : '';
+    const genres = Array.isArray(movie.genres) ? movie.genres.filter(Boolean) : [];
 
     modalPoster.src = movie.poster || PLACEHOLDER_IMAGE;
     modalPoster.alt = `${displayTitle} - cartel`;
@@ -100,6 +104,20 @@ function openModal(movie) {
         originalTitleElement.textContent = originalTitle;
     } else if (originalTitleElement) {
         originalTitleElement.remove();
+    }
+
+    if (genres.length) {
+        modalGenres.innerHTML = '';
+        genres.forEach((genre) => {
+            const genrePill = document.createElement('span');
+            genrePill.className = 'genre-chip';
+            genrePill.textContent = genre;
+            modalGenres.appendChild(genrePill);
+        });
+        modalGenres.hidden = false;
+    } else {
+        modalGenres.innerHTML = '';
+        modalGenres.hidden = true;
     }
 
     modalYear.textContent = movie.year ? `Año: ${movie.year}` : 'Año desconocido';
@@ -179,7 +197,9 @@ function updateFilteredMovies() {
     state.filteredMovies = state.fullMovies.filter((movie) => {
         const matchesTitle = movie.title ? movie.title.toLowerCase().includes(titleQuery) : false;
         const matchesYear = state.selectedYear === 'all' || movie.year === state.selectedYear;
-        return matchesTitle && matchesYear;
+        const movieGenres = Array.isArray(movie.genres) ? movie.genres : [];
+        const matchesGenre = state.selectedGenre === 'all' || movieGenres.includes(state.selectedGenre);
+        return matchesTitle && matchesYear && matchesGenre;
     });
     state.currentPage = 1;
 }
@@ -196,6 +216,21 @@ function populateYearFilter() {
         option.value = year;
         option.textContent = year;
         yearFilter.appendChild(option);
+    });
+}
+
+function populateGenreFilter() {
+    const genres = Array.from(new Set(state.fullMovies
+        .flatMap((movie) => Array.isArray(movie.genres) ? movie.genres : [])
+        .filter(Boolean)))
+        .sort((a, b) => a.localeCompare(b, 'es', { sensitivity: 'base' }));
+
+    genreFilter.innerHTML = '<option value="all">Todos</option>';
+    genres.forEach((genre) => {
+        const option = document.createElement('option');
+        option.value = genre;
+        option.textContent = genre;
+        genreFilter.appendChild(option);
     });
 }
 
@@ -230,6 +265,7 @@ async function loadMovies() {
         }
 
         populateYearFilter();
+        populateGenreFilter();
         updateFilteredMovies();
         renderCurrentPage();
     } catch (error) {
@@ -278,6 +314,12 @@ function handleYearFilterChange(event) {
     renderCurrentPage();
 }
 
+function handleGenreFilterChange(event) {
+    state.selectedGenre = event.target.value;
+    updateFilteredMovies();
+    renderCurrentPage();
+}
+
 function handleKeyDown(event) {
     if (event.key === 'Escape') {
         closeModal();
@@ -296,6 +338,7 @@ window.addEventListener('DOMContentLoaded', () => {
     paginationControls.addEventListener('click', handlePaginationClick);
     searchInput.addEventListener('input', debounce(handleSearchInput));
     yearFilter.addEventListener('change', handleYearFilterChange);
+    genreFilter.addEventListener('change', handleGenreFilterChange);
     modalOverlay.addEventListener('click', handleOverlayClick);
     modalClose.addEventListener('click', closeModal);
     document.addEventListener('keydown', handleKeyDown);

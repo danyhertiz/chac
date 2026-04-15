@@ -27,6 +27,12 @@
                     <option value="all">Todos los años</option>
                 </select>
             </div>
+            <div class="control-group">
+                <label for="genre-filter">Filtrar por género</label>
+                <select id="genre-filter" aria-label="Filtrar películas por género">
+                    <option value="all">Todos</option>
+                </select>
+            </div>
         </section>
 
         <section class="movies-page-main">
@@ -44,6 +50,7 @@
                 <div>
                     <h2 id="modal-title">Título</h2>
                     <p class="modal-meta" id="modal-year">Año</p>
+                    <div class="modal-genres" id="modal-genres" hidden></div>
                     <p class="overview" id="modal-overview">Descripción</p>
                 </div>
             </div>
