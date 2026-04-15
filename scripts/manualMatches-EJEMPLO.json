@@ -1,0 +1,8 @@
+{
+  "_comentario": "Películas con títulos traducidos o difíciles de encontrar. El script normaliza automáticamente las claves.",
+  "_versionControl": "2025-04-15",
+  "_instrucciones": "Agregar una entrada por línea en formato: 'titulo exacto del archivo': tmdbId (sin .mp4 o .mkv)",
+
+  "abraham lincoln cazador de vampiros": 417320,
+  "example movie title": 12345
+}

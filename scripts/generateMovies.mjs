@@ -26,7 +26,7 @@ const CONCURRENCY = 5; // Máximo de requests concurrentes a TMDb
 async function getVideoDuration(filePath) {
   try {
     // Comando ffprobe para obtener duración en segundos
-    const command = `ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1:noinit=1 "${filePath}"`;
+    const command = `ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "${filePath}"`;
     
     const durationSeconds = parseFloat(
       execSync(command, { encoding: "utf-8" }).trim()
@@ -227,13 +227,70 @@ function createFallbackMovie(title, year) {
 }
 
 /**
+ * Normaliza las claves de manualMatches.json
+ * - Ignora entradas que comienzan con "_" (comentarios)
+ * - Normaliza todas las claves para consistencia
+ * - Valida que los tmdbIds sean números válidos
+ * 
+ * @param {Object} rawData - Datos crudos de manualMatches.json
+ * @returns {Object} - Datos normalizados { claveNormalizada: tmdbId }
+ */
+function normalizeManualMatches(rawData) {
+  const normalized = {};
+  let totalEntries = 0;
+  let skippedEntries = 0;
+
+  for (const [key, value] of Object.entries(rawData)) {
+    totalEntries++;
+
+    // Ignorar claves que comienzan con "_" (comentarios)
+    if (key.startsWith("_")) {
+      console.log(`ℹ️ Ignorado comentario en manualMatches: "${key}"`);
+      skippedEntries++;
+      continue;
+    }
+
+    // Validar que el valor sea un número válido
+    const tmdbId = Number(value);
+    if (!Number.isInteger(tmdbId) || tmdbId <= 0) {
+      console.warn(
+        `⚠️ Entrada inválida en manualMatches: "${key}" → "${value}" (debe ser ID numérico positivo)`
+      );
+      skippedEntries++;
+      continue;
+    }
+
+    // Normalizar la clave
+    const normalizedKey = normalize(key);
+    if (!normalizedKey) {
+      console.warn(`⚠️ Clave en blanco después de normalizar: "${key}"`);
+      skippedEntries++;
+      continue;
+    }
+
+    normalized[normalizedKey] = tmdbId;
+  }
+
+  if (skippedEntries > 0) {
+    console.log(
+      `✓ Cargados overrides manuales: ${totalEntries - skippedEntries}/${totalEntries} válidos`
+    );
+  }
+
+  return normalized;
+}
+
+/**
  * Carga las coincidencias manuales desde manualMatches.json
+ * Normaliza automáticamente las claves para consistencia
+ * 
+ * @returns {Promise<Object>} - Matchs manuales normalizados
  */
 async function loadManualMatches() {
   try {
     if (await fs.pathExists(MANUAL_MATCHES_JSON)) {
-      const data = await fs.readJson(MANUAL_MATCHES_JSON);
-      return data;
+      const rawData = await fs.readJson(MANUAL_MATCHES_JSON);
+      return normalizeManualMatches(rawData);
     }
   } catch (error) {
     console.warn(`⚠️ Error leyendo manualMatches.json:`, error.message);
@@ -272,19 +329,31 @@ async function saveCache(cache) {
  * Obtiene una película del cache o busca en TMDb
  * Clave del cache: "titulo_normalizado_2012"
  * También cachea la duración local del archivo de video
+ * 
+ * Protección contra cache corrupto:
+ * - Si no tiene tmdbId válido, ignora el cache
+ * - Rehace la búsqueda si el cache está incompleto
  */
 async function getCachedOrSearchMovie(title, year, filePath, manualMatches, cache) {
   const cacheKey = `${normalize(title)}_${year}`;
   
-  // Si está en cache y tiene runtime, devolverlo directamente
-  if (cache[cacheKey] && cache[cacheKey].runtime !== undefined) {
+  // Validar que el cache sea válido (debe tener tmdbId válido o ser null explícitamente)
+  const cachedMovie = cache[cacheKey];
+  if (cachedMovie && typeof cachedMovie === "object" && cachedMovie.tmdbId) {
+    // Cache válido: tiene tmdbId válido
     console.log(`✓ Desde cache: ${title}`);
-    return cache[cacheKey];
+    return cachedMovie;
+  }
+
+  if (cachedMovie && !cachedMovie.tmdbId) {
+    // Cache corrupto: existe pero sin tmdbId válido → ignorarlo
+    console.log(`⚠️ Cache corrupto ignorado para: ${title}`);
+    delete cache[cacheKey];
   }
   
-  // Obtener duración local si no está en cache
-  let localRuntime = cache[cacheKey]?.runtime;
-  if (!localRuntime && filePath) {
+  // Obtener duración local si no está en cache válido
+  let localRuntime = null;
+  if (filePath) {
     const absolutePath = path.join(MOVIES_FOLDER, filePath);
     localRuntime = await getVideoDuration(absolutePath);
     if (localRuntime) {
@@ -359,32 +428,65 @@ async function processInBatches(items, worker, concurrency = CONCURRENCY) {
 
 /**
  * Busca una película en TMDb usando búsqueda mejorada con validación de runtime
- * Verifica primero overrides manuales, luego busca con scoring robusto
+ * 
+ * PRIORIDAD ABSOLUTA DE OVERRIDES MANUALES:
+ * - Si existe match manual → fetch directo por ID, sin búsqueda TMDb
+ * - Si el ID manual es inválido → log de error y fallback a búsqueda normal
+ * 
+ * Luego verifica búsqueda con scoring robusto
  * Para los TOP 3 candidatos, obtiene runtime de TMDb y valida contra duración local
  * 
  * @param {string} title - Título de la película
  * @param {number} year - Año de lanzamiento
  * @param {number|null} localRuntime - Duración en minutos del archivo local
- * @param {Object} manualMatches - Coincidencias manuales
+ * @param {Object} manualMatches - Coincidencias manuales (ya normalizadas)
  * @returns {Promise<Object|null>}
  */
 async function searchMovie(title, year, localRuntime, manualMatches) {
-  // Verificar si existe coincidencia manual
+  // ==========================================
+  // 1️⃣ VERIFICAR OVERRIDE MANUAL (PRIORIDAD ABSOLUTA)
+  // ==========================================
   const normalizedTitle = normalize(title);
   if (manualMatches[normalizedTitle]) {
     const manualId = manualMatches[normalizedTitle];
-    console.log(`📌 Manual: ${manualId}`);
+    console.log(`📌 Usando override manual: ${manualId}`);
+    
     try {
       const url = `https://api.themoviedb.org/3/movie/${manualId}?api_key=${API_KEY}`;
       const res = await fetch(url);
+      
+      if (!res.ok) {
+        throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+      }
+      
       const data = await res.json();
-      return data || null;
+      
+      // Validar que la respuesta es válida
+      if (!data || !data.id) {
+        throw new Error("Respuesta inválida de TMDb (sin ID)");
+      }
+      
+      // LOG DETALLADO DE MATCH MANUAL
+      console.log(`   ✅ Archivo: "${title}"`);
+      console.log(`   ✅ TMDb ID: ${data.id}`);
+      console.log(`   ✅ Título TMDb: "${data.title}" (${data.original_title})`);
+      
+      return data;
+      
     } catch (error) {
-      console.warn(`⚠️ Error obteniendo película manual ${manualId}:`, error.message);
+      console.error(
+        `⚠️ Match manual INVÁLIDO para: "${title}"\n` +
+        `   ID proporcionado: ${manualId}\n` +
+        `   Error: ${error.message}\n` +
+        `   → Intentando búsqueda normal...`
+      );
+      // Continuar con búsqueda normal como fallback
     }
   }
   
-  // Búsqueda en TMDb CON año (primer intento)
+  // ==========================================
+  // 2️⃣ BÚSQUEDA NORMAL EN TMDB CON AÑO
+  // ==========================================
   let url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(title)}&primary_release_year=${year}&language=es-MX`;
   
   try {
@@ -398,7 +500,9 @@ async function searchMovie(title, year, localRuntime, manualMatches) {
       if (bestMatch) return bestMatch;
     }
     
-    // Fallback: buscar SIN año
+    // ==========================================
+    // 3️⃣ FALLBACK: BÚSQUEDA SIN AÑO
+    // ==========================================
     console.log(`↩️ Reintentando sin año: ${title}`);
     url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(title)}&language=es-MX`;
     
@@ -679,6 +783,14 @@ async function main() {
         return fallbackMovie;
       }
 
+      // Validar que movieInfo tenga un ID válido
+      if (!movieInfo.id) {
+        console.error(`❌ ERROR CRÍTICO: movieInfo sin ID para "${parsed.title}"`);
+        const fallbackMovie = createFallbackMovie(parsed.title, parsed.year);
+        console.timeEnd(`  ${parsed.title}`);
+        return fallbackMovie;
+      }
+
       // Fetch Spanish localized data
       const movieES = await getMovieDetails(movieInfo.id);
       await new Promise(r => setTimeout(r, 100)); // Delay reducido
@@ -689,12 +801,13 @@ async function main() {
         posterPath = await downloadPoster(movieInfo.poster_path, movieInfo.id);
       }
 
+      // Asegurar que SIEMPRE se crea un movieRecord válido
       const movieRecord = {
         title: movieES?.title ?? movieInfo.title,
         originalTitle: movieInfo.original_title,
-        year: movieInfo.release_date?.split("-")[0],
-        overview: movieES?.overview ?? movieInfo.overview,
-        originalOverview: movieInfo.overview,
+        year: movieInfo.release_date?.split("-")[0] ?? parsed.year,
+        overview: movieES?.overview ?? movieInfo.overview ?? "",
+        originalOverview: movieInfo.overview ?? "",
         poster: posterPath,
         genres: transformGenres(movieES?.genres),
         tmdbId: movieInfo.id,
