@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi colección de películas</title>
+    <link rel="icon" href="img/hertiz_ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/binary-background.css">
+    <link rel="stylesheet" href="css/galeria.css">
+</head>
+<body>
+    <main>
+        <section class="gallery-page-intro card">
+            <h1>Mi colección de películas</h1>
+            <p>Este catálogo personal reúne las películas que más me gustan o he guardado para ver. Explora los carteles, toca cualquiera para abrir la ficha completa y descubre más detalles dentro de mi colección.</p>
+        </section>
+
+        <section class="gallery-controls card">
+            <div class="control-group">
+                <label for="search-input">Buscar película</label>
+                <input id="search-input" type="search" placeholder="Buscar por título..." aria-label="Buscar películas por título">
+            </div>
+            <div class="control-group">
+                <label for="year-filter">Filtrar por año</label>
+                <select id="year-filter" aria-label="Filtrar películas por año">
+                    <option value="all">Todos los años</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="movies-page-main">
+            <div id="movies-grid" class="gallery-grid" aria-live="polite"></div>
+        </section>
+
+        <section id="pagination-controls" class="pagination-container" aria-label="Controles de paginación"></section>
+    </main>
+
+    <div id="movie-modal" class="modal-overlay hidden" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <button type="button" class="modal-close" aria-label="Cerrar ventana">×</button>
+            <img id="modal-poster" class="modal-poster" src="" alt="Poster de película">
+            <div class="modal-body">
+                <div>
+                    <h2 id="modal-title">Título</h2>
+                    <p class="modal-meta" id="modal-year">Año</p>
+                    <p class="overview" id="modal-overview">Descripción</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/load-header.js" defer></script>
+    <script src="js/galeria.js" defer></script>
+</body>
+</html>
