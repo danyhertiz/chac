@@ -3,6 +3,7 @@ import path from "path";
 import fetch from "node-fetch";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
+import { execSync } from "child_process";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -10,9 +11,46 @@ const __dirname = dirname(__filename);
 const API_KEY = "79babdd2d24b858c4488b987a2743aef";
 const MOVIES_FOLDER = "D:/Videos/Peliculas/HD"; // carpeta donde están tus videos
 const OUTPUT_JSON = "./movies.json";
+const MANUAL_MATCHES_JSON = "./manualMatches.json";
+const CACHE_JSON = "./cache.json";
 const POSTERS_FOLDER = path.join(__dirname, "..", "posters");
 const TMDB_POSTER_BASE_URL = "https://image.tmdb.org/t/p/w500";
+const CONCURRENCY = 5; // Máximo de requests concurrentes a TMDb
 
+/**
+ * Obtiene la duración del archivo de video en minutos
+ * Usa ffprobe para obtener metadatos precisos
+ * @param {string} filePath - Ruta absoluta al archivo de video
+ * @returns {Promise<number|null>} - Duración en minutos (entero) o null si hay error
+ */
+async function getVideoDuration(filePath) {
+  try {
+    // Comando ffprobe para obtener duración en segundos
+    const command = `ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1:noinit=1 "${filePath}"`;
+    
+    const durationSeconds = parseFloat(
+      execSync(command, { encoding: "utf-8" }).trim()
+    );
+    
+    if (isNaN(durationSeconds)) {
+      console.warn(`⚠️ No se pudo obtener duración: ${path.basename(filePath)}`);
+      return null;
+    }
+    
+    const durationMinutes = Math.round(durationSeconds / 60);
+    return durationMinutes;
+  } catch (error) {
+    console.warn(`⚠️ Error obteniendo duración de ${path.basename(filePath)}: ${error.message}`);
+    return null;
+  }
+}
+
+
+/**
+ * Extrae título y año del nombre del archivo
+ * Ejemplo: "Abraham Lincoln Cazador de Vampiros (2012).mkv" 
+ * → { title: "Abraham Lincoln Cazador de Vampiros", year: "2012" }
+ */
 function parseFileName(fileName) {
   // Ejemplo: "The Matrix (1999).mp4"
   const match = fileName.match(/^(.*)\((\d{4})\)/);
@@ -24,13 +62,472 @@ function parseFileName(fileName) {
   };
 }
 
-async function searchMovie(title, year) {
-  const url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(title)}&year=${year}`;
+/**
+ * Normaliza texto para comparación:
+ * - Convierte a minúsculas
+ * - Elimina acentos
+ * - Elimina caracteres especiales
+ * - Elimina espacios extra
+ */
+function normalize(text) {
+  if (!text) return "";
   
-  const res = await fetch(url);
-  const data = await res.json();
+  return text
+    .toLowerCase()
+    .normalize("NFD") // Descompone caracteres acentuados
+    .replace(/[\u0300-\u036f]/g, "") // Elimina marcas diacríticas
+    .replace(/[^a-z0-9\s]/g, "") // Elimina caracteres especiales
+    .replace(/\s+/g, " ") // Elimina espacios extra
+    .trim();
+}
 
-  return data.results?.[0] || null;
+/**
+ * Calcula similitud entre dos strings comparando palabras individuales
+ * Devuelve: 1 (exacto), 0.8 (alta similitud), 0.5 (media), 0 (baja/diferente)
+ */
+function similarity(a, b) {
+  if (!a || !b) return 0;
+  
+  const normA = normalize(a);
+  const normB = normalize(b);
+  
+  // Exacto
+  if (normA === normB) return 1;
+  
+  // Dividir en palabras
+  const wordsA = normA.split(" ").filter(w => w.length > 0);
+  const wordsB = normB.split(" ").filter(w => w.length > 0);
+  
+  // Si uno es vacío
+  if (wordsA.length === 0 || wordsB.length === 0) return 0;
+  
+  // Contar palabras comunes
+  const common = wordsA.filter(w => wordsB.includes(w));
+  const ratio = common.length / Math.max(wordsA.length, wordsB.length);
+  
+  // Escala: 1 (exacto), 0.8 (>60%), 0.5 (>40%), 0 (<40%)
+  if (ratio >= 1) return 1;
+  if (ratio > 0.6) return 0.8;
+  if (ratio > 0.4) return 0.5;
+  
+  return 0;
+}
+
+/**
+ * Encuentra la mejor coincidencia en los resultados de TMDb
+ * Sistema de puntuación:
+ * - +2 si coincide con title
+ * - +2 si coincide con original_title
+ * - +1.5 si el año coincide (solo si year es != null)
+ * - +popularidad (bonus normalizado)
+ * - -2 si es documental (genre_id 99)
+ * - -2 si contiene palabras clave sospechosas
+ */
+function findBestMatch(results, fileTitle, year) {
+  if (!results || results.length === 0) return null;
+  
+  // Palabras clave que indican contenido secundario/no-película
+  const badKeywords = ["making", "behind", "documentary", "featurette", "short film"];
+  
+  let bestMatch = null;
+  let bestScore = 0;
+  
+  for (const movie of results) {
+    let score = 0;
+    
+    // Comparar contra title
+    const titleSimilarity = similarity(fileTitle, movie.title);
+    score += titleSimilarity * 2;
+    
+    // Comparar contra original_title
+    const originalTitleSimilarity = similarity(fileTitle, movie.original_title);
+    score += originalTitleSimilarity * 2;
+    
+    // Comparar año (solo si year está definido)
+    if (year && movie.release_date && movie.release_date.startsWith(year)) {
+      score += 1.5;
+    }
+    
+    // Bonus de popularidad (normalizado: máximo +1)
+    if (movie.popularity) {
+      score += Math.min(movie.popularity / 50, 1);
+    }
+    
+    // Penalizar documentales (genre_id 99)
+    if (movie.genre_ids && movie.genre_ids.includes(99)) {
+      score -= 2;
+      console.log(`⚠️ Penalizado posible documental: "${movie.title}"`);
+    }
+    
+    // Penalizar palabras clave sospechosas en title o original_title
+    const titleLower = normalize(movie.title);
+    const originalTitleLower = normalize(movie.original_title);
+    
+    for (const keyword of badKeywords) {
+      const keywordNorm = normalize(keyword);
+      if (titleLower.includes(keywordNorm) || originalTitleLower.includes(keywordNorm)) {
+        score -= 2;
+        console.log(`⚠️ Penalizado por palabra clave: "${movie.title}" (contiene "${keyword}")`);
+        break; // Solo penalizar una vez por película
+      }
+    }
+    
+    if (score > bestScore) {
+      bestScore = score;
+      bestMatch = movie;
+    }
+  }
+  
+  // Warning si el score es bajo (pero no en búsquedas sin año)
+  if (year && bestScore < 2) {
+    console.warn(`⚠️ Posible coincidencia débil: "${fileTitle}" (score: ${bestScore.toFixed(2)})`);
+  }
+  
+  return bestMatch;
+}
+
+/**
+ * Calcula ajuste de score basado en comparación de duración
+ * @param {number|null} localRuntime - Duración en minutos del archivo local
+ * @param {number|null} tmdbRuntime - Duración en minutos de TMDb
+ * @returns {number} - Ajuste de score (-2, -1, 0, +1, +2)
+ */
+function calculateRuntimeBonus(localRuntime, tmdbRuntime) {
+  if (!localRuntime || !tmdbRuntime) return 0;
+  
+  const diff = Math.abs(localRuntime - tmdbRuntime);
+  
+  if (diff <= 5) {
+    console.log(`📊 Ajuste por duración: +2 (${localRuntime}min vs ${tmdbRuntime}min)`);
+    return 2;
+  } else if (diff <= 10) {
+    console.log(`📊 Ajuste por duración: +1 (${localRuntime}min vs ${tmdbRuntime}min)`);
+    return 1;
+  } else {
+    console.log(`📊 Penalización por duración: -2 (${localRuntime}min vs ${tmdbRuntime}min - diferencia: ${diff}min)`);
+    return -2;
+  }
+}
+
+
+/**
+ * Crea un objeto película fallback cuando no se encuentra en TMDb
+ */
+function createFallbackMovie(title, year) {
+  return {
+    title: title,
+    originalTitle: title,
+    year: year,
+    overview: "No disponible",
+    originalOverview: "",
+    poster: null,
+    genres: [],
+    tmdbId: null
+  };
+}
+
+/**
+ * Carga las coincidencias manuales desde manualMatches.json
+ */
+async function loadManualMatches() {
+  try {
+    if (await fs.pathExists(MANUAL_MATCHES_JSON)) {
+      const data = await fs.readJson(MANUAL_MATCHES_JSON);
+      return data;
+    }
+  } catch (error) {
+    console.warn(`⚠️ Error leyendo manualMatches.json:`, error.message);
+  }
+  return {};
+}
+
+/**
+ * Carga el cache de TMDb desde cache.json
+ */
+async function loadCache() {
+  try {
+    if (await fs.pathExists(CACHE_JSON)) {
+      const data = await fs.readJson(CACHE_JSON);
+      console.log(`💾 Cache cargado: ${Object.keys(data).length} películas en cache`);
+      return data;
+    }
+  } catch (error) {
+    console.warn(`⚠️ Error leyendo cache.json:`, error.message);
+  }
+  return {};
+}
+
+/**
+ * Guarda el cache en cache.json
+ */
+async function saveCache(cache) {
+  try {
+    await fs.writeJson(CACHE_JSON, cache, { spaces: 2 });
+  } catch (error) {
+    console.warn(`⚠️ Error guardando cache.json:`, error.message);
+  }
+}
+
+/**
+ * Obtiene una película del cache o busca en TMDb
+ * Clave del cache: "titulo_normalizado_2012"
+ * También cachea la duración local del archivo de video
+ */
+async function getCachedOrSearchMovie(title, year, filePath, manualMatches, cache) {
+  const cacheKey = `${normalize(title)}_${year}`;
+  
+  // Si está en cache y tiene runtime, devolverlo directamente
+  if (cache[cacheKey] && cache[cacheKey].runtime !== undefined) {
+    console.log(`✓ Desde cache: ${title}`);
+    return cache[cacheKey];
+  }
+  
+  // Obtener duración local si no está en cache
+  let localRuntime = cache[cacheKey]?.runtime;
+  if (!localRuntime && filePath) {
+    const absolutePath = path.join(MOVIES_FOLDER, filePath);
+    localRuntime = await getVideoDuration(absolutePath);
+    if (localRuntime) {
+      console.log(`⏱️ Runtime local: ${localRuntime} min`);
+    }
+  }
+  
+  // Buscar en TMDb
+  const movieData = await searchMovie(title, year, localRuntime, manualMatches);
+  
+  if (movieData) {
+    // Agregar runtime al objeto guardado en cache
+    movieData.runtime = localRuntime;
+    cache[cacheKey] = movieData;
+  }
+  
+  return movieData;
+}
+
+/**
+ * Carga las películas ya procesadas desde movies.json
+ */
+async function loadExistingMovies() {
+  try {
+    if (await fs.pathExists(OUTPUT_JSON)) {
+      const data = await fs.readJson(OUTPUT_JSON);
+      console.log(`📚 ${data.length} películas existentes cargadas`);
+      
+      // Crear mapa para búsqueda rápida: tmdbId -> película
+      const movieMap = new Map();
+      data.forEach(movie => {
+        if (movie.tmdbId) {
+          movieMap.set(movie.tmdbId, movie);
+        }
+      });
+      
+      return { movies: data, movieMap };
+    }
+  } catch (error) {
+    console.warn(`⚠️ Error leyendo movies.json:`, error.message);
+  }
+  return { movies: [], movieMap: new Map() };
+}
+
+/**
+ * Procesa un array de items de forma concurrente en lotes
+ * @param {Array} items - Items a procesar
+ * @param {Function} worker - Función async que procesa un item
+ * @param {number} concurrency - Máximo de items concurrentes
+ */
+async function processInBatches(items, worker, concurrency = CONCURRENCY) {
+  const results = [];
+  const executing = [];
+  
+  for (const [index, item] of items.entries()) {
+    const promise = Promise.resolve().then(() => worker(item, index));
+    results.push(promise);
+    
+    if (concurrency <= items.length) {
+      executing.push(
+        promise.then(() => executing.splice(executing.indexOf(promise), 1))
+      );
+      
+      if (executing.length >= concurrency) {
+        await Promise.race(executing);
+      }
+    }
+  }
+  
+  return Promise.all(results);
+}
+
+/**
+ * Busca una película en TMDb usando búsqueda mejorada con validación de runtime
+ * Verifica primero overrides manuales, luego busca con scoring robusto
+ * Para los TOP 3 candidatos, obtiene runtime de TMDb y valida contra duración local
+ * 
+ * @param {string} title - Título de la película
+ * @param {number} year - Año de lanzamiento
+ * @param {number|null} localRuntime - Duración en minutos del archivo local
+ * @param {Object} manualMatches - Coincidencias manuales
+ * @returns {Promise<Object|null>}
+ */
+async function searchMovie(title, year, localRuntime, manualMatches) {
+  // Verificar si existe coincidencia manual
+  const normalizedTitle = normalize(title);
+  if (manualMatches[normalizedTitle]) {
+    const manualId = manualMatches[normalizedTitle];
+    console.log(`📌 Manual: ${manualId}`);
+    try {
+      const url = `https://api.themoviedb.org/3/movie/${manualId}?api_key=${API_KEY}`;
+      const res = await fetch(url);
+      const data = await res.json();
+      return data || null;
+    } catch (error) {
+      console.warn(`⚠️ Error obteniendo película manual ${manualId}:`, error.message);
+    }
+  }
+  
+  // Búsqueda en TMDb CON año (primer intento)
+  let url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(title)}&primary_release_year=${year}&language=es-MX`;
+  
+  try {
+    let res = await fetch(url);
+    let data = await res.json();
+    let results = data.results || [];
+    
+    // Si encontró resultados con año, usar esos
+    if (results.length > 0) {
+      const bestMatch = await findBestMatchWithRuntime(results, title, year, localRuntime);
+      if (bestMatch) return bestMatch;
+    }
+    
+    // Fallback: buscar SIN año
+    console.log(`↩️ Reintentando sin año: ${title}`);
+    url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(title)}&language=es-MX`;
+    
+    res = await fetch(url);
+    data = await res.json();
+    results = data.results || [];
+    
+    if (results.length > 0) {
+      // Sin año, no aplicar bonus por año en la puntuación
+      const bestMatch = await findBestMatchWithRuntime(results, title, null, localRuntime);
+      if (bestMatch) {
+        console.log(`✓ Encontrada sin año: ${title}`);
+        return bestMatch;
+      }
+    }
+    
+    // No encontrado ni con ni sin año
+    console.warn(`❌ No encontrada en TMDb: "${title}" (${year})`);
+    return null;
+    
+  } catch (error) {
+    console.error(`❌ Error en búsqueda TMDb:`, error.message);
+    return null;
+  }
+}
+
+/**
+ * Encuentra mejor coincidencia considerando runtime
+ * Para los TOP 3 candidatos, obtiene runtime de TMDb y valida
+ * 
+ * @param {Array} results - Resultados de búsqueda de TMDb
+ * @param {string} fileTitle - Título del archivo
+ * @param {number|null} year - Año esperado
+ * @param {number|null} localRuntime - Runtime local en minutos
+ * @returns {Promise<Object|null>}
+ */
+async function findBestMatchWithRuntime(results, fileTitle, year, localRuntime) {
+  if (!results || results.length === 0) return null;
+  
+  // Calcular scores iniciales para todos los resultados
+  const scoredResults = results.map(movie => {
+    let score = 0;
+    
+    // Comparar contra title
+    const titleSimilarity = similarity(fileTitle, movie.title);
+    score += titleSimilarity * 2;
+    
+    // Comparar contra original_title
+    const originalTitleSimilarity = similarity(fileTitle, movie.original_title);
+    score += originalTitleSimilarity * 2;
+    
+    // Comparar año (solo si year está definido)
+    if (year && movie.release_date && movie.release_date.startsWith(year)) {
+      score += 1.5;
+    }
+    
+    // Bonus de popularidad (normalizado: máximo +1)
+    if (movie.popularity) {
+      score += Math.min(movie.popularity / 50, 1);
+    }
+    
+    // Penalizar documentales (genre_id 99)
+    if (movie.genre_ids && movie.genre_ids.includes(99)) {
+      score -= 2;
+      console.log(`⚠️ Penalizado posible documental: "${movie.title}"`);
+    }
+    
+    // Penalizar palabras clave sospechosas en title o original_title
+    const badKeywords = ["making", "behind", "documentary", "featurette", "short film"];
+    const titleLower = normalize(movie.title);
+    const originalTitleLower = normalize(movie.original_title);
+    
+    for (const keyword of badKeywords) {
+      const keywordNorm = normalize(keyword);
+      if (titleLower.includes(keywordNorm) || originalTitleLower.includes(keywordNorm)) {
+        score -= 2;
+        console.log(`⚠️ Penalizado por palabra clave: "${movie.title}" (contiene "${keyword}")`);
+        break;
+      }
+    }
+    
+    return { movie, score };
+  });
+  
+  // Ordenar por score descendente
+  scoredResults.sort((a, b) => b.score - a.score);
+  
+  // Obtener TOP 3 candidatos para validar runtime
+  const topCandidates = scoredResults.slice(0, 3);
+  
+  // Para cada candidato, obtener runtime de TMDb y comparar
+  for (const candidate of topCandidates) {
+    try {
+      const detailedMovie = await getMovieDetails(candidate.movie.id);
+      
+      if (detailedMovie) {
+        const tmdbRuntime = detailedMovie.runtime;
+        
+        if (tmdbRuntime) {
+          console.log(`🎬 TMDb runtime: ${tmdbRuntime} min`);
+        }
+        
+        // Ajustar score según runtime si se tiene información local
+        if (localRuntime && tmdbRuntime) {
+          const runtimeBonus = calculateRuntimeBonus(localRuntime, tmdbRuntime);
+          candidate.score += runtimeBonus;
+        }
+        
+        // Guardar el runtime en el objeto para posterior uso
+        candidate.movie.runtime = tmdbRuntime;
+      }
+      
+      // Pequeña pausa para respetar rate limit de TMDb
+      await new Promise(r => setTimeout(r, 100));
+    } catch (error) {
+      console.warn(`⚠️ Error obteniendo runtime para ${candidate.movie.title}:`, error.message);
+    }
+  }
+  
+  // Reordenar por score final y devolver el mejor
+  topCandidates.sort((a, b) => b.score - a.score);
+  const bestMatch = topCandidates[0];
+  
+  // Warning si el score es bajo (pero no en búsquedas sin año)
+  if (year && bestMatch.score < 2) {
+    console.warn(`⚠️ Posible coincidencia débil: "${fileTitle}" (score: ${bestMatch.score.toFixed(2)})`);
+  }
+  
+  return bestMatch.movie;
 }
 
 // Fetch detailed movie data with Spanish localization
@@ -103,60 +600,129 @@ async function initializePostersFolder() {
 }
 
 async function main() {
+  console.time("Total");
+  
   await initializePostersFolder();
 
+  // Cargar datos previos
+  console.log("📂 Inicializando...");
+  const manualMatches = await loadManualMatches();
+  const cache = await loadCache();
+  const { movies: existingMovies, movieMap: existingMovieMap } = await loadExistingMovies();
+
   const files = await fs.readdir(MOVIES_FOLDER);
+  const videoFiles = files.filter(f => f.endsWith(".mp4") || f.endsWith(".mkv"));
 
-  const movies = [];
+  console.log(`📹 ${videoFiles.length} archivos de video encontrados\n`);
 
-  for (const file of files) {
-    if (!file.endsWith(".mp4") && !file.endsWith(".mkv")) continue;
+  // Separar películas nuevas de las existentes
+  const moviesToProcess = [];
+  const processedIds = new Set();
 
+  for (const file of videoFiles) {
     const parsed = parseFileName(file);
     if (!parsed) {
       console.log(`❌ No se pudo parsear: ${file}`);
       continue;
     }
 
-    console.log(`🔎 Buscando: ${parsed.title} (${parsed.year})`);
+    // Si ya existe en movies.json, agregarlo directamente
+    const cacheKey = `${normalize(parsed.title)}_${parsed.year}`;
+    const foundInExisting = existingMovies.find(
+      m => `${normalize(m.title)}_${m.year}` === cacheKey
+    );
 
-    const movieData = await searchMovie(parsed.title, parsed.year);
-
-    if (!movieData) {
-      console.log(`⚠️ No encontrada: ${parsed.title}`);
-      continue;
+    if (foundInExisting && !processedIds.has(foundInExisting.tmdbId)) {
+      moviesToProcess.push({
+        type: "existing",
+        file,
+        parsed,
+        movie: foundInExisting
+      });
+      processedIds.add(foundInExisting.tmdbId);
+    } else {
+      moviesToProcess.push({
+        type: "new",
+        file,
+        parsed
+      });
     }
-
-    // Increase delay to respect API rate limits
-    await new Promise(r => setTimeout(r, 350));
-
-    // Fetch Spanish localized data
-    const movieES = await getMovieDetails(movieData.id);
-
-    // Descarga el poster si existe
-    let posterPath = null;
-    if (movieData.poster_path) {
-      posterPath = await downloadPoster(movieData.poster_path, movieData.id);
-    }
-
-    movies.push({
-      title: movieES?.title ?? movieData.title,
-      originalTitle: movieData.original_title,
-      year: movieData.release_date?.split("-")[0],
-      overview: movieES?.overview ?? movieData.overview,
-      originalOverview: movieData.overview,
-      poster: posterPath,
-      genres: transformGenres(movieES?.genres),
-      tmdbId: movieData.id
-    });
-
-    // Increase delay between API calls to avoid rate limiting
-    await new Promise(r => setTimeout(r, 350));
   }
 
-  await fs.writeJson(OUTPUT_JSON, movies, { spaces: 2 });
+  // Procesar películas nuevas en lotes con concurrencia controlada
+  const newMovies = moviesToProcess.filter(m => m.type === "new").map(m => ({
+    file: m.file,
+    parsed: m.parsed
+  }));
 
-  console.log(`✅ JSON generado con ${movies.length} películas`);
+  const processedNewMovies = await processInBatches(
+    newMovies,
+    async (movieData) => {
+      const { file, parsed } = movieData;
+      console.log(`🔎 ${parsed.title} (${parsed.year})`);
+
+      console.time(`  ${parsed.title}`);
+
+      const movieInfo = await getCachedOrSearchMovie(
+        parsed.title,
+        parsed.year,
+        file,
+        manualMatches,
+        cache
+      );
+
+      // Si NO hay información en TMDb, crear fallback
+      if (!movieInfo) {
+        console.warn(`📝 Usando fallback para: "${parsed.title}"`);
+        const fallbackMovie = createFallbackMovie(parsed.title, parsed.year);
+        console.timeEnd(`  ${parsed.title}`);
+        return fallbackMovie;
+      }
+
+      // Fetch Spanish localized data
+      const movieES = await getMovieDetails(movieInfo.id);
+      await new Promise(r => setTimeout(r, 100)); // Delay reducido
+
+      // Descarga el poster si existe
+      let posterPath = null;
+      if (movieInfo.poster_path) {
+        posterPath = await downloadPoster(movieInfo.poster_path, movieInfo.id);
+      }
+
+      const movieRecord = {
+        title: movieES?.title ?? movieInfo.title,
+        originalTitle: movieInfo.original_title,
+        year: movieInfo.release_date?.split("-")[0],
+        overview: movieES?.overview ?? movieInfo.overview,
+        originalOverview: movieInfo.overview,
+        poster: posterPath,
+        genres: transformGenres(movieES?.genres),
+        tmdbId: movieInfo.id,
+        runtime: movieInfo.runtime || null
+      };
+
+      console.timeEnd(`  ${parsed.title}`);
+      return movieRecord;
+    },
+    CONCURRENCY
+  );
+
+  // Combinar películas existentes con nuevas
+  const existingOnly = moviesToProcess.filter(m => m.type === "existing").map(m => m.movie);
+  const newOnly = processedNewMovies.filter(m => m !== null && m !== undefined);
+  const finalMovies = [
+    ...existingOnly,
+    ...newOnly
+  ];
+
+  // Guardar resultados
+  await fs.writeJson(OUTPUT_JSON, finalMovies, { spaces: 2 });
+  await saveCache(cache);
+
+  console.log(`\n✅ JSON generado con ${finalMovies.length} películas`);
+  const fallbackCount = newOnly.filter(m => m.tmdbId === null).length;
+  console.log(`   (${existingOnly.length} existentes + ${newOnly.length} nuevas${fallbackCount > 0 ? ` | ${fallbackCount} con fallback` : ""})`);
+  console.timeEnd("Total");
 }
 
 main();

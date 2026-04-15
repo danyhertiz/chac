@@ -1,0 +1,5 @@
+{
+  "_comentario": "Archivo para overrides manuales. Normaliza el título (minúsculas, sin acentos) y agrega el ID de TMDb",
+  "abraham lincoln cazador de vampiros": 417320,
+  "example movie title": 12345
+}
