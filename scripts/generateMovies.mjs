@@ -922,21 +922,41 @@ async function main() {
       continue;
     }
 
-    // Si ya existe en movies.json, agregarlo directamente
-    const cacheKey = `${normalize(parsed.title)}_${parsed.year}`;
+    const normalizedTitle = normalize(parsed.title);
+    const cacheKey = `${normalizedTitle}_${parsed.year}`;
+
+    // Verificar si existe override manual
+    const hasManualOverride = manualMatches[normalizedTitle];
+
+    // Buscar en películas existentes
     const foundInExisting = existingMovies.find(
       m => `${normalize(m.title)}_${m.year}` === cacheKey
     );
 
-    if (foundInExisting && !processedIds.has(foundInExisting.tmdbId)) {
+    // 🔥 PRIORIDAD: si hay override manual, SIEMPRE reprocesar
+    if (hasManualOverride) {
+      console.log(`🔄 Reprocesando por override manual: ${parsed.title}`);
+      
+      moviesToProcess.push({
+        type: "new",
+        file,
+        parsed
+      });
+      
+    } else if (foundInExisting && !processedIds.has(foundInExisting.tmdbId)) {
+      
+      console.log(`📦 Usando existente: ${parsed.title}`);
       moviesToProcess.push({
         type: "existing",
         file,
         parsed,
         movie: foundInExisting
       });
+      
       processedIds.add(foundInExisting.tmdbId);
+
     } else {
+      
       moviesToProcess.push({
         type: "new",
         file,
