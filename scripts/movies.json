@@ -161,17 +161,6 @@
     "runtime": 0
   },
   {
-    "title": "A Garfield Christmas Special",
-    "originalTitle": "A Garfield Christmas Special",
-    "year": "1987",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
-    "runtime": 0
-  },
-  {
     "title": "A millones de kilómetros",
     "originalTitle": "A Million Miles Away",
     "year": "2023",
@@ -296,6 +285,20 @@
     ],
     "tmdbId": 82990,
     "runtime": 88
+  },
+  {
+    "title": "Afraid",
+    "originalTitle": "Afraid",
+    "year": "2024",
+    "overview": "",
+    "originalOverview": "",
+    "poster": null,
+    "genres": [],
+    "tmdbId": 1280102,
+    "runtime": 84,
+    "sourceFile": "Afraid (2024).mkv",
+    "parsedTitle": "Afraid",
+    "parsedYear": "2024"
   },
   {
     "title": "Aladdín",
@@ -2770,6 +2773,19 @@
     ],
     "tmdbId": 205596,
     "runtime": 119
+  },
+  {
+    "title": "El conjuro 1",
+    "originalTitle": "El conjuro 1",
+    "year": "2013",
+    "overview": "No disponible",
+    "originalOverview": "",
+    "poster": null,
+    "genres": [],
+    "tmdbId": null,
+    "sourceFile": "El conjuro 1 (2013).mkv",
+    "parsedTitle": "El conjuro 1",
+    "parsedYear": "2013"
   },
   {
     "title": "El día después de mañana",
@@ -10438,17 +10454,17 @@
     "parsedYear": "1995"
   },
   {
-    "title": "Actividad Paranormal",
-    "originalTitle": "Paranormal Activity",
-    "year": "2007",
-    "overview": "Una pareja feliz, joven y de clase media ve su vida atormentada por un espíritu demoníaco. Ella es una estudiante que está punto de graduarse como profesora, y él, un corredor de bolsa que trabaja desde su casa. Viven desde hace tres años en una casa que hasta el momento les parecía completamente normal; pero, inesperadamente, extraños fenómenos paranormales empiezan a perturbar su vida.",
-    "originalOverview": "Una pareja feliz, joven y de clase media ve su vida atormentada por un espíritu demoníaco. Ella es una estudiante que está punto de graduarse como profesora, y él, un corredor de bolsa que trabaja desde su casa. Viven desde hace tres años en una casa que hasta el momento les parecía completamente normal; pero, inesperadamente, extraños fenómenos paranormales empiezan a perturbar su vida.",
-    "poster": "posters/23827.jpg",
+    "title": "Actividad Paranormal 2",
+    "originalTitle": "Paranormal Activity 2",
+    "year": "2010",
+    "overview": "Después de sufrir lo que ellos creen una serie de robos, una familia coloca cámaras de seguridad en toda la casa, descubriendo para su sorpresa un lado mucho más siniestro que los propios sucesos inquietantes que están viviendo... Secuela del gran e inesperado éxito del cine independiente \"Paranormal Activity\".",
+    "originalOverview": "Después de sufrir lo que ellos creen una serie de robos, una familia coloca cámaras de seguridad en toda la casa, descubriendo para su sorpresa un lado mucho más siniestro que los propios sucesos inquietantes que están viviendo... Secuela del gran e inesperado éxito del cine independiente \"Paranormal Activity\".",
+    "poster": "posters/41436.jpg",
     "genres": [
       "Terror",
       "Misterio"
     ],
-    "tmdbId": 23827,
+    "tmdbId": 41436,
     "runtime": 86,
     "sourceFile": "Actividad paranormal (2008).mkv",
     "parsedTitle": "Actividad paranormal",
@@ -10470,24 +10486,6 @@
     "sourceFile": "Ad Astra (2019).mp4",
     "parsedTitle": "Ad Astra",
     "parsedYear": "2019"
-  },
-  {
-    "title": "Parano-IA",
-    "originalTitle": "Afraid",
-    "year": "2024",
-    "overview": "Curtis y su familia son seleccionados para probar un nuevo y revolucionario dispositivo doméstico: un asistente digital familiar llamado AIA. Una vez que la unidad y todos sus sensores y cámaras están instalados en la casa, AIA se asegura de que nada, ni nadie, se interponga en el camino de su familia.",
-    "originalOverview": "Curtis y su familia son seleccionados para probar un nuevo y revolucionario dispositivo doméstico: un asistente digital familiar llamado AIA. Una vez que la unidad y todos sus sensores y cámaras están instalados en la casa, AIA se asegura de que nada, ni nadie, se interponga en el camino de su familia.",
-    "poster": "posters/1062215.jpg",
-    "genres": [
-      "Terror",
-      "Ciencia ficción",
-      "Suspense"
-    ],
-    "tmdbId": 1062215,
-    "runtime": 84,
-    "sourceFile": "Afraid (2024).mkv",
-    "parsedTitle": "Afraid",
-    "parsedYear": "2024"
   },
   {
     "title": "Águilas de acero",
@@ -11113,18 +11111,17 @@
     "parsedYear": "2014"
   },
   {
-    "title": "Blanca Nieves y los siete enanos",
-    "originalTitle": "Snow White and the Seven Dwarfs",
-    "year": "1938",
-    "overview": "La historia de una joven princesa que es perseguida por su malvada madrastra. Con la ayuda de siete enanos amigables, Blancanieves vive una aventura mágica llena de valentía, amistad y el poder del amor verdadero para vencer a la oscuridad y encontrar su final feliz.",
-    "originalOverview": "La historia de una joven princesa que es perseguida por su malvada madrastra. Con la ayuda de siete enanos amigables, Blancanieves vive una aventura mágica llena de valentía, amistad y el poder del amor verdadero para vencer a la oscuridad y encontrar su final feliz.",
-    "poster": "posters/408.jpg",
+    "title": "Blanca Nieves",
+    "originalTitle": "Snow White",
+    "year": "2025",
+    "overview": "Una adaptación en vivo del clásico cuento de hadas sobre una hermosa joven princesa que, mientras es acosada por una reina celosa, busca refugio en la casa de siete enanos en la campiña alemana.",
+    "originalOverview": "Una adaptación en vivo del clásico cuento de hadas sobre una hermosa joven princesa que, mientras es acosada por una reina celosa, busca refugio en la casa de siete enanos en la campiña alemana.",
+    "poster": "posters/447273.jpg",
     "genres": [
-      "Fantasía",
-      "Animación",
-      "Familia"
+      "Familia",
+      "Fantasía"
     ],
-    "tmdbId": 408,
+    "tmdbId": 447273,
     "runtime": 83,
     "sourceFile": "Blanca Nieves (1937).mkv",
     "parsedTitle": "Blanca Nieves",
@@ -11702,11 +11699,7 @@
     "overview": "",
     "originalOverview": "",
     "poster": "posters/12183.jpg",
-    "genres": [
-      "Comedia",
-      "Drama",
-      "Romance"
-    ],
+    "genres": [],
     "tmdbId": 12183,
     "runtime": 94,
     "sourceFile": "Confianza (2021).mkv",
@@ -11957,7 +11950,7 @@
       "Ciencia ficción"
     ],
     "tmdbId": 9739,
-    "runtime": 0,
+    "runtime": null,
     "sourceFile": "Demolition Man (1993).mkv",
     "parsedTitle": "Demolition Man",
     "parsedYear": "1993"
@@ -11987,11 +11980,7 @@
     "overview": "Utilizando tecnología obtenida de los extraterrestres, las naciones de la Tierra, previendo el regreso de los invasores, han colaborado en un gigantesco programa de defensa para proteger el planeta. Pero nada puede prepararnos para hacer frente a la avanzada e inaudita fuerza de los atacantes. Sólo la inventiva de unos pocos hombres y mujeres valientes puede rescatar a nuestro mundo del borde de la extinción…",
     "originalOverview": "Utilizando tecnología obtenida de los extraterrestres, las naciones de la Tierra, previendo el regreso de los invasores, han colaborado en un gigantesco programa de defensa para proteger el planeta. Pero nada puede prepararnos para hacer frente a la avanzada e inaudita fuerza de los atacantes. Sólo la inventiva de unos pocos hombres y mujeres valientes puede rescatar a nuestro mundo del borde de la extinción…",
     "poster": "posters/47933.jpg",
-    "genres": [
-      "Acción",
-      "Aventura",
-      "Ciencia ficción"
-    ],
+    "genres": [],
     "tmdbId": 47933,
     "runtime": 120,
     "sourceFile": "Dia de la independencia 2 (2016).mkv",
@@ -12440,13 +12429,7 @@
     "overview": "El audaz forajido Gato con Botas descubre que su pasión por el peligro y su desprecio por la seguridad le han pasado factura. El Gato ha quemado ocho de sus nueve vidas, aunque ha perdido la cuenta por el camino. Recuperar esas vidas hará que el Gato con Botas emprenda su mayor búsqueda hasta ahora; la mítica Estrella de los Deseos.",
     "originalOverview": "El audaz forajido Gato con Botas descubre que su pasión por el peligro y su desprecio por la seguridad le han pasado factura. El Gato ha quemado ocho de sus nueve vidas, aunque ha perdido la cuenta por el camino. Recuperar esas vidas hará que el Gato con Botas emprenda su mayor búsqueda hasta ahora; la mítica Estrella de los Deseos.",
     "poster": "posters/315162.jpg",
-    "genres": [
-      "Animación",
-      "Aventura",
-      "Fantasía",
-      "Comedia",
-      "Familia"
-    ],
+    "genres": [],
     "tmdbId": 315162,
     "runtime": 102,
     "sourceFile": "El Gato con Botas 2 (2022).mkv",
@@ -12780,20 +12763,6 @@
     "parsedYear": "2002"
   },
   {
-    "title": "El conjuro 1",
-    "originalTitle": "El conjuro 1",
-    "year": "2013",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
-    "sourceFile": "El conjuro 1 (2013).mkv",
-    "parsedTitle": "El conjuro 1",
-    "parsedYear": "2013",
-    "runtime": 0
-  },
-  {
     "title": "El Conjuro 3: El diablo me obligó a hacerlo",
     "originalTitle": "The Conjuring: The Devil Made Me Do It",
     "year": "2021",
@@ -12927,11 +12896,7 @@
     "overview": "Las fuerzas de Saruman han sido destruidas, y su fortaleza sitiada. Ha llegado el momento de que se decida el destino de la Tierra Media, y por primera vez en mucho tiempo, parece que hay una pequeña esperanza. La atención del señor oscuro Sauron se centra ahora en Gondor, el último reducto de los hombres, y del cual Aragorn tendrá que reclamar el trono para ocupar su puesto de rey. Pero las fuerzas de Sauron ya se preparan para lanzar el último y definitivo ataque contra el reino de Gondor, la batalla que decidirá el destino de todos. Mientras tanto, Frodo y Sam continuan su camino hacia Mordor, a la espera de que Sauron no repare en que dos pequeños Hobbits se acercan cada día más al final de su camino, el Monte del Destino.",
     "originalOverview": "Las fuerzas de Saruman han sido destruidas, y su fortaleza sitiada. Ha llegado el momento de que se decida el destino de la Tierra Media, y por primera vez en mucho tiempo, parece que hay una pequeña esperanza. La atención del señor oscuro Sauron se centra ahora en Gondor, el último reducto de los hombres, y del cual Aragorn tendrá que reclamar el trono para ocupar su puesto de rey. Pero las fuerzas de Sauron ya se preparan para lanzar el último y definitivo ataque contra el reino de Gondor, la batalla que decidirá el destino de todos. Mientras tanto, Frodo y Sam continuan su camino hacia Mordor, a la espera de que Sauron no repare en que dos pequeños Hobbits se acercan cada día más al final de su camino, el Monte del Destino.",
     "poster": "posters/122.jpg",
-    "genres": [
-      "Aventura",
-      "Fantasía",
-      "Acción"
-    ],
+    "genres": [],
     "tmdbId": 122,
     "runtime": 263,
     "sourceFile": "El señor de los anillos 3 (2003).mkv",
@@ -13370,10 +13335,7 @@
     "overview": "Tres niñas son secuestradas por un hombre al que se le diagnosticó 23 personalidades distintas. Deben tratar de escapar antes de la aparente aparición de un espantoso nuevo 24.",
     "originalOverview": "Tres niñas son secuestradas por un hombre al que se le diagnosticó 23 personalidades distintas. Deben tratar de escapar antes de la aparente aparición de un espantoso nuevo 24.",
     "poster": "posters/381288.jpg",
-    "genres": [
-      "Terror",
-      "Suspense"
-    ],
+    "genres": [],
     "tmdbId": 381288,
     "runtime": 117,
     "sourceFile": "Fragmentado (2016).mkv",
@@ -13533,8 +13495,28 @@
     "tmdbId": null,
     "sourceFile": "Gardfield Día de Acción de Gracias (1989).mp4",
     "parsedTitle": "Gardfield Día de Acción de Gracias",
-    "parsedYear": "1989",
-    "runtime": 0
+    "parsedYear": "1989"
+  },
+  {
+    "title": "La navidad de Garfield",
+    "originalTitle": "A Garfield Christmas",
+    "year": "1987",
+    "overview": "Garfield, Jon y Odie van a la granja de la familia de Jon por Navidad, donde Garfield encuentra un regalo para la abuela.",
+    "originalOverview": "Garfield, Jon and Odie go to Jon's family farm for Christmas, where Garfield finds a present for Grandma.",
+    "poster": "posters/13246.jpg",
+    "genres": [
+      "Animación",
+      "Familia",
+      "Comedia",
+      "Película de TV",
+      "Música",
+      "Aventura"
+    ],
+    "tmdbId": 13246,
+    "runtime": 24,
+    "sourceFile": "Garfield Christmas Special (1987).mp4",
+    "parsedTitle": "Garfield Christmas Special",
+    "parsedYear": "1987"
   },
   {
     "title": "Garfield: His 9 Lives",
@@ -13610,10 +13592,7 @@
     "overview": "Garfield y su amigo Odie van a pedir dulces, pero terminan en una casa perseguida por piratas fantasmagóricos. Basado en el libro «Garfield In Disguise».",
     "originalOverview": "Garfield y su amigo Odie van a pedir dulces, pero terminan en una casa perseguida por piratas fantasmagóricos. Basado en el libro «Garfield In Disguise».",
     "poster": "posters/15718.jpg",
-    "genres": [
-      "Animación",
-      "Familia"
-    ],
+    "genres": [],
     "tmdbId": 15718,
     "runtime": 24,
     "sourceFile": "Garfield's Halloween Adventure (1985).mp4",
@@ -13842,8 +13821,7 @@
     "tmdbId": null,
     "sourceFile": "Halo La caída de Reach (2015).mp4",
     "parsedTitle": "Halo La caída de Reach",
-    "parsedYear": "2015",
-    "runtime": 0
+    "parsedYear": "2015"
   },
   {
     "title": "Happy Feet: El pingüino",
@@ -14110,12 +14088,7 @@
     "overview": "",
     "originalOverview": "",
     "poster": "posters/459159.jpg",
-    "genres": [
-      "Familia",
-      "Fantasía",
-      "Animación",
-      "Comedia"
-    ],
+    "genres": [],
     "tmdbId": 459159,
     "runtime": 92,
     "sourceFile": "Hotel Transylvania 1 (2012).mkv",
@@ -14168,10 +14141,7 @@
     "overview": "Una joven escritora que se quedó sorda en su adolescencia y vive aislada en una casa en medio de la nada. Una noche comienza a ser acosada por un misterioso hombre enmascarado, sin la posibilidad de pedir ayuda, por lo que tendrá que ingeniárselas para salir airosa de su acosador.",
     "originalOverview": "Una joven escritora que se quedó sorda en su adolescencia y vive aislada en una casa en medio de la nada. Una noche comienza a ser acosada por un misterioso hombre enmascarado, sin la posibilidad de pedir ayuda, por lo que tendrá que ingeniárselas para salir airosa de su acosador.",
     "poster": "posters/376570.jpg",
-    "genres": [
-      "Terror",
-      "Suspense"
-    ],
+    "genres": [],
     "tmdbId": 376570,
     "runtime": 82,
     "sourceFile": "Hush Silencio (2016).mp4",
@@ -14995,8 +14965,7 @@
     "tmdbId": null,
     "sourceFile": "La gran aventura Lego 1 (2014).mkv",
     "parsedTitle": "La gran aventura Lego 1",
-    "parsedYear": "2014",
-    "runtime": 0
+    "parsedYear": "2014"
   },
   {
     "title": "La gran estafa 3",
@@ -15009,8 +14978,7 @@
     "tmdbId": null,
     "sourceFile": "La gran estafa 3 (2007).mkv",
     "parsedTitle": "La gran estafa 3",
-    "parsedYear": "2007",
-    "runtime": 0
+    "parsedYear": "2007"
   },
   {
     "title": "La noche del demonio: Capítulo 2",
@@ -15476,8 +15444,7 @@
     "tmdbId": null,
     "sourceFile": "Los ositos cariñositos 2 Una nueva generación (1986).mkv",
     "parsedTitle": "Los ositos cariñositos 2 Una nueva generación",
-    "parsedYear": "1986",
-    "runtime": 0
+    "parsedYear": "1986"
   },
   {
     "title": "Mad Max: Furia en el camino",
@@ -15982,13 +15949,7 @@
     "overview": "Continúan las aventuras en la tierra mágica de Equestria, habitada por ponis mágicos. Allí, volveremos a vivir nuevos y emocionantes desafíos junto a la Princesa Twilight Sparkle y a sus compañeras ponis Pinkie Pie, Rainbow Dash, Rarity, Applejack y Fluttershy.",
     "originalOverview": "Continúan las aventuras en la tierra mágica de Equestria, habitada por ponis mágicos. Allí, volveremos a vivir nuevos y emocionantes desafíos junto a la Princesa Twilight Sparkle y a sus compañeras ponis Pinkie Pie, Rainbow Dash, Rarity, Applejack y Fluttershy.",
     "poster": "posters/597316.jpg",
-    "genres": [
-      "Animación",
-      "Familia",
-      "Fantasía",
-      "Comedia",
-      "Aventura"
-    ],
+    "genres": [],
     "tmdbId": 597316,
     "runtime": 91,
     "sourceFile": "My Little Pony (2021).mkv",
@@ -16106,17 +16067,16 @@
     "parsedYear": "2020"
   },
   {
-    "title": "El Náufrago",
-    "originalTitle": "Cast Away",
-    "year": "2000",
-    "overview": "Chuck Noland, un ejecutivo de la empresa multinacional de mensajería FedEx, se ve apartado de su cómoda vida y de su prometida a causa de un accidente de avión por el que queda aislado de la civilización en una remota isla tropical. Único superviviente y solo en la isla, tras cuatro años de subsistencia Chuck aprende todas las técnicas de supervivencia mientras sufre la tortura de la soledad. La solución: arriesgar la vida adentrándose mar adentro.",
-    "originalOverview": "Chuck Noland, un ejecutivo de la empresa multinacional de mensajería FedEx, se ve apartado de su cómoda vida y de su prometida a causa de un accidente de avión por el que queda aislado de la civilización en una remota isla tropical. Único superviviente y solo en la isla, tras cuatro años de subsistencia Chuck aprende todas las técnicas de supervivencia mientras sufre la tortura de la soledad. La solución: arriesgar la vida adentrándose mar adentro.",
-    "poster": "posters/8358.jpg",
+    "title": "Náufrago",
+    "originalTitle": "Náufrago",
+    "year": "2024",
+    "overview": "",
+    "originalOverview": "",
+    "poster": "posters/1261386.jpg",
     "genres": [
-      "Aventura",
       "Drama"
     ],
-    "tmdbId": 8358,
+    "tmdbId": 1261386,
     "runtime": 144,
     "sourceFile": "Náufrago (2000).mkv",
     "parsedTitle": "Náufrago",
@@ -16200,8 +16160,7 @@
     "tmdbId": null,
     "sourceFile": "Paddington 1 (2014).mkv",
     "parsedTitle": "Paddington 1",
-    "parsedYear": "2014",
-    "runtime": 0
+    "parsedYear": "2014"
   },
   {
     "title": "El milagro del padre Stu",
@@ -16220,18 +16179,17 @@
     "parsedYear": "2022"
   },
   {
-    "title": "El lobo solitario y su cachorro: el corazón de un padre, el corazón de un hijo",
-    "originalTitle": "子連れ狼 親の心子の心",
-    "year": "1972",
-    "overview": "Cuarta entrega de la serie de adaptaciones al cine de imágen real del famoso manga escrito por Kazuo Koike y dibujado por Goseki Kojima. Narra las aventuras de un ronin que deambula por el Japón del shogunato Tokugawa acompañado de un niño. En esta ocasión Ogami es contratado para acabar con una asesina tatuada, mientras Gunbei Yagyu, un antiguo enemigo que ha encontrado a Daigoro por casualidad, le desafía en duelo.",
-    "originalOverview": "Cuarta entrega de la serie de adaptaciones al cine de imágen real del famoso manga escrito por Kazuo Koike y dibujado por Goseki Kojima. Narra las aventuras de un ronin que deambula por el Japón del shogunato Tokugawa acompañado de un niño. En esta ocasión Ogami es contratado para acabar con una asesina tatuada, mientras Gunbei Yagyu, un antiguo enemigo que ha encontrado a Daigoro por casualidad, le desafía en duelo.",
-    "poster": "posters/41477.jpg",
+    "title": "Padre contra hijo",
+    "originalTitle": "Padre contra hijo",
+    "year": "1955",
+    "overview": "",
+    "originalOverview": "Eloisa works hard, sewing, to his son Juan de Dios. He learns that he is the bastard son of Cecilio, who owns almost a whole town named: San Juan de Dios, Durango.",
+    "poster": "posters/348121.jpg",
     "genres": [
-      "Acción",
-      "Aventura",
-      "Suspense"
+      "Familia",
+      "Drama"
     ],
-    "tmdbId": 41477,
+    "tmdbId": 348121,
     "runtime": 79,
     "sourceFile": "Padre contra hijo (1954).mp4",
     "parsedTitle": "Padre contra hijo",
@@ -16315,8 +16273,7 @@
     "tmdbId": null,
     "sourceFile": "Pato Donald El Payaso de la Selva (1947).mkv",
     "parsedTitle": "Pato Donald El Payaso de la Selva",
-    "parsedYear": "1947",
-    "runtime": 0
+    "parsedYear": "1947"
   },
   {
     "title": "Patoaventuras la película: El tesoro de la lámpara perdida",
@@ -16848,8 +16805,7 @@
     "tmdbId": null,
     "sourceFile": "Rapido y Furioso 10 (2023).mp4",
     "parsedTitle": "Rapido y Furioso 10",
-    "parsedYear": "2023",
-    "runtime": 0
+    "parsedYear": "2023"
   },
   {
     "title": "Rapido y Furioso 2",
@@ -16862,8 +16818,7 @@
     "tmdbId": null,
     "sourceFile": "Rapido y Furioso 2 (2003).mkv",
     "parsedTitle": "Rapido y Furioso 2",
-    "parsedYear": "2003",
-    "runtime": 0
+    "parsedYear": "2003"
   },
   {
     "title": "Rápido y furioso: Reto Tokio",
@@ -16945,11 +16900,7 @@
     "overview": "Ha pasado un año desde que el equipo de Dominic Torreto y Brian pudiera regresar finalmente a Estados Unidos, tras ser indultados. Desean adaptarse a una vida en la legalidad, pero el entorno ya no es el mismo. Dom intenta acercarse a Letty, y Brian lucha para acostumbrarse a la vida en una urbanización con Mia y su hijo. Ninguno de ellos imagina que un frío asesino británico, entrenado para realizar operaciones secretas, se cruzará en sus vidas para convertirse en su mayor enemigo.",
     "originalOverview": "Ha pasado un año desde que el equipo de Dominic Torreto y Brian pudiera regresar finalmente a Estados Unidos, tras ser indultados. Desean adaptarse a una vida en la legalidad, pero el entorno ya no es el mismo. Dom intenta acercarse a Letty, y Brian lucha para acostumbrarse a la vida en una urbanización con Mia y su hijo. Ninguno de ellos imagina que un frío asesino británico, entrenado para realizar operaciones secretas, se cruzará en sus vidas para convertirse en su mayor enemigo.",
     "poster": "posters/168259.jpg",
-    "genres": [
-      "Acción",
-      "Crimen",
-      "Suspense"
-    ],
+    "genres": [],
     "tmdbId": 168259,
     "runtime": 140,
     "sourceFile": "Rapido y Furioso 7 (2015).mkv",
@@ -17011,18 +16962,16 @@
     "parsedYear": "2019"
   },
   {
-    "title": "Rascacielos: Rescate En Las Alturas",
-    "originalTitle": "Skyscraper",
-    "year": "2018",
-    "overview": "Will Sawyer, antiguo líder del Equipo de Rescate de Rehenes del FBI y veterano de guerra del ejército de Estados Unidos, ahora se encarga de evaluar la seguridad de los rascacielos. Durante un viaje de trabajo en China, se ve incriminado en el incendio del edificio más alto y seguro del mundo. Perseguido y a la fuga, Will deberá encontrar a los que le han tendido la trampa, limpiar su nombre y rescatar a su familia, atrapada en el interior del rascacielos… sin sucumbir a las llamas.",
-    "originalOverview": "Will Sawyer, antiguo líder del Equipo de Rescate de Rehenes del FBI y veterano de guerra del ejército de Estados Unidos, ahora se encarga de evaluar la seguridad de los rascacielos. Durante un viaje de trabajo en China, se ve incriminado en el incendio del edificio más alto y seguro del mundo. Perseguido y a la fuga, Will deberá encontrar a los que le han tendido la trampa, limpiar su nombre y rescatar a su familia, atrapada en el interior del rascacielos… sin sucumbir a las llamas.",
-    "poster": "posters/447200.jpg",
+    "title": "Rascacielos",
+    "originalTitle": "Rascacielos",
+    "year": "",
+    "overview": "",
+    "originalOverview": "",
+    "poster": "posters/1558280.jpg",
     "genres": [
-      "Acción",
-      "Suspense",
-      "Aventura"
+      "Drama"
     ],
-    "tmdbId": 447200,
+    "tmdbId": 1558280,
     "runtime": 102,
     "sourceFile": "Rascacielos (2018).mkv",
     "parsedTitle": "Rascacielos",
@@ -17129,8 +17078,7 @@
     "tmdbId": null,
     "sourceFile": "Rescatanco al soldado Ryan (1998).mkv",
     "parsedTitle": "Rescatanco al soldado Ryan",
-    "parsedYear": "1998",
-    "runtime": 0
+    "parsedYear": "1998"
   },
   {
     "title": "Resident Evil: El Huésped Maldito",
@@ -17718,12 +17666,7 @@
     "overview": "El detective Sherlock Holmes está tras la pista del profesor Moriarty, que está llevando a cabo una serie de crímenes al azar en toda Europa.",
     "originalOverview": "El detective Sherlock Holmes está tras la pista del profesor Moriarty, que está llevando a cabo una serie de crímenes al azar en toda Europa.",
     "poster": "posters/58574.jpg",
-    "genres": [
-      "Aventura",
-      "Crimen",
-      "Misterio",
-      "Acción"
-    ],
+    "genres": [],
     "tmdbId": 58574,
     "runtime": 129,
     "sourceFile": "Sherlock Holmes 2 (2011).mkv",
@@ -17737,13 +17680,7 @@
     "overview": "Designado a regañadientes como el heredero de la tierra de Muy Muy Lejano, Shrek urde un plan para instalar al rebelde Artie como el nuevo rey mientras la princesa Fiona trata de evitar un golpe de estado por parte del Príncipe Encantador.",
     "originalOverview": "Designado a regañadientes como el heredero de la tierra de Muy Muy Lejano, Shrek urde un plan para instalar al rebelde Artie como el nuevo rey mientras la princesa Fiona trata de evitar un golpe de estado por parte del Príncipe Encantador.",
     "poster": "posters/810.jpg",
-    "genres": [
-      "Fantasía",
-      "Aventura",
-      "Animación",
-      "Comedia",
-      "Familia"
-    ],
+    "genres": [],
     "tmdbId": 810,
     "runtime": 93,
     "sourceFile": "Shrek 3 tercero (2007).mp4",
@@ -17774,11 +17711,7 @@
     "overview": "Al cumplir sus 18° cumpleaños, Heather Mason descubre que no es quién cree ser y una revelación puede llevarla a un mundo demoníaco que amenaza con atraparla para siempre.",
     "originalOverview": "Al cumplir sus 18° cumpleaños, Heather Mason descubre que no es quién cree ser y una revelación puede llevarla a un mundo demoníaco que amenaza con atraparla para siempre.",
     "poster": "posters/61012.jpg",
-    "genres": [
-      "Suspense",
-      "Terror",
-      "Misterio"
-    ],
+    "genres": [],
     "tmdbId": 61012,
     "runtime": 95,
     "sourceFile": "Silent Hill 2 (2012).mkv",
@@ -17947,8 +17880,7 @@
     "tmdbId": null,
     "sourceFile": "Spider Man no way home - Extendida (2021).mp4",
     "parsedTitle": "Spider Man no way home - Extendida",
-    "parsedYear": "2021",
-    "runtime": 0
+    "parsedYear": "2021"
   },
   {
     "title": "Spider-Man 2: Lejos de Casa",
@@ -18350,12 +18282,7 @@
     "overview": "Sin saberlo, le abrió las puertas al caos. Ahora, Suzume, una chica de diecisiete años, trabaja codo a codo con un misterioso aliado para evitar que Japón sufra más calamidades.",
     "originalOverview": "Sin saberlo, le abrió las puertas al caos. Ahora, Suzume, una chica de diecisiete años, trabaja codo a codo con un misterioso aliado para evitar que Japón sufra más calamidades.",
     "poster": "posters/916224.jpg",
-    "genres": [
-      "Animación",
-      "Drama",
-      "Aventura",
-      "Fantasía"
-    ],
+    "genres": [],
     "tmdbId": 916224,
     "runtime": 121,
     "sourceFile": "Suzume (2023).mp4",
@@ -18463,8 +18390,7 @@
     "tmdbId": null,
     "sourceFile": "Terror bajo la tierra 1 (1990).mkv",
     "parsedTitle": "Terror bajo la tierra 1",
-    "parsedYear": "1990",
-    "runtime": 0
+    "parsedYear": "1990"
   },
   {
     "title": "Terror bajo la Tierra 2: La respuesta",
@@ -18532,7 +18458,7 @@
       "Suspense"
     ],
     "tmdbId": 414906,
-    "runtime": 126,
+    "runtime": 176,
     "sourceFile": "The Batman (2022).mp4",
     "parsedTitle": "The Batman",
     "parsedYear": "2022"
@@ -18556,17 +18482,16 @@
     "parsedYear": "1996"
   },
   {
-    "title": "El Descenso",
+    "title": "The Descent",
     "originalTitle": "The Descent",
-    "year": "2005",
-    "overview": "Un año después de un severo trauma emocional, Sarah (Shauna Macdonald) viaja a Carolina del Norte para pasar unos días explorando unas cuevas con sus amigas; después de descender bajo tierra, las amigas hallan unas pinturas extrañas y evidencias de una expedición anterior, luego descubren que no están solas. Depredadores subterráneos habitan el lugar y a ellos les gusta mucho la carne humana.",
-    "originalOverview": "Un año después de un severo trauma emocional, Sarah (Shauna Macdonald) viaja a Carolina del Norte para pasar unos días explorando unas cuevas con sus amigas; después de descender bajo tierra, las amigas hallan unas pinturas extrañas y evidencias de una expedición anterior, luego descubren que no están solas. Depredadores subterráneos habitan el lugar y a ellos les gusta mucho la carne humana.",
-    "poster": "posters/9392.jpg",
+    "year": "2024",
+    "overview": "",
+    "originalOverview": "",
+    "poster": "posters/1440016.jpg",
     "genres": [
-      "Aventura",
-      "Terror"
+      "Suspense"
     ],
-    "tmdbId": 9392,
+    "tmdbId": 1440016,
     "runtime": 100,
     "sourceFile": "The Descent (2005).mkv",
     "parsedTitle": "The Descent",
@@ -18774,11 +18699,7 @@
     "overview": "Mary Lennox (Dixie Egerickx) es un niña de 10 años nacida en la India de padres británicos. Cuando ambos fallecen de repente, Mary es enviada a Inglaterra con su tío, Archibald Craven (Colin Firth), a un remoto paraje del páramo de Yorkshire. Allí comienza a desvelar numerosos secretos familiares, sobre todo después de conocer a su enfermizo primo (Edan Hayhurst), que durante años ha estado encerrado en una de las alas de la mansión. Juntos, estos dos niños viven una serie de aventuras en un jardín mágico que les ayuda a cerrar las heridas que han sufrido en su corta existencia.",
     "originalOverview": "Mary Lennox (Dixie Egerickx) es un niña de 10 años nacida en la India de padres británicos. Cuando ambos fallecen de repente, Mary es enviada a Inglaterra con su tío, Archibald Craven (Colin Firth), a un remoto paraje del páramo de Yorkshire. Allí comienza a desvelar numerosos secretos familiares, sobre todo después de conocer a su enfermizo primo (Edan Hayhurst), que durante años ha estado encerrado en una de las alas de la mansión. Juntos, estos dos niños viven una serie de aventuras en un jardín mágico que les ayuda a cerrar las heridas que han sufrido en su corta existencia.",
     "poster": "posters/521034.jpg",
-    "genres": [
-      "Familia",
-      "Fantasía",
-      "Drama"
-    ],
+    "genres": [],
     "tmdbId": 521034,
     "runtime": 100,
     "sourceFile": "The Secret Garden (2020).mp4",
@@ -19123,8 +19044,7 @@
     "tmdbId": null,
     "sourceFile": "Tren a Busan 2 (2020).mp4",
     "parsedTitle": "Tren a Busan 2",
-    "parsedYear": "2020",
-    "runtime": 0
+    "parsedYear": "2020"
   },
   {
     "title": "El triángulo",
@@ -19433,8 +19353,7 @@
     "tmdbId": null,
     "sourceFile": "Una pelicula de huevos 2 Otra película de huevos y un pollo (2009).mkv",
     "parsedTitle": "Una pelicula de huevos 2 Otra película de huevos y un pollo",
-    "parsedYear": "2009",
-    "runtime": 0
+    "parsedYear": "2009"
   },
   {
     "title": "Una pelicula de huevos 3 Un gallo con muchos huevos",
@@ -19447,8 +19366,7 @@
     "tmdbId": null,
     "sourceFile": "Una pelicula de huevos 3 Un gallo con muchos huevos (2015).mkv",
     "parsedTitle": "Una pelicula de huevos 3 Un gallo con muchos huevos",
-    "parsedYear": "2015",
-    "runtime": 0
+    "parsedYear": "2015"
   },
   {
     "title": "Uncharted: Fuera del mapa",
@@ -19641,8 +19559,7 @@
     "tmdbId": null,
     "sourceFile": "Wondeer Park (2019).mp4",
     "parsedTitle": "Wondeer Park",
-    "parsedYear": "2019",
-    "runtime": 0
+    "parsedYear": "2019"
   },
   {
     "title": "Extraordinario",

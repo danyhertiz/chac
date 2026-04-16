@@ -13,6 +13,7 @@ const MOVIES_FOLDER = "D:/Videos/Peliculas/HD"; // carpeta donde están tus vide
 const OUTPUT_JSON = "./movies.json";
 const MANUAL_MATCHES_JSON = "./manualMatches.json";
 const CACHE_JSON = "./cache.json";
+const POSTER_OVERRIDES_JSON = "./posterOverrides.json";
 const POSTERS_FOLDER = path.join(__dirname, "..", "posters");
 const TMDB_POSTER_BASE_URL = "https://image.tmdb.org/t/p/w500";
 const CONCURRENCY = 5; // Máximo de requests concurrentes a TMDb
@@ -665,6 +666,140 @@ function transformGenres(genresArray) {
   return genresArray.map(genre => genre.name);
 }
 
+/**
+ * Carga los overrides manuales de posters desde posterOverrides.json
+ * Formato: { "tmdbId": "/custom/path/poster.jpg", ... }
+ * 
+ * @returns {Promise<Object>} - Overrides manuales { tmdbId: customPath }
+ */
+async function loadPosterOverrides() {
+  try {
+    if (await fs.pathExists(POSTER_OVERRIDES_JSON)) {
+      const overrides = await fs.readJson(POSTER_OVERRIDES_JSON);
+      const validOverrides = {};
+      let count = 0;
+      
+      for (const [tmdbIdStr, customPath] of Object.entries(overrides)) {
+        // Ignorar claves que comienzan con "_" (comentarios)
+        if (tmdbIdStr.startsWith("_")) {
+          continue;
+        }
+        
+        const tmdbId = Number(tmdbIdStr);
+        if (!Number.isInteger(tmdbId) || tmdbId <= 0) {
+          console.warn(`⚠️ Override inválido: "${tmdbIdStr}" (debe ser ID numérico)`);
+          continue;
+        }
+        
+        if (typeof customPath !== "string" || !customPath.trim()) {
+          console.warn(`⚠️ Override sin path válido para tmdbId: ${tmdbId}`);
+          continue;
+        }
+        
+        validOverrides[tmdbId] = customPath;
+        count++;
+      }
+      
+      if (count > 0) {
+        console.log(`📌 ${count} poster override(s) cargados`);
+      }
+      
+      return validOverrides;
+    }
+  } catch (error) {
+    console.warn(`⚠️ Error leyendo posterOverrides.json:`, error.message);
+  }
+  return {};
+}
+
+/**
+ * Obtiene todas las imágenes disponibles para una película desde TMDb
+ * 
+ * @param {number} movieId - ID de la película en TMDb
+ * @returns {Promise<Array|null>} - Array de posters o null si hay error
+ */
+async function getMovieImages(movieId) {
+  const url = `https://api.themoviedb.org/3/movie/${movieId}/images?api_key=${API_KEY}`;
+  
+  try {
+    const res = await fetch(url);
+    
+    if (!res.ok) {
+      throw new Error(`HTTP ${res.status}`);
+    }
+    
+    const data = await res.json();
+    return data.posters || [];
+  } catch (error) {
+    console.warn(`⚠️ Error obteniendo imágenes para ${movieId}:`, error.message);
+    return null;
+  }
+}
+
+/**
+ * Selecciona el mejor poster de una lista según criterios de priorización
+ * 
+ * Prioridad:
+ * 1. Posters en español (iso_639_1 === "es")
+ * 2. Posters sin idioma (iso_639_1 === null)
+ * 3. Cualquier otro poster disponible
+ * 
+ * Ordenamiento dentro de cada categoría:
+ * 1. vote_average (descendente)
+ * 2. vote_count (descendente)
+ * 3. width (descendente)
+ * 
+ * @param {Array} posters - Array de objetos poster de TMDb
+ * @returns {Object|null} - El mejor poster o null si no hay posters
+ */
+function selectBestPoster(posters) {
+  if (!Array.isArray(posters) || posters.length === 0) {
+    return null;
+  }
+  
+  // Categorizar posters
+  const spanishPosters = posters.filter(p => p.iso_639_1 === "es");
+  const nullLanguagePosters = posters.filter(p => p.iso_639_1 === null);
+  const otherPosters = posters.filter(p => p.iso_639_1 !== "es" && p.iso_639_1 !== null);
+  
+  // Función auxiliar para ordenar posters
+  const sortPosters = (arr) => {
+    return arr.sort((a, b) => {
+      // 1. vote_average (descendente)
+      if (a.vote_average !== b.vote_average) {
+        return b.vote_average - a.vote_average;
+      }
+      // 2. vote_count (descendente)
+      if (a.vote_count !== b.vote_count) {
+        return b.vote_count - a.vote_count;
+      }
+      // 3. width (descendente)
+      return b.width - a.width;
+    });
+  };
+  
+  // Priorizar según categoría
+  if (spanishPosters.length > 0) {
+    const best = sortPosters(spanishPosters)[0];
+    console.log(`🎨 Poster seleccionado (español): ${best.vote_average}/10 (votos: ${best.vote_count})`);
+    return best;
+  }
+  
+  if (nullLanguagePosters.length > 0) {
+    const best = sortPosters(nullLanguagePosters)[0];
+    console.log(`🎨 Poster seleccionado (sin idioma): ${best.vote_average}/10 (votos: ${best.vote_count})`);
+    return best;
+  }
+  
+  if (otherPosters.length > 0) {
+    const best = sortPosters(otherPosters)[0];
+    console.log(`🎨 Poster seleccionado (${best.iso_639_1}): ${best.vote_average}/10 (votos: ${best.vote_count})`);
+    return best;
+  }
+  
+  return null;
+}
+
 async function downloadPoster(posterPath, tmdbId) {
   if (!posterPath) {
     return null;
@@ -702,6 +837,53 @@ async function downloadPoster(posterPath, tmdbId) {
   }
 }
 
+/**
+ * Maneja descarga de posters personalizados desde overrides
+ * Verifica si existe override manual para el tmdbId
+ * Si existe, devuelve ese path; si no, busca y descarga automáticamente
+ * 
+ * @param {number} movieId - ID de la película en TMDb
+ * @param {string|null} originalPosterPath - Poster por defecto de TMDb
+ * @param {Object} posterOverrides - Overrides manuales { tmdbId: customPath }
+ * @returns {Promise<string|null>} - Ruta relativa al poster o null
+ */
+async function selectAndDownloadPoster(movieId, originalPosterPath, posterOverrides) {
+  // 1️⃣ Verificar si existe override manual
+  if (posterOverrides[movieId]) {
+    console.log(`📌 Poster override aplicado`);
+    return posterOverrides[movieId];
+  }
+  
+  // 2️⃣ Intentar seleccionar poster automáticamente
+  try {
+    const allPosters = await getMovieImages(movieId);
+    
+    if (!allPosters) {
+      console.log(`⚠️ No se pudieron obtener imágenes, usando poster por defecto`);
+      return await downloadPoster(originalPosterPath, movieId);
+    }
+    
+    if (allPosters.length === 0) {
+      console.log(`⚠️ No hay posters disponibles, usando poster por defecto`);
+      return await downloadPoster(originalPosterPath, movieId);
+    }
+    
+    // Seleccionar el mejor poster
+    const bestPoster = selectBestPoster(allPosters);
+    
+    if (bestPoster && bestPoster.file_path) {
+      return await downloadPoster(bestPoster.file_path, movieId);
+    } else {
+      console.log(`⚠️ No se pudo seleccionar mejor poster, usando por defecto`);
+      return await downloadPoster(originalPosterPath, movieId);
+    }
+  } catch (error) {
+    console.warn(`⚠️ Error en selección automática de poster: ${error.message}`);
+    console.log(`   → Usando poster por defecto`);
+    return await downloadPoster(originalPosterPath, movieId);
+  }
+}
+
 async function initializePostersFolder() {
   try {
     await fs.ensureDir(POSTERS_FOLDER);
@@ -721,6 +903,7 @@ async function main() {
   console.log("📂 Inicializando...");
   const manualMatches = await loadManualMatches();
   const cache = await loadCache();
+  const posterOverrides = await loadPosterOverrides();
   const { movies: existingMovies, movieMap: existingMovieMap } = await loadExistingMovies();
 
   const files = await fs.readdir(MOVIES_FOLDER);
@@ -765,13 +948,14 @@ async function main() {
   // Procesar películas nuevas en lotes con concurrencia controlada
   const newMovies = moviesToProcess.filter(m => m.type === "new").map(m => ({
     file: m.file,
-    parsed: m.parsed
+    parsed: m.parsed,
+    posterOverrides: posterOverrides
   }));
 
   const processedNewMovies = await processInBatches(
     newMovies,
     async (movieData) => {
-      const { file, parsed } = movieData;
+      const { file, parsed, posterOverrides } = movieData;
       console.log(`🔎 ${parsed.title} (${parsed.year})`);
 
       console.time(`  ${parsed.title}`);
@@ -804,10 +988,10 @@ async function main() {
       const movieES = await getMovieDetails(movieInfo.id);
       await new Promise(r => setTimeout(r, 100)); // Delay reducido
 
-      // Descarga el poster si existe
+      // Selecciona y descarga el mejor poster
       let posterPath = null;
       if (movieInfo.poster_path) {
-        posterPath = await downloadPoster(movieInfo.poster_path, movieInfo.id);
+        posterPath = await selectAndDownloadPoster(movieInfo.id, movieInfo.poster_path, posterOverrides);
       }
 
       // Asegurar que SIEMPRE se crea un movieRecord válido
