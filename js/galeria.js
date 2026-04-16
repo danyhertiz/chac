@@ -6,11 +6,14 @@ const moviesGrid = document.getElementById('movies-grid');
 const searchInput = document.getElementById('search-input');
 const genreFilter = document.getElementById('genre-filter');
 const yearFilter = document.getElementById('year-filter');
+const runtimeFilter = document.getElementById('runtime-filter');
+const sortOrder = document.getElementById('sort-order');
 const paginationControls = document.getElementById('pagination-controls');
 const modalOverlay = document.getElementById('movie-modal');
 const modalPoster = document.getElementById('modal-poster');
 const modalTitle = document.getElementById('modal-title');
 const modalYear = document.getElementById('modal-year');
+const modalRuntime = document.getElementById('modal-runtime');
 const modalGenres = document.getElementById('modal-genres');
 const modalOverview = document.getElementById('modal-overview');
 const modalClose = document.querySelector('.modal-close');
@@ -22,6 +25,8 @@ const state = {
     searchQuery: '',
     selectedGenre: 'Todos',
     selectedYear: 'all',
+    selectedDuration: 'all',
+    sortOrder: 'none',
 };
 
 function debounce(fn, delay = 180) {
@@ -30,6 +35,18 @@ function debounce(fn, delay = 180) {
         clearTimeout(timeoutId);
         timeoutId = setTimeout(() => fn(...args), delay);
     };
+}
+
+function formatRuntime(minutes) {
+    if (!minutes || minutes <= 0) return null;
+    const hours = Math.floor(minutes / 60);
+    const mins = minutes % 60;
+    if (hours > 0 && mins > 0) {
+        return `${hours}h ${mins}min`;
+    } else if (hours > 0) {
+        return `${hours}h`;
+    }
+    return `${mins} min`;
 }
 
 function createMovieCard(movie) {
@@ -105,7 +122,16 @@ function openModal(movie) {
         originalTitleElement.remove();
     }
 
-    modalYear.textContent = movie.year ? `Año: ${movie.year}` : 'Año desconocido';
+    const yearText = movie.year ? `${movie.year}` : 'Año desconocido';
+    const runtimeText = movie.runtime ? formatRuntime(movie.runtime) : null;
+    
+    if (runtimeText) {
+        modalYear.textContent = `${yearText} • ${runtimeText}`;
+        modalRuntime.hidden = true;
+    } else {
+        modalYear.textContent = `Año: ${yearText}`;
+        modalRuntime.hidden = true;
+    }
 
     if (Array.isArray(movie.genres) && movie.genres.length) {
         modalGenres.innerHTML = movie.genres
@@ -196,9 +222,40 @@ function updateFilteredMovies() {
         const matchesYear = state.selectedYear === 'all' || String(movie.year) === state.selectedYear;
         const genres = Array.isArray(movie.genres) ? movie.genres : [];
         const matchesGenre = state.selectedGenre === 'Todos' || genres.includes(state.selectedGenre);
-        return matchesTitle && matchesYear && matchesGenre;
+        
+        let matchesDuration = true;
+        if (state.selectedDuration !== 'all') {
+            const runtime = movie.runtime || 0;
+            if (state.selectedDuration === 'short') {
+                matchesDuration = runtime < 90;
+            } else if (state.selectedDuration === 'medium') {
+                matchesDuration = runtime >= 90 && runtime <= 120;
+            } else if (state.selectedDuration === 'long') {
+                matchesDuration = runtime > 120;
+            }
+        }
+        
+        return matchesTitle && matchesYear && matchesGenre && matchesDuration;
     });
+    
+    applySort();
     state.currentPage = 1;
+}
+
+function applySort() {
+    if (state.sortOrder === 'asc') {
+        state.filteredMovies.sort((a, b) => {
+            const titleA = a.title || a.originalTitle || '';
+            const titleB = b.title || b.originalTitle || '';
+            return titleA.localeCompare(titleB, 'es', { sensitivity: 'base' });
+        });
+    } else if (state.sortOrder === 'desc') {
+        state.filteredMovies.sort((a, b) => {
+            const titleA = a.title || a.originalTitle || '';
+            const titleB = b.title || b.originalTitle || '';
+            return titleB.localeCompare(titleA, 'es', { sensitivity: 'base' });
+        });
+    }
 }
 
 function populateYearFilter() {
@@ -297,6 +354,7 @@ function handlePaginationClick(event) {
 
     state.currentPage = Math.max(1, selectedPage);
     renderCurrentPage();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function handleSearchInput(event) {
@@ -313,6 +371,18 @@ function handleYearFilterChange(event) {
 
 function handleGenreFilterChange(event) {
     state.selectedGenre = event.target.value;
+    updateFilteredMovies();
+    renderCurrentPage();
+}
+
+function handleRuntimeFilterChange(event) {
+    state.selectedDuration = event.target.value;
+    updateFilteredMovies();
+    renderCurrentPage();
+}
+
+function handleSortOrderChange(event) {
+    state.sortOrder = event.target.value;
     updateFilteredMovies();
     renderCurrentPage();
 }
@@ -336,6 +406,8 @@ window.addEventListener('DOMContentLoaded', () => {
     searchInput.addEventListener('input', debounce(handleSearchInput));
     genreFilter.addEventListener('change', handleGenreFilterChange);
     yearFilter.addEventListener('change', handleYearFilterChange);
+    runtimeFilter.addEventListener('change', handleRuntimeFilterChange);
+    sortOrder.addEventListener('change', handleSortOrderChange);
     modalOverlay.addEventListener('click', handleOverlayClick);
     modalClose.addEventListener('click', closeModal);
     document.addEventListener('keydown', handleKeyDown);

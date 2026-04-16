@@ -213,7 +213,7 @@ function calculateRuntimeBonus(localRuntime, tmdbRuntime) {
 /**
  * Crea un objeto película fallback cuando no se encuentra en TMDb
  */
-function createFallbackMovie(title, year) {
+function createFallbackMovie(title, year, file, parsedTitle, parsedYear) {
   return {
     title: title,
     originalTitle: title,
@@ -222,7 +222,10 @@ function createFallbackMovie(title, year) {
     originalOverview: "",
     poster: null,
     genres: [],
-    tmdbId: null
+    tmdbId: null,
+    sourceFile: file,
+    parsedTitle: parsedTitle,
+    parsedYear: parsedYear
   };
 }
 
@@ -330,25 +333,25 @@ async function saveCache(cache) {
  * Clave del cache: "titulo_normalizado_2012"
  * También cachea la duración local del archivo de video
  * 
- * Protección contra cache corrupto:
- * - Si no tiene tmdbId válido, ignora el cache
- * - Rehace la búsqueda si el cache está incompleto
+ * Protección mejorada contra cache corrupto:
+ * - Preserva cache válido incluso sin tmdbId
+ * - Nunca borra cache automáticamente
+ * - Si búsqueda falla, usa cache anterior como fallback
  */
 async function getCachedOrSearchMovie(title, year, filePath, manualMatches, cache) {
   const cacheKey = `${normalize(title)}_${year}`;
-  
-  // Validar que el cache sea válido (debe tener tmdbId válido o ser null explícitamente)
   const cachedMovie = cache[cacheKey];
-  if (cachedMovie && typeof cachedMovie === "object" && cachedMovie.tmdbId) {
-    // Cache válido: tiene tmdbId válido
-    console.log(`✓ Desde cache: ${title}`);
-    return cachedMovie;
-  }
-
-  if (cachedMovie && !cachedMovie.tmdbId) {
-    // Cache corrupto: existe pero sin tmdbId válido → ignorarlo
-    console.log(`⚠️ Cache corrupto ignorado para: ${title}`);
-    delete cache[cacheKey];
+  
+  // Validar cache existente
+  if (cachedMovie && typeof cachedMovie === "object") {
+    if (cachedMovie.tmdbId) {
+      // Cache válido aunque esté incompleto
+      console.log(`✓ Desde cache: ${title}`);
+      return cachedMovie;
+    } else {
+      // Solo aquí considerar inválido (pero no borrarlo)
+      console.log(`⚠️ Cache sin tmdbId, se intentará corregir: ${title}`);
+    }
   }
   
   // Obtener duración local si no está en cache válido
@@ -363,6 +366,12 @@ async function getCachedOrSearchMovie(title, year, filePath, manualMatches, cach
   
   // Buscar en TMDb
   const movieData = await searchMovie(title, year, localRuntime, manualMatches);
+  
+  // Si falla la búsqueda, conservar cache antiguo
+  if (!movieData && cachedMovie) {
+    console.log(`🛡️ Usando cache anterior para: ${title}`);
+    return cachedMovie;
+  }
   
   if (movieData) {
     // Agregar runtime al objeto guardado en cache
@@ -778,7 +787,7 @@ async function main() {
       // Si NO hay información en TMDb, crear fallback
       if (!movieInfo) {
         console.warn(`📝 Usando fallback para: "${parsed.title}"`);
-        const fallbackMovie = createFallbackMovie(parsed.title, parsed.year);
+        const fallbackMovie = createFallbackMovie(parsed.title, parsed.year, file, parsed.title, parsed.year);
         console.timeEnd(`  ${parsed.title}`);
         return fallbackMovie;
       }
@@ -786,7 +795,7 @@ async function main() {
       // Validar que movieInfo tenga un ID válido
       if (!movieInfo.id) {
         console.error(`❌ ERROR CRÍTICO: movieInfo sin ID para "${parsed.title}"`);
-        const fallbackMovie = createFallbackMovie(parsed.title, parsed.year);
+        const fallbackMovie = createFallbackMovie(parsed.title, parsed.year, file, parsed.title, parsed.year);
         console.timeEnd(`  ${parsed.title}`);
         return fallbackMovie;
       }
@@ -811,9 +820,13 @@ async function main() {
         poster: posterPath,
         genres: transformGenres(movieES?.genres),
         tmdbId: movieInfo.id,
-        runtime: movieInfo.runtime || null
+        runtime: movieInfo.runtime || null,
+        sourceFile: file,
+        parsedTitle: parsed.title,
+        parsedYear: parsed.year
       };
 
+      console.log(`🎬 Match: "${parsed.title}" → "${movieRecord.title}"`);
       console.timeEnd(`  ${parsed.title}`);
       return movieRecord;
     },

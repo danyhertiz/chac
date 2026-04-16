@@ -7,6 +7,7 @@
     <link rel="icon" href="img/hertiz_ico.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/binary-background.css">
+    <link rel="stylesheet" href="css/emoji-background.css">
     <link rel="stylesheet" href="css/galeria.css">
 </head>
 <body>
@@ -17,21 +18,43 @@
         </section>
 
         <section class="gallery-controls card">
-            <div class="control-group">
+            <!-- Fila 1: Buscador (ancho completo) -->
+            <div class="control-group full-width">
                 <label for="search-input">Buscar película</label>
                 <input id="search-input" type="search" placeholder="Buscar por título..." aria-label="Buscar películas por título">
             </div>
-            <div class="control-group">
-                <label for="genre-filter">Filtrar por género</label>
-                <select id="genre-filter" aria-label="Filtrar películas por género">
-                    <option value="Todos">Todos</option>
-                </select>
-            </div>
-            <div class="control-group">
-                <label for="year-filter">Filtrar por año</label>
-                <select id="year-filter" aria-label="Filtrar películas por año">
-                    <option value="all">Todos los años</option>
-                </select>
+
+            <!-- Fila 2: Filtros -->
+            <div class="filters-row">
+                <div class="control-group">
+                    <label for="genre-filter">Filtrar por género</label>
+                    <select id="genre-filter" aria-label="Filtrar películas por género">
+                        <option value="Todos">Todos</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="year-filter">Filtrar por año</label>
+                    <select id="year-filter" aria-label="Filtrar películas por año">
+                        <option value="all">Todos los años</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="runtime-filter">Filtrar por duración</label>
+                    <select id="runtime-filter" aria-label="Filtrar películas por duración">
+                        <option value="all">Todas</option>
+                        <option value="short">Menos de 90 min</option>
+                        <option value="medium">90 - 120 min</option>
+                        <option value="long">Más de 120 min</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="sort-order">Ordenar</label>
+                    <select id="sort-order" aria-label="Ordenar películas alfabéticamente">
+                        <option value="none">Predeterminado</option>
+                        <option value="asc">A → Z</option>
+                        <option value="desc">Z → A</option>
+                    </select>
+                </div>
             </div>
         </section>
 
@@ -50,6 +73,7 @@
                 <div>
                     <h2 id="modal-title">Título</h2>
                     <p class="modal-meta" id="modal-year">Año</p>
+                    <p class="modal-meta" id="modal-runtime" hidden>Duración</p>
                     <div class="movie-genres" id="modal-genres" hidden></div>
                     <p class="overview" id="modal-overview">Descripción</p>
                 </div>
@@ -58,6 +82,7 @@
     </div>
 
     <script src="js/load-header.js" defer></script>
+    <script src="js/emoji-background.js"></script>
     <script src="js/galeria.js" defer></script>
 </body>
 </html>
