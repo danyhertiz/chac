@@ -3129,22 +3129,22 @@
   },
   "actividad paranormal_2008": {
     "adult": false,
-    "backdrop_path": "/lcw9r76AzazaUxRWVgC7YSPA4ua.jpg",
+    "backdrop_path": "/wfCdJ0MD1hYJzlaHulolNw5pYtR.jpg",
     "genre_ids": [
       27,
       9648
     ],
-    "id": 41436,
+    "id": 23827,
     "original_language": "en",
-    "original_title": "Paranormal Activity 2",
-    "overview": "Después de sufrir lo que ellos creen una serie de robos, una familia coloca cámaras de seguridad en toda la casa, descubriendo para su sorpresa un lado mucho más siniestro que los propios sucesos inquietantes que están viviendo... Secuela del gran e inesperado éxito del cine independiente \"Paranormal Activity\".",
-    "popularity": 3.3794,
-    "poster_path": "/lWpl5SH15Bk9movTlexugxTXDd0.jpg",
-    "release_date": "2010-10-20",
-    "title": "Actividad Paranormal 2",
+    "original_title": "Paranormal Activity",
+    "overview": "Una pareja feliz, joven y de clase media ve su vida atormentada por un espíritu demoníaco. Ella es una estudiante que está punto de graduarse como profesora, y él, un corredor de bolsa que trabaja desde su casa. Viven desde hace tres años en una casa que hasta el momento les parecía completamente normal; pero, inesperadamente, extraños fenómenos paranormales empiezan a perturbar su vida.",
+    "popularity": 3.6775,
+    "poster_path": "/919Xf5NshBIKuj4HP2XkGIfNaCF.jpg",
+    "release_date": "2007-09-14",
+    "title": "Actividad Paranormal",
     "video": false,
-    "vote_average": 5.8,
-    "vote_count": 2615,
+    "vote_average": 6.046,
+    "vote_count": 5390,
     "runtime": 86
   },
   "el gato con botas 2_2022": {
@@ -3276,25 +3276,23 @@
   },
   "eso 2_2019": {
     "adult": false,
-    "backdrop_path": "/AoSZyb37ljMAxw0RdeQEBHKtgcc.jpg",
+    "backdrop_path": "/pFKUaIkbqu03ScfVi9FSvcs7HQo.jpg",
     "genre_ids": [
-      10751,
-      16,
-      12,
-      35,
-      14
+      18,
+      28,
+      53
     ],
-    "id": 330457,
-    "original_language": "en",
-    "original_title": "Frozen II",
-    "overview": "¿Por qué Elsa nació con poderes mágicos? La respuesta la está llamando y amenazando su reino. Junto con Anna, Kristoff, Olaf y Sven, se embarcará en un peligroso, pero extraordinario viaje. En Frozen: Una Aventura Congelada, Elsa temía que sus poderes fueran demasiado para el mundo. En Frozen 2, ella debe esperar que sean suficientes. Del equipo ganador del Óscar®, los directores Jennifer Lee y Chris Buck, y el productor Peter Del Vecho; con las voces originales en inglés de Idina Menzel, Kristen Bell, Jonathan Groff y Josh Gad; y la música de los compositores Kristen Anderson-Lopez y Robert Lopez, ganadores del premio de la Academia, llega Frozen 2, la nueva película animada de Disney.",
-    "popularity": 30.3035,
-    "poster_path": "/jnFCk7qGGWop2DgfnJXeKLZFuBq.jpg",
-    "release_date": "2019-11-20",
-    "title": "Frozen 2",
+    "id": 512731,
+    "original_language": "cn",
+    "original_title": "掃毒2 天地對決",
+    "overview": "Un magnate financiero, que alguna vez fue miembro de la tríada, intenta erradicar el mercado de las drogas, mientras que un viejo cómplice aspira a ser el primer narcotraficante de Hong Kong.",
+    "popularity": 2.5012,
+    "poster_path": "/5lyUDO2bHMtAKWt0OPHvt0nJu7f.jpg",
+    "release_date": "2019-07-04",
+    "title": "La tormenta blanca 2: Los capos de la droga",
     "video": false,
-    "vote_average": 7.232,
-    "vote_count": 10226,
+    "vote_average": 6.5,
+    "vote_count": 67,
     "runtime": 169
   },
   "batman 3_2012": {
@@ -4062,13 +4060,13 @@
     "original_language": "en",
     "original_title": "Silent Hill: Revelation 3D",
     "overview": "Al cumplir sus 18° cumpleaños, Heather Mason descubre que no es quién cree ser y una revelación puede llevarla a un mundo demoníaco que amenaza con atraparla para siempre.",
-    "popularity": 4.6795,
+    "popularity": 4.825,
     "poster_path": "/xnGfJjCNdjPsn6Yq72keEyWEKBt.jpg",
     "release_date": "2012-10-10",
     "title": "Terror en Silent Hill 2: La revelación",
     "video": false,
     "vote_average": 5.547,
-    "vote_count": 1840,
+    "vote_count": 1841,
     "runtime": 95
   },
   "we bare bears the movie_2020": {
@@ -5180,21 +5178,22 @@
   },
   "the descent_2005": {
     "adult": false,
-    "backdrop_path": "/7fZ8H0lzknkZbA0kiVugSz3cAZd.jpg",
+    "backdrop_path": "/yERDHEaOezMqsRXhrulS9t6sAqC.jpg",
     "genre_ids": [
-      53
+      12,
+      27
     ],
-    "id": 1440016,
+    "id": 9392,
     "original_language": "en",
     "original_title": "The Descent",
-    "overview": "",
-    "popularity": 0.177,
-    "poster_path": "/6ygImRf9QC9od8zypQy3u9l9HNF.jpg",
-    "release_date": "2024-12-25",
-    "title": "The Descent",
+    "overview": "Un año después de un severo trauma emocional, Sarah (Shauna Macdonald) viaja a Carolina del Norte para pasar unos días explorando unas cuevas con sus amigas; después de descender bajo tierra, las amigas hallan unas pinturas extrañas y evidencias de una expedición anterior, luego descubren que no están solas. Depredadores subterráneos habitan el lugar y a ellos les gusta mucho la carne humana.",
+    "popularity": 5.2613,
+    "poster_path": "/de3FmosaHB2NbxLkJBSB11xIr8l.jpg",
+    "release_date": "2005-07-08",
+    "title": "El Descenso",
     "video": false,
-    "vote_average": 4,
-    "vote_count": 2,
+    "vote_average": 6.979,
+    "vote_count": 4338,
     "runtime": 100
   },
   "crepusculo 2_2009": {
@@ -5698,21 +5697,23 @@
   },
   "rascacielos_2018": {
     "adult": false,
-    "backdrop_path": null,
+    "backdrop_path": "/oMKFQmoVgB69fyXfSMu0lGlHJP2.jpg",
     "genre_ids": [
-      18
+      28,
+      53,
+      12
     ],
-    "id": 1558280,
-    "original_language": "es",
-    "original_title": "Rascacielos",
-    "overview": "",
-    "popularity": 0.0168,
-    "poster_path": "/qOYRzXLIuFZXgHsSFRKWQVqGO1H.jpg",
-    "release_date": "",
-    "title": "Rascacielos",
+    "id": 447200,
+    "original_language": "en",
+    "original_title": "Skyscraper",
+    "overview": "Will Sawyer, antiguo líder del Equipo de Rescate de Rehenes del FBI y veterano de guerra del ejército de Estados Unidos, ahora se encarga de evaluar la seguridad de los rascacielos. Durante un viaje de trabajo en China, se ve incriminado en el incendio del edificio más alto y seguro del mundo. Perseguido y a la fuga, Will deberá encontrar a los que le han tendido la trampa, limpiar su nombre y rescatar a su familia, atrapada en el interior del rascacielos… sin sucumbir a las llamas.",
+    "popularity": 3.2211,
+    "poster_path": "/iZewx4w2Fh8lBuKoOlJqfPC5uWs.jpg",
+    "release_date": "2018-07-11",
+    "title": "Rascacielos: Rescate En Las Alturas",
     "video": false,
-    "vote_average": 0,
-    "vote_count": 0,
+    "vote_average": 6.307,
+    "vote_count": 5314,
     "runtime": 102
   },
   "karate kid 3_1989": {
@@ -6144,7 +6145,7 @@
     "release_date": "2005-10-28",
     "title": "El juego del miedo 2",
     "video": false,
-    "vote_average": 6.607,
+    "vote_average": 6.6,
     "vote_count": 5818,
     "runtime": 95
   },
@@ -6186,7 +6187,7 @@
     "title": "La noche del demonio: Capítulo 2",
     "video": false,
     "vote_average": 6.68,
-    "vote_count": 4527,
+    "vote_count": 4528,
     "runtime": 103
   },
   "erase una vez un estudio_2023": {
@@ -6532,22 +6533,23 @@
   },
   "blanca nieves_1937": {
     "adult": false,
-    "backdrop_path": "/tyfO9jHgkhypUFizRVYD0bytPjP.jpg",
+    "backdrop_path": "/4yWayBvwl9gHXaWrDrAslxjL7mh.jpg",
     "genre_ids": [
-      10751,
-      14
+      14,
+      16,
+      10751
     ],
-    "id": 447273,
+    "id": 408,
     "original_language": "en",
-    "original_title": "Snow White",
-    "overview": "Una adaptación en vivo del clásico cuento de hadas sobre una hermosa joven princesa que, mientras es acosada por una reina celosa, busca refugio en la casa de siete enanos en la campiña alemana.",
-    "popularity": 13.394,
-    "poster_path": "/sm91FNDF6OOKU4hT9BDW6EMoyDB.jpg",
-    "release_date": "2025-03-19",
-    "title": "Blanca Nieves",
+    "original_title": "Snow White and the Seven Dwarfs",
+    "overview": "La historia de una joven princesa que es perseguida por su malvada madrastra. Con la ayuda de siete enanos amigables, Blancanieves vive una aventura mágica llena de valentía, amistad y el poder del amor verdadero para vencer a la oscuridad y encontrar su final feliz.",
+    "popularity": 9.8535,
+    "poster_path": "/b2ZPP3bZqDOzqTHr1TlFIFPWP48.jpg",
+    "release_date": "1938-01-14",
+    "title": "Blanca Nieves y los siete enanos",
     "video": false,
-    "vote_average": 4.3,
-    "vote_count": 1601,
+    "vote_average": 7.122,
+    "vote_count": 7945,
     "runtime": 83
   },
   "el taller de santa claus_1932": {
@@ -7403,21 +7405,22 @@
   },
   "naufrago_2000": {
     "adult": false,
-    "backdrop_path": "/d6FyAHuNfvYmH2F4frNwQjM2Qnm.jpg",
+    "backdrop_path": "/oCFVYPXI4IfhtF3GapU2jkDicDI.jpg",
     "genre_ids": [
+      12,
       18
     ],
-    "id": 1261386,
-    "original_language": "pt",
-    "original_title": "Náufrago",
-    "overview": "",
-    "popularity": 0.0306,
-    "poster_path": "/33EWKVu7qiiZhEam68qDhrQ77Zl.jpg",
-    "release_date": "2024-03-16",
-    "title": "Náufrago",
+    "id": 8358,
+    "original_language": "en",
+    "original_title": "Cast Away",
+    "overview": "Chuck Noland, un ejecutivo de la empresa multinacional de mensajería FedEx, se ve apartado de su cómoda vida y de su prometida a causa de un accidente de avión por el que queda aislado de la civilización en una remota isla tropical. Único superviviente y solo en la isla, tras cuatro años de subsistencia Chuck aprende todas las técnicas de supervivencia mientras sufre la tortura de la soledad. La solución: arriesgar la vida adentrándose mar adentro.",
+    "popularity": 7.3665,
+    "poster_path": "/BlxcYMoHMXsgf3sXcHAjLOuQ1y.jpg",
+    "release_date": "2000-12-22",
+    "title": "El Náufrago",
     "video": false,
-    "vote_average": 0,
-    "vote_count": 0,
+    "vote_average": 7.661,
+    "vote_count": 12177,
     "runtime": 144
   },
   "atlantis_2001": {
@@ -7603,13 +7606,13 @@
     "original_language": "en",
     "original_title": "Shrek the Third",
     "overview": "Designado a regañadientes como el heredero de la tierra de Muy Muy Lejano, Shrek urde un plan para instalar al rebelde Artie como el nuevo rey mientras la princesa Fiona trata de evitar un golpe de estado por parte del Príncipe Encantador.",
-    "popularity": 9.251,
+    "popularity": 9.0343,
     "poster_path": "/7sTwtmVPTX77CFOUXdwAM7lKtKL.jpg",
     "release_date": "2007-05-17",
     "title": "Shrek Tercero",
     "video": false,
-    "vote_average": 6.306,
-    "vote_count": 9709,
+    "vote_average": 6.305,
+    "vote_count": 9711,
     "runtime": 93
   },
   "los ewoks 2_1985": {
@@ -7789,13 +7792,13 @@
     "original_language": "ja",
     "original_title": "ストリートファイター II MOVIE",
     "overview": "Bison, el líder despiadado de la organización terrorista internacional Shadowlaw, ha estado buscando desesperadamente el mayor combatiente del planeta durante años. Lo encuentra en Ryu, un joven vagabundo que nunca permanece en un lugar el tiempo suficiente para que Bison lo encuentre. Él, sin embargo, consigue una solución en Ken Masters, un campeón de artes marciales de América que estudió con Ryu como un niño bajo el mismo maestro. Mientras tanto, el mayor Guile del ejército de Estados Unidos se ve obligado a unirse a Chun Li de China con la esperanza de detener a Bison y poner fin a su círculo internacional de delitos.",
-    "popularity": 2.2921,
+    "popularity": 2.1286,
     "poster_path": "/gX2YGHzmT3paqco4ap2sPk46DsQ.jpg",
     "release_date": "1994-08-06",
     "title": "Street Fighter II: La pelicula Animada",
     "video": false,
     "vote_average": 7.074,
-    "vote_count": 309,
+    "vote_count": 310,
     "runtime": 101
   },
   "saw 4_2007": {
@@ -9669,22 +9672,19 @@
   },
   "predestination_2014": {
     "adult": false,
-    "backdrop_path": "/cvq9cRMDJIGzNpHaPVGFftqPcLj.jpg",
-    "genre_ids": [
-      878,
-      53
-    ],
-    "id": 206487,
+    "backdrop_path": null,
+    "genre_ids": [],
+    "id": 824188,
     "original_language": "en",
     "original_title": "Predestination",
-    "overview": "Un agente especial de un departamento secreto del gobierno, una agencia creada en los años 80 que permite realizar viajes en el tiempo, tendrá que realizar una compleja serie de \"saltos\" hacia atrás en el tiempo con el fin de detener al conocido como \"el terrorista fallido\", un individuo que está poniendo bombas por todo el país con miles de víctimas. En uno de sus viajes a los 70, el agente, que trabaja encubierto como camarero de un bar, conoce a un hombre que le narra una historia extraordinaria.",
-    "popularity": 4.9973,
-    "poster_path": "/qXabr1nGFE3HCdIlU9xFGqALALg.jpg",
-    "release_date": "2014-08-28",
-    "title": "Predestinación",
+    "overview": "",
+    "popularity": 0.0804,
+    "poster_path": null,
+    "release_date": "2021-04-23",
+    "title": "Predestination",
     "video": false,
-    "vote_average": 7.4,
-    "vote_count": 7009,
+    "vote_average": 5,
+    "vote_count": 1,
     "runtime": 98
   },
   "chucky 2_1990": {
@@ -9814,24 +9814,88 @@
   },
   "confianza_2021": {
     "adult": false,
-    "backdrop_path": "/3V617MptZZj3nReODRU59K0Z66K.jpg",
-    "genre_ids": [
-      35,
-      18,
-      10749
+    "backdrop_path": "/8sqvC5hU5QOkYHUnhZIoFKz87BA.jpg",
+    "belongs_to_collection": null,
+    "budget": 0,
+    "genres": [
+      {
+        "id": 53,
+        "name": "Thriller"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      },
+      {
+        "id": 18,
+        "name": "Drama"
+      }
     ],
-    "id": 12183,
+    "homepage": "",
+    "id": 795230,
+    "imdb_id": "tt3986420",
+    "origin_country": [
+      "US"
+    ],
     "original_language": "en",
-    "original_title": "The Wendell Baker Story",
-    "overview": "",
-    "popularity": 0.6688,
-    "poster_path": "/rNXEUtwXW6j7pBQ5jKD1XTBy1Ak.jpg",
-    "release_date": "2005-08-03",
-    "title": "The Wendell Baker Story",
+    "original_title": "Trust",
+    "overview": "Set in the glamour of the New York and Paris art scenes, gallery owner Brooke Gatwick and her newscaster husband Owen Shore, face temptation, jealousy, twists and mystery when two seductive newcomers enter their lives.",
+    "popularity": 1.8373,
+    "poster_path": "/ndFgjUUquqb0PCNH4IYemFoeo57.jpg",
+    "production_companies": [
+      {
+        "id": 88606,
+        "logo_path": "/9NKtkn1QfC6cqXB107nGox1rgqt.png",
+        "name": "Vertical",
+        "origin_country": "US"
+      },
+      {
+        "id": 25140,
+        "logo_path": "/6SeV4YCwyIDktJlvrVwiEDSLovF.png",
+        "name": "The Exchange",
+        "origin_country": "US"
+      },
+      {
+        "id": 6831,
+        "logo_path": "/fWSI4EjIDEEzCNJC8OTPX9Pdbxv.png",
+        "name": "Big Indie Pictures",
+        "origin_country": "US"
+      },
+      {
+        "id": 149671,
+        "logo_path": null,
+        "name": "Untravelled Worlds",
+        "origin_country": ""
+      },
+      {
+        "id": 41551,
+        "logo_path": null,
+        "name": "DeCubellis Films",
+        "origin_country": ""
+      }
+    ],
+    "production_countries": [
+      {
+        "iso_3166_1": "US",
+        "name": "United States of America"
+      }
+    ],
+    "release_date": "2021-03-12",
+    "revenue": 0,
+    "runtime": 94,
+    "spoken_languages": [
+      {
+        "english_name": "English",
+        "iso_639_1": "en",
+        "name": "English"
+      }
+    ],
+    "status": "Released",
+    "tagline": "",
+    "title": "Trust",
     "video": false,
-    "vote_average": 5,
-    "vote_count": 76,
-    "runtime": 94
+    "vote_average": 6.4,
+    "vote_count": 232
   },
   "virgen de san juan_2020": {
     "adult": false,
@@ -10943,7 +11007,7 @@
     "title": "Guardianes de la Galaxia volumen 2",
     "video": false,
     "vote_average": 7.608,
-    "vote_count": 22802,
+    "vote_count": 22803,
     "runtime": 136
   },
   "rapido y furioso 8_2017": {
@@ -11452,60 +11516,24 @@
   },
   "padre contra hijo_1954": {
     "adult": false,
-    "backdrop_path": null,
-    "belongs_to_collection": null,
-    "budget": 0,
-    "genres": [
-      {
-        "id": 10751,
-        "name": "Family"
-      },
-      {
-        "id": 18,
-        "name": "Drama"
-      }
+    "backdrop_path": "/x9mXe97tn5F9dxmjpVL9YqN1xJL.jpg",
+    "genre_ids": [
+      28,
+      12,
+      53
     ],
-    "homepage": "",
-    "id": 348121,
-    "imdb_id": "tt0230605",
-    "origin_country": [
-      "MX"
-    ],
-    "original_language": "es",
-    "original_title": "Padre contra hijo",
-    "overview": "Eloisa works hard, sewing, to his son Juan de Dios. He learns that he is the bastard son of Cecilio, who owns almost a whole town named: San Juan de Dios, Durango.",
-    "popularity": 0.3051,
-    "poster_path": "/xZUzcP8Bhzkb0dUFBSJsGkmjEk1.jpg",
-    "production_companies": [
-      {
-        "id": 5000,
-        "logo_path": null,
-        "name": "Tele Talia Films",
-        "origin_country": ""
-      }
-    ],
-    "production_countries": [
-      {
-        "iso_3166_1": "MX",
-        "name": "Mexico"
-      }
-    ],
-    "release_date": "1955-08-23",
-    "revenue": 0,
-    "runtime": 79,
-    "spoken_languages": [
-      {
-        "english_name": "Spanish",
-        "iso_639_1": "es",
-        "name": "Español"
-      }
-    ],
-    "status": "Released",
-    "tagline": "",
-    "title": "Padre contra hijo",
+    "id": 41477,
+    "original_language": "ja",
+    "original_title": "子連れ狼 親の心子の心",
+    "overview": "Cuarta entrega de la serie de adaptaciones al cine de imágen real del famoso manga escrito por Kazuo Koike y dibujado por Goseki Kojima. Narra las aventuras de un ronin que deambula por el Japón del shogunato Tokugawa acompañado de un niño. En esta ocasión Ogami es contratado para acabar con una asesina tatuada, mientras Gunbei Yagyu, un antiguo enemigo que ha encontrado a Daigoro por casualidad, le desafía en duelo.",
+    "popularity": 1.9751,
+    "poster_path": "/nQDnNND76SzJmiRKGYPbibHZGMV.jpg",
+    "release_date": "1972-12-30",
+    "title": "El lobo solitario y su cachorro: el corazón de un padre, el corazón de un hijo",
     "video": false,
-    "vote_average": 4.2,
-    "vote_count": 4
+    "vote_average": 7.242,
+    "vote_count": 153,
+    "runtime": 79
   },
   "mad money_2008": {
     "adult": false,
@@ -12207,13 +12235,13 @@
     "original_language": "en",
     "original_title": "The Lord of the Rings: The Return of the King",
     "overview": "Las fuerzas de Saruman han sido destruidas, y su fortaleza sitiada. Ha llegado el momento de que se decida el destino de la Tierra Media, y por primera vez en mucho tiempo, parece que hay una pequeña esperanza. La atención del señor oscuro Sauron se centra ahora en Gondor, el último reducto de los hombres, y del cual Aragorn tendrá que reclamar el trono para ocupar su puesto de rey. Pero las fuerzas de Sauron ya se preparan para lanzar el último y definitivo ataque contra el reino de Gondor, la batalla que decidirá el destino de todos. Mientras tanto, Frodo y Sam continuan su camino hacia Mordor, a la espera de que Sauron no repare en que dos pequeños Hobbits se acercan cada día más al final de su camino, el Monte del Destino.",
-    "popularity": 28.8167,
+    "popularity": 25.5228,
     "poster_path": "/mWuFbQrXyLk2kMBKF9TUPtDwuPx.jpg",
     "release_date": "2003-12-17",
     "title": "El señor de los anillos: El retorno del rey",
     "video": false,
-    "vote_average": 8.5,
-    "vote_count": 26320,
+    "vote_average": 8.496,
+    "vote_count": 26325,
     "runtime": 263
   },
   "la sirenita_1989": {
@@ -13436,5 +13464,129 @@
     "video": false,
     "vote_average": 7.214,
     "vote_count": 91
+  },
+  "se7en los siete pecados capitales_1995": {
+    "adult": false,
+    "backdrop_path": "/i5H7zusQGsysGQ8i6P361Vnr0n2.jpg",
+    "genre_ids": [
+      80,
+      9648,
+      53
+    ],
+    "id": 807,
+    "original_language": "en",
+    "original_title": "Se7en",
+    "overview": "Somerset es un solitario y veterano detective a punto de retirarse que se encuentra con Mills, un joven impulsivo. Ambos investigan un particular asesinato. Es este el primero de una serie de crímenes que aluden los siete pecados capitales.",
+    "popularity": 22.1827,
+    "poster_path": "/4dSivge4jxozWgbD6GW2NkOYGaD.jpg",
+    "release_date": "1995-09-22",
+    "title": "Se7en: Los Siete Pecados Capitales",
+    "video": false,
+    "vote_average": 8.38,
+    "vote_count": 22893,
+    "runtime": 127
+  },
+  "terror bajo la tierra_1990": {
+    "adult": false,
+    "backdrop_path": "/ojVlJoGsysPmdmLrIbGW7ljn7JH.jpg",
+    "genre_ids": [
+      27,
+      28,
+      878,
+      35
+    ],
+    "id": 9362,
+    "original_language": "en",
+    "original_title": "Tremors",
+    "overview": "Hick handymen Val McKee y Earl Bassett apenas pueden ganarse la vida en la aldea Nevada de Perfection, por lo que deciden irse de la ciudad, a pesar de una advertencia de una estudiante de sismología que está aprendiendo extrañas lecturas de su equipo. En poco tiempo, Val y Earl descubren lo que es responsable de esas lecturas: gusanos carnívoros de 30 pies de largo con una tendencia a chupar a su presa bajo tierra.",
+    "popularity": 4.0898,
+    "poster_path": "/qFZYBZjIrJXRGjRnDloDU2i0rxb.jpg",
+    "release_date": "1990-01-19",
+    "title": "Temblores",
+    "video": false,
+    "vote_average": 6.934,
+    "vote_count": 3520,
+    "runtime": 96
+  },
+  "paranoia afraid_2024": {
+    "adult": false,
+    "backdrop_path": "/zu4m80pS1EBqDd000xD6exSyHp4.jpg",
+    "genre_ids": [
+      27,
+      878,
+      53
+    ],
+    "id": 1062215,
+    "original_language": "en",
+    "original_title": "Afraid",
+    "overview": "Curtis y su familia son seleccionados para probar un nuevo y revolucionario dispositivo doméstico: un asistente digital familiar llamado AIA. Una vez que la unidad y todos sus sensores y cámaras están instalados en la casa, AIA se asegura de que nada, ni nadie, se interponga en el camino de su familia.",
+    "popularity": 3.588,
+    "poster_path": "/eDCyEUNFce9g7NJxlhDzV0BBMMo.jpg",
+    "release_date": "2024-08-28",
+    "title": "Parano-IA",
+    "video": false,
+    "vote_average": 5.923,
+    "vote_count": 493,
+    "runtime": 84
+  },
+  "el conjuro_2013": {
+    "adult": false,
+    "backdrop_path": "/ecKQlAEG95k62SMGhvX83oEqANK.jpg",
+    "genre_ids": [
+      27,
+      53
+    ],
+    "id": 138843,
+    "original_language": "en",
+    "original_title": "The Conjuring",
+    "overview": "Una familia aterrorizada pide ayuda a los investigadores paranormales Ed y Lorraine Warren a investigar una presencia oscura en su granja. Al ser obligados a enfrentarse a una entidad poderosa, los Warren se ven atrapados en el caso más aterrador de sus vidas.",
+    "popularity": 11.8705,
+    "poster_path": "/10ir0eISr3p1MF1mjZwGTx7u4vv.jpg",
+    "release_date": "2013-07-18",
+    "title": "El Conjuro",
+    "video": false,
+    "vote_average": 7.537,
+    "vote_count": 12617,
+    "runtime": 112
+  },
+  "deja vu cambiando el pasado_2006": {
+    "adult": false,
+    "backdrop_path": "/mhi2fRCbEXtN43FNiq45WQg0DFe.jpg",
+    "genre_ids": [
+      28,
+      53,
+      878
+    ],
+    "id": 7551,
+    "original_language": "en",
+    "original_title": "Déjà Vu",
+    "overview": "Tras una terrible explosión de una bomba en un Ferry de Nueva Orleans, el agente Doug Carlin descubre que es obra de un terrorista. Por su perspicacia para analizar y distinguir rápidamente lo relevante de lo secundario en el escenario del crimen, Carlin es asignado a un misterioso nuevo equipo de investigación que utiliza una sofisticada máquina que permite algo extraordinario...",
+    "popularity": 4.9826,
+    "poster_path": "/sRhG9FVei9YcTDsTaBAHRVhLlQs.jpg",
+    "release_date": "2006-11-22",
+    "title": "Déja vu: Cambiando el pasado",
+    "video": false,
+    "vote_average": 6.878,
+    "vote_count": 5227,
+    "runtime": 126
+  },
+  "oculus el reflejo del mal_2013": {
+    "adult": false,
+    "backdrop_path": "/o0EQmMhHA6Gpf7MS7KxPafWqTPp.jpg",
+    "genre_ids": [
+      27
+    ],
+    "id": 157547,
+    "original_language": "en",
+    "original_title": "Oculus",
+    "overview": "Hace tiempo que un asesinato dejó huérfanos a dos niños. Las autoridades culparon al hermano, pero la hermana creció creyendo que el verdadero culpable había sido un antiguo espejo maldito. Ahora, completamente rehabilitado y con veinte años cumplidos, el hermano está listo para empezar de nuevo, pero la hermana está decidida a demostrar que fue el espejo lo que destrozó a su familia.",
+    "popularity": 2.7918,
+    "poster_path": "/pdsrNerOmRUKJVMKyKHsP4zF3cS.jpg",
+    "release_date": "2014-04-03",
+    "title": "Oculus: El reflejo del mal",
+    "video": false,
+    "vote_average": 6.497,
+    "vote_count": 3157,
+    "runtime": 104
   }
 }
