@@ -509,3 +509,51 @@
         font-size: 0.9rem;
     }
 }
+
+/* Pagination ellipsis */
+.pagination-ellipsis {
+    opacity: 0.6;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    font-size: 0.95rem;
+    color: #f3f3f3;
+}
+
+/* Mobile pagination improvements */
+@media (max-width: 640px) {
+    .pagination-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 0.5rem;
+        padding-bottom: 0.75rem;
+        scroll-behavior: smooth;
+    }
+
+    .pagination-pages {
+        flex-wrap: nowrap;
+        gap: 0.35rem;
+    }
+
+    .pagination-button {
+        padding: 0.5rem 0.7rem;
+        font-size: 0.9rem;
+        border-radius: 10px;
+    }
+
+    .pagination-button.page-number {
+        min-width: 32px;
+    }
+
+    .pagination-button.page-number.active {
+        padding: 0.45rem 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    .pagination-ellipsis {
+        min-width: 28px;
+        font-size: 0.85rem;
+    }
+}

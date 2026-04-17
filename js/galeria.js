@@ -1,5 +1,5 @@
 const MOVIES_DATA_PATH = 'scripts/movies.json';
-const ITEMS_PER_PAGE = 50;
+const ITEMS_PER_PAGE = 60;
 const PLACEHOLDER_IMAGE = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='600' viewBox='0 0 400 600'%3E%3Crect width='400' height='600' fill='%231e1e1e'/%3E%3Ctext x='50%25' y='50%25' fill='%23cccccc' font-family='Segoe UI,Arial,sans-serif' font-size='24' text-anchor='middle' dominant-baseline='middle'%3ENo poster%3C/text%3E%3C/svg%3E";
 
 const moviesGrid = document.getElementById('movies-grid');
@@ -186,32 +186,72 @@ function getPaginatedMovies() {
     return state.filteredMovies.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 }
 
+function createEllipsis() {
+    const span = document.createElement('span');
+    span.className = 'pagination-ellipsis';
+    span.textContent = '...';
+    span.setAttribute('aria-hidden', 'true');
+    return span;
+}
+
 function setupPagination() {
     const totalPages = Math.max(1, Math.ceil(state.filteredMovies.length / ITEMS_PER_PAGE));
     if (state.currentPage > totalPages) {
         state.currentPage = totalPages;
     }
 
+    // Detect mobile and set max visible pages
+    const isMobile = window.innerWidth <= 640;
+    const maxVisiblePages = isMobile ? 3 : 5;
+
     const prevButton = document.createElement('button');
     prevButton.type = 'button';
-    prevButton.className = 'pagination-button';
-    prevButton.textContent = 'Anterior';
+    prevButton.className = 'pagination-button pagination-prev';
+    prevButton.textContent = isMobile ? '←' : 'Anterior';
+    prevButton.setAttribute('aria-label', 'Anterior');
     prevButton.disabled = state.currentPage === 1;
     prevButton.dataset.page = String(state.currentPage - 1);
 
     const nextButton = document.createElement('button');
     nextButton.type = 'button';
-    nextButton.className = 'pagination-button';
-    nextButton.textContent = 'Siguiente';
+    nextButton.className = 'pagination-button pagination-next';
+    nextButton.textContent = isMobile ? '→' : 'Siguiente';
+    nextButton.setAttribute('aria-label', 'Siguiente');
     nextButton.disabled = state.currentPage === totalPages;
     nextButton.dataset.page = String(state.currentPage + 1);
 
     const pagesWrapper = document.createElement('div');
     pagesWrapper.className = 'pagination-pages';
 
-    const startPage = Math.max(1, state.currentPage - 2);
-    const endPage = Math.min(totalPages, state.currentPage + 2);
+    // Calculate window around current page
+    const halfWindow = Math.floor(maxVisiblePages / 2);
+    let startPage = Math.max(1, state.currentPage - halfWindow);
+    let endPage = Math.min(totalPages, state.currentPage + halfWindow);
 
+    // Adjust if at boundaries
+    if (endPage - startPage + 1 < maxVisiblePages) {
+        if (startPage === 1) {
+            endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+        } else if (endPage === totalPages) {
+            startPage = Math.max(1, endPage - maxVisiblePages + 1);
+        }
+    }
+
+    // Add first page and ellipsis if needed
+    if (startPage > 1) {
+        const firstPageButton = document.createElement('button');
+        firstPageButton.type = 'button';
+        firstPageButton.className = 'pagination-button page-number';
+        firstPageButton.textContent = '1';
+        firstPageButton.dataset.page = '1';
+        pagesWrapper.appendChild(firstPageButton);
+
+        if (startPage > 2) {
+            pagesWrapper.appendChild(createEllipsis());
+        }
+    }
+
+    // Add visible page numbers
     for (let page = startPage; page <= endPage; page += 1) {
         const pageButton = document.createElement('button');
         pageButton.type = 'button';
@@ -222,6 +262,20 @@ function setupPagination() {
             pageButton.disabled = true;
         }
         pagesWrapper.appendChild(pageButton);
+    }
+
+    // Add ellipsis and last page if needed
+    if (endPage < totalPages) {
+        if (endPage < totalPages - 1) {
+            pagesWrapper.appendChild(createEllipsis());
+        }
+
+        const lastPageButton = document.createElement('button');
+        lastPageButton.type = 'button';
+        lastPageButton.className = 'pagination-button page-number';
+        lastPageButton.textContent = String(totalPages);
+        lastPageButton.dataset.page = String(totalPages);
+        pagesWrapper.appendChild(lastPageButton);
     }
 
     paginationControls.innerHTML = '';
@@ -352,7 +406,15 @@ function handlePaginationClick(event) {
 
     state.currentPage = Math.max(1, selectedPage);
     renderCurrentPage();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    // Scroll al grid de películas, considerando la altura del header fixed
+    const header = document.querySelector('header');
+    const headerHeight = header ? header.offsetHeight : 0;
+    const gridTop = moviesGrid.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({ 
+        top: gridTop - headerHeight - 20, 
+        behavior: 'smooth' 
+    });
 }
 
 function handleSearchInput(event) {
@@ -417,4 +479,9 @@ window.addEventListener('DOMContentLoaded', () => {
             renderCurrentPage();
         });
     }
+
+    // Handle window resize for responsive pagination
+    window.addEventListener('resize', debounce(() => {
+        renderCurrentPage();
+    }, 200));
 });

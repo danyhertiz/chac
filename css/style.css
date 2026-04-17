@@ -295,7 +295,7 @@ main.video-page-main {
     }
 
     main {
-        padding: 1.5rem 0.5rem 0.5rem 0.5rem; /* Padding general para móvil */
+        padding: 1.5rem 0.5rem 2rem 0.5rem; /* Padding general para móvil (increased bottom) */
     }
     
     main#story-gallery,
