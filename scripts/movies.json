@@ -4312,6 +4312,24 @@
     "runtime": 0
   },
   {
+    "title": "Green Book: Una Amistad sin Fronteras",
+    "originalTitle": "Green Book",
+    "year": "2018",
+    "overview": "Tony Lip, un rudo guardaespaldas italoamericano, es contratado como chofer del pianista negro Don Shirley durante un tour por el Sur Profundo, emprendiendo un viaje que los adentra en un territorio en el que predomina el racismo y la segregación.",
+    "originalOverview": "Tony Lip, un rudo guardaespaldas italoamericano, es contratado como chofer del pianista negro Don Shirley durante un tour por el Sur Profundo, emprendiendo un viaje que los adentra en un territorio en el que predomina el racismo y la segregación.",
+    "poster": "posters/490132.jpg",
+    "genres": [
+      "Drama",
+      "Comedia",
+      "Historia"
+    ],
+    "tmdbId": 490132,
+    "runtime": 130,
+    "sourceFile": "Green Book una amistad sin fronteras (2018).mkv",
+    "parsedTitle": "Green Book una amistad sin fronteras",
+    "parsedYear": "2018"
+  },
+  {
     "title": "Gremlins",
     "originalTitle": "Gremlins",
     "year": "1984",
@@ -9942,6 +9960,24 @@
     "runtime": 0
   },
   {
+    "title": "Traición y Deseo",
+    "originalTitle": "Trust",
+    "year": "2021",
+    "overview": "Ambientados en el glamour de las escenas de arte de Nueva York y París, la galerista Brooke Gatwick y su esposo, el presentador de noticias Owen Shore, se enfrentan a la tentación, los celos, los giros y el misterio cuando dos seductores recién llegados entran en sus vidas.",
+    "originalOverview": "Set in the glamour of the New York and Paris art scenes, gallery owner Brooke Gatwick and her newscaster husband Owen Shore, face temptation, jealousy, twists and mystery when two seductive newcomers enter their lives.",
+    "poster": "posters/795230.jpg",
+    "genres": [
+      "Suspense",
+      "Romance",
+      "Drama"
+    ],
+    "tmdbId": 795230,
+    "runtime": 94,
+    "sourceFile": "Confianza (2021).mkv",
+    "parsedTitle": "Confianza",
+    "parsedYear": "2021"
+  },
+  {
     "title": "Tras Líneas Enemigas",
     "originalTitle": "Behind Enemy Lines",
     "year": "2001",
@@ -12039,24 +12075,6 @@
     "parsedYear": "1997"
   },
   {
-    "title": "Traición y Deseo",
-    "originalTitle": "Trust",
-    "year": "2021",
-    "overview": "Ambientados en el glamour de las escenas de arte de Nueva York y París, la galerista Brooke Gatwick y su esposo, el presentador de noticias Owen Shore, se enfrentan a la tentación, los celos, los giros y el misterio cuando dos seductores recién llegados entran en sus vidas.",
-    "originalOverview": "Set in the glamour of the New York and Paris art scenes, gallery owner Brooke Gatwick and her newscaster husband Owen Shore, face temptation, jealousy, twists and mystery when two seductive newcomers enter their lives.",
-    "poster": "posters/795230.jpg",
-    "genres": [
-      "Suspense",
-      "Romance",
-      "Drama"
-    ],
-    "tmdbId": 795230,
-    "runtime": 94,
-    "sourceFile": "Confianza (2021).mkv",
-    "parsedTitle": "Confianza",
-    "parsedYear": "2021"
-  },
-  {
     "title": "Guerra de Consolas",
     "originalTitle": "Console Wars",
     "year": "2020",
@@ -13656,19 +13674,6 @@
     "parsedYear": "2010"
   },
   {
-    "title": "Gardfield Especial de Accion de Gracias",
-    "originalTitle": "Gardfield Especial de Accion de Gracias",
-    "year": "1989",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
-    "sourceFile": "Gardfield Especial de Accion de Gracias (1989).mp4",
-    "parsedTitle": "Gardfield Especial de Accion de Gracias",
-    "parsedYear": "1989"
-  },
-  {
     "title": "La navidad de Garfield",
     "originalTitle": "A Garfield Christmas",
     "year": "1987",
@@ -13688,6 +13693,25 @@
     "sourceFile": "Garfield Christmas Special (1987).mp4",
     "parsedTitle": "Garfield Christmas Special",
     "parsedYear": "1987"
+  },
+  {
+    "title": "Garfield Especial de Accion de Gracias",
+    "originalTitle": "Garfield's Thanksgiving",
+    "year": "1989",
+    "overview": "Jon se enamora de la veterinaria de Garfield, que pone a Garfield a dieta, y la invita a la cena de Acción de Gracias.",
+    "originalOverview": "Jon se enamora de la veterinaria de Garfield, que pone a Garfield a dieta, y la invita a la cena de Acción de Gracias.",
+    "poster": "posters/44840.jpg",
+    "genres": [
+      "Animación",
+      "Comedia",
+      "Familia",
+      "Película de TV"
+    ],
+    "tmdbId": 44840,
+    "runtime": 24,
+    "sourceFile": "Garfield Especial de Accion de Gracias (1989).mp4",
+    "parsedTitle": "Garfield Especial de Accion de Gracias",
+    "parsedYear": "1989"
   },
   {
     "title": "Garfield: His 9 Lives",
@@ -13914,24 +13938,6 @@
     "sourceFile": "Gran Turismo (2023).mp4",
     "parsedTitle": "Gran Turismo",
     "parsedYear": "2023"
-  },
-  {
-    "title": "Green Book: Una Amistad sin Fronteras",
-    "originalTitle": "Green Book",
-    "year": "2018",
-    "overview": "Tony Lip, un rudo guardaespaldas italoamericano, es contratado como chofer del pianista negro Don Shirley durante un tour por el Sur Profundo, emprendiendo un viaje que los adentra en un territorio en el que predomina el racismo y la segregación.",
-    "originalOverview": "Tony Lip, un rudo guardaespaldas italoamericano, es contratado como chofer del pianista negro Don Shirley durante un tour por el Sur Profundo, emprendiendo un viaje que los adentra en un territorio en el que predomina el racismo y la segregación.",
-    "poster": "posters/490132.jpg",
-    "genres": [
-      "Drama",
-      "Comedia",
-      "Historia"
-    ],
-    "tmdbId": 490132,
-    "runtime": 130,
-    "sourceFile": "Green Book una amistad sin fronteras (2018).mkv",
-    "parsedTitle": "Green Book una amistad sin fronteras",
-    "parsedYear": "2018"
   },
   {
     "title": "Guardianes de la galaxia",

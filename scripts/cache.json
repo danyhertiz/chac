@@ -11217,5 +11217,27 @@
     "vote_average": 4,
     "vote_count": 2,
     "runtime": 94
+  },
+  "garfield especial de accion de gracias_1989": {
+    "adult": false,
+    "backdrop_path": "/6yFnyrlZ5rxksMZTE3bKd8XUT7C.jpg",
+    "genre_ids": [
+      16,
+      35,
+      10751,
+      10770
+    ],
+    "id": 44840,
+    "original_language": "en",
+    "original_title": "Garfield's Thanksgiving",
+    "overview": "Jon se enamora de la veterinaria de Garfield, que pone a Garfield a dieta, y la invita a la cena de Acción de Gracias.",
+    "popularity": 0.4765,
+    "poster_path": "/oULFXcDjQDLGVsRkbNoCDZ8MVN0.jpg",
+    "release_date": "1989-11-22",
+    "title": "Garfield Especial de Accion de Gracias",
+    "video": false,
+    "vote_average": 7,
+    "vote_count": 35,
+    "runtime": 24
   }
 }

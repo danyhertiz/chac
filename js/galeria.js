@@ -79,7 +79,14 @@ function createMovieCard(movie) {
 
     const title = document.createElement('div');
     title.className = 'movie-title';
-    title.textContent = displayTitle;
+    
+    // Build year and duration metadata
+    const yearText = movie.year ? String(movie.year) : '—';
+    const durationText = movie.runtime ? ` • ${movie.runtime} min` : '';
+    const metaText = `${yearText}${durationText}`;
+    
+    // Set title with metadata
+    title.innerHTML = `${displayTitle}<span class="movie-meta">(${metaText})</span>`;
 
     card.appendChild(poster);
     card.appendChild(title);
