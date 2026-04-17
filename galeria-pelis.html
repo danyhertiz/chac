@@ -18,44 +18,46 @@
         </article>
 
         <section class="gallery-controls card">
-            <!-- Fila 1: Buscador (ancho completo) -->
-            <div class="control-group full-width">
-                <label for="search-input">Buscar película</label>
-                <input id="search-input" type="search" placeholder="Buscar por título..." aria-label="Buscar películas por título">
+            <!-- Search bar + Filter toggle -->
+            <div class="search-bar-wrapper">
+                <div class="control-group full-width">
+                    <label for="search-input">Buscar película</label>
+                    <input id="search-input" type="search" placeholder="Buscar por título..." aria-label="Buscar películas por título">
+                </div>
+                <button id="toggleFilters" class="toggle-filters-btn" aria-label="Mostrar/ocultar filtros">Filtros</button>
             </div>
 
-            <!-- Fila 2: Filtros -->
-            <div class="filters-row">
+            <!-- Collapsible filters container -->
+            <div id="filtersContainer" class="filters-collapsed">
                 <div class="control-group">
                     <label for="genre-filter">Filtrar por género</label>
                     <select id="genre-filter" aria-label="Filtrar películas por género">
                         <option value="Todos">Todos</option>
                     </select>
                 </div>
+
                 <div class="control-group">
                     <label for="year-filter">Filtrar por año</label>
                     <select id="year-filter" aria-label="Filtrar películas por año">
                         <option value="all">Todos los años</option>
                     </select>
                 </div>
+
                 <div class="control-group">
-                    <label for="runtime-filter">Filtrar por duración</label>
-                    <select id="runtime-filter" aria-label="Filtrar películas por duración">
-                        <option value="all">Todas</option>
-                        <option value="short">Menos de 90 min</option>
-                        <option value="medium">90 - 120 min</option>
-                        <option value="long">Más de 120 min</option>
-                    </select>
-                </div>
-                <div class="control-group">
-                    <label for="sort-order">Ordenar</label>
-                    <select id="sort-order" aria-label="Ordenar películas alfabéticamente">
-                        <option value="none">Predeterminado</option>
-                        <option value="asc">A → Z</option>
-                        <option value="desc">Z → A</option>
+                    <label for="sortSelect">Ordenar películas</label>
+                    <select id="sortSelect" aria-label="Ordenar películas">
+                        <option value="year_desc">Año (más reciente)</option>
+                        <option value="year_asc">Año (más antiguo)</option>
+                        <option value="title_asc">Título (A-Z)</option>
+                        <option value="title_desc">Título (Z-A)</option>
+                        <option value="duration_asc">Duración (corta)</option>
+                        <option value="duration_desc">Duración (larga)</option>
                     </select>
                 </div>
             </div>
+
+            <!-- Results counter -->
+            <p id="resultsCount" class="results-count"></p>
         </section>
 
         <section class="movies-page-main">

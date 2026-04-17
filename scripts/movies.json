@@ -287,6 +287,23 @@
     "runtime": 88
   },
   {
+    "title": "Al filo del abismo",
+    "originalTitle": "The Ledge",
+    "year": "2022",
+    "overview": "Una aventura de montañismo se convierte en una terrorífica pesadilla. Después de que Kelly es testigo de un crimen, los responsables la persiguen y su única salida es huir a una montaña peligrosa.",
+    "originalOverview": "Una aventura de montañismo se convierte en una terrorífica pesadilla. Después de que Kelly es testigo de un crimen, los responsables la persiguen y su única salida es huir a una montaña peligrosa.",
+    "poster": "posters/924482.jpg",
+    "genres": [
+      "Suspense",
+      "Aventura"
+    ],
+    "tmdbId": 924482,
+    "runtime": 86,
+    "sourceFile": "Al filo del abismo (2022).mp4",
+    "parsedTitle": "Al filo del abismo",
+    "parsedYear": "2022"
+  },
+  {
     "title": "Aladdín",
     "originalTitle": "Aladdin",
     "year": "2019",
@@ -379,6 +396,19 @@
     ],
     "tmdbId": 126889,
     "runtime": 122
+  },
+  {
+    "title": "Allied",
+    "originalTitle": "Allied",
+    "year": "2016",
+    "overview": "No disponible",
+    "originalOverview": "",
+    "poster": null,
+    "genres": [],
+    "tmdbId": null,
+    "sourceFile": "Allied (2016).mkv",
+    "parsedTitle": "Allied",
+    "parsedYear": "2016"
   },
   {
     "title": "Amén: Francisco responde",
@@ -507,6 +537,22 @@
     ],
     "tmdbId": 7350,
     "runtime": 124
+  },
+  {
+    "title": "Aprendices Fuera de Linea",
+    "originalTitle": "The Internship",
+    "year": "2013",
+    "overview": "Dos vendedores de la vieja escuela no han sabido adaptarse a los cambios tecnológicos de los últimos tiempos. Un buen día son despedidos y su solución es aceptar un contrato de prácticas en una gran empresa dedicada al campo de la tecnología: Google.",
+    "originalOverview": "Dos vendedores de la vieja escuela no han sabido adaptarse a los cambios tecnológicos de los últimos tiempos. Un buen día son despedidos y su solución es aceptar un contrato de prácticas en una gran empresa dedicada al campo de la tecnología: Google.",
+    "poster": "posters/116741.jpg",
+    "genres": [
+      "Comedia"
+    ],
+    "tmdbId": 116741,
+    "runtime": 125,
+    "sourceFile": "Aprendices Fuera de Linea (2013).mkv",
+    "parsedTitle": "Aprendices Fuera de Linea",
+    "parsedYear": "2013"
   },
   {
     "title": "Aquaman",
@@ -1083,6 +1129,24 @@
     "runtime": 134
   },
   {
+    "title": "Care Bears Movie II: A New Generation",
+    "originalTitle": "Care Bears Movie II: A New Generation",
+    "year": "1986",
+    "overview": "",
+    "originalOverview": "",
+    "poster": "posters/19975.jpg",
+    "genres": [
+      "Animación",
+      "Aventura",
+      "Familia"
+    ],
+    "tmdbId": 19975,
+    "runtime": 76,
+    "sourceFile": "Care Bears Movie II A New Generation (1986).mkv",
+    "parsedTitle": "Care Bears Movie II A New Generation",
+    "parsedYear": "1986"
+  },
+  {
     "title": "Cars",
     "originalTitle": "Cars",
     "year": "2006",
@@ -1305,6 +1369,23 @@
     "runtime": 0
   },
   {
+    "title": "Clown of the Jungle",
+    "originalTitle": "Clown of the Jungle",
+    "year": "1947",
+    "overview": "",
+    "originalOverview": "",
+    "poster": "posters/53494.jpg",
+    "genres": [
+      "Animación",
+      "Comedia"
+    ],
+    "tmdbId": 53494,
+    "runtime": 6,
+    "sourceFile": "Clown of the Jungle (1947).mkv",
+    "parsedTitle": "Clown of the Jungle",
+    "parsedYear": "1947"
+  },
+  {
     "title": "Coco",
     "originalTitle": "Coco",
     "year": "2017",
@@ -1333,6 +1414,23 @@
     ],
     "tmdbId": 9671,
     "runtime": 97
+  },
+  {
+    "title": "Come What May",
+    "originalTitle": "Come What May",
+    "year": "2009",
+    "overview": "",
+    "originalOverview": "",
+    "poster": "posters/63525.jpg",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "tmdbId": 63525,
+    "runtime": 93,
+    "sourceFile": "Come What May (2009).mp4",
+    "parsedTitle": "Come What May",
+    "parsedYear": "2009"
   },
   {
     "title": "Constantine",
@@ -2193,6 +2291,24 @@
     "runtime": 115
   },
   {
+    "title": "El Día Final",
+    "originalTitle": "End of Days",
+    "year": "1999",
+    "overview": "Nueva York, 1979. En un hospital de Manhattan acaba de nacer Christine, una niña preciosa. Ese mismo día, en el Vaticano, un joven sacerdote informa al Papa del nacimiento de la niña, que lleva la marca del Anticristo. En 1999, Jericho Cane, un ex-policía amargado, salva a una joven del asalto de unos ladrones: es Christine. Desde entonces Cane será víctima de la persecución de terribles fuerzas sobrenaturales.",
+    "originalOverview": "Nueva York, 1979. En un hospital de Manhattan acaba de nacer Christine, una niña preciosa. Ese mismo día, en el Vaticano, un joven sacerdote informa al Papa del nacimiento de la niña, que lleva la marca del Anticristo. En 1999, Jericho Cane, un ex-policía amargado, salva a una joven del asalto de unos ladrones: es Christine. Desde entonces Cane será víctima de la persecución de terribles fuerzas sobrenaturales.",
+    "poster": "posters/9946.jpg",
+    "genres": [
+      "Acción",
+      "Terror",
+      "Fantasía"
+    ],
+    "tmdbId": 9946,
+    "runtime": 122,
+    "sourceFile": "El Día Final (1999).mkv",
+    "parsedTitle": "El Día Final",
+    "parsedYear": "1999"
+  },
+  {
     "title": "El escapulario",
     "originalTitle": "El escapulario",
     "year": "1968",
@@ -2898,6 +3014,24 @@
     "runtime": 110
   },
   {
+    "title": "El día de la marmota",
+    "originalTitle": "Groundhog Day",
+    "year": "1993",
+    "overview": "Un meteorólogo narcisista de televisión, junto con su atractiva pero distante productor y camarógrafo, es enviado a informar sobre el Día de la Marmota en la pequeña ciudad de Punxsutawney, donde se encuentra repitiendo el mismo día una y otra vez.",
+    "originalOverview": "Un meteorólogo narcisista de televisión, junto con su atractiva pero distante productor y camarógrafo, es enviado a informar sobre el Día de la Marmota en la pequeña ciudad de Punxsutawney, donde se encuentra repitiendo el mismo día una y otra vez.",
+    "poster": "posters/137.jpg",
+    "genres": [
+      "Romance",
+      "Fantasía",
+      "Comedia"
+    ],
+    "tmdbId": 137,
+    "runtime": 101,
+    "sourceFile": "El día de la marmota (1993).mkv",
+    "parsedTitle": "El día de la marmota",
+    "parsedYear": "1993"
+  },
+  {
     "title": "El ejército de los muertos",
     "originalTitle": "Army of the Dead",
     "year": "2021",
@@ -3583,6 +3717,25 @@
     "runtime": 0
   },
   {
+    "title": "Estación Zombie 2: Península",
+    "originalTitle": "반도",
+    "year": "2020",
+    "overview": "Después de que la infección que se extendió hace 4 años, solo algunas partes de Corea del Sur permanecen resguardadas, aunque la Península de Busan es la única parte en donde pueden buscar refugio los coreanos, muchos aún mantienen la esperanza de ser rescatados por ayuda internacional.",
+    "originalOverview": "Después de que la infección que se extendió hace 4 años, solo algunas partes de Corea del Sur permanecen resguardadas, aunque la Península de Busan es la única parte en donde pueden buscar refugio los coreanos, muchos aún mantienen la esperanza de ser rescatados por ayuda internacional.",
+    "poster": "posters/581392.jpg",
+    "genres": [
+      "Terror",
+      "Acción",
+      "Suspense",
+      "Aventura"
+    ],
+    "tmdbId": 581392,
+    "runtime": 116,
+    "sourceFile": "Estación Zombie 2 Península (2020).mp4",
+    "parsedTitle": "Estación Zombie 2 Península",
+    "parsedYear": "2020"
+  },
+  {
     "title": "Están entre nosotros",
     "originalTitle": "ชัตเตอร์ กดติดวิญญาณ",
     "year": "2004",
@@ -3849,19 +4002,6 @@
     ],
     "tmdbId": 10323,
     "runtime": 0
-  },
-  {
-    "title": "Gardfield Día de Acción de Gracias",
-    "originalTitle": "Gardfield Día de Acción de Gracias",
-    "year": "1989",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
-    "sourceFile": "Gardfield Día de Acción de Gracias (1989).mp4",
-    "parsedTitle": "Gardfield Día de Acción de Gracias",
-    "parsedYear": "1989"
   },
   {
     "title": "Garfield Gets a Life",
@@ -4637,23 +4777,6 @@
     "runtime": 0
   },
   {
-    "title": "Intensa-Mente",
-    "originalTitle": "Inside Out",
-    "year": "2015",
-    "overview": "Riley es una chica que disfruta o padece toda clase de sentimientos. Aunque su vida ha estado marcada por la Alegría, también se ve afectada por otro tipo de emociones. Lo que Riley no entiende muy bien es por qué motivo tiene que existir la Tristeza en su vida. Una serie de acontecimientos hacen que Alegría y Tristeza se mezclen en una peligrosa aventura que dará un vuelco al mundo de Riley.",
-    "originalOverview": "When 11-year-old Riley moves to a new city, her Emotions team up to help her through the transition. Joy, Fear, Anger, Disgust and Sadness work together, but when Joy and Sadness get lost, they must journey through unfamiliar places to get back home.",
-    "poster": "posters/150540.jpg",
-    "genres": [
-      "Animación",
-      "Familia",
-      "Aventura",
-      "Drama",
-      "Comedia"
-    ],
-    "tmdbId": 150540,
-    "runtime": 0
-  },
-  {
     "title": "Interestelar",
     "originalTitle": "Interstellar",
     "year": "2014",
@@ -5237,20 +5360,6 @@
     "runtime": 0
   },
   {
-    "title": "La Gran Estafa",
-    "originalTitle": "Ocean's Eleven",
-    "year": "2001",
-    "overview": "Danny Ocean es un carismático ladrón que, tan sólo 24 horas después de cumplir una larga condena en prisión, ya está planeando su próximo delito. Su objetivo: realizar el mayor atraco de casinos de la historia. Para ello formará un equipo de once hombres, cada uno de ellos el mejor en su campo. Sin embargo surgirá un problema inesperado: el dueño de los locales, Terry Benedic, está saliendo con Tess, su ex-mujer.",
-    "originalOverview": "Danny Ocean es un carismático ladrón que, tan sólo 24 horas después de cumplir una larga condena en prisión, ya está planeando su próximo delito. Su objetivo: realizar el mayor atraco de casinos de la historia. Para ello formará un equipo de once hombres, cada uno de ellos el mejor en su campo. Sin embargo surgirá un problema inesperado: el dueño de los locales, Terry Benedic, está saliendo con Tess, su ex-mujer.",
-    "poster": "posters/161.jpg",
-    "genres": [
-      "Suspense",
-      "Crimen"
-    ],
-    "tmdbId": 161,
-    "runtime": 117
-  },
-  {
     "title": "La habitación del pánico",
     "originalTitle": "Panic Room",
     "year": "2002",
@@ -5679,23 +5788,6 @@
     "runtime": 0
   },
   {
-    "title": "La Gran Aventura LEGO 2",
-    "originalTitle": "The Lego Movie 2: The Second Part",
-    "year": "2019",
-    "overview": "\"La Gran Aventura LEGO 2\" reúne a los héroes de Bricksburg en una nueva aventura en la que tendrán que salvar su ciudad. Después de cinco años de tranquilidad aparece una nueva amenaza: invasores de LEGO DUPLO del espacio exterior que lo destrozan todo antes de que dé tiempo a reconstruirlo. Emmet, Lucy, Batman y sus amigos unirán fuerzas para librar una batalla que les llevará a mundos inexplorados.",
-    "originalOverview": "It's been five years since everything was awesome and the citizens are facing a huge new threat: LEGO DUPLO® invaders from outer space, wrecking everything faster than they can rebuild.",
-    "poster": "posters/280217.jpg",
-    "genres": [
-      "Acción",
-      "Aventura",
-      "Animación",
-      "Comedia",
-      "Familia"
-    ],
-    "tmdbId": 280217,
-    "runtime": 0
-  },
-  {
     "title": "La Guerra de los Mundos",
     "originalTitle": "War of the Worlds",
     "year": "2005",
@@ -6070,6 +6162,24 @@
     ],
     "tmdbId": 1498,
     "runtime": 94
+  },
+  {
+    "title": "Las aventuras de Winnie Pooh",
+    "originalTitle": "The Many Adventures of Winnie the Pooh",
+    "year": "1977",
+    "overview": "En esta colección de cortos animados basados en las historias y personajes de A.A. Milne, Winnie the Pooh, un osito de peluche amante de la miel, se embarca en algunas aventuras excéntricas.",
+    "originalOverview": "En esta colección de cortos animados basados en las historias y personajes de A.A. Milne, Winnie the Pooh, un osito de peluche amante de la miel, se embarca en algunas aventuras excéntricas.",
+    "poster": "posters/250480.jpg",
+    "genres": [
+      "Animación",
+      "Familia",
+      "Aventura"
+    ],
+    "tmdbId": 250480,
+    "runtime": 74,
+    "sourceFile": "Winnie Pooh (1977).mkv",
+    "parsedTitle": "Winnie Pooh",
+    "parsedYear": "1977"
   },
   {
     "title": "Las Crónicas de Navidad",
@@ -6826,21 +6936,6 @@
     ],
     "tmdbId": 31113,
     "runtime": 22
-  },
-  {
-    "title": "Lukas Storyteller",
-    "originalTitle": "Lukas Storyteller",
-    "year": "2019",
-    "overview": "Después de conocer a Jesús durante una de sus aventuras en el mar de Galilea, Lukas y su amigo Noah la tortuga, comparten las maravillosas historias de Jesús y otros héroes de la Biblia",
-    "originalOverview": "After meeting Jesus during one of his adventures in the Sea of Galilee, Lukas and his friend Noah the turtle, share the wonderful stories of Jesus and other Heroes of the Bible with Lukas' friends from the reef: Ana, Paul, Agnes and Peter. Discover how these stories full of music and fun changed the lives of Lukas and his friends, and how they can change yours.",
-    "poster": "posters/625948.jpg",
-    "genres": [
-      "Animación",
-      "Familia",
-      "Música"
-    ],
-    "tmdbId": 625948,
-    "runtime": 0
   },
   {
     "title": "Lumber Jerks",
@@ -7846,6 +7941,43 @@
     "runtime": 0
   },
   {
+    "title": "Otra película de huevos y un pollo",
+    "originalTitle": "Otra película de huevos y un pollo",
+    "year": "2009",
+    "overview": "Un huevo brujo necesita del corazón de Toto para realizar un hechizo y entonces manda a secuestrarlo. Ahora, para rescatarlo sus amigos se aventurarán en un peligroso desierto.",
+    "originalOverview": "Un huevo brujo necesita del corazón de Toto para realizar un hechizo y entonces manda a secuestrarlo. Ahora, para rescatarlo sus amigos se aventurarán en un peligroso desierto.",
+    "poster": "posters/37221.jpg",
+    "genres": [
+      "Animación",
+      "Comedia",
+      "Aventura",
+      "Familia"
+    ],
+    "tmdbId": 37221,
+    "runtime": 101,
+    "sourceFile": "Otra película de huevos y un pollo (2009).mkv",
+    "parsedTitle": "Otra película de huevos y un pollo",
+    "parsedYear": "2009"
+  },
+  {
+    "title": "Paddington",
+    "originalTitle": "Paddington",
+    "year": "2014",
+    "overview": "Paddington es un oso que ha crecido en lo más profundo de la selva peruana con su tía Lucy. Sin embargo, un terremoto destruye su hogar, entonces Lucy esconde a su sobrino en un barco con destino a Inglaterra para que encuentre una vida mejor.",
+    "originalOverview": "Paddington es un oso que ha crecido en lo más profundo de la selva peruana con su tía Lucy. Sin embargo, un terremoto destruye su hogar, entonces Lucy esconde a su sobrino en un barco con destino a Inglaterra para que encuentre una vida mejor.",
+    "poster": "posters/116149.jpg",
+    "genres": [
+      "Comedia",
+      "Aventura",
+      "Familia"
+    ],
+    "tmdbId": 116149,
+    "runtime": 95,
+    "sourceFile": "Paddington (2014).mkv",
+    "parsedTitle": "Paddington",
+    "parsedYear": "2014"
+  },
+  {
     "title": "Paddington 2",
     "originalTitle": "Paddington 2",
     "year": "2017",
@@ -7932,6 +8064,26 @@
     ],
     "tmdbId": 735595,
     "runtime": 0
+  },
+  {
+    "title": "Parque mágico",
+    "originalTitle": "Wonder Park",
+    "year": "2019",
+    "overview": "June es una niña optimista y alegre que un día descubre un parque de atracciones llamado \"Wonderland\" escondido en el bosque. Allí conoce a una serie de divertidos animales que le explican que el parque, su hogar durante muchos años, está prácticamente en ruinas. Sólo June, con la ayuda de su imaginación y de sus nuevos amigos, podrá arreglarlo para salvar así a los animales que en él habitan, llevando de vuelta la magia a un lugar de ensueño",
+    "originalOverview": "June es una niña optimista y alegre que un día descubre un parque de atracciones llamado \"Wonderland\" escondido en el bosque. Allí conoce a una serie de divertidos animales que le explican que el parque, su hogar durante muchos años, está prácticamente en ruinas. Sólo June, con la ayuda de su imaginación y de sus nuevos amigos, podrá arreglarlo para salvar así a los animales que en él habitan, llevando de vuelta la magia a un lugar de ensueño",
+    "poster": "posters/400157.jpg",
+    "genres": [
+      "Comedia",
+      "Animación",
+      "Aventura",
+      "Familia",
+      "Fantasía"
+    ],
+    "tmdbId": 400157,
+    "runtime": 85,
+    "sourceFile": "Parque mágico (2019).mp4",
+    "parsedTitle": "Parque mágico",
+    "parsedYear": "2019"
   },
   {
     "title": "Pasajero inesperado",
@@ -8111,6 +8263,25 @@
     ],
     "tmdbId": 10693,
     "runtime": 0
+  },
+  {
+    "title": "Peter Pan 2: El regreso al país de Nunca Jamás",
+    "originalTitle": "Return to Never Land",
+    "year": "2002",
+    "overview": "Aunque su intención era secuestrar a Wendy, el capitán Garfio secuestra a la hija de esta para atraer a Peter Pan y tenderle una trampa. Wendy ya no cree ni en Peter Pan ni en la magia, pero tendrá que derribar los muros del escepticismo por su hija.",
+    "originalOverview": "Aunque su intención era secuestrar a Wendy, el capitán Garfio secuestra a la hija de esta para atraer a Peter Pan y tenderle una trampa. Wendy ya no cree ni en Peter Pan ni en la magia, pero tendrá que derribar los muros del escepticismo por su hija.",
+    "poster": "posters/16690.jpg",
+    "genres": [
+      "Aventura",
+      "Fantasía",
+      "Animación",
+      "Familia"
+    ],
+    "tmdbId": 16690,
+    "runtime": 73,
+    "sourceFile": "Peter Pan 2 (2002).mkv",
+    "parsedTitle": "Peter Pan 2",
+    "parsedYear": "2002"
   },
   {
     "title": "Pinocho",
@@ -8296,19 +8467,6 @@
     "runtime": 0
   },
   {
-    "title": "¿Qué Pasó Ayer?",
-    "originalTitle": "The Hangover",
-    "year": "2009",
-    "overview": "El novio y tres amigos organizan una despedida de soltero en Las Vegas. Como era de esperar, a la mañana siguiente tienen una resaca tan monumental que no pueden recordar nada de lo ocurrido la noche anterior. Lo más extraordinario es que el novio ha desaparecido y en la suite del hotel se encuentran un tigre y un bebé.",
-    "originalOverview": "El novio y tres amigos organizan una despedida de soltero en Las Vegas. Como era de esperar, a la mañana siguiente tienen una resaca tan monumental que no pueden recordar nada de lo ocurrido la noche anterior. Lo más extraordinario es que el novio ha desaparecido y en la suite del hotel se encuentran un tigre y un bebé.",
-    "poster": "posters/18785.jpg",
-    "genres": [
-      "Comedia"
-    ],
-    "tmdbId": 18785,
-    "runtime": 100
-  },
-  {
     "title": "Querida, Agrandé al Bebé",
     "originalTitle": "Honey, I Blew Up the Kid",
     "year": "1992",
@@ -8477,6 +8635,26 @@
     ],
     "tmdbId": 2062,
     "runtime": 0
+  },
+  {
+    "title": "Raya y El Último Dragón",
+    "originalTitle": "Raya and the Last Dragon",
+    "year": "2021",
+    "overview": "Raya, una niña de gran espíritu aventurero, se embarca en la búsqueda del último dragón del mundo con el objetivo de devolver el equilibrio a Kumandra, un lejano y recóndito territorio habitado por una civilización milenaria.",
+    "originalOverview": "Raya, una niña de gran espíritu aventurero, se embarca en la búsqueda del último dragón del mundo con el objetivo de devolver el equilibrio a Kumandra, un lejano y recóndito territorio habitado por una civilización milenaria.",
+    "poster": "posters/527774.jpg",
+    "genres": [
+      "Animación",
+      "Familia",
+      "Fantasía",
+      "Aventura",
+      "Acción"
+    ],
+    "tmdbId": 527774,
+    "runtime": 107,
+    "sourceFile": "Raya y El Último Dragón (2021).mp4",
+    "parsedTitle": "Raya y El Último Dragón",
+    "parsedYear": "2021"
   },
   {
     "title": "Realmente amor",
@@ -9006,6 +9184,24 @@
     "runtime": 0
   },
   {
+    "title": "Sin salida",
+    "originalTitle": "No Exit",
+    "year": "2022",
+    "overview": "Darby Thorne, una joven con una emergencia familiar, queda varada por una tormenta de nieve y busca refugio en la autopista junto a un grupo de extraños. Cuando ve a una niña raptada en una furgoneta en el estacionamiento, comienza una lucha de vida o muerte por descubrir quién de ellos es el secuestrador.",
+    "originalOverview": "Darby Thorne, una joven con una emergencia familiar, queda varada por una tormenta de nieve y busca refugio en la autopista junto a un grupo de extraños. Cuando ve a una niña raptada en una furgoneta en el estacionamiento, comienza una lucha de vida o muerte por descubrir quién de ellos es el secuestrador.",
+    "poster": "posters/833425.jpg",
+    "genres": [
+      "Suspense",
+      "Misterio",
+      "Drama"
+    ],
+    "tmdbId": 833425,
+    "runtime": 95,
+    "sourceFile": "Sin salida (2022).mp4",
+    "parsedTitle": "Sin salida",
+    "parsedYear": "2022"
+  },
+  {
     "title": "Sin tiempo para morir",
     "originalTitle": "No Time to Die",
     "year": "2021",
@@ -9123,6 +9319,24 @@
     ],
     "tmdbId": 6479,
     "runtime": 0
+  },
+  {
+    "title": "Spider-Man: Sin camino a casa",
+    "originalTitle": "Spider-Man: No Way Home",
+    "year": "2021",
+    "overview": "Peter Parker es desenmascarado y ya no puede separar su vida normal de los altos riesgos de ser un súper héroe. Cuando pide ayuda al Doctor Strange para recuperar su secreto, el hechizo crea un agujero en su mundo, liberando a los villanos más poderosos que han luchado con cualquier Spider-Man, en cualquier universo. Ahora Peter debe de superar su reto más grande, que no solo alterara su propio futuro pero el del multiverso, forzándolo a descubrir lo que realmente significa ser Spider-Man.",
+    "originalOverview": "Peter Parker es desenmascarado y ya no puede separar su vida normal de los altos riesgos de ser un súper héroe. Cuando pide ayuda al Doctor Strange para recuperar su secreto, el hechizo crea un agujero en su mundo, liberando a los villanos más poderosos que han luchado con cualquier Spider-Man, en cualquier universo. Ahora Peter debe de superar su reto más grande, que no solo alterara su propio futuro pero el del multiverso, forzándolo a descubrir lo que realmente significa ser Spider-Man.",
+    "poster": "posters/634649.jpg",
+    "genres": [
+      "Acción",
+      "Aventura",
+      "Ciencia ficción"
+    ],
+    "tmdbId": 634649,
+    "runtime": 148,
+    "sourceFile": "Spider-Man Sin camino a casa (2021).mp4",
+    "parsedTitle": "Spider-Man Sin camino a casa",
+    "parsedYear": "2021"
   },
   {
     "title": "Spirit: El Indomable",
@@ -9942,6 +10156,25 @@
     "runtime": 0
   },
   {
+    "title": "Un gallo con muchos huevos",
+    "originalTitle": "Un gallo con muchos huevos",
+    "year": "2015",
+    "overview": "Toto ha crecido y ahora es un joven gallito. Un ranchero malvado engaña a la dueña del rancho donde vive y la obliga a apostar la propiedad en una pelea de gallos en el palenque. Toto es la única opción para defender su hogar, por lo que deberá entrenarse en tan solo una semana y vencer al gallo campeón del palenque.",
+    "originalOverview": "Toto ha crecido y ahora es un joven gallito. Un ranchero malvado engaña a la dueña del rancho donde vive y la obliga a apostar la propiedad en una pelea de gallos en el palenque. Toto es la única opción para defender su hogar, por lo que deberá entrenarse en tan solo una semana y vencer al gallo campeón del palenque.",
+    "poster": "posters/264419.jpg",
+    "genres": [
+      "Animación",
+      "Aventura",
+      "Comedia",
+      "Familia"
+    ],
+    "tmdbId": 264419,
+    "runtime": 97,
+    "sourceFile": "Un gallo con muchos huevos (2015).mkv",
+    "parsedTitle": "Un gallo con muchos huevos",
+    "parsedYear": "2015"
+  },
+  {
     "title": "Un golpe con estilo",
     "originalTitle": "Going in Style",
     "year": "2017",
@@ -10740,26 +10973,6 @@
     "parsedYear": "1986"
   },
   {
-    "title": "Aliados",
-    "originalTitle": "Allied",
-    "year": "2016",
-    "overview": "Año 1942 en el protectorado francés de Marruecos, durante la Segunda Guerra Mundial. Max es un espía canadiense del bando aliado que llega a Casablanca y se hace pasar por marido de Marianne, una francesa miembro de la resistencia con buenas relaciones con el régimen de Vichy. Ambos deberán cumplir una peligrosa misión en el norte de África por órdenes de Londres",
-    "originalOverview": "Año 1942 en el protectorado francés de Marruecos, durante la Segunda Guerra Mundial. Max es un espía canadiense del bando aliado que llega a Casablanca y se hace pasar por marido de Marianne, una francesa miembro de la resistencia con buenas relaciones con el régimen de Vichy. Ambos deberán cumplir una peligrosa misión en el norte de África por órdenes de Londres",
-    "poster": "posters/369885.jpg",
-    "genres": [
-      "Acción",
-      "Drama",
-      "Bélica",
-      "Romance",
-      "Suspense"
-    ],
-    "tmdbId": 369885,
-    "runtime": 125,
-    "sourceFile": "Allied (2016).mkv",
-    "parsedTitle": "Allied",
-    "parsedYear": "2016"
-  },
-  {
     "title": "Un Hombre Lobo Americano En Londres",
     "originalTitle": "An American Werewolf in London",
     "year": "1981",
@@ -10923,7 +11136,11 @@
     "overview": "Dave Stutler es un joven normal, hasta que el experimentado mago Balthazar Blake ve en él un talento oculto para la hechicería. Dave se convierte en el protegido renuente de Balthazar y recibe un curso intenso en el arte de la magia; pero mientras él se prepara para ayudar a su maestro a defender Manhattan de un poderoso adversario, Dave se pregunta si sobrevivirá a su entrenamiento, salvará la ciudad y encontrará a su amor verdadero.",
     "originalOverview": "Dave Stutler es un joven normal, hasta que el experimentado mago Balthazar Blake ve en él un talento oculto para la hechicería. Dave se convierte en el protegido renuente de Balthazar y recibe un curso intenso en el arte de la magia; pero mientras él se prepara para ayudar a su maestro a defender Manhattan de un poderoso adversario, Dave se pregunta si sobrevivirá a su entrenamiento, salvará la ciudad y encontrará a su amor verdadero.",
     "poster": "posters/27022.jpg",
-    "genres": [],
+    "genres": [
+      "Fantasía",
+      "Aventura",
+      "Acción"
+    ],
     "tmdbId": 27022,
     "runtime": 109,
     "sourceFile": "Aprendiz del Brujo (2010).mkv",
@@ -11047,7 +11264,11 @@
     "overview": "Después de entrenar con su mentor, Batman comienza su lucha para liberar a Ciudad Gótica de la corrupción.",
     "originalOverview": "Después de entrenar con su mentor, Batman comienza su lucha para liberar a Ciudad Gótica de la corrupción.",
     "poster": "posters/272.jpg",
-    "genres": [],
+    "genres": [
+      "Drama",
+      "Crimen",
+      "Acción"
+    ],
     "tmdbId": 272,
     "runtime": 140,
     "sourceFile": "Batman 1 (2005).mkv",
@@ -11224,7 +11445,11 @@
     "overview": "T’Challa regresa a su hogar en la apartada nación africana de Wakanda para servir como líder de su país. Tras suceder a su padre en el trono, pasa a convertirse en Pantera Negra, una sigilosa criatura de la noche, con agudos sentidos felinos y otras habilidades como súper fuerza e inteligencia, agilidad, estrategia o maestro del combate sin armas. Es bajo el liderazgo de T’Challa como Wakanda consigue convertirse en una de las naciones más ricas y tecnológicamente avanzadas del planeta.",
     "originalOverview": "T’Challa regresa a su hogar en la apartada nación africana de Wakanda para servir como líder de su país. Tras suceder a su padre en el trono, pasa a convertirse en Pantera Negra, una sigilosa criatura de la noche, con agudos sentidos felinos y otras habilidades como súper fuerza e inteligencia, agilidad, estrategia o maestro del combate sin armas. Es bajo el liderazgo de T’Challa como Wakanda consigue convertirse en una de las naciones más ricas y tecnológicamente avanzadas del planeta.",
     "poster": "posters/284054.jpg",
-    "genres": [],
+    "genres": [
+      "Acción",
+      "Aventura",
+      "Ciencia ficción"
+    ],
     "tmdbId": 284054,
     "runtime": 135,
     "sourceFile": "Black Panther (2018).mp4",
@@ -11368,7 +11593,10 @@
     "overview": "Las hermanastras Ida y Tuva sufren un accidente durante una sesión de buceo invernal en el norte de Noruega. Tuva queda atrapada a 30 metros de profundidad e Ida tendrá que poner a prueba sus habilidades para manejar la crisis. Sin ayuda del mundo exterior las hermanas deben resolver la situación por sus propios medios.",
     "originalOverview": "Las hermanastras Ida y Tuva sufren un accidente durante una sesión de buceo invernal en el norte de Noruega. Tuva queda atrapada a 30 metros de profundidad e Ida tendrá que poner a prueba sus habilidades para manejar la crisis. Sin ayuda del mundo exterior las hermanas deben resolver la situación por sus propios medios.",
     "poster": "posters/616803.jpg",
-    "genres": [],
+    "genres": [
+      "Drama",
+      "Suspense"
+    ],
     "tmdbId": 616803,
     "runtime": 78,
     "sourceFile": "Breaking Surface (2020).mp4",
@@ -12030,7 +12258,11 @@
     "overview": "Un peligroso asesino llamado Simon Phoenix es congelado en una cárcel criógena. Años después despierta en una ciudad sin ley y con una sociedad llena de criminales, donde nadie puede evitar que cometa sus acciones favoritas. Solo Spartan, el policía que lo detuvo en 1996, y congelado por un crimen que no cometió, puede acabar con él…",
     "originalOverview": "Un peligroso asesino llamado Simon Phoenix es congelado en una cárcel criógena. Años después despierta en una ciudad sin ley y con una sociedad llena de criminales, donde nadie puede evitar que cometa sus acciones favoritas. Solo Spartan, el policía que lo detuvo en 1996, y congelado por un crimen que no cometió, puede acabar con él…",
     "poster": "posters/9739.jpg",
-    "genres": [],
+    "genres": [
+      "Crimen",
+      "Acción",
+      "Ciencia ficción"
+    ],
     "tmdbId": 9739,
     "runtime": null,
     "sourceFile": "Demolition Man (1993).mkv",
@@ -12044,7 +12276,11 @@
     "overview": "El 2 de julio, mothership extranjero gigantesco entra en la órbita alrededor de la Tierra y despliega varias docenas de naves espaciales del 'destructor' en forma de platillo que rápidamente ponen la basura a ciudades principales alrededor del planeta. El 3 de julio, los Estados Unidos conducen un contraataque coordinado que falla. El 4 de julio, un plan se idea para ganar el acceso al interior de mothership extranjero en el espacio, a fin de plantar un misil nuclear.",
     "originalOverview": "El 2 de julio, mothership extranjero gigantesco entra en la órbita alrededor de la Tierra y despliega varias docenas de naves espaciales del 'destructor' en forma de platillo que rápidamente ponen la basura a ciudades principales alrededor del planeta. El 3 de julio, los Estados Unidos conducen un contraataque coordinado que falla. El 4 de julio, un plan se idea para ganar el acceso al interior de mothership extranjero en el espacio, a fin de plantar un misil nuclear.",
     "poster": "posters/602.jpg",
-    "genres": [],
+    "genres": [
+      "Acción",
+      "Aventura",
+      "Ciencia ficción"
+    ],
     "tmdbId": 602,
     "runtime": 145,
     "sourceFile": "Dia de la independencia (1996).mkv",
@@ -12186,7 +12422,13 @@
     "overview": "Adaptación al cine del videojuego de Konami, de 1988. El mundo se ha sumido en el caos; la policia sólo patrulla durante el día, la noche pertenece a las bandas y al crimen organizado. Koga Suko es un empresario que desea el poder absoluto, para lograrlo debe reunir los dos fragmentos del doble dragón para formar un amuleto que le otorgará grandes poderes. Lo malo es que una parte del amuleto está en poder de los hermanos Lee, dos expertos en artes marciales que se ganan la vida peleando. Pero esta no es la única amenaza para Suko; también debe enfrentarse a los Power Corps, un grupo que lucha para devolver la seguridad a las calles.",
     "originalOverview": "Adaptación al cine del videojuego de Konami, de 1988. El mundo se ha sumido en el caos; la policia sólo patrulla durante el día, la noche pertenece a las bandas y al crimen organizado. Koga Suko es un empresario que desea el poder absoluto, para lograrlo debe reunir los dos fragmentos del doble dragón para formar un amuleto que le otorgará grandes poderes. Lo malo es que una parte del amuleto está en poder de los hermanos Lee, dos expertos en artes marciales que se ganan la vida peleando. Pero esta no es la única amenaza para Suko; también debe enfrentarse a los Power Corps, un grupo que lucha para devolver la seguridad a las calles.",
     "poster": "posters/2436.jpg",
-    "genres": [],
+    "genres": [
+      "Acción",
+      "Aventura",
+      "Comedia",
+      "Fantasía",
+      "Ciencia ficción"
+    ],
     "tmdbId": 2436,
     "runtime": 96,
     "sourceFile": "Double Dragon (1994).mkv",
@@ -12218,7 +12460,11 @@
     "overview": "La historia del famoso neurocirujano Dr. Stephen Strange cuya vida cambia para siempre luego de un accidente automovilístico que lo deja sin poder mover sus manos. Cuando la medicina tradicional falla, se ve obligado a buscar una cura y esperanzas en un lugar impensado: una comunidad aislada y misteriosa llamada Kamar-Taj. Rápidamente descubre que éste no es sólo un centro de recuperación, sino también la primera línea de una batalla en contra de fuerzas oscuras y ocultas empeñadas en destruir nuestra realidad. En poco tiempo, Strange, armado con sus poderes mágicos recientemente adquiridos, se ve obligado a elegir entre volver a su antigua vida de riqueza y estatus, o dejarlo todo para defender el mundo como el hechicero más poderoso del planeta.",
     "originalOverview": "La historia del famoso neurocirujano Dr. Stephen Strange cuya vida cambia para siempre luego de un accidente automovilístico que lo deja sin poder mover sus manos. Cuando la medicina tradicional falla, se ve obligado a buscar una cura y esperanzas en un lugar impensado: una comunidad aislada y misteriosa llamada Kamar-Taj. Rápidamente descubre que éste no es sólo un centro de recuperación, sino también la primera línea de una batalla en contra de fuerzas oscuras y ocultas empeñadas en destruir nuestra realidad. En poco tiempo, Strange, armado con sus poderes mágicos recientemente adquiridos, se ve obligado a elegir entre volver a su antigua vida de riqueza y estatus, o dejarlo todo para defender el mundo como el hechicero más poderoso del planeta.",
     "poster": "posters/284052.jpg",
-    "genres": [],
+    "genres": [
+      "Fantasía",
+      "Aventura",
+      "Acción"
+    ],
     "tmdbId": 284052,
     "runtime": 115,
     "sourceFile": "Dr Strange (2016).mkv",
@@ -12248,32 +12494,19 @@
     "overview": "Luca sigue los pasos de su padre para rescatar a su madre del malvado Ladja. Encontrar al héroe celestial que empuña la espada Zenitiana es su única esperanza.",
     "originalOverview": "Luca sigue los pasos de su padre para rescatar a su madre del malvado Ladja. Encontrar al héroe celestial que empuña la espada Zenitiana es su única esperanza.",
     "poster": "posters/592867.jpg",
-    "genres": [],
+    "genres": [
+      "Animación",
+      "Aventura",
+      "Comedia",
+      "Fantasía",
+      "Acción",
+      "Familia"
+    ],
     "tmdbId": 592867,
     "runtime": 102,
     "sourceFile": "Dragon Quest (2019).mkv",
     "parsedTitle": "Dragon Quest",
     "parsedYear": "2019"
-  },
-  {
-    "title": "¡Scooby-Doo! Dulce o Travesura",
-    "originalTitle": "Trick or Treat Scooby-Doo!",
-    "year": "2022",
-    "overview": "¡Mystery Inc. resolvió el caso! Rastrearon a Coco Diablo, líder de la famosa organización criminal que colabora con el caballero negro, Space Kook y Ghost Diver. Con Coco y su gatito en prisión, Mystery Inc. creen que finalmente podrán disfrutar de un descanso. ¡Equivocados! De repente, amenazantes fantasmas doppelgänger de la pandilla de Scooby y los clásicos enemigos favoritos de siempre aparecen en Coolsville para poner en peligro Halloween. ¡Ahora depende de los entrometidos chicos, y su incompatible nueva socia Coco, desenmascarar al último sinvergüenza y salvar Halloween! Para Shaggy y Scooby-Doo, con la búsqueda de dulces en riesgo, ¡esta vez es un tema personal!",
-    "originalOverview": "¡Mystery Inc. resolvió el caso! Rastrearon a Coco Diablo, líder de la famosa organización criminal que colabora con el caballero negro, Space Kook y Ghost Diver. Con Coco y su gatito en prisión, Mystery Inc. creen que finalmente podrán disfrutar de un descanso. ¡Equivocados! De repente, amenazantes fantasmas doppelgänger de la pandilla de Scooby y los clásicos enemigos favoritos de siempre aparecen en Coolsville para poner en peligro Halloween. ¡Ahora depende de los entrometidos chicos, y su incompatible nueva socia Coco, desenmascarar al último sinvergüenza y salvar Halloween! Para Shaggy y Scooby-Doo, con la búsqueda de dulces en riesgo, ¡esta vez es un tema personal!",
-    "poster": "posters/1015724.jpg",
-    "genres": [
-      "Aventura",
-      "Misterio",
-      "Comedia",
-      "Animación",
-      "Familia"
-    ],
-    "tmdbId": 1015724,
-    "runtime": 82,
-    "sourceFile": "Dulce o truco (2007).mkv",
-    "parsedTitle": "Dulce o truco",
-    "parsedYear": "2007"
   },
   {
     "title": "Duro de matar",
@@ -12369,7 +12602,11 @@
     "overview": "Jerry Shaw, un joven inteligente pero inadaptado cuyo hermano gemelo acaba de morir en extrañas circustancias, y Rachel Holloman, una joven madre soltera cuyo hijo está en peligro, se ven de repente juntos e involucrados en una complicada trama de terrorismo que gira en torno a una misteriosa voz que parece controlar sus vidas.",
     "originalOverview": "Jerry Shaw, un joven inteligente pero inadaptado cuyo hermano gemelo acaba de morir en extrañas circustancias, y Rachel Holloman, una joven madre soltera cuyo hijo está en peligro, se ven de repente juntos e involucrados en una complicada trama de terrorismo que gira en torno a una misteriosa voz que parece controlar sus vidas.",
     "poster": "posters/13027.jpg",
-    "genres": [],
+    "genres": [
+      "Misterio",
+      "Suspense",
+      "Acción"
+    ],
     "tmdbId": 13027,
     "runtime": 118,
     "sourceFile": "Eagle Eye (2008).mkv",
@@ -12448,23 +12685,23 @@
     "parsedYear": "2002"
   },
   {
-    "title": "Gato con Botas: El último deseo",
-    "originalTitle": "Puss in Boots: The Last Wish",
-    "year": "2022",
-    "overview": "El audaz forajido Gato con Botas descubre que su pasión por el peligro y su desprecio por la seguridad le han pasado factura. El Gato ha quemado ocho de sus nueve vidas, aunque ha perdido la cuenta por el camino. Recuperar esas vidas hará que el Gato con Botas emprenda su mayor búsqueda hasta ahora; la mítica Estrella de los Deseos.",
-    "originalOverview": "El audaz forajido Gato con Botas descubre que su pasión por el peligro y su desprecio por la seguridad le han pasado factura. El Gato ha quemado ocho de sus nueve vidas, aunque ha perdido la cuenta por el camino. Recuperar esas vidas hará que el Gato con Botas emprenda su mayor búsqueda hasta ahora; la mítica Estrella de los Deseos.",
-    "poster": "posters/315162.jpg",
+    "title": "Gato con botas",
+    "originalTitle": "Puss in Boots",
+    "year": "2011",
+    "overview": "\"Gato con botas\" se sitúa en el tiempo como la precuela de Shrek 2. Mucho tiempo antes de conocer a Shrek, el Gato con Botas emprendió un viaje aliándose con el ingenioso Humpty Dumpty y con la avispada Kitty Softpaws para robar el famoso ganso de los huevos de oro.",
+    "originalOverview": "\"Gato con botas\" se sitúa en el tiempo como la precuela de Shrek 2. Mucho tiempo antes de conocer a Shrek, el Gato con Botas emprendió un viaje aliándose con el ingenioso Humpty Dumpty y con la avispada Kitty Softpaws para robar el famoso ganso de los huevos de oro.",
+    "poster": "posters/417859.jpg",
     "genres": [
       "Animación",
-      "Aventura",
+      "Familia",
       "Fantasía",
-      "Comedia",
-      "Familia"
+      "Aventura",
+      "Comedia"
     ],
-    "tmdbId": 315162,
+    "tmdbId": 417859,
     "runtime": 93,
-    "sourceFile": "El Gato con Botas 1 (2011).mkv",
-    "parsedTitle": "El Gato con Botas 1",
+    "sourceFile": "El Gato con Botas (2011).mkv",
+    "parsedTitle": "El Gato con Botas",
     "parsedYear": "2011"
   },
   {
@@ -12548,7 +12785,11 @@
     "overview": "Después de haber recuperado el reino del Dragón Smaug en la montaña, la Compañía ha desencadenado, sin querer, una potencia maligna. Un Smaug enfurecido vuela hacia la Ciudad del Lago para acabar con cualquier resto de vida. Obsesionado con las enormes riquezas en su poder, el rey enano Thorin se vuelve codicioso, mientras Bilbo intenta hacerle entrar en razón haciendo algo desesperado y peligroso. Pero hay aún mayores peligros por delante. Sin la ayuda del mago Gandalf, su gran enemigo Sauron ha enviado legiones de orcos hacia la Montaña Solitaria en un ataque épico. Cuando la oscuridad se cierna sobre ellos, las razas de los Enanos, Elfos y Hombres deberán decidir si unirse o ser destruidos. Bilbo se encontrará así en la batalla épica de los Cinco Ejércitos, donde el futuro de la Tierra Media está en juego.",
     "originalOverview": "Después de haber recuperado el reino del Dragón Smaug en la montaña, la Compañía ha desencadenado, sin querer, una potencia maligna. Un Smaug enfurecido vuela hacia la Ciudad del Lago para acabar con cualquier resto de vida. Obsesionado con las enormes riquezas en su poder, el rey enano Thorin se vuelve codicioso, mientras Bilbo intenta hacerle entrar en razón haciendo algo desesperado y peligroso. Pero hay aún mayores peligros por delante. Sin la ayuda del mago Gandalf, su gran enemigo Sauron ha enviado legiones de orcos hacia la Montaña Solitaria en un ataque épico. Cuando la oscuridad se cierna sobre ellos, las razas de los Enanos, Elfos y Hombres deberán decidir si unirse o ser destruidos. Bilbo se encontrará así en la batalla épica de los Cinco Ejércitos, donde el futuro de la Tierra Media está en juego.",
     "poster": "posters/122917.jpg",
-    "genres": [],
+    "genres": [
+      "Acción",
+      "Aventura",
+      "Fantasía"
+    ],
     "tmdbId": 122917,
     "runtime": 144,
     "sourceFile": "El Hobbit 3 (2014).mp4",
@@ -12692,7 +12933,10 @@
     "overview": "Le envían a Donald un pingüino desde el Polo Sur. A Donald le divierte, hasta que cree que se ha comido su pez dorado...",
     "originalOverview": "Le envían a Donald un pingüino desde el Polo Sur. A Donald le divierte, hasta que cree que se ha comido su pez dorado...",
     "poster": "posters/55409.jpg",
-    "genres": [],
+    "genres": [
+      "Animación",
+      "Comedia"
+    ],
     "tmdbId": 55409,
     "runtime": 8,
     "sourceFile": "El Pingüino de Donald (1939).mkv",
@@ -12724,7 +12968,10 @@
     "overview": "Truman Burbank es un hombre corriente y algo ingenuo que ha vivido toda su vida en uno de esos pueblos donde nunca pasa nada. Sin embargo, unos extraños sucesos le hacen sospechar que algo anormal está ocurriendo.",
     "originalOverview": "Truman Burbank es un hombre corriente y algo ingenuo que ha vivido toda su vida en uno de esos pueblos donde nunca pasa nada. Sin embargo, unos extraños sucesos le hacen sospechar que algo anormal está ocurriendo.",
     "poster": "posters/37165.jpg",
-    "genres": [],
+    "genres": [
+      "Comedia",
+      "Drama"
+    ],
     "tmdbId": 37165,
     "runtime": 103,
     "sourceFile": "El Show de Truman (1998).mkv",
@@ -12769,30 +13016,17 @@
     "parsedYear": "1987"
   },
   {
-    "title": "El abismo del infierno",
-    "originalTitle": "Ostatnia wieczerza",
-    "year": "2022",
-    "overview": "En un monasterio aislado del mundo, los monjes dirigen una clínica para los poseídos. Un día, un joven policía Marek llega al convento. Haciéndose pasar por un clérigo, penetra en la vida monástica y trata de explicar la reciente y misteriosa desaparición de varios reclusos atormentados. Resulta, sin embargo, que no hay forma de salir del monasterio.",
-    "originalOverview": "En un monasterio aislado del mundo, los monjes dirigen una clínica para los poseídos. Un día, un joven policía Marek llega al convento. Haciéndose pasar por un clérigo, penetra en la vida monástica y trata de explicar la reciente y misteriosa desaparición de varios reclusos atormentados. Resulta, sin embargo, que no hay forma de salir del monasterio.",
-    "poster": "posters/1032950.jpg",
-    "genres": [
-      "Terror",
-      "Misterio"
-    ],
-    "tmdbId": 1032950,
-    "runtime": 86,
-    "sourceFile": "El abismo (2022).mp4",
-    "parsedTitle": "El abismo",
-    "parsedYear": "2022"
-  },
-  {
     "title": "Barco fantasma",
     "originalTitle": "Ghost Ship",
     "year": "2002",
     "overview": "Una tripulación de salvamento descubre un buque de pasajeros de 1962 que llevaba mucho tiempo perdido y que flotaba sin vida en una región remota del Mar de Bering, y pronto se da cuenta de que sus habitantes, muertos desde hace mucho tiempo, pueden seguir a bordo.",
     "originalOverview": "Una tripulación de salvamento descubre un buque de pasajeros de 1962 que llevaba mucho tiempo perdido y que flotaba sin vida en una región remota del Mar de Bering, y pronto se da cuenta de que sus habitantes, muertos desde hace mucho tiempo, pueden seguir a bordo.",
     "poster": "posters/9645.jpg",
-    "genres": [],
+    "genres": [
+      "Terror",
+      "Misterio",
+      "Suspense"
+    ],
     "tmdbId": 9645,
     "runtime": 91,
     "sourceFile": "El barco fantasma (2002).mkv",
@@ -12819,23 +13053,6 @@
     "sourceFile": "El dragon de los deseos (2021).mp4",
     "parsedTitle": "El dragon de los deseos",
     "parsedYear": "2021"
-  },
-  {
-    "title": "Black Travel Across America",
-    "originalTitle": "Black Travel Across America",
-    "year": "2023",
-    "overview": "La consultora de viajes, Martinique Lewis, se embarca en un viaje para visitar ubicaciones históricamente incluidas en el Libro verde y destinos modernos de viajes negros. Martinique aprenderá sobre los fantásticos refugios seguros para negros que florecieron en una época de lucha racial y cómo influyeron en los empresarios negros modernos.",
-    "originalOverview": "La consultora de viajes, Martinique Lewis, se embarca en un viaje para visitar ubicaciones históricamente incluidas en el Libro verde y destinos modernos de viajes negros. Martinique aprenderá sobre los fantásticos refugios seguros para negros que florecieron en una época de lucha racial y cómo influyeron en los empresarios negros modernos.",
-    "poster": "posters/1076261.jpg",
-    "genres": [
-      "Documental",
-      "Película de TV"
-    ],
-    "tmdbId": 1076261,
-    "runtime": 130,
-    "sourceFile": "El libro verde (2018).mkv",
-    "parsedTitle": "El libro verde",
-    "parsedYear": "2018"
   },
   {
     "title": "El mapa de los instantes perfectos",
@@ -12961,41 +13178,6 @@
     "parsedYear": "2002"
   },
   {
-    "title": "La gran tormenta",
-    "originalTitle": "Survive",
-    "year": "2022",
-    "overview": "Cuando un avión se estrella en una remota montaña cubierta de nieve, Jane y Paul tienen que luchar por sus vidas como los únicos sobrevivientes que quedan. Juntos se embarcan en un angustioso viaje fuera del desierto.",
-    "originalOverview": "Cuando un avión se estrella en una remota montaña cubierta de nieve, Jane y Paul tienen que luchar por sus vidas como los únicos sobrevivientes que quedan. Juntos se embarcan en un angustioso viaje fuera del desierto.",
-    "poster": "posters/1132079.jpg",
-    "genres": [
-      "Aventura",
-      "Drama",
-      "Suspense"
-    ],
-    "tmdbId": 1132079,
-    "runtime": 95,
-    "sourceFile": "En la tormenta (2022).mp4",
-    "parsedTitle": "En la tormenta",
-    "parsedYear": "2022"
-  },
-  {
-    "title": "End of Days, Inc.",
-    "originalTitle": "End of Days, Inc.",
-    "year": "2015",
-    "overview": "",
-    "originalOverview": "",
-    "poster": "posters/346347.jpg",
-    "genres": [
-      "Comedia",
-      "Ciencia ficción"
-    ],
-    "tmdbId": 346347,
-    "runtime": 122,
-    "sourceFile": "End of Days (1999).mkv",
-    "parsedTitle": "End of Days",
-    "parsedYear": "1999"
-  },
-  {
     "title": "Enemigo mío",
     "originalTitle": "Enemy Mine",
     "year": "1985",
@@ -13088,20 +13270,6 @@
     "parsedYear": "2019"
   },
   {
-    "title": "Salvado por la Campana: Detrás de las cámaras",
-    "originalTitle": "The Unauthorized Saved by the Bell Story",
-    "year": "2014",
-    "overview": "The Noauthorized Saved by the Bell Story profundiza en las experiencias de seis actores jóvenes desconocidos puestos en el punto de mira de Hollywood, exponiendo los desafíos de crecer bajo el escrutinio público",
-    "originalOverview": "The Noauthorized Saved by the Bell Story profundiza en las experiencias de seis actores jóvenes desconocidos puestos en el punto de mira de Hollywood, exponiendo los desafíos de crecer bajo el escrutinio público",
-    "poster": "posters/287241.jpg",
-    "genres": [],
-    "tmdbId": 287241,
-    "runtime": 100,
-    "sourceFile": "Esta detras de ti (2014).mp4",
-    "parsedTitle": "Esta detras de ti",
-    "parsedYear": "2014"
-  },
-  {
     "title": "Estación Zombie: tren a Busan",
     "originalTitle": "부산행",
     "year": "2016",
@@ -13180,7 +13348,10 @@
     "overview": "El piloto legendario Sonny Hayes es convencido de salir de su retiro para liderar a un equipo de la Fórmula 1 en dificultades y ser mentor de un joven piloto talentoso, mientras se busca una última oportunidad de gloria.",
     "originalOverview": "El piloto legendario Sonny Hayes es convencido de salir de su retiro para liderar a un equipo de la Fórmula 1 en dificultades y ser mentor de un joven piloto talentoso, mientras se busca una última oportunidad de gloria.",
     "poster": "posters/911430.jpg",
-    "genres": [],
+    "genres": [
+      "Acción",
+      "Drama"
+    ],
     "tmdbId": 911430,
     "runtime": 156,
     "sourceFile": "F1 (2025).mkv",
@@ -13194,7 +13365,9 @@
     "overview": "Para Becky y Hunter, la vida trata de superar tus miedos y empujar tus límites. Sin embargo, después de subir hasta la cima de una torre de comunicaciones abandonada, se encuentran atrapadas y sin forma de bajar. A 600 metros del suelo y totalmente alejadas de la civilización, las chicas pondrán a prueba sus habilidades de escaladoras expertas y lucharán desesperadamente por sobrevivir aunque lo tengan todo en contra. ¿Lo conseguirán?",
     "originalOverview": "Para Becky y Hunter, la vida trata de superar tus miedos y empujar tus límites. Sin embargo, después de subir hasta la cima de una torre de comunicaciones abandonada, se encuentran atrapadas y sin forma de bajar. A 600 metros del suelo y totalmente alejadas de la civilización, las chicas pondrán a prueba sus habilidades de escaladoras expertas y lucharán desesperadamente por sobrevivir aunque lo tengan todo en contra. ¿Lo conseguirán?",
     "poster": "posters/985939.jpg",
-    "genres": [],
+    "genres": [
+      "Suspense"
+    ],
     "tmdbId": 985939,
     "runtime": 107,
     "sourceFile": "Fall (2022).mp4",
@@ -13435,7 +13608,10 @@
     "overview": "La empresa de un comercial inmobiliario lo manda a vender unas viviendas en una zona desierta y salvaje de Oregón. Allí tendrá que enfrentarse a unas extrañas criaturas que lo pondrán en serias dificultades.",
     "originalOverview": "La empresa de un comercial inmobiliario lo manda a vender unas viviendas en una zona desierta y salvaje de Oregón. Allí tendrá que enfrentarse a unas extrañas criaturas que lo pondrán en serias dificultades.",
     "poster": "posters/35169.jpg",
-    "genres": [],
+    "genres": [
+      "Familia",
+      "Comedia"
+    ],
     "tmdbId": 35169,
     "runtime": 91,
     "sourceFile": "Furry Vengeance (2010).mkv",
@@ -13478,6 +13654,19 @@
     "sourceFile": "Ga Hoole (2010).mkv",
     "parsedTitle": "Ga Hoole",
     "parsedYear": "2010"
+  },
+  {
+    "title": "Gardfield Especial de Accion de Gracias",
+    "originalTitle": "Gardfield Especial de Accion de Gracias",
+    "year": "1989",
+    "overview": "No disponible",
+    "originalOverview": "",
+    "poster": null,
+    "genres": [],
+    "tmdbId": null,
+    "sourceFile": "Gardfield Especial de Accion de Gracias (1989).mp4",
+    "parsedTitle": "Gardfield Especial de Accion de Gracias",
+    "parsedYear": "1989"
   },
   {
     "title": "La navidad de Garfield",
@@ -13591,7 +13780,11 @@
     "overview": "Cuando el motociclista Johnny Blaze vende su alma al Diablo para salvar la vida de su padre, se transforma en el Vengador Fantasma, el cazador de recompensas del Diablo, y es enviado a cazar pecadores.",
     "originalOverview": "Cuando el motociclista Johnny Blaze vende su alma al Diablo para salvar la vida de su padre, se transforma en el Vengador Fantasma, el cazador de recompensas del Diablo, y es enviado a cazar pecadores.",
     "poster": "posters/1250.jpg",
-    "genres": [],
+    "genres": [
+      "Suspense",
+      "Acción",
+      "Fantasía"
+    ],
     "tmdbId": 1250,
     "runtime": 123,
     "sourceFile": "Ghost Rider (2007).mp4",
@@ -13723,6 +13916,24 @@
     "parsedYear": "2023"
   },
   {
+    "title": "Green Book: Una Amistad sin Fronteras",
+    "originalTitle": "Green Book",
+    "year": "2018",
+    "overview": "Tony Lip, un rudo guardaespaldas italoamericano, es contratado como chofer del pianista negro Don Shirley durante un tour por el Sur Profundo, emprendiendo un viaje que los adentra en un territorio en el que predomina el racismo y la segregación.",
+    "originalOverview": "Tony Lip, un rudo guardaespaldas italoamericano, es contratado como chofer del pianista negro Don Shirley durante un tour por el Sur Profundo, emprendiendo un viaje que los adentra en un territorio en el que predomina el racismo y la segregación.",
+    "poster": "posters/490132.jpg",
+    "genres": [
+      "Drama",
+      "Comedia",
+      "Historia"
+    ],
+    "tmdbId": 490132,
+    "runtime": 130,
+    "sourceFile": "Green Book una amistad sin fronteras (2018).mkv",
+    "parsedTitle": "Green Book una amistad sin fronteras",
+    "parsedYear": "2018"
+  },
+  {
     "title": "Guardianes de la galaxia",
     "originalTitle": "Guardians of the Galaxy",
     "year": "2014",
@@ -13792,16 +14003,16 @@
     "parsedYear": "2009"
   },
   {
-    "title": "Halo La caída de Reach",
-    "originalTitle": "Halo La caída de Reach",
+    "title": "Halo The Fall Of Reach",
+    "originalTitle": "Halo The Fall Of Reach",
     "year": "2015",
     "overview": "No disponible",
     "originalOverview": "",
     "poster": null,
     "genres": [],
     "tmdbId": null,
-    "sourceFile": "Halo La caída de Reach (2015).mp4",
-    "parsedTitle": "Halo La caída de Reach",
+    "sourceFile": "Halo The Fall Of Reach (2015).mp4",
+    "parsedTitle": "Halo The Fall Of Reach",
     "parsedYear": "2015"
   },
   {
@@ -13993,22 +14204,6 @@
     "parsedYear": "2022"
   },
   {
-    "title": "Gato Galáctico e o Feitiço do Tempo",
-    "originalTitle": "Gato Galáctico e o Feitiço do Tempo",
-    "year": "2024",
-    "overview": "",
-    "originalOverview": "",
-    "poster": "posters/1209095.jpg",
-    "genres": [
-      "Aventura"
-    ],
-    "tmdbId": 1209095,
-    "runtime": 101,
-    "sourceFile": "Hechizo Del Tiempo (1993).mkv",
-    "parsedTitle": "Hechizo Del Tiempo",
-    "parsedYear": "1993"
-  },
-  {
     "title": "Ella",
     "originalTitle": "Her",
     "year": "2013",
@@ -14107,7 +14302,13 @@
     "overview": "Al sentirse que no pertenece en el hotel lleno de monstruos, Johnny se cruza con Van Helsing y su nuevo invento, el \"Rayo Monstruificante\", permitiendo que Johnny se convierta en un monstruo, pero con la consecuencia de que Drácula y sus amigos monstruosos se transforman en humanos.",
     "originalOverview": "Al sentirse que no pertenece en el hotel lleno de monstruos, Johnny se cruza con Van Helsing y su nuevo invento, el \"Rayo Monstruificante\", permitiendo que Johnny se convierta en un monstruo, pero con la consecuencia de que Drácula y sus amigos monstruosos se transforman en humanos.",
     "poster": "posters/585083.jpg",
-    "genres": [],
+    "genres": [
+      "Animación",
+      "Comedia",
+      "Familia",
+      "Aventura",
+      "Fantasía"
+    ],
     "tmdbId": 585083,
     "runtime": 88,
     "sourceFile": "Hotel Transylvania 4 (2022).mkv",
@@ -14289,6 +14490,26 @@
     "parsedYear": "2024"
   },
   {
+    "title": "Intensa-Mente",
+    "originalTitle": "Inside Out",
+    "year": "2015",
+    "overview": "Riley es una chica que disfruta o padece toda clase de sentimientos. Aunque su vida ha estado marcada por la Alegría, también se ve afectada por otro tipo de emociones. Lo que Riley no entiende muy bien es por qué motivo tiene que existir la Tristeza en su vida. Una serie de acontecimientos hacen que Alegría y Tristeza se mezclen en una peligrosa aventura que dará un vuelco al mundo de Riley.",
+    "originalOverview": "Riley es una chica que disfruta o padece toda clase de sentimientos. Aunque su vida ha estado marcada por la Alegría, también se ve afectada por otro tipo de emociones. Lo que Riley no entiende muy bien es por qué motivo tiene que existir la Tristeza en su vida. Una serie de acontecimientos hacen que Alegría y Tristeza se mezclen en una peligrosa aventura que dará un vuelco al mundo de Riley.",
+    "poster": "posters/150540.jpg",
+    "genres": [
+      "Animación",
+      "Familia",
+      "Aventura",
+      "Drama",
+      "Comedia"
+    ],
+    "tmdbId": 150540,
+    "runtime": 95,
+    "sourceFile": "Intensa-mente Inside Out (2015).mkv",
+    "parsedTitle": "Intensa-mente Inside Out",
+    "parsedYear": "2015"
+  },
+  {
     "title": "Iron man - El hombre de hierro",
     "originalTitle": "Iron Man",
     "year": "2008",
@@ -14305,6 +14526,23 @@
     "sourceFile": "Iron Man (2008).mkv",
     "parsedTitle": "Iron Man",
     "parsedYear": "2008"
+  },
+  {
+    "title": "Está Detrás De Ti",
+    "originalTitle": "It Follows",
+    "year": "2015",
+    "overview": "Jay, una joven de 18 años, tiene una experiencia sexual con su novio en la parte trasera del auto, tras la cual su novio la ata a una silla y le explica que le ha transmitido una maldición que se propaga mediante el sexo. Así, un espíritu que adopta multitud de formas comienza a acosarla, persiguiéndola de forma lenta pero imparable para despedazarla. Sus amigos intentan ayudarla, pero según su ahora exnovio, solo pasándole la maldición a otro se librará de la muerte.",
+    "originalOverview": "Jay, una joven de 18 años, tiene una experiencia sexual con su novio en la parte trasera del auto, tras la cual su novio la ata a una silla y le explica que le ha transmitido una maldición que se propaga mediante el sexo. Así, un espíritu que adopta multitud de formas comienza a acosarla, persiguiéndola de forma lenta pero imparable para despedazarla. Sus amigos intentan ayudarla, pero según su ahora exnovio, solo pasándole la maldición a otro se librará de la muerte.",
+    "poster": "posters/270303.jpg",
+    "genres": [
+      "Terror",
+      "Misterio"
+    ],
+    "tmdbId": 270303,
+    "runtime": 100,
+    "sourceFile": "It Follows (2014).mp4",
+    "parsedTitle": "It Follows",
+    "parsedYear": "2014"
   },
   {
     "title": "Jack Reacher: Bajo la Mira",
@@ -14716,7 +14954,9 @@
     "overview": "",
     "originalOverview": "",
     "poster": "posters/696092.jpg",
-    "genres": [],
+    "genres": [
+      "Bélica"
+    ],
     "tmdbId": 696092,
     "runtime": 94,
     "sourceFile": "La Divina Misericordia (2020).mp4",
@@ -14761,23 +15001,6 @@
     "sourceFile": "La Era de Hielo 5 (2016).mkv",
     "parsedTitle": "La Era de Hielo 5",
     "parsedYear": "2016"
-  },
-  {
-    "title": "La Nueva Gran Estafa",
-    "originalTitle": "Ocean's Twelve",
-    "year": "2004",
-    "overview": "Danny Ocean (Clooney), Tess (Roberts) y su banda vuelven a formar equipo. Esta vez el golpe será múltiple: tres espectaculares atracos en tres lugares diferentes, Roma, París y Ámsterdam. En Ámsterdam, el premio es un Rembrandt. Mientras tanto, el propietario del casino de Las Vegas Terry Benedict (García), a quien Ocean y su banda robaron en una ocasión, no ha renunciado a vengarse de ellos",
-    "originalOverview": "Danny Ocean (Clooney), Tess (Roberts) y su banda vuelven a formar equipo. Esta vez el golpe será múltiple: tres espectaculares atracos en tres lugares diferentes, Roma, París y Ámsterdam. En Ámsterdam, el premio es un Rembrandt. Mientras tanto, el propietario del casino de Las Vegas Terry Benedict (García), a quien Ocean y su banda robaron en una ocasión, no ha renunciado a vengarse de ellos",
-    "poster": "posters/163.jpg",
-    "genres": [
-      "Suspense",
-      "Crimen"
-    ],
-    "tmdbId": 163,
-    "runtime": 125,
-    "sourceFile": "La Gran Estafa 2 (2004).mkv",
-    "parsedTitle": "La Gran Estafa 2",
-    "parsedYear": "2004"
   },
   {
     "title": "Gameheadz: The History of Video Games",
@@ -14936,61 +15159,21 @@
     "parsedYear": "2012"
   },
   {
-    "title": "La gran aventura Lego 1",
-    "originalTitle": "La gran aventura Lego 1",
-    "year": "2014",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
-    "sourceFile": "La gran aventura Lego 1 (2014).mkv",
-    "parsedTitle": "La gran aventura Lego 1",
-    "parsedYear": "2014"
-  },
-  {
-    "title": "La gran estafa 3",
-    "originalTitle": "La gran estafa 3",
-    "year": "2007",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
-    "sourceFile": "La gran estafa 3 (2007).mkv",
-    "parsedTitle": "La gran estafa 3",
-    "parsedYear": "2007"
-  },
-  {
-    "title": "La noche del demonio",
-    "originalTitle": "Insidious",
-    "year": "2011",
-    "overview": "Una familia descubre que los espíritus oscuros han invadido su hogar después de que su hijo inexplicablemente cae en un sueño sin fin. Cuando llegan a un profesional para obtener ayuda, aprenden que las cosas son mucho más personales de lo que pensaban.",
-    "originalOverview": "Una familia descubre que los espíritus oscuros han invadido su hogar después de que su hijo inexplicablemente cae en un sueño sin fin. Cuando llegan a un profesional para obtener ayuda, aprenden que las cosas son mucho más personales de lo que pensaban.",
-    "poster": "posters/49018.jpg",
+    "title": "La noche del demonio: Capítulo 2",
+    "originalTitle": "Insidious: Chapter 2",
+    "year": "2013",
+    "overview": "Josh y Renai Lambert se han mudado con sus hijos a la casa de Lorraine, la madre de Josh, esperando olvidar el pasado y comenzar una nueva vida. Pero pronto la familia empieza a percibir extrañas visiones y fenómenos amenazantes que los obligarán a desentrañar un oscuro secreto.",
+    "originalOverview": "Josh y Renai Lambert se han mudado con sus hijos a la casa de Lorraine, la madre de Josh, esperando olvidar el pasado y comenzar una nueva vida. Pero pronto la familia empieza a percibir extrañas visiones y fenómenos amenazantes que los obligarán a desentrañar un oscuro secreto.",
+    "poster": "posters/91586.jpg",
     "genres": [
       "Terror",
       "Suspense"
     ],
-    "tmdbId": 49018,
+    "tmdbId": 91586,
     "runtime": 103,
     "sourceFile": "La noche del demonio (2010).mkv",
     "parsedTitle": "La noche del demonio",
     "parsedYear": "2010"
-  },
-  {
-    "title": "Il primo Natale",
-    "originalTitle": "Il primo Natale",
-    "year": "2019",
-    "overview": "",
-    "originalOverview": "",
-    "poster": "posters/613080.jpg",
-    "genres": [],
-    "tmdbId": 613080,
-    "runtime": 104,
-    "sourceFile": "La primera Navidad (2019).mkv",
-    "parsedTitle": "La primera Navidad",
-    "parsedYear": "2019"
   },
   {
     "title": "Red Social",
@@ -14999,7 +15182,9 @@
     "overview": "Durante una noche de otoño de 2003, el genio de la programación de computación de la Universidad de Harvard, Mark Zuckerberg, se sienta en su computadora y comienza a trabajar en una nueva idea: una red social global. A sólo seis años y 500 millones de amigos más tarde, Mark es el multimillonario más joven de la historia... pero también su éxito conduce a complicaciones tanto personales como legales.",
     "originalOverview": "Durante una noche de otoño de 2003, el genio de la programación de computación de la Universidad de Harvard, Mark Zuckerberg, se sienta en su computadora y comienza a trabajar en una nueva idea: una red social global. A sólo seis años y 500 millones de amigos más tarde, Mark es el multimillonario más joven de la historia... pero también su éxito conduce a complicaciones tanto personales como legales.",
     "poster": "posters/37799.jpg",
-    "genres": [],
+    "genres": [
+      "Drama"
+    ],
     "tmdbId": 37799,
     "runtime": 120,
     "sourceFile": "La red social (2010).mkv",
@@ -15196,7 +15381,10 @@
     "overview": "Amy, Jo, Beth y Meg son cuatro hermanas adolescentes que se embarcan en unas vacaciones con su madre, pero sin su padre, un evangelista itinerante. A medida que atraviesan el estado de Massachusetts, sumido en plena Guerra Civil, descubren el amor y la importancia de los lazos familiares.",
     "originalOverview": "Amy, Jo, Beth y Meg son cuatro hermanas adolescentes que se embarcan en unas vacaciones con su madre, pero sin su padre, un evangelista itinerante. A medida que atraviesan el estado de Massachusetts, sumido en plena Guerra Civil, descubren el amor y la importancia de los lazos familiares.",
     "poster": "posters/331482.jpg",
-    "genres": [],
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
     "tmdbId": 331482,
     "runtime": 135,
     "sourceFile": "Little women (2019).mp4",
@@ -15286,7 +15474,11 @@
     "overview": "Grace es una mujer religiosa que vive en una vieja casa mantenida oscura porque sus dos hijos, Anne y Nicholas, tienen una rara sensibilidad a la luz. Cuando la familia comienza a sospechar que la casa está embrujada, Grace lucha para proteger a sus hijos a cualquier costo ante los extraños acontecimientos y las visiones inquietantes.",
     "originalOverview": "Grace es una mujer religiosa que vive en una vieja casa mantenida oscura porque sus dos hijos, Anne y Nicholas, tienen una rara sensibilidad a la luz. Cuando la familia comienza a sospechar que la casa está embrujada, Grace lucha para proteger a sus hijos a cualquier costo ante los extraños acontecimientos y las visiones inquietantes.",
     "poster": "posters/1933.jpg",
-    "genres": [],
+    "genres": [
+      "Terror",
+      "Misterio",
+      "Suspense"
+    ],
     "tmdbId": 1933,
     "runtime": 104,
     "sourceFile": "Los Otros (2001).mkv",
@@ -15356,7 +15548,11 @@
     "overview": "Katniss Everdeen (Jennifer Lawrence) en el Distrito 13 tras, literalmente, destrozar los juegos para siempre. Bajo el liderazgo de la Presidenta Coin (Julianne Moore) y contando con las advertencias de los amigos en quien confía, Katniss expande sus alas al tiempo que lucha por salvar a Peeta (Josh Hutcherson) y a una nación conmovida por su coraje...",
     "originalOverview": "Katniss Everdeen (Jennifer Lawrence) en el Distrito 13 tras, literalmente, destrozar los juegos para siempre. Bajo el liderazgo de la Presidenta Coin (Julianne Moore) y contando con las advertencias de los amigos en quien confía, Katniss expande sus alas al tiempo que lucha por salvar a Peeta (Josh Hutcherson) y a una nación conmovida por su coraje...",
     "poster": "posters/131631.jpg",
-    "genres": [],
+    "genres": [
+      "Ciencia ficción",
+      "Aventura",
+      "Suspense"
+    ],
     "tmdbId": 131631,
     "runtime": 123,
     "sourceFile": "Los juegos del hambre 3 (2014).mp4",
@@ -15370,7 +15566,11 @@
     "overview": "Katniss Everdeen (Jennifer Lawrence) se da cuenta de que ya no sólo está en juego su supervivencia, sino también el futuro. Con Panem sumida en una guerra a gran escala, Katniss tendrá que plantar cara al presidente Snow (Donald Sutherland) en el enfrentamiento final. Katniss, acompañada por un grupo de sus mejores amigos, que incluye a Gale (Liam Hemsworth), Finnick (Sam Claflin) y Peeta (Josh Hutcherson), emprende una misión con la unidad del Distrito 13, en la que arriesgan sus vidas para liberar a los ciudadanos de Panem y orquestan un intento de asesinato del presidente Snow, cada vez más obsesionado con destruirla. Las trampas mortales, los enemigos y las decisiones morales que aguardan a Katniss la pondrán en mayores aprietos que ninguna arena de Los Juegos del Hambre.",
     "originalOverview": "Katniss Everdeen (Jennifer Lawrence) se da cuenta de que ya no sólo está en juego su supervivencia, sino también el futuro. Con Panem sumida en una guerra a gran escala, Katniss tendrá que plantar cara al presidente Snow (Donald Sutherland) en el enfrentamiento final. Katniss, acompañada por un grupo de sus mejores amigos, que incluye a Gale (Liam Hemsworth), Finnick (Sam Claflin) y Peeta (Josh Hutcherson), emprende una misión con la unidad del Distrito 13, en la que arriesgan sus vidas para liberar a los ciudadanos de Panem y orquestan un intento de asesinato del presidente Snow, cada vez más obsesionado con destruirla. Las trampas mortales, los enemigos y las decisiones morales que aguardan a Katniss la pondrán en mayores aprietos que ninguna arena de Los Juegos del Hambre.",
     "poster": "posters/131634.jpg",
-    "genres": [],
+    "genres": [
+      "Acción",
+      "Aventura",
+      "Ciencia ficción"
+    ],
     "tmdbId": 131634,
     "runtime": 137,
     "sourceFile": "Los juegos del hambre 4 (2015).mp4",
@@ -15378,17 +15578,22 @@
     "parsedYear": "2015"
   },
   {
-    "title": "Los ositos cariñositos 2 Una nueva generación",
-    "originalTitle": "Los ositos cariñositos 2 Una nueva generación",
-    "year": "1986",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
-    "sourceFile": "Los ositos cariñositos 2 Una nueva generación (1986).mkv",
-    "parsedTitle": "Los ositos cariñositos 2 Una nueva generación",
-    "parsedYear": "1986"
+    "title": "Lukas Storyteller",
+    "originalTitle": "Lukas Storyteller",
+    "year": "2019",
+    "overview": "Después de conocer a Jesús durante una de sus aventuras en el mar de Galilea, Lukas y su amigo Noah la tortuga, comparten las maravillosas historias de Jesús y otros héroes de la Biblia",
+    "originalOverview": "After meeting Jesus during one of his adventures in the Sea of Galilee, Lukas and his friend Noah the turtle, share the wonderful stories of Jesus and other Heroes of the Bible with Lukas' friends from the reef: Ana, Paul, Agnes and Peter. Discover how these stories full of music and fun changed the lives of Lukas and his friends, and how they can change yours.",
+    "poster": "posters/625948.jpg",
+    "genres": [
+      "Animación",
+      "Familia",
+      "Música"
+    ],
+    "tmdbId": 625948,
+    "runtime": 96,
+    "sourceFile": "Lukas Storyteller (2019).mkv",
+    "parsedTitle": "Lukas Storyteller",
+    "parsedYear": "2019"
   },
   {
     "title": "Mad Max: Furia en el camino",
@@ -15471,7 +15676,9 @@
     "overview": "Siglo XIX. Después de una larga guerra, un bebé es abandonado a la puerta de un convento de frailes franciscanos que intentan, sin éxito, buscarle una familia. Pasan los años, y aunque el niño vive feliz entre los monjes, no puede dejar de añorar a su madre. Marcelino se hace amigo de un Cristo crucificado que hay en el desván del convento: habla con él y le sube de la cocina pan, vino y otros víveres que puede encontrar.",
     "originalOverview": "Siglo XIX. Después de una larga guerra, un bebé es abandonado a la puerta de un convento de frailes franciscanos que intentan, sin éxito, buscarle una familia. Pasan los años, y aunque el niño vive feliz entre los monjes, no puede dejar de añorar a su madre. Marcelino se hace amigo de un Cristo crucificado que hay en el desván del convento: habla con él y le sube de la cocina pan, vino y otros víveres que puede encontrar.",
     "poster": "posters/62395.jpg",
-    "genres": [],
+    "genres": [
+      "Drama"
+    ],
     "tmdbId": 62395,
     "runtime": 90,
     "sourceFile": "Marcelino Pan y Vino (1954).mp4",
@@ -15485,7 +15692,10 @@
     "overview": "",
     "originalOverview": "",
     "poster": "posters/1430.jpg",
-    "genres": [],
+    "genres": [
+      "Documental",
+      "Drama"
+    ],
     "tmdbId": 1430,
     "runtime": 120,
     "sourceFile": "Masacre en Columbine (2002).mkv",
@@ -15518,7 +15728,12 @@
     "overview": "La ciudad humana de Zion se defiende de la invasión masiva de las máquinas mientras Neo lucha por terminar la guerra en otro frente y también se opone al agente Smith.",
     "originalOverview": "La ciudad humana de Zion se defiende de la invasión masiva de las máquinas mientras Neo lucha por terminar la guerra en otro frente y también se opone al agente Smith.",
     "poster": "posters/605.jpg",
-    "genres": [],
+    "genres": [
+      "Aventura",
+      "Acción",
+      "Suspense",
+      "Ciencia ficción"
+    ],
     "tmdbId": 605,
     "runtime": 129,
     "sourceFile": "Matrix 3 (2003).mkv",
@@ -15673,7 +15888,12 @@
     "overview": "Basado en las aventuras de \"Jack y las habichuelas magicas\", Mickey, Donald y Goofy suben un fantástico tallo de frijoles hacia el cielo a un lugar donde todo es enorme: la comida, el castillo y el temible gigante llamado Willy que cuida a una hermosa arpa dorada! ¿Mickey y sus amigos burlarán al gigante y regresaran a salvo a casa?",
     "originalOverview": "Basado en las aventuras de \"Jack y las habichuelas magicas\", Mickey, Donald y Goofy suben un fantástico tallo de frijoles hacia el cielo a un lugar donde todo es enorme: la comida, el castillo y el temible gigante llamado Willy que cuida a una hermosa arpa dorada! ¿Mickey y sus amigos burlarán al gigante y regresaran a salvo a casa?",
     "poster": "posters/31135.jpg",
-    "genres": [],
+    "genres": [
+      "Animación",
+      "Fantasía",
+      "Aventura",
+      "Familia"
+    ],
     "tmdbId": 31135,
     "runtime": 29,
     "sourceFile": "Mickey y las Habichuelas (1947).mkv",
@@ -15726,25 +15946,8 @@
     ],
     "tmdbId": 158445,
     "runtime": 128,
-    "sourceFile": "Milagro En La Celda 7 (2014).mkv",
+    "sourceFile": "Milagro En La Celda 7 (2013).mkv",
     "parsedTitle": "Milagro En La Celda 7",
-    "parsedYear": "2014"
-  },
-  {
-    "title": "Milagro en la Celda 7 - El Equivoco",
-    "originalTitle": "7번방의 선물",
-    "year": "2013",
-    "overview": "Lee Yong-gu es un hombre con problemas mentales: tiene un coeficiente de inteligencia de un niño de 6 años de edad, que es casualmente la edad que tiene su hija, la inteligente Ye-sung. Ambos llevan una vida feliz, pues Yong-gu se gana la vida trabajando como encargado del aparcamiento en un supermercado local. Pero un día, cuando la hija del comisario de policía muere en un extraño accidente, Yong-gu, que es el que encuentra su cadaver, es falsamente acusado y condenado a muerte por el secuestro, asalto sexual y asesinato de una menor de edad. Ye-sung es enviada entonces a una institución de menores, y Yong-gu es encarcelado y asignado a la celda nº7, en una prisión de máxima seguridad.",
-    "originalOverview": "Lee Yong-gu es un hombre con problemas mentales: tiene un coeficiente de inteligencia de un niño de 6 años de edad, que es casualmente la edad que tiene su hija, la inteligente Ye-sung. Ambos llevan una vida feliz, pues Yong-gu se gana la vida trabajando como encargado del aparcamiento en un supermercado local. Pero un día, cuando la hija del comisario de policía muere en un extraño accidente, Yong-gu, que es el que encuentra su cadaver, es falsamente acusado y condenado a muerte por el secuestro, asalto sexual y asesinato de una menor de edad. Ye-sung es enviada entonces a una institución de menores, y Yong-gu es encarcelado y asignado a la celda nº7, en una prisión de máxima seguridad.",
-    "poster": "posters/158445.jpg",
-    "genres": [
-      "Drama",
-      "Comedia"
-    ],
-    "tmdbId": 158445,
-    "runtime": 128,
-    "sourceFile": "Milagro en la celda 7 (2013).mkv",
-    "parsedTitle": "Milagro en la celda 7",
     "parsedYear": "2013"
   },
   {
@@ -15789,7 +15992,10 @@
     "overview": "John, el taxista que quiere ser piloto de aviones, se ha casado con Molly, la madre de Mickey. Éste ha aprendido a dar sus primeros pasos y a pronunciar sus primeras palabras. También posee la clásica habilidad infantil para tirar cualquier objeto que encuentre a su paso. Por si fuera poco, nace Julie, su hermanita, dotada con idéntico sarcasmo.",
     "originalOverview": "John, el taxista que quiere ser piloto de aviones, se ha casado con Molly, la madre de Mickey. Éste ha aprendido a dar sus primeros pasos y a pronunciar sus primeras palabras. También posee la clásica habilidad infantil para tirar cualquier objeto que encuentre a su paso. Por si fuera poco, nace Julie, su hermanita, dotada con idéntico sarcasmo.",
     "poster": "posters/9356.jpg",
-    "genres": [],
+    "genres": [
+      "Romance",
+      "Comedia"
+    ],
     "tmdbId": 9356,
     "runtime": 80,
     "sourceFile": "Mira Quien Habla Tambien (1990).mkv",
@@ -15810,8 +16016,8 @@
     ],
     "tmdbId": 575264,
     "runtime": 163,
-    "sourceFile": "Misión Imposible 7 sentencia mortal (2023).mp4",
-    "parsedTitle": "Misión Imposible 7 sentencia mortal",
+    "sourceFile": "Misión Imposible 7 (2023).mp4",
+    "parsedTitle": "Misión Imposible 7",
     "parsedYear": "2023"
   },
   {
@@ -15828,8 +16034,8 @@
     ],
     "tmdbId": 575265,
     "runtime": 170,
-    "sourceFile": "Misión Imposible 8 Sentencia final (2025).mkv",
-    "parsedTitle": "Misión Imposible 8 Sentencia final",
+    "sourceFile": "Misión Imposible 8 (2025).mkv",
+    "parsedTitle": "Misión Imposible 8",
     "parsedYear": "2025"
   },
   {
@@ -15858,7 +16064,11 @@
     "overview": "Mufasa era un cachorro huérfano, perdido y solo hasta que conoce a un simpático león llamado Taka, heredero de un linaje real. Este encuentro casual pone en marcha un viaje de un extraordinario grupo de inadaptados que buscan su destino.",
     "originalOverview": "Mufasa era un cachorro huérfano, perdido y solo hasta que conoce a un simpático león llamado Taka, heredero de un linaje real. Este encuentro casual pone en marcha un viaje de un extraordinario grupo de inadaptados que buscan su destino.",
     "poster": "posters/762509.jpg",
-    "genres": [],
+    "genres": [
+      "Aventura",
+      "Familia",
+      "Animación"
+    ],
     "tmdbId": 762509,
     "runtime": 121,
     "sourceFile": "Mufasa (2024).mkv",
@@ -15910,7 +16120,11 @@
     "overview": "La acción de \"Las crónicas de Narnia. El Príncipe Caspian\" transcurre un año después de los increíbles acontecimientos de «El León, la Bruja y el Armario», cuando los reyes y las reinas de Narnia -los 4 hermanos Pevensie- vuelven a reunirse en ese remoto y fantástico mundo, donde descubrirán que han pasado más de 1.300 años, calculados en tiempo narniano. Durante su ausencia, la Edad de Oro de Narnia ha terminado, y los Telmarinos han conquistado el reino de Narnia, que ahora está dominado por el malvado Rey Miraz, que gobierna sin piedad. Los cuatro niños no tardarán en conocer un nuevo y extraño personaje: el joven Príncipe Caspian, heredero legítimo al trono que se ha visto obligado a esconderse ya que su tío Miraz trama su asesinato para colocar a su hijo recién nacido en el trono.",
     "originalOverview": "La acción de \"Las crónicas de Narnia. El Príncipe Caspian\" transcurre un año después de los increíbles acontecimientos de «El León, la Bruja y el Armario», cuando los reyes y las reinas de Narnia -los 4 hermanos Pevensie- vuelven a reunirse en ese remoto y fantástico mundo, donde descubrirán que han pasado más de 1.300 años, calculados en tiempo narniano. Durante su ausencia, la Edad de Oro de Narnia ha terminado, y los Telmarinos han conquistado el reino de Narnia, que ahora está dominado por el malvado Rey Miraz, que gobierna sin piedad. Los cuatro niños no tardarán en conocer un nuevo y extraño personaje: el joven Príncipe Caspian, heredero legítimo al trono que se ha visto obligado a esconderse ya que su tío Miraz trama su asesinato para colocar a su hijo recién nacido en el trono.",
     "poster": "posters/2454.jpg",
-    "genres": [],
+    "genres": [
+      "Aventura",
+      "Familia",
+      "Fantasía"
+    ],
     "tmdbId": 2454,
     "runtime": 150,
     "sourceFile": "Narnia 2 (2008).mkv",
@@ -15998,7 +16212,10 @@
     "overview": "Chuck Noland, un ejecutivo de la empresa multinacional de mensajería FedEx, se ve apartado de su cómoda vida y de su prometida a causa de un accidente de avión por el que queda aislado de la civilización en una remota isla tropical. Único superviviente y solo en la isla, tras cuatro años de subsistencia Chuck aprende todas las técnicas de supervivencia mientras sufre la tortura de la soledad. La solución: arriesgar la vida adentrándose mar adentro.",
     "originalOverview": "Chuck Noland, un ejecutivo de la empresa multinacional de mensajería FedEx, se ve apartado de su cómoda vida y de su prometida a causa de un accidente de avión por el que queda aislado de la civilización en una remota isla tropical. Único superviviente y solo en la isla, tras cuatro años de subsistencia Chuck aprende todas las técnicas de supervivencia mientras sufre la tortura de la soledad. La solución: arriesgar la vida adentrándose mar adentro.",
     "poster": "posters/8358.jpg",
-    "genres": [],
+    "genres": [
+      "Aventura",
+      "Drama"
+    ],
     "tmdbId": 8358,
     "runtime": 144,
     "sourceFile": "Náufrago (2000).mkv",
@@ -16020,6 +16237,57 @@
     "sourceFile": "Obi Wan Kenobi A Jedis Return (2022).mp4",
     "parsedTitle": "Obi Wan Kenobi A Jedis Return",
     "parsedYear": "2022"
+  },
+  {
+    "title": "La Gran Estafa",
+    "originalTitle": "Ocean's Eleven",
+    "year": "2001",
+    "overview": "Danny Ocean es un carismático ladrón que, tan sólo 24 horas después de cumplir una larga condena en prisión, ya está planeando su próximo delito. Su objetivo: realizar el mayor atraco de casinos de la historia. Para ello formará un equipo de once hombres, cada uno de ellos el mejor en su campo. Sin embargo surgirá un problema inesperado: el dueño de los locales, Terry Benedic, está saliendo con Tess, su ex-mujer.",
+    "originalOverview": "Danny Ocean es un carismático ladrón que, tan sólo 24 horas después de cumplir una larga condena en prisión, ya está planeando su próximo delito. Su objetivo: realizar el mayor atraco de casinos de la historia. Para ello formará un equipo de once hombres, cada uno de ellos el mejor en su campo. Sin embargo surgirá un problema inesperado: el dueño de los locales, Terry Benedic, está saliendo con Tess, su ex-mujer.",
+    "poster": "posters/161.jpg",
+    "genres": [
+      "Suspense",
+      "Crimen"
+    ],
+    "tmdbId": 161,
+    "runtime": 117,
+    "sourceFile": "Ocean's Eleven (2001).mkv",
+    "parsedTitle": "Ocean's Eleven",
+    "parsedYear": "2001"
+  },
+  {
+    "title": "Ahora son 13",
+    "originalTitle": "Ocean's Thirteen",
+    "year": "2007",
+    "overview": "Danny Ocean (George Clooney) y su banda preparan un ambicioso y arriesgado plan para robar un casino. Su único objetivo, en este caso, es defender a uno de los suyos, que ha sido engañado por Willy Bank (Al Pacino), el despiadado dueño del casino.",
+    "originalOverview": "Danny Ocean (George Clooney) y su banda preparan un ambicioso y arriesgado plan para robar un casino. Su único objetivo, en este caso, es defender a uno de los suyos, que ha sido engañado por Willy Bank (Al Pacino), el despiadado dueño del casino.",
+    "poster": "posters/298.jpg",
+    "genres": [
+      "Crimen",
+      "Suspense"
+    ],
+    "tmdbId": 298,
+    "runtime": 122,
+    "sourceFile": "Ocean's Thirteen (2007).mkv",
+    "parsedTitle": "Ocean's Thirteen",
+    "parsedYear": "2007"
+  },
+  {
+    "title": "La Nueva Gran Estafa",
+    "originalTitle": "Ocean's Twelve",
+    "year": "2004",
+    "overview": "Danny Ocean (Clooney), Tess (Roberts) y su banda vuelven a formar equipo. Esta vez el golpe será múltiple: tres espectaculares atracos en tres lugares diferentes, Roma, París y Ámsterdam. En Ámsterdam, el premio es un Rembrandt. Mientras tanto, el propietario del casino de Las Vegas Terry Benedict (García), a quien Ocean y su banda robaron en una ocasión, no ha renunciado a vengarse de ellos",
+    "originalOverview": "Danny Ocean (Clooney), Tess (Roberts) y su banda vuelven a formar equipo. Esta vez el golpe será múltiple: tres espectaculares atracos en tres lugares diferentes, Roma, París y Ámsterdam. En Ámsterdam, el premio es un Rembrandt. Mientras tanto, el propietario del casino de Las Vegas Terry Benedict (García), a quien Ocean y su banda robaron en una ocasión, no ha renunciado a vengarse de ellos",
+    "poster": "posters/163.jpg",
+    "genres": [
+      "Suspense",
+      "Crimen"
+    ],
+    "tmdbId": 163,
+    "runtime": 125,
+    "sourceFile": "Ocean's Twelve (2004).mkv",
+    "parsedTitle": "Ocean's Twelve",
+    "parsedYear": "2004"
   },
   {
     "title": "Ocean's 8: Las estafadoras",
@@ -16073,6 +16341,23 @@
     "parsedYear": "1985"
   },
   {
+    "title": "Il primo Natale",
+    "originalTitle": "Il primo Natale",
+    "year": "2019",
+    "overview": "",
+    "originalOverview": "",
+    "poster": "posters/613080.jpg",
+    "genres": [
+      "Comedia",
+      "Fantasía"
+    ],
+    "tmdbId": 613080,
+    "runtime": 104,
+    "sourceFile": "Once Upon a Time in Bethlehem (2019).mkv",
+    "parsedTitle": "Once Upon a Time in Bethlehem",
+    "parsedYear": "2019"
+  },
+  {
     "title": "Pablo el apóstol de Cristo",
     "originalTitle": "Paul, Apostle of Christ",
     "year": "2018",
@@ -16087,19 +16372,6 @@
     "sourceFile": "Pablo, Apostol de Cristo (2018).mkv",
     "parsedTitle": "Pablo, Apostol de Cristo",
     "parsedYear": "2018"
-  },
-  {
-    "title": "Paddington 1",
-    "originalTitle": "Paddington 1",
-    "year": "2014",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
-    "sourceFile": "Paddington 1 (2014).mkv",
-    "parsedTitle": "Paddington 1",
-    "parsedYear": "2014"
   },
   {
     "title": "El milagro del padre Stu",
@@ -16187,22 +16459,6 @@
     "parsedYear": "2024"
   },
   {
-    "title": "Un Pase De Gracia",
-    "originalTitle": "The Grace Card",
-    "year": "2011",
-    "overview": "Tras perder a su hijo en un accidente, Mac McDonald se sume durante 17 años en la amargura y el dolor, arruinando las relaciones con su familia, y convirtiéndose en un hombre enfrentado con Dios...y con todo el mundo. Su carrera en el departamento de polícia también se resiente hasta llegar a una situación incendiaria cuando le asignan como compañero a Sam Wright, pastor a tiempo parcial y un cariñoso padre de familia.",
-    "originalOverview": "Tras perder a su hijo en un accidente, Mac McDonald se sume durante 17 años en la amargura y el dolor, arruinando las relaciones con su familia, y convirtiéndose en un hombre enfrentado con Dios...y con todo el mundo. Su carrera en el departamento de polícia también se resiente hasta llegar a una situación incendiaria cuando le asignan como compañero a Sam Wright, pastor a tiempo parcial y un cariñoso padre de familia.",
-    "poster": "posters/54897.jpg",
-    "genres": [
-      "Drama"
-    ],
-    "tmdbId": 54897,
-    "runtime": 93,
-    "sourceFile": "Pase lo que pase (2009).mp4",
-    "parsedTitle": "Pase lo que pase",
-    "parsedYear": "2009"
-  },
-  {
     "title": "Chip an' Dale",
     "originalTitle": "Chip an' Dale",
     "year": "1947",
@@ -16217,19 +16473,6 @@
     "runtime": 7,
     "sourceFile": "Pato Donald Chip Y Dale (1947).mkv",
     "parsedTitle": "Pato Donald Chip Y Dale",
-    "parsedYear": "1947"
-  },
-  {
-    "title": "Pato Donald El Payaso de la Selva",
-    "originalTitle": "Pato Donald El Payaso de la Selva",
-    "year": "1947",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
-    "sourceFile": "Pato Donald El Payaso de la Selva (1947).mkv",
-    "parsedTitle": "Pato Donald El Payaso de la Selva",
     "parsedYear": "1947"
   },
   {
@@ -16296,31 +16539,15 @@
     "overview": "Danny OShea siempre ha vivido a la sombra de su hermano, el gran jugador de fútbol americano Kevin O'Shea. Kevin siempre fue el más grande, más fuerte, más rápido y más popular. Después de una brillante carrera, Kevin vuelve con su familia a su pueblo natal, donde organiza una liga infantil de fútbol. Sin embargo, a pesar que su sobrina (la hija de Danny) es la mejor jugadora, no la selecciona para el equipo representante del pueblo. Cuando se entera de que su hija es rechazada, Danny reunirá a una cuadrilla de los más flojuchos y regordetes del lugar para enseñarle una lección a su hermano.",
     "originalOverview": "Danny OShea siempre ha vivido a la sombra de su hermano, el gran jugador de fútbol americano Kevin O'Shea. Kevin siempre fue el más grande, más fuerte, más rápido y más popular. Después de una brillante carrera, Kevin vuelve con su familia a su pueblo natal, donde organiza una liga infantil de fútbol. Sin embargo, a pesar que su sobrina (la hija de Danny) es la mejor jugadora, no la selecciona para el equipo representante del pueblo. Cuando se entera de que su hija es rechazada, Danny reunirá a una cuadrilla de los más flojuchos y regordetes del lugar para enseñarle una lección a su hermano.",
     "poster": "posters/20726.jpg",
-    "genres": [],
+    "genres": [
+      "Comedia",
+      "Familia"
+    ],
     "tmdbId": 20726,
     "runtime": 106,
     "sourceFile": "Pequeños Gigantes (1994).mkv",
     "parsedTitle": "Pequeños Gigantes",
     "parsedYear": "1994"
-  },
-  {
-    "title": "Peter Pan 2: El regreso al país de Nunca Jamás",
-    "originalTitle": "Return to Never Land",
-    "year": "2002",
-    "overview": "Aunque su intención era secuestrar a Wendy, el capitán Garfio secuestra a la hija de esta para atraer a Peter Pan y tenderle una trampa. Wendy ya no cree ni en Peter Pan ni en la magia, pero tendrá que derribar los muros del escepticismo por su hija.",
-    "originalOverview": "Aunque su intención era secuestrar a Wendy, el capitán Garfio secuestra a la hija de esta para atraer a Peter Pan y tenderle una trampa. Wendy ya no cree ni en Peter Pan ni en la magia, pero tendrá que derribar los muros del escepticismo por su hija.",
-    "poster": "posters/16690.jpg",
-    "genres": [
-      "Aventura",
-      "Fantasía",
-      "Animación",
-      "Familia"
-    ],
-    "tmdbId": 16690,
-    "runtime": 73,
-    "sourceFile": "Peter Pan 2 (2002).mkv",
-    "parsedTitle": "Peter Pan 2",
-    "parsedYear": "2002"
   },
   {
     "title": "Pinocho",
@@ -16437,7 +16664,10 @@
     "overview": "Esta película es el documental semigracioso sobre los hombres que hicieron el mundo de la tecnología lo que es hoy, sus luchas durante el colegio, la fundación de sus compañías y las acciones ingeniosas que tomaron para aumentar los Imperios corporativos globales de Apple Computer Inc. y Microsoft Corporation.",
     "originalOverview": "Esta película es el documental semigracioso sobre los hombres que hicieron el mundo de la tecnología lo que es hoy, sus luchas durante el colegio, la fundación de sus compañías y las acciones ingeniosas que tomaron para aumentar los Imperios corporativos globales de Apple Computer Inc. y Microsoft Corporation.",
     "poster": "posters/3293.jpg",
-    "genres": [],
+    "genres": [
+      "Drama",
+      "Película de TV"
+    ],
     "tmdbId": 3293,
     "runtime": 97,
     "sourceFile": "Pirates of Silicon Valley (1999).mkv",
@@ -16641,38 +16871,6 @@
     "parsedYear": "1994"
   },
   {
-    "title": "¿Qué Pasó Ayer? Parte II",
-    "originalTitle": "The Hangover Part II",
-    "year": "2011",
-    "overview": "Alan, Stu y Phil vuelven a despertarse en otra habitación de otro hotel y, para no perder la costumbre, en esta ocasión tampoco recuerdan nada. Esta vez sólo saben que están en Tailandia, adonde han viajado, junto a Doug, para asistir a la boda de Stu con Lauren. El principal problema: el hermano menor de Lauren, Teddy, ha desaparecido. Y para encontrarlo intentarán recomponer su noche anterior, que al parecer ha contado con monos, monjes, transexuales... y Chow, claro.",
-    "originalOverview": "Alan, Stu y Phil vuelven a despertarse en otra habitación de otro hotel y, para no perder la costumbre, en esta ocasión tampoco recuerdan nada. Esta vez sólo saben que están en Tailandia, adonde han viajado, junto a Doug, para asistir a la boda de Stu con Lauren. El principal problema: el hermano menor de Lauren, Teddy, ha desaparecido. Y para encontrarlo intentarán recomponer su noche anterior, que al parecer ha contado con monos, monjes, transexuales... y Chow, claro.",
-    "poster": "posters/45243.jpg",
-    "genres": [
-      "Comedia"
-    ],
-    "tmdbId": 45243,
-    "runtime": 102,
-    "sourceFile": "Que paso ayer 2 (2011).mkv",
-    "parsedTitle": "Que paso ayer 2",
-    "parsedYear": "2011"
-  },
-  {
-    "title": "¿Qué Pasó Ayer? Parte III",
-    "originalTitle": "The Hangover Part III",
-    "year": "2013",
-    "overview": "Tras la inesperada muerte de su padre, Alan es llevado por sus amigos Phil, Stu y Doug a un centro especializado para que mejore. Esta vez no hay boda ni fiesta de despedida, pues que cuando estos chicos salen a la carretera, y sobre todo cuando aparece Chow… la suerte está echada.",
-    "originalOverview": "Tras la inesperada muerte de su padre, Alan es llevado por sus amigos Phil, Stu y Doug a un centro especializado para que mejore. Esta vez no hay boda ni fiesta de despedida, pues que cuando estos chicos salen a la carretera, y sobre todo cuando aparece Chow… la suerte está echada.",
-    "poster": "posters/109439.jpg",
-    "genres": [
-      "Comedia"
-    ],
-    "tmdbId": 109439,
-    "runtime": 100,
-    "sourceFile": "Que paso ayer 3 (2013).mkv",
-    "parsedTitle": "Que paso ayer 3",
-    "parsedYear": "2013"
-  },
-  {
     "title": "Rabbids: La invasión – Misión a Marte",
     "originalTitle": "Les Lapins Crétins - Invasion : Objectif Mars",
     "year": "2021",
@@ -16746,27 +16944,37 @@
     "parsedYear": "2018"
   },
   {
-    "title": "Rapido y Furioso 10",
-    "originalTitle": "Rapido y Furioso 10",
+    "title": "Rápidos y furiosos X",
+    "originalTitle": "Fast X",
     "year": "2023",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
+    "overview": "A través de varias misiones y contra lo imposible, Dom Toretto y su familia han sido más astutos y más rápidos que todos los enemigos se le han cruzado en su camino. Ahora se enfrentan a su enemigo más letal: una amenaza aterradora que surge de las sombras del pasado que está alimentado de una venganza sangrienta, y está decidido a destruir a su familia y destruir todo, y a cualquier persona, a los que Dom ama.",
+    "originalOverview": "Over many missions and against impossible odds, Dom Toretto and his family have outsmarted, out-nerved and outdriven every foe in their path. Now, they confront the most lethal opponent they've ever faced: A terrifying threat emerging from the shadows of the past who's fueled by blood revenge, and who is determined to shatter this family and destroy everything—and everyone—that Dom loves, forever.",
+    "poster": "posters/385687.jpg",
+    "genres": [
+      "Acción",
+      "Crimen",
+      "Suspense"
+    ],
+    "tmdbId": 385687,
+    "runtime": 141,
     "sourceFile": "Rapido y Furioso 10 (2023).mp4",
     "parsedTitle": "Rapido y Furioso 10",
     "parsedYear": "2023"
   },
   {
-    "title": "Rapido y Furioso 2",
-    "originalTitle": "Rapido y Furioso 2",
+    "title": "Más rápido, más furioso",
+    "originalTitle": "2 Fast 2 Furious",
     "year": "2003",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
+    "overview": "El expolicía Brian O'Conner es llamado a atrapar a un peligroso criminal y recluta la ayuda de un examigo de la infancia y corredor callejero que tiene la oportunidad de redimirse.",
+    "originalOverview": "It's a major double-cross when former police officer Brian O'Conner teams up with his ex-con buddy Roman Pearce to transport a shipment of \"dirty\" money for shady Miami-based import-export dealer Carter Verone. But the guys are actually working with undercover agent Monica Fuentes to bring Verone down.",
+    "poster": "posters/584.jpg",
+    "genres": [
+      "Acción",
+      "Crimen",
+      "Suspense"
+    ],
+    "tmdbId": 584,
+    "runtime": 108,
     "sourceFile": "Rapido y Furioso 2 (2003).mkv",
     "parsedTitle": "Rapido y Furioso 2",
     "parsedYear": "2003"
@@ -16815,7 +17023,11 @@
     "overview": "Dominic Toretto y su equipo de corredores callejeros planean un atraco masivo para comprar su libertad mientras están en la mira de un poderoso capo de la droga brasileño y un peligroso agente federal.",
     "originalOverview": "Dominic Toretto y su equipo de corredores callejeros planean un atraco masivo para comprar su libertad mientras están en la mira de un poderoso capo de la droga brasileño y un peligroso agente federal.",
     "poster": "posters/51497.jpg",
-    "genres": [],
+    "genres": [
+      "Acción",
+      "Suspense",
+      "Crimen"
+    ],
     "tmdbId": 51497,
     "runtime": 130,
     "sourceFile": "Rapido y Furioso 5 (2011).mkv",
@@ -16847,7 +17059,11 @@
     "overview": "Ha pasado un año desde que el equipo de Dominic Torreto y Brian pudiera regresar finalmente a Estados Unidos, tras ser indultados. Desean adaptarse a una vida en la legalidad, pero el entorno ya no es el mismo. Dom intenta acercarse a Letty, y Brian lucha para acostumbrarse a la vida en una urbanización con Mia y su hijo. Ninguno de ellos imagina que un frío asesino británico, entrenado para realizar operaciones secretas, se cruzará en sus vidas para convertirse en su mayor enemigo.",
     "originalOverview": "Ha pasado un año desde que el equipo de Dominic Torreto y Brian pudiera regresar finalmente a Estados Unidos, tras ser indultados. Desean adaptarse a una vida en la legalidad, pero el entorno ya no es el mismo. Dom intenta acercarse a Letty, y Brian lucha para acostumbrarse a la vida en una urbanización con Mia y su hijo. Ninguno de ellos imagina que un frío asesino británico, entrenado para realizar operaciones secretas, se cruzará en sus vidas para convertirse en su mayor enemigo.",
     "poster": "posters/168259.jpg",
-    "genres": [],
+    "genres": [
+      "Acción",
+      "Crimen",
+      "Suspense"
+    ],
     "tmdbId": 168259,
     "runtime": 140,
     "sourceFile": "Rapido y Furioso 7 (2015).mkv",
@@ -16927,24 +17143,6 @@
     "parsedYear": "2018"
   },
   {
-    "title": "Rompak Raya",
-    "originalTitle": "Rompak Raya",
-    "year": "2021",
-    "overview": "",
-    "originalOverview": "",
-    "poster": "posters/839521.jpg",
-    "genres": [
-      "Comedia",
-      "Crimen",
-      "Drama"
-    ],
-    "tmdbId": 839521,
-    "runtime": 107,
-    "sourceFile": "Raya (2021).mp4",
-    "parsedTitle": "Raya",
-    "parsedYear": "2021"
-  },
-  {
     "title": "Ready Player One: Comienza el juego",
     "originalTitle": "Ready Player One",
     "year": "2018",
@@ -16981,20 +17179,6 @@
     "parsedYear": "2012"
   },
   {
-    "title": "El Regreso de los Muertos Vivientes",
-    "originalTitle": "The Return of the Living Dead",
-    "year": "1985",
-    "overview": "Cuando un torpe par de empleados en un almacén de suministros médicos accidentalmente libera un gas mortal en el aire, los vapores causan que los muertos vuelvan a animarse mientras van en un alboroto en busca de su comida favorita: ¡cerebros!",
-    "originalOverview": "Cuando un torpe par de empleados en un almacén de suministros médicos accidentalmente libera un gas mortal en el aire, los vapores causan que los muertos vuelvan a animarse mientras van en un alboroto en busca de su comida favorita: ¡cerebros!",
-    "poster": "posters/10925.jpg",
-    "genres": [],
-    "tmdbId": 10925,
-    "runtime": 110,
-    "sourceFile": "Regreso a Oz (1985).mkv",
-    "parsedTitle": "Regreso a Oz",
-    "parsedYear": "1985"
-  },
-  {
     "title": "Remi: Un niño sin familia",
     "originalTitle": "Rémi sans famille",
     "year": "2018",
@@ -17013,31 +17197,18 @@
     "parsedYear": "2018"
   },
   {
-    "title": "Rescatanco al soldado Ryan",
-    "originalTitle": "Rescatanco al soldado Ryan",
-    "year": "1998",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
-    "sourceFile": "Rescatanco al soldado Ryan (1998).mkv",
-    "parsedTitle": "Rescatanco al soldado Ryan",
-    "parsedYear": "1998"
-  },
-  {
-    "title": "Resident Evil: Apocalipsis",
-    "originalTitle": "Resident Evil: Apocalypse",
-    "year": "2004",
-    "overview": "Alice se despierta en el hospital de Raccoon City después de que la zona haya sido invadida por los zombis, y ahora debe conseguir salir de la ciudad antes de que se lance una bomba nuclear.",
-    "originalOverview": "Alice se despierta en el hospital de Raccoon City después de que la zona haya sido invadida por los zombis, y ahora debe conseguir salir de la ciudad antes de que se lance una bomba nuclear.",
-    "poster": "posters/1577.jpg",
+    "title": "Resident Evil: El Huésped Maldito",
+    "originalTitle": "Resident Evil",
+    "year": "2002",
+    "overview": "Una unidad militar especial lucha contra una poderosa supercomputadora fuera de control y contra cientos de científicos que han mutado en criaturas carnívoras después de un accidente de laboratorio.",
+    "originalOverview": "Una unidad militar especial lucha contra una poderosa supercomputadora fuera de control y contra cientos de científicos que han mutado en criaturas carnívoras después de un accidente de laboratorio.",
+    "poster": "posters/1576.jpg",
     "genres": [
       "Terror",
       "Acción",
       "Ciencia ficción"
     ],
-    "tmdbId": 1577,
+    "tmdbId": 1576,
     "runtime": 101,
     "sourceFile": "Resident Evil (2002).mp4",
     "parsedTitle": "Resident Evil",
@@ -17123,12 +17294,34 @@
     "overview": "Alice regresa a donde comenzó la pesadilla: El Panal en Raccoon City, donde la Corporación Umbrella está reuniendo sus fuerzas para un ataque final contra los únicos sobrevivientes del apocalipsis.",
     "originalOverview": "Alice regresa a donde comenzó la pesadilla: El Panal en Raccoon City, donde la Corporación Umbrella está reuniendo sus fuerzas para un ataque final contra los únicos sobrevivientes del apocalipsis.",
     "poster": "posters/173897.jpg",
-    "genres": [],
+    "genres": [
+      "Acción",
+      "Terror",
+      "Ciencia ficción"
+    ],
     "tmdbId": 173897,
     "runtime": 107,
     "sourceFile": "Resident Evil 6 (2016).mp4",
     "parsedTitle": "Resident Evil 6",
     "parsedYear": "2016"
+  },
+  {
+    "title": "Oz, un mundo fantástico",
+    "originalTitle": "Return to Oz",
+    "year": "1985",
+    "overview": "Continuación de la conocida historia de \"El mago de Oz\", en la que Dorothy (Fairuza Balk), de vuelta en Kansas, echa de menos sus aventuras en Oz. Su tía la lleva a un famoso doctor que dice hacer milagros con la electricidad. El azar hace que el tratamiento salga al revés, y Dorothy regresa a Oz. Allí intentará encontrar a sus antiguos amigos en la ciudad Esmeralda, pero el malvado rey Nome los ha transformado.",
+    "originalOverview": "Continuación de la conocida historia de \"El mago de Oz\", en la que Dorothy (Fairuza Balk), de vuelta en Kansas, echa de menos sus aventuras en Oz. Su tía la lleva a un famoso doctor que dice hacer milagros con la electricidad. El azar hace que el tratamiento salga al revés, y Dorothy regresa a Oz. Allí intentará encontrar a sus antiguos amigos en la ciudad Esmeralda, pero el malvado rey Nome los ha transformado.",
+    "poster": "posters/13155.jpg",
+    "genres": [
+      "Aventura",
+      "Familia",
+      "Fantasía"
+    ],
+    "tmdbId": 13155,
+    "runtime": 110,
+    "sourceFile": "Return to Oz (1985).mkv",
+    "parsedTitle": "Return to Oz",
+    "parsedYear": "1985"
   },
   {
     "title": "Rocky II",
@@ -17264,6 +17457,24 @@
     "sourceFile": "Sanson (1949).mkv",
     "parsedTitle": "Sanson",
     "parsedYear": "1949"
+  },
+  {
+    "title": "Rescatando al soldado Ryan",
+    "originalTitle": "Saving Private Ryan",
+    "year": "1998",
+    "overview": "Segunda Guerra Mundial, 1944. Tras el desembarco de los Aliados en Normandía, a un grupo de soldados americanos se le encomienda una peligrosa misión: poner a salvo al soldado James Ryan. Los hombres de la patrulla del capitán John Miller deben arriesgar sus vidas para encontrar a este soldado, cuyos tres hermanos han muerto en la guerra. Lo único que se sabe del soldado Ryan es que se lanzó con su escuadrón de paracaidistas detrás de las líneas enemigas.",
+    "originalOverview": "Segunda Guerra Mundial, 1944. Tras el desembarco de los Aliados en Normandía, a un grupo de soldados americanos se le encomienda una peligrosa misión: poner a salvo al soldado James Ryan. Los hombres de la patrulla del capitán John Miller deben arriesgar sus vidas para encontrar a este soldado, cuyos tres hermanos han muerto en la guerra. Lo único que se sabe del soldado Ryan es que se lanzó con su escuadrón de paracaidistas detrás de las líneas enemigas.",
+    "poster": "posters/857.jpg",
+    "genres": [
+      "Bélica",
+      "Drama",
+      "Historia"
+    ],
+    "tmdbId": 857,
+    "runtime": 168,
+    "sourceFile": "Saving Private Ryan (1998).mkv",
+    "parsedTitle": "Saving Private Ryan",
+    "parsedYear": "1998"
   },
   {
     "title": "El juego del miedo",
@@ -17411,7 +17622,9 @@
     "overview": "Siguiendo los talones de las populares películas de terror adolescente-grito, con una comedia espeluznante y sátira mordaz. Marlon y Shawn Wayans, Shannon Elizabeth y Carmen Electra participan en el lanzamiento de algunos de los éxitos de taquilla más grandes de Hollywood, como Scream, Sé lo que hiciste el verano pasado, The Matrix, American Pie y The Blair Witch Project.",
     "originalOverview": "Siguiendo los talones de las populares películas de terror adolescente-grito, con una comedia espeluznante y sátira mordaz. Marlon y Shawn Wayans, Shannon Elizabeth y Carmen Electra participan en el lanzamiento de algunos de los éxitos de taquilla más grandes de Hollywood, como Scream, Sé lo que hiciste el verano pasado, The Matrix, American Pie y The Blair Witch Project.",
     "poster": "posters/4247.jpg",
-    "genres": [],
+    "genres": [
+      "Comedia"
+    ],
     "tmdbId": 4247,
     "runtime": 89,
     "sourceFile": "Scary Movie (2000).mkv",
@@ -17506,6 +17719,24 @@
     "sourceFile": "Scream 5 (2022).mp4",
     "parsedTitle": "Scream 5",
     "parsedYear": "2022"
+  },
+  {
+    "title": "Amor y tesoro",
+    "originalTitle": "Fool's Gold",
+    "year": "2008",
+    "overview": "Finn (Matthew McConaughey) y Tess (Kate Hudson) son un matrimonio que se dedican a la búsqueda de tesoros, pero que atraviesan una aguda una crisis matrimonial. Parece que encontrar una gran fortuna sería la única manera de salvar su relación.",
+    "originalOverview": "Finn (Matthew McConaughey) y Tess (Kate Hudson) son un matrimonio que se dedican a la búsqueda de tesoros, pero que atraviesan una aguda una crisis matrimonial. Parece que encontrar una gran fortuna sería la única manera de salvar su relación.",
+    "poster": "posters/8676.jpg",
+    "genres": [
+      "Aventura",
+      "Romance",
+      "Comedia"
+    ],
+    "tmdbId": 8676,
+    "runtime": 110,
+    "sourceFile": "Se Busca (2008).mkv",
+    "parsedTitle": "Se Busca",
+    "parsedYear": "2008"
   },
   {
     "title": "Obsesión Secreta",
@@ -17625,7 +17856,13 @@
     "overview": "Designado a regañadientes como el heredero de la tierra de Muy Muy Lejano, Shrek urde un plan para instalar al rebelde Artie como el nuevo rey mientras la princesa Fiona trata de evitar un golpe de estado por parte del Príncipe Encantador.",
     "originalOverview": "Designado a regañadientes como el heredero de la tierra de Muy Muy Lejano, Shrek urde un plan para instalar al rebelde Artie como el nuevo rey mientras la princesa Fiona trata de evitar un golpe de estado por parte del Príncipe Encantador.",
     "poster": "posters/810.jpg",
-    "genres": [],
+    "genres": [
+      "Fantasía",
+      "Aventura",
+      "Animación",
+      "Comedia",
+      "Familia"
+    ],
     "tmdbId": 810,
     "runtime": 93,
     "sourceFile": "Shrek 3 tercero (2007).mp4",
@@ -17711,7 +17948,12 @@
     "overview": "Tom Wachowski, el sheriff de la ciudad de Green Hills, viajará a San Francisco para ayudar a Sonic, un erizo azul antropomórfico que corre a velocidades supersónicas, en su batalla contra el maligno Dr. Robotnik y sus aliados.",
     "originalOverview": "Tom Wachowski, el sheriff de la ciudad de Green Hills, viajará a San Francisco para ayudar a Sonic, un erizo azul antropomórfico que corre a velocidades supersónicas, en su batalla contra el maligno Dr. Robotnik y sus aliados.",
     "poster": "posters/454626.jpg",
-    "genres": [],
+    "genres": [
+      "Acción",
+      "Ciencia ficción",
+      "Comedia",
+      "Familia"
+    ],
     "tmdbId": 454626,
     "runtime": 99,
     "sourceFile": "Sonic (2020).mkv",
@@ -17814,19 +18056,6 @@
     "parsedYear": "1994"
   },
   {
-    "title": "Spider Man no way home - Extendida",
-    "originalTitle": "Spider Man no way home - Extendida",
-    "year": "2021",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
-    "sourceFile": "Spider Man no way home - Extendida (2021).mp4",
-    "parsedTitle": "Spider Man no way home - Extendida",
-    "parsedYear": "2021"
-  },
-  {
     "title": "Spider-Man 2: Lejos de Casa",
     "originalTitle": "Spider-Man: Far From Home",
     "year": "2019",
@@ -17857,8 +18086,8 @@
     ],
     "tmdbId": 557,
     "runtime": 121,
-    "sourceFile": "Spiderman 1 (2002).mkv",
-    "parsedTitle": "Spiderman 1",
+    "sourceFile": "Spiderman (2002).mkv",
+    "parsedTitle": "Spiderman",
     "parsedYear": "2002"
   },
   {
@@ -17886,7 +18115,11 @@
     "overview": "Una extraña entidad negra de otro mundo se vincula con Peter Parker y le provoca confusión interna mientras lucha contra nuevos villanos, tentaciones y venganza.",
     "originalOverview": "Una extraña entidad negra de otro mundo se vincula con Peter Parker y le provoca confusión interna mientras lucha contra nuevos villanos, tentaciones y venganza.",
     "poster": "posters/559.jpg",
-    "genres": [],
+    "genres": [
+      "Acción",
+      "Aventura",
+      "Ciencia ficción"
+    ],
     "tmdbId": 559,
     "runtime": 139,
     "sourceFile": "Spiderman 3 (2007).mkv",
@@ -17954,7 +18187,11 @@
     "overview": "Años después del inicio de las Guerras Clon, los nobles Caballeros Jedi lideran un masivo ejército clon en una batalla de galaxia contra los Separatistas. Cuando los siniestros Sith revelan un complot de mil años para gobernar la galaxia, la República se derrumba y de sus cenizas surge el malvado Imperio Galáctico. El héroe Jedi Anakin Skywalker es seducido por el lado oscuro de la Fuerza para convertirse en el nuevo aprendiz del Emperador: Darth Vader. Los Jedi están diezmados, mientras Obi-Wan Kenobi y el Maestro Jedi Yoda son forzados a esconderse. La única esperanza para la galaxia es la descendencia de Anakin: los hijos gemelos nacidos en secreto que crecerán y se convertirán en héroes.",
     "originalOverview": "Años después del inicio de las Guerras Clon, los nobles Caballeros Jedi lideran un masivo ejército clon en una batalla de galaxia contra los Separatistas. Cuando los siniestros Sith revelan un complot de mil años para gobernar la galaxia, la República se derrumba y de sus cenizas surge el malvado Imperio Galáctico. El héroe Jedi Anakin Skywalker es seducido por el lado oscuro de la Fuerza para convertirse en el nuevo aprendiz del Emperador: Darth Vader. Los Jedi están diezmados, mientras Obi-Wan Kenobi y el Maestro Jedi Yoda son forzados a esconderse. La única esperanza para la galaxia es la descendencia de Anakin: los hijos gemelos nacidos en secreto que crecerán y se convertirán en héroes.",
     "poster": "posters/1895.jpg",
-    "genres": [],
+    "genres": [
+      "Aventura",
+      "Acción",
+      "Ciencia ficción"
+    ],
     "tmdbId": 1895,
     "runtime": 140,
     "sourceFile": "Star Wars Episodio 3 (2005).mkv",
@@ -18113,7 +18350,9 @@
     "overview": "Un escuadrón de pilotos de élite se embarca en una peligrosa misión para intentar neutralizar un prototipo de avión de combate que está fuera de control y que dispone de un sistema de inteligencia artificial cuyas acciones podrían desencadenar una guerra nuclear.",
     "originalOverview": "Un escuadrón de pilotos de élite se embarca en una peligrosa misión para intentar neutralizar un prototipo de avión de combate que está fuera de control y que dispone de un sistema de inteligencia artificial cuyas acciones podrían desencadenar una guerra nuclear.",
     "poster": "posters/10048.jpg",
-    "genres": [],
+    "genres": [
+      "Ciencia ficción"
+    ],
     "tmdbId": 10048,
     "runtime": 121,
     "sourceFile": "Stealth (2005).mkv",
@@ -18153,20 +18392,6 @@
     "runtime": 101,
     "sourceFile": "Street Fighter II (1994).mkv",
     "parsedTitle": "Street Fighter II",
-    "parsedYear": "1994"
-  },
-  {
-    "title": "Bagheria, Un Sueño De Libertad",
-    "originalTitle": "Baarìa",
-    "year": "2009",
-    "overview": "",
-    "originalOverview": "",
-    "poster": "posters/25846.jpg",
-    "genres": [],
-    "tmdbId": 25846,
-    "runtime": 142,
-    "sourceFile": "Sueños de Libertad (1994).mkv",
-    "parsedTitle": "Sueños de Libertad",
     "parsedYear": "1994"
   },
   {
@@ -18213,7 +18438,12 @@
     "overview": "Sin saberlo, le abrió las puertas al caos. Ahora, Suzume, una chica de diecisiete años, trabaja codo a codo con un misterioso aliado para evitar que Japón sufra más calamidades.",
     "originalOverview": "Sin saberlo, le abrió las puertas al caos. Ahora, Suzume, una chica de diecisiete años, trabaja codo a codo con un misterioso aliado para evitar que Japón sufra más calamidades.",
     "poster": "posters/916224.jpg",
-    "genres": [],
+    "genres": [
+      "Animación",
+      "Drama",
+      "Aventura",
+      "Fantasía"
+    ],
     "tmdbId": 916224,
     "runtime": 121,
     "sourceFile": "Suzume (2023).mp4",
@@ -18457,17 +18687,51 @@
     "parsedYear": "2008"
   },
   {
-    "title": "The Intership",
-    "originalTitle": "The Intership",
-    "year": "",
-    "overview": "",
-    "originalOverview": "",
-    "poster": "posters/1147428.jpg",
-    "genres": [],
-    "tmdbId": 1147428,
-    "runtime": 125,
-    "sourceFile": "The Intership (2013).mkv",
-    "parsedTitle": "The Intership",
+    "title": "¿Qué Pasó Ayer?",
+    "originalTitle": "The Hangover",
+    "year": "2009",
+    "overview": "El novio y tres amigos organizan una despedida de soltero en Las Vegas. Como era de esperar, a la mañana siguiente tienen una resaca tan monumental que no pueden recordar nada de lo ocurrido la noche anterior. Lo más extraordinario es que el novio ha desaparecido y en la suite del hotel se encuentran un tigre y un bebé.",
+    "originalOverview": "El novio y tres amigos organizan una despedida de soltero en Las Vegas. Como era de esperar, a la mañana siguiente tienen una resaca tan monumental que no pueden recordar nada de lo ocurrido la noche anterior. Lo más extraordinario es que el novio ha desaparecido y en la suite del hotel se encuentran un tigre y un bebé.",
+    "poster": "posters/18785.jpg",
+    "genres": [
+      "Comedia"
+    ],
+    "tmdbId": 18785,
+    "runtime": 100,
+    "sourceFile": "The Hangover (2009).mkv",
+    "parsedTitle": "The Hangover",
+    "parsedYear": "2009"
+  },
+  {
+    "title": "¿Qué Pasó Ayer? Parte II",
+    "originalTitle": "The Hangover Part II",
+    "year": "2011",
+    "overview": "Alan, Stu y Phil vuelven a despertarse en otra habitación de otro hotel y, para no perder la costumbre, en esta ocasión tampoco recuerdan nada. Esta vez sólo saben que están en Tailandia, adonde han viajado, junto a Doug, para asistir a la boda de Stu con Lauren. El principal problema: el hermano menor de Lauren, Teddy, ha desaparecido. Y para encontrarlo intentarán recomponer su noche anterior, que al parecer ha contado con monos, monjes, transexuales... y Chow, claro.",
+    "originalOverview": "Alan, Stu y Phil vuelven a despertarse en otra habitación de otro hotel y, para no perder la costumbre, en esta ocasión tampoco recuerdan nada. Esta vez sólo saben que están en Tailandia, adonde han viajado, junto a Doug, para asistir a la boda de Stu con Lauren. El principal problema: el hermano menor de Lauren, Teddy, ha desaparecido. Y para encontrarlo intentarán recomponer su noche anterior, que al parecer ha contado con monos, monjes, transexuales... y Chow, claro.",
+    "poster": "posters/45243.jpg",
+    "genres": [
+      "Comedia"
+    ],
+    "tmdbId": 45243,
+    "runtime": 102,
+    "sourceFile": "The Hangover Part II (2011).mkv",
+    "parsedTitle": "The Hangover Part II",
+    "parsedYear": "2011"
+  },
+  {
+    "title": "¿Qué Pasó Ayer? Parte III",
+    "originalTitle": "The Hangover Part III",
+    "year": "2013",
+    "overview": "Tras la inesperada muerte de su padre, Alan es llevado por sus amigos Phil, Stu y Doug a un centro especializado para que mejore. Esta vez no hay boda ni fiesta de despedida, pues que cuando estos chicos salen a la carretera, y sobre todo cuando aparece Chow… la suerte está echada.",
+    "originalOverview": "Tras la inesperada muerte de su padre, Alan es llevado por sus amigos Phil, Stu y Doug a un centro especializado para que mejore. Esta vez no hay boda ni fiesta de despedida, pues que cuando estos chicos salen a la carretera, y sobre todo cuando aparece Chow… la suerte está echada.",
+    "poster": "posters/109439.jpg",
+    "genres": [
+      "Comedia"
+    ],
+    "tmdbId": 109439,
+    "runtime": 100,
+    "sourceFile": "The Hangover Part III (2013).mkv",
+    "parsedTitle": "The Hangover Part III",
     "parsedYear": "2013"
   },
   {
@@ -18506,6 +18770,46 @@
     "sourceFile": "The Last of the Mohicans (1992).mp4",
     "parsedTitle": "The Last of the Mohicans",
     "parsedYear": "1992"
+  },
+  {
+    "title": "La Gran Aventura LEGO",
+    "originalTitle": "The Lego Movie",
+    "year": "2014",
+    "overview": "Una mini figura ordinaria de Lego, erróneamente pensada para ser el extraordinario MasterBuilder, es reclutada para unirse a una búsqueda para detener a un tirano malvado de Lego de pegar el universo juntos.",
+    "originalOverview": "Una mini figura ordinaria de Lego, erróneamente pensada para ser el extraordinario MasterBuilder, es reclutada para unirse a una búsqueda para detener a un tirano malvado de Lego de pegar el universo juntos.",
+    "poster": "posters/137106.jpg",
+    "genres": [
+      "Animación",
+      "Familia",
+      "Aventura",
+      "Comedia",
+      "Fantasía"
+    ],
+    "tmdbId": 137106,
+    "runtime": 101,
+    "sourceFile": "The Lego Movie (2014).mkv",
+    "parsedTitle": "The Lego Movie",
+    "parsedYear": "2014"
+  },
+  {
+    "title": "La Gran Aventura LEGO 2",
+    "originalTitle": "The Lego Movie 2: The Second Part",
+    "year": "2019",
+    "overview": "\"La Gran Aventura LEGO 2\" reúne a los héroes de Bricksburg en una nueva aventura en la que tendrán que salvar su ciudad. Después de cinco años de tranquilidad aparece una nueva amenaza: invasores de LEGO DUPLO del espacio exterior que lo destrozan todo antes de que dé tiempo a reconstruirlo. Emmet, Lucy, Batman y sus amigos unirán fuerzas para librar una batalla que les llevará a mundos inexplorados.",
+    "originalOverview": "\"La Gran Aventura LEGO 2\" reúne a los héroes de Bricksburg en una nueva aventura en la que tendrán que salvar su ciudad. Después de cinco años de tranquilidad aparece una nueva amenaza: invasores de LEGO DUPLO del espacio exterior que lo destrozan todo antes de que dé tiempo a reconstruirlo. Emmet, Lucy, Batman y sus amigos unirán fuerzas para librar una batalla que les llevará a mundos inexplorados.",
+    "poster": "posters/280217.jpg",
+    "genres": [
+      "Acción",
+      "Aventura",
+      "Animación",
+      "Comedia",
+      "Familia"
+    ],
+    "tmdbId": 280217,
+    "runtime": 107,
+    "sourceFile": "The Lego Movie 2 (2019).mkv",
+    "parsedTitle": "The Lego Movie 2",
+    "parsedYear": "2019"
   },
   {
     "title": "El hombre de la tierra",
@@ -18630,6 +18934,23 @@
     "sourceFile": "The Secret Garden (2020).mp4",
     "parsedTitle": "The Secret Garden",
     "parsedYear": "2020"
+  },
+  {
+    "title": "Sueño de fuga",
+    "originalTitle": "The Shawshank Redemption",
+    "year": "1994",
+    "overview": "Andy Dufresne es un banquero injustamente encarcelado en la prisión de Shawshank por el asesinato de su esposa y su amante. Dentro de prisión, Andy entabla una amistad con Red, un prisionero con habilidades para conseguir cosas. Estos dos hombres encarcelados se unirán durante años, encontrando consuelo y eventual redención a través de actos de decencia común.",
+    "originalOverview": "Andy Dufresne es un banquero injustamente encarcelado en la prisión de Shawshank por el asesinato de su esposa y su amante. Dentro de prisión, Andy entabla una amistad con Red, un prisionero con habilidades para conseguir cosas. Estos dos hombres encarcelados se unirán durante años, encontrando consuelo y eventual redención a través de actos de decencia común.",
+    "poster": "posters/278.jpg",
+    "genres": [
+      "Drama",
+      "Crimen"
+    ],
+    "tmdbId": 278,
+    "runtime": 142,
+    "sourceFile": "The Shawshank Redemption (1994).mkv",
+    "parsedTitle": "The Shawshank Redemption",
+    "parsedYear": "1994"
   },
   {
     "title": "La Estrella de Belén",
@@ -18941,19 +19262,6 @@
     "parsedYear": "2002"
   },
   {
-    "title": "Tren a Busan 2",
-    "originalTitle": "Tren a Busan 2",
-    "year": "2020",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
-    "sourceFile": "Tren a Busan 2 (2020).mp4",
-    "parsedTitle": "Tren a Busan 2",
-    "parsedYear": "2020"
-  },
-  {
     "title": "El triángulo",
     "originalTitle": "Triangle",
     "year": "2009",
@@ -18970,13 +19278,36 @@
     "parsedYear": "2009"
   },
   {
+    "title": "Terror en Halloween",
+    "originalTitle": "Trick 'r Treat",
+    "year": "2007",
+    "overview": "Cuatro historias entrelazadas que ocurren en Halloween: un director de escuela secundaria tiene una vida secreta como asesino en serie; una virgen universitaria podría haber conocido al único tipo para ella; un grupo de adolescentes saca una broma mala; un viejo recluso amargado recibe un invitado no invitado.",
+    "originalOverview": "Cuatro historias entrelazadas que ocurren en Halloween: un director de escuela secundaria tiene una vida secreta como asesino en serie; una virgen universitaria podría haber conocido al único tipo para ella; un grupo de adolescentes saca una broma mala; un viejo recluso amargado recibe un invitado no invitado.",
+    "poster": "posters/23202.jpg",
+    "genres": [
+      "Terror",
+      "Fantasía"
+    ],
+    "tmdbId": 23202,
+    "runtime": 82,
+    "sourceFile": "Trick 'r Treat (2007).mkv",
+    "parsedTitle": "Trick 'r Treat",
+    "parsedYear": "2007"
+  },
+  {
     "title": "xXx - Triple X",
     "originalTitle": "xXx",
     "year": "2002",
     "overview": "Xander Cage es tu adicto a la adrenalina estándar sin miedo y con una actitud pésima. Cuando el gobierno de los Estados Unidos lo \"recluta\" para ir a una misión, no está precisamente emocionado. Su misión: recopilar información sobre una organización que puede estar planeando la destrucción del mundo, dirigida por el nihilista Yorgi.",
     "originalOverview": "Xander Cage es tu adicto a la adrenalina estándar sin miedo y con una actitud pésima. Cuando el gobierno de los Estados Unidos lo \"recluta\" para ir a una misión, no está precisamente emocionado. Su misión: recopilar información sobre una organización que puede estar planeando la destrucción del mundo, dirigida por el nihilista Yorgi.",
     "poster": "posters/7451.jpg",
-    "genres": [],
+    "genres": [
+      "Acción",
+      "Aventura",
+      "Suspense",
+      "Crimen",
+      "Drama"
+    ],
     "tmdbId": 7451,
     "runtime": 124,
     "sourceFile": "Triple X (2002).mp4",
@@ -19068,7 +19399,12 @@
     "overview": "Mei Lee es una niña china-canadiense de trece años que se debate entre ser la hija obediente de su madre y el caos de la adolescencia. Y, por si los cambios en sus intereses, relaciones y cuerpo no fueran suficientes, cada vez que se emociona o estresa demasiado, se convierte en un panda rojo gigante.",
     "originalOverview": "Mei Lee es una niña china-canadiense de trece años que se debate entre ser la hija obediente de su madre y el caos de la adolescencia. Y, por si los cambios en sus intereses, relaciones y cuerpo no fueran suficientes, cada vez que se emociona o estresa demasiado, se convierte en un panda rojo gigante.",
     "poster": "posters/508947.jpg",
-    "genres": [],
+    "genres": [
+      "Animación",
+      "Familia",
+      "Comedia",
+      "Fantasía"
+    ],
     "tmdbId": 508947,
     "runtime": 100,
     "sourceFile": "Turning Red (2022).mkv",
@@ -19192,7 +19528,12 @@
     "overview": "Charlie Brown está deprimido porque piensa que la Navidad carece de sentido. Ve a Lucy y Snoopy obsesionados con regalos y decoraciones, Schroeder obsesionado con la obra de navidad, y todos los demás concentrados en las tarjetas y cartas a Santa; todo esto lo hace cuestionarse el verdadero significado de la Navidad.",
     "originalOverview": "Charlie Brown está deprimido porque piensa que la Navidad carece de sentido. Ve a Lucy y Snoopy obsesionados con regalos y decoraciones, Schroeder obsesionado con la obra de navidad, y todos los demás concentrados en las tarjetas y cartas a Santa; todo esto lo hace cuestionarse el verdadero significado de la Navidad.",
     "poster": "posters/13187.jpg",
-    "genres": [],
+    "genres": [
+      "Animación",
+      "Familia",
+      "Comedia",
+      "Película de TV"
+    ],
     "tmdbId": 13187,
     "runtime": 25,
     "sourceFile": "Una Navidad Charlie Brown (1965).mkv",
@@ -19232,32 +19573,6 @@
     "sourceFile": "Una historia del Bronx (1993).mkv",
     "parsedTitle": "Una historia del Bronx",
     "parsedYear": "1993"
-  },
-  {
-    "title": "Una pelicula de huevos 2 Otra película de huevos y un pollo",
-    "originalTitle": "Una pelicula de huevos 2 Otra película de huevos y un pollo",
-    "year": "2009",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
-    "sourceFile": "Una pelicula de huevos 2 Otra película de huevos y un pollo (2009).mkv",
-    "parsedTitle": "Una pelicula de huevos 2 Otra película de huevos y un pollo",
-    "parsedYear": "2009"
-  },
-  {
-    "title": "Una pelicula de huevos 3 Un gallo con muchos huevos",
-    "originalTitle": "Una pelicula de huevos 3 Un gallo con muchos huevos",
-    "year": "2015",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
-    "sourceFile": "Una pelicula de huevos 3 Un gallo con muchos huevos (2015).mkv",
-    "parsedTitle": "Una pelicula de huevos 3 Un gallo con muchos huevos",
-    "parsedYear": "2015"
   },
   {
     "title": "Uncharted: Fuera del mapa",
@@ -19309,24 +19624,6 @@
     "sourceFile": "Virgen de San Juan (2020).mp4",
     "parsedTitle": "Virgen de San Juan",
     "parsedYear": "2020"
-  },
-  {
-    "title": "J'ai toujours rêvé d'être un gangster",
-    "originalTitle": "J'ai toujours rêvé d'être un gangster",
-    "year": "2008",
-    "overview": "",
-    "originalOverview": "",
-    "poster": "posters/8281.jpg",
-    "genres": [
-      "Drama",
-      "Comedia",
-      "Crimen"
-    ],
-    "tmdbId": 8281,
-    "runtime": 110,
-    "sourceFile": "Wanted (2008).mkv",
-    "parsedTitle": "Wanted",
-    "parsedYear": "2008"
   },
   {
     "title": "Warcraft: El primer encuentro de dos mundos",
@@ -19420,37 +19717,6 @@
     "sourceFile": "Willow (1988).mkv",
     "parsedTitle": "Willow",
     "parsedYear": "1988"
-  },
-  {
-    "title": "Las aventuras de Winnie Pooh",
-    "originalTitle": "The Many Adventures of Winnie the Pooh",
-    "year": "1977",
-    "overview": "En esta colección de cortos animados basados en las historias y personajes de A.A. Milne, Winnie the Pooh, un osito de peluche amante de la miel, se embarca en algunas aventuras excéntricas.",
-    "originalOverview": "En esta colección de cortos animados basados en las historias y personajes de A.A. Milne, Winnie the Pooh, un osito de peluche amante de la miel, se embarca en algunas aventuras excéntricas.",
-    "poster": "posters/250480.jpg",
-    "genres": [
-      "Animación",
-      "Familia",
-      "Aventura"
-    ],
-    "tmdbId": 250480,
-    "runtime": 74,
-    "sourceFile": "Winnie Pooh (1977).mkv",
-    "parsedTitle": "Winnie Pooh",
-    "parsedYear": "1977"
-  },
-  {
-    "title": "Wondeer Park",
-    "originalTitle": "Wondeer Park",
-    "year": "2019",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
-    "sourceFile": "Wondeer Park (2019).mp4",
-    "parsedTitle": "Wondeer Park",
-    "parsedYear": "2019"
   },
   {
     "title": "Extraordinario",
