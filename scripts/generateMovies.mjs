@@ -254,11 +254,29 @@ function normalizeManualMatches(rawData) {
       continue;
     }
 
-    // Validar que el valor sea un número válido
-    const tmdbId = Number(value);
-    if (!Number.isInteger(tmdbId) || tmdbId <= 0) {
+    // Soportar ambos formatos: número directo o objeto con id y type
+    let entry;
+
+    if (typeof value === "number") {
+      // Formato antiguo: solo número
+      entry = { id: value, type: "movie" };
+    } else if (typeof value === "object" && value && value.id) {
+      // Formato nuevo: { id, type }
+      const tmdbId = Number(value.id);
+      if (!Number.isInteger(tmdbId) || tmdbId <= 0) {
+        console.warn(
+          `⚠️ Entrada inválida en manualMatches: "${key}" → ID "${value.id}" (debe ser número positivo)`
+        );
+        skippedEntries++;
+        continue;
+      }
+      entry = {
+        id: tmdbId,
+        type: value.type === "tv" ? "tv" : "movie"
+      };
+    } else {
       console.warn(
-        `⚠️ Entrada inválida en manualMatches: "${key}" → "${value}" (debe ser ID numérico positivo)`
+        `⚠️ Entrada inválida en manualMatches: "${key}" → "${JSON.stringify(value)}" (debe ser número o {id, type})`
       );
       skippedEntries++;
       continue;
@@ -272,7 +290,7 @@ function normalizeManualMatches(rawData) {
       continue;
     }
 
-    normalized[normalizedKey] = tmdbId;
+    normalized[normalizedKey] = entry;
   }
 
   if (skippedEntries > 0) {
@@ -343,14 +361,23 @@ async function getCachedOrSearchMovie(title, year, filePath, manualMatches, cach
   const cacheKey = `${normalize(title)}_${year}`;
   const cachedMovie = cache[cacheKey];
   
-  // Validar cache existente
-  if (cachedMovie && typeof cachedMovie === "object") {
-    if (cachedMovie.tmdbId) {
-      // Cache válido aunque esté incompleto
+  // 🔥 Detectar si hay override manual
+  const normalizedTitle = normalize(title);
+  const hasManualOverride = manualMatches[normalizedTitle];
+  
+  // 🔥 PRIORIDAD: override manual invalida el cache
+  if (hasManualOverride) {
+    console.log(`🧹 Ignorando cache por override manual: ${title}`);
+  } else if (cachedMovie && typeof cachedMovie === "object") {
+    // Cache válido solo si tiene tmdbId Y runtime
+    if (cachedMovie.tmdbId && cachedMovie.runtime) {
       console.log(`✓ Desde cache: ${title}`);
       return cachedMovie;
+    } else if (cachedMovie.tmdbId && !cachedMovie.runtime) {
+      // Cache incompleto: falta runtime
+      console.log(`⚠️ Cache incompleto (sin runtime), se intentará corregir: ${title}`);
     } else {
-      // Solo aquí considerar inválido (pero no borrarlo)
+      // Cache sin tmdbId
       console.log(`⚠️ Cache sin tmdbId, se intentará corregir: ${title}`);
     }
   }
@@ -457,36 +484,48 @@ async function searchMovie(title, year, localRuntime, manualMatches) {
   // 1️⃣ VERIFICAR OVERRIDE MANUAL (PRIORIDAD ABSOLUTA)
   // ==========================================
   const normalizedTitle = normalize(title);
-  if (manualMatches[normalizedTitle]) {
-    const manualId = manualMatches[normalizedTitle];
-    console.log(`📌 Usando override manual: ${manualId}`);
-    
+  const manualEntry = manualMatches[normalizedTitle];
+
+  if (manualEntry) {
+    const { id, type } = manualEntry;
+
+    console.log(`📌 Usando override manual (${type}): ${id}`);
+
     try {
-      const url = `https://api.themoviedb.org/3/movie/${manualId}?api_key=${API_KEY}`;
+      const endpoint = type === "tv" ? "tv" : "movie";
+
+      const url = `https://api.themoviedb.org/3/${endpoint}/${id}?api_key=${API_KEY}&language=es-MX`;
       const res = await fetch(url);
-      
+
       if (!res.ok) {
         throw new Error(`HTTP ${res.status}: ${res.statusText}`);
       }
-      
+
       const data = await res.json();
-      
+
       // Validar que la respuesta es válida
       if (!data || !data.id) {
         throw new Error("Respuesta inválida de TMDb (sin ID)");
       }
-      
+
       // LOG DETALLADO DE MATCH MANUAL
       console.log(`   ✅ Archivo: "${title}"`);
       console.log(`   ✅ TMDb ID: ${data.id}`);
-      console.log(`   ✅ Título TMDb: "${data.title}" (${data.original_title})`);
-      
-      return data;
-      
+      console.log(`   ✅ Título TMDb: "${data.title || data.name}" (${data.original_title || data.original_name})`);
+
+      // Normalize fields so the rest of the script continues to work
+      return {
+        ...data,
+        title: data.title || data.name,
+        original_title: data.original_title || data.original_name,
+        release_date: data.release_date || data.first_air_date,
+        runtime: data.runtime || data.episode_run_time?.[0] || null
+      };
+
     } catch (error) {
       console.error(
         `⚠️ Match manual INVÁLIDO para: "${title}"\n` +
-        `   ID proporcionado: ${manualId}\n` +
+        `   ID proporcionado: ${id}\n` +
         `   Error: ${error.message}\n` +
         `   → Intentando búsqueda normal...`
       );
@@ -609,7 +648,7 @@ async function findBestMatchWithRuntime(results, fileTitle, year, localRuntime) 
       const detailedMovie = await getMovieDetails(candidate.movie.id);
       
       if (detailedMovie) {
-        const tmdbRuntime = detailedMovie.runtime;
+        const tmdbRuntime = detailedMovie.runtime || detailedMovie.episode_run_time?.[0] || null;
         
         if (tmdbRuntime) {
           console.log(`🎬 TMDb runtime: ${tmdbRuntime} min`);
@@ -907,7 +946,9 @@ async function main() {
   const { movies: existingMovies, movieMap: existingMovieMap } = await loadExistingMovies();
 
   const files = await fs.readdir(MOVIES_FOLDER);
-  const videoFiles = files.filter(f => f.endsWith(".mp4") || f.endsWith(".mkv"));
+  const videoFiles = files.filter(f => 
+    [".mp4", ".mkv", ".avi"].includes(path.extname(f).toLowerCase())
+  );
 
   console.log(`📹 ${videoFiles.length} archivos de video encontrados\n`);
 
@@ -943,7 +984,11 @@ async function main() {
         parsed
       });
       
-    } else if (foundInExisting && !processedIds.has(foundInExisting.tmdbId)) {
+    } else if (
+      foundInExisting &&
+      !processedIds.has(foundInExisting.tmdbId) &&
+      foundInExisting.runtime
+    ) {
       
       console.log(`📦 Usando existente: ${parsed.title}`);
       moviesToProcess.push({
@@ -988,6 +1033,10 @@ async function main() {
         cache
       );
 
+      // Obtener duración local del video
+      const absolutePath = path.join(MOVIES_FOLDER, file);
+      const localRuntime = await getVideoDuration(absolutePath);
+
       // Si NO hay información en TMDb, crear fallback
       if (!movieInfo) {
         console.warn(`📝 Usando fallback para: "${parsed.title}"`);
@@ -1024,11 +1073,15 @@ async function main() {
         poster: posterPath,
         genres: transformGenres(movieES?.genres),
         tmdbId: movieInfo.id,
-        runtime: movieInfo.runtime || null,
+        runtime: movieInfo.runtime ?? localRuntime ?? null,
         sourceFile: file,
         parsedTitle: parsed.title,
         parsedYear: parsed.year
       };
+
+      if (!movieRecord.runtime) {
+        console.warn(`⚠️ Runtime missing: ${parsed.title}`);
+      }
 
       console.log(`🎬 Match: "${parsed.title}" → "${movieRecord.title}"`);
       console.timeEnd(`  ${parsed.title}`);
