@@ -11,7 +11,14 @@
   const themeSelect = document.getElementById('ds-theme');
 
   // Load saved theme
-  const savedTheme = localStorage.getItem('ds-theme') || 'modern';
+  const allowedThemes = ['modern', 'vista', 'mac2000'];
+
+  let savedTheme = localStorage.getItem('ds-theme') || 'modern';
+
+  if (!allowedThemes.includes(savedTheme)) {
+    savedTheme = 'modern';
+  }
+
   simulator.setAttribute('data-theme', savedTheme);
   themeSelect.value = savedTheme;
 
@@ -39,6 +46,7 @@
     switch (unit) {
       case 'kb': return size / 1024;
       case 'gb': return size * 1024;
+      case 'tb': return size * 1024 * 1024;
       case 'mb': default: return size;
     }
   }
@@ -47,9 +55,35 @@
     if (seconds < 60) {
       return Math.round(seconds) + ' s';
     }
-    const minutes = Math.floor(seconds / 60);
-    const secs = Math.round(seconds % 60);
-    return minutes + 'm ' + secs + 's';
+    if (seconds < 3600) { // < 1 hour
+      const minutes = Math.floor(seconds / 60);
+      const secs = Math.round(seconds % 60);
+      return minutes + ' min ' + secs + ' s';
+    }
+    if (seconds < 86400) { // < 1 day
+      const hours = Math.floor(seconds / 3600);
+      const minutes = Math.round((seconds % 3600) / 60);
+      return hours + ' h ' + minutes + ' min';
+    }
+    if (seconds < 604800) { // < 1 week
+      const days = Math.floor(seconds / 86400);
+      const hours = Math.round((seconds % 86400) / 3600);
+      return days + ' d ' + hours + ' h';
+    }
+    if (seconds < 2592000) { // < 1 month
+      const weeks = Math.floor(seconds / 604800);
+      const days = Math.round((seconds % 604800) / 86400);
+      return weeks + ' sem ' + days + ' d';
+    }
+    if (seconds < 31536000) { // < 1 year
+      const months = Math.floor(seconds / 2592000);
+      const weeks = Math.round((seconds % 2592000) / 604800);
+      return months + ' mes ' + weeks + ' sem';
+    }
+    // >= 1 year
+    const years = Math.floor(seconds / 31536000);
+    const months = Math.round((seconds % 31536000) / 2592000);
+    return years + ' a ' + months + ' mes';
   }
 
   function buildBlocks(elements) {
@@ -111,7 +145,7 @@
 
     item.appendChild(barDiv);
 
-    const elements = { item, barDiv, fillDiv, percentSpan, timeSpan, blocksDiv, blocks: [] };
+    const elements = { item, barDiv, fillDiv, percentSpan, timeSpan, blocksDiv, blocks: [], funMessage: null };
 
     return elements;
   }
@@ -144,7 +178,20 @@
 
       if (progress < 1) {
         const remaining = totalTime - elapsed;
-        elements.timeSpan.textContent = formatTime(remaining);
+        let text = formatTime(remaining);
+        if (remaining >= 31536000) {
+          if (!elements.funMessage) {
+            const messages = [
+              "😅 Paciencia...",
+              "⏳ Esto va para largo...",
+              "🚀 Tal vez quieras hacer otra cosa...",
+              "😂 Mejor vuelve mañana..."
+            ];
+            elements.funMessage = messages[Math.floor(Math.random() * messages.length)];
+          }
+          text += " " + elements.funMessage;
+        }
+        elements.timeSpan.textContent = text;
         animationId = requestAnimationFrame(update);
       } else {
         elements.timeSpan.textContent = 'Completado';

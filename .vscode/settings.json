@@ -31,5 +31,15 @@
         "webcam",
         "Wolfenstein",
         "Xalapa"
-    ]
+    ],
+    "chat.tools.terminal.autoApprove": {
+        "/^node -c \"b:\\\\Documentos\\\\chac\\\\js/download-simulator\\.js\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^node test_convert\\.js$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
 }

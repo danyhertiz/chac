@@ -19,7 +19,7 @@
         <article class="story-full">
         <h1>Programas</h1>
             <p>
-            Experimentos de programación.
+            Esta sección contiene mis pocos experimentos en el mundo de la programación. Han sido traducidos a javascript para que se puedan ejecutar directamente en el navegador.
             </p>
         </article>
     <section id="download-simulator" data-theme="modern">
@@ -29,8 +29,6 @@
         <label for="ds-theme">Estilo:</label>
         <select id="ds-theme">
           <option value="modern">Moderno</option>
-          <option value="win98">Windows 98</option>
-          <option value="winxp">Windows XP</option>
           <option value="vista">Windows Vista</option>
           <option value="mac2000">Mac clásico</option>
         </select>
@@ -40,9 +38,10 @@
         <input type="number" id="ds-size" value="100" min="1">
         
         <select id="ds-unit">
-          <option value="mb">MB</option>
           <option value="kb">KB</option>
+          <option value="mb" selected>MB</option>
           <option value="gb">GB</option>
+          <option value="tb">TB</option>
         </select>
 
         <button id="ds-start">Iniciar</button>
