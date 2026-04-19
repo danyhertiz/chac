@@ -1,0 +1,378 @@
+#download-simulator {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+#download-simulator h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+#download-simulator .ds-controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+#download-simulator .ds-controls input,
+#download-simulator .ds-controls select {
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+#download-simulator .ds-controls button {
+  padding: 0.4rem 0.8rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+#download-simulator .ds-controls button:hover {
+  background-color: #0056b3;
+}
+
+#download-simulator #ds-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#download-simulator .ds-item {
+  border: 1px solid #eee;
+  padding: 0.4rem;
+  border-radius: 4px;
+  background-color: white;
+}
+
+#download-simulator .ds-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+#download-simulator .ds-speed {
+  font-weight: bold;
+  color: #333;
+}
+
+#download-simulator .ds-percent,
+#download-simulator .ds-time {
+  white-space: nowrap;
+}
+
+#download-simulator .ds-bar {
+  width: 100%;
+  height: 14px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+#download-simulator .ds-fill {
+  height: 100%;
+  width: 0%;
+  display: block;
+  background: #22c55e;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  border-radius: inherit;
+  transition: width 0.1s ease;
+  z-index: 1;
+}
+
+/* Block-based progress for retro themes */
+#download-simulator .ds-blocks {
+  display: none;
+  flex-direction: row;
+  gap: 2px;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+#download-simulator .ds-block {
+  width: 6px;
+  height: 100%;
+  flex: 0 0 auto;
+  background: transparent;
+  display: block;
+}
+
+/* Show blocks for retro themes, hide fill */
+#download-simulator[data-theme="win98"] .ds-blocks,
+#download-simulator[data-theme="winxp"] .ds-blocks {
+  display: flex;
+}
+
+#download-simulator[data-theme="win98"] .ds-fill,
+#download-simulator[data-theme="winxp"] .ds-fill {
+  display: none;
+}
+
+/* Windows 98 blocks */
+#download-simulator[data-theme="win98"] .ds-block.active {
+  background-color: #000080;
+}
+
+/* Windows XP blocks */
+#download-simulator[data-theme="winxp"] .ds-block.active {
+  background: linear-gradient(to bottom, #22c55e, #16a34a);
+  box-shadow: inset 0 1px rgba(255,255,255,0.5);
+}
+
+#download-simulator .ds-theme-selector {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+#download-simulator .ds-theme-selector label {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+#download-simulator .ds-theme-selector select {
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Windows 98 Theme */
+#download-simulator[data-theme="win98"] {
+  background-color: #c0c0c0;
+  border: 2px inset #c0c0c0;
+  border-radius: 0;
+  font-family: 'Courier New', monospace;
+}
+
+#download-simulator[data-theme="win98"] h2 {
+  color: #000;
+}
+
+#download-simulator[data-theme="win98"] .ds-item {
+  background-color: #ffffff;
+  border: 2px inset #ffffff;
+  border-radius: 0;
+}
+
+#download-simulator[data-theme="win98"] .ds-bar {
+  background-color: #c0c0c0;
+  border: 1px inset #c0c0c0;
+  border-radius: 0;
+}
+
+#download-simulator[data-theme="win98"] .ds-fill {
+  background-color: #000080;
+  background-image: repeating-linear-gradient(
+    to right,
+    #000080 0px,
+    #000080 6px,
+    #c0c0c0 6px,
+    #c0c0c0 8px
+  );
+  background-size: 8px 100%;
+  background-repeat: repeat-x;
+  background-position: left center;
+  image-rendering: pixelated;
+}
+
+/* Windows XP Theme */
+#download-simulator[data-theme="winxp"] {
+  background: linear-gradient(to bottom, #3a6ea5, #1e3a5f);
+  border: 1px solid #1e3a5f;
+  border-radius: 6px;
+  color: white;
+}
+
+#download-simulator[data-theme="winxp"] h2 {
+  color: white;
+}
+
+#download-simulator[data-theme="winxp"] .ds-item {
+  background: linear-gradient(to bottom, #f0f0f0, #d0d0d0);
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+#download-simulator[data-theme="winxp"] .ds-bar {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+}
+
+#download-simulator[data-theme="winxp"] .ds-fill {
+  background-color: #22c55e;
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      rgba(255,255,255,0.25) 0px,
+      rgba(255,255,255,0.25) 2px,
+      transparent 2px,
+      transparent 10px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.4),
+      rgba(255,255,255,0)
+    );
+  background-size: 10px 100%, 100% 100%;
+  background-repeat: repeat-x, no-repeat;
+  background-position: left center, left center;
+}
+
+/* Windows Vista Theme */
+#download-simulator[data-theme="vista"] {
+  background-color: #f3f6fb;
+  border: 1px solid #c7d3e0;
+  border-radius: 8px;
+  color: #333;
+}
+
+#download-simulator[data-theme="vista"] h2 {
+  color: #333;
+}
+
+#download-simulator[data-theme="vista"] .ds-item {
+  background-color: #ffffff;
+  border: 1px solid #d0d7e2;
+  border-radius: 6px;
+}
+
+#download-simulator[data-theme="vista"] .ds-bar {
+  background-color: #dbe3ec;
+  border-radius: 6px;
+}
+
+#download-simulator[data-theme="vista"] .ds-fill {
+  background: linear-gradient(
+    to bottom,
+    #4ade80,
+    #22c55e
+  );
+
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+#download-simulator[data-theme="vista"] .ds-fill::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    transparent 48%,
+    rgba(255,255,255,0.2) 50%,
+    transparent 52%
+  );
+
+  transform: translateX(-100%);
+  animation: vista-shine 3s linear infinite;
+
+  pointer-events: none;
+}
+
+@keyframes vista-shine {
+  0% {
+    transform: translateX(-120%);
+  }
+  60% {
+    transform: translateX(120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+/* Mac Classic Theme */
+#download-simulator[data-theme="mac2000"] {
+  background-color: #f0f0f0;
+  border: 1px solid #999;
+  border-radius: 8px;
+}
+
+#download-simulator[data-theme="mac2000"] .ds-item {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#download-simulator[data-theme="mac2000"] .ds-bar {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+}
+
+#download-simulator[data-theme="mac2000"] .ds-fill {
+  background: linear-gradient(
+    to bottom,
+    #60a5fa,
+    #3b82f6
+  );
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+#download-simulator[data-theme="mac2000"] .ds-fill::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255,255,255,0.35) 0px,
+    rgba(255,255,255,0.35) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  animation: mac-stripes 1s linear infinite;
+  z-index: 1;
+}
+
+#download-simulator[data-theme="mac2000"] .ds-fill::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 45%,
+    rgba(255,255,255,0.25) 50%,
+    transparent 55%
+  );
+  transform: translateX(-100%);
+  animation: mac-shine 3s linear infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@keyframes mac-shine {
+  0% {
+    transform: translateX(-120%);
+  }
+  60% {
+    transform: translateX(120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}

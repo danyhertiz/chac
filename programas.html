@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/hertiz_ico.ico" type="image/x-icon">
+    <title>Programas - Dany Hertiz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/collapsible-cards.css">
+    <link rel="stylesheet" href="css/binary-background.css">
+    <link rel="stylesheet" href="css/emoji-background.css">
+    <link rel="stylesheet" href="css/download-simulator.css">
+    <script src="js/auth.js"></script>
+   
+</head>
+<body>
+
+    <main style="margin-top: 1.5rem;">
+        <article class="story-full">
+        <h1>Programas</h1>
+            <p>
+            Experimentos de programación.
+            </p>
+        </article>
+    <section id="download-simulator" data-theme="modern">
+      <h2>Simulador de descarga</h2>
+
+      <div class="ds-theme-selector">
+        <label for="ds-theme">Estilo:</label>
+        <select id="ds-theme">
+          <option value="modern">Moderno</option>
+          <option value="win98">Windows 98</option>
+          <option value="winxp">Windows XP</option>
+          <option value="vista">Windows Vista</option>
+          <option value="mac2000">Mac clásico</option>
+        </select>
+      </div>
+
+      <div class="ds-controls">
+        <input type="number" id="ds-size" value="100" min="1">
+        
+        <select id="ds-unit">
+          <option value="mb">MB</option>
+          <option value="kb">KB</option>
+          <option value="gb">GB</option>
+        </select>
+
+        <button id="ds-start">Iniciar</button>
+      </div>
+
+      <div id="ds-list"></div>
+    </section>
+    <a href="historias.html" class="back-link">← Volver a Historias</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Dany Hertiz</p>
+    </footer>
+
+    <script src="js/marked.min.js"></script>
+    <script src="js/emoji-background.js"></script>
+    <script src="js/load-header.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.collapsible-story');
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.classList.toggle('expanded');
+                });
+            });
+
+            const loadMarkdown = async (filename) => {
+                try {
+                    const response = await fetch('content/stories/musica/' + encodeURIComponent(filename));
+                    if (!response.ok) throw new Error('Not found: ' + filename);
+                    const text = await response.text();
+                    return marked.parse(text);
+                } catch (err) {
+                    console.error('Error loading MD:', err);
+                    return '<p>Error loading content: ' + err.message + '</p>';
+                }
+            };
+
+            document.querySelectorAll('[data-md]').forEach(async (el) => {
+                const filename = el.getAttribute('data-md');
+                const html = await loadMarkdown(filename);
+                el.innerHTML = html;
+            });
+        });
+    </script>
+    <script src="js/download-simulator.js" defer></script>
+</body>
+</html>
+
