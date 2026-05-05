@@ -10359,23 +10359,6 @@
     "parsedYear": "2008"
   },
   {
-    "title": "Silencio",
-    "originalTitle": "Hush",
-    "year": "2016",
-    "overview": "Una joven escritora que se quedó sorda en su adolescencia y vive aislada en una casa en medio de la nada. Una noche comienza a ser acosada por un misterioso hombre enmascarado, sin la posibilidad de pedir ayuda, por lo que tendrá que ingeniárselas para salir airosa de su acosador.",
-    "originalOverview": "Una joven escritora que se quedó sorda en su adolescencia y vive aislada en una casa en medio de la nada. Una noche comienza a ser acosada por un misterioso hombre enmascarado, sin la posibilidad de pedir ayuda, por lo que tendrá que ingeniárselas para salir airosa de su acosador.",
-    "poster": "posters/376570.jpg",
-    "genres": [
-      "Terror",
-      "Suspense"
-    ],
-    "tmdbId": 376570,
-    "runtime": 82,
-    "sourceFile": "Hush Silencio (2016).mp4",
-    "parsedTitle": "Hush Silencio",
-    "parsedYear": "2016"
-  },
-  {
     "title": "Sin salida",
     "originalTitle": "No Exit",
     "year": "2022",
@@ -22073,5 +22056,22 @@
     ],
     "tmdbId": 27022,
     "runtime": 109
+  },
+  {
+    "title": "Silencio",
+    "originalTitle": "Silence",
+    "year": "2016",
+    "overview": "Dos sacerdotes jesuitas, Sebastião Rodrigues y Francis Garrpe, viajan al Japón del siglo XVII que, bajo el shogunato Tokugawa, prohibió el catolicismo y casi todos los contactos extranjeros. Allí son testigos de la persecución de los cristianos japoneses a manos de su propio gobierno que desea purgar Japón de toda influencia occidental. Eventualmente los sacerdotes se separan y Rodrigues viaja por el campo, preguntándose por qué Dios permanece en silencio mientras Sus hijos sufren.",
+    "originalOverview": "Dos sacerdotes jesuitas, Sebastião Rodrigues y Francis Garrpe, viajan al Japón del siglo XVII que, bajo el shogunato Tokugawa, prohibió el catolicismo y casi todos los contactos extranjeros. Allí son testigos de la persecución de los cristianos japoneses a manos de su propio gobierno que desea purgar Japón de toda influencia occidental. Eventualmente los sacerdotes se separan y Rodrigues viaja por el campo, preguntándose por qué Dios permanece en silencio mientras Sus hijos sufren.",
+    "poster": "posters/68730.jpg",
+    "genres": [
+      "Drama",
+      "Historia"
+    ],
+    "tmdbId": 68730,
+    "runtime": 161,
+    "sourceFile": "Silencio (2016).mp4",
+    "parsedTitle": "Silencio",
+    "parsedYear": "2016"
   }
 ]
