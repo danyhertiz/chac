@@ -22,7 +22,15 @@
             Esta sección contiene mis pocos experimentos en el mundo de la programación. Han sido traducidos a javascript para que se puedan ejecutar directamente en el navegador.
             </p>
         </article>
-    <section id="download-simulator" data-theme="modern">
+        
+    <article class="story-full">
+        <H2>Simulador de descarga de archivos</H2>
+        Este es un programa que simula la velocidad de descarga a diferentes
+        anchos de banda, el tamaño del archivo puede ser definido por el usuario. 
+        Simula anchos de banda desde el antiguo módem de 56Kbps hasta conexiones de fibra óptica de 10Gbps.
+        Originalmente lo programé en visual basic en 2017. Esta versión está en javascript 
+        con la ventaja de poder cambiar el estilo visual de las barras de carga.
+        <section id="download-simulator" data-theme="modern">
       <h2>Simulador de descarga</h2>
 
       <div class="ds-theme-selector">
@@ -49,6 +57,21 @@
 
       <div id="ds-list"></div>
     </section>
+    </article>
+
+    <article class="story-full">
+        <H2>Traductor del idioma Dino de Star Fox Adventures</H2>
+        Desde que vi las instrucciones para traducir este idioma ficticio en el manual 
+        del juego de Star Fox Adventures, quise crear un programa que fuera capaz de hacer el trabajo.
+        Pero nunca pude materializarlo en código, solamente 
+        hice bosquejos en un cuaderno y soñaba con verlo funcionando algún día. 
+        Ahora, años después, lo he podido programar en javascript, pero he descubierto que 
+        el propio "idioma" tiene sus limitaciónes, porque no es 100% reversible. No tiene reglas gramticales ni 
+        traducciones directas, solo es un sistema de sustitución de letras, por lo que la traducción de Dino a inglés no es tan coherente como la de inglés a Dino.
+        <img src="img/historias/programas/dino.jpg" alt="Dino" style="width: 100%; max-width: 800px; margin-top: 1rem;">
+        <div id="dino-translator"></div>
+    </article>
+
     <a href="historias.html" class="back-link">← Volver a Historias</a>
     </main>
 
@@ -88,6 +111,10 @@
         });
     </script>
     <script src="js/download-simulator.js" defer></script>
+    <script src="js/dino-translator.js"></script>
+    <script>
+        initDinoTranslator("dino-translator");
+    </script>
 </body>
 </html>
 
