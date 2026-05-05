@@ -348,6 +348,21 @@ async function saveCache(cache) {
 }
 
 /**
+ * Limpia el título de forma agresiva para mejorar búsquedas fallidas
+ */
+function cleanTitleAggressively(title) {
+  if (!title) return "";
+  
+  return title
+    .replace(/\(.*?\)/g, "") // Eliminar contenido en paréntesis
+    .replace(/\[.*?\]/g, "") // Eliminar contenido en corchetes
+    .replace(/\d{3,4}p|bluray|hdtv|x264|h264|ac3|dts|brrip|web-dl|dual|latino|spanish/gi, "") // Eliminar tags comunes
+    .replace(/[^a-zA-Z0-9\s]/g, " ") // Caracteres especiales a espacio
+    .replace(/\s+/g, " ") // Normalizar espacios
+    .trim();
+}
+
+/**
  * Obtiene una película del cache o busca en TMDb
  * Clave del cache: "titulo_normalizado_2012"
  * También cachea la duración local del archivo de video
@@ -357,7 +372,7 @@ async function saveCache(cache) {
  * - Nunca borra cache automáticamente
  * - Si búsqueda falla, usa cache anterior como fallback
  */
-async function getCachedOrSearchMovie(title, year, filePath, manualMatches, cache) {
+async function getCachedOrSearchMovie(title, year, filePath, manualMatches, cache, isProblematic = false) {
   const cacheKey = `${normalize(title)}_${year}`;
   const cachedMovie = cache[cacheKey];
   
@@ -368,7 +383,7 @@ async function getCachedOrSearchMovie(title, year, filePath, manualMatches, cach
   // 🔥 PRIORIDAD: override manual invalida el cache
   if (hasManualOverride) {
     console.log(`🧹 Ignorando cache por override manual: ${title}`);
-  } else if (cachedMovie && typeof cachedMovie === "object") {
+  } else if (!isProblematic && cachedMovie && typeof cachedMovie === "object") {
     // Cache válido solo si tiene tmdbId Y runtime
     if (cachedMovie.tmdbId && cachedMovie.runtime) {
       console.log(`✓ Desde cache: ${title}`);
@@ -380,6 +395,8 @@ async function getCachedOrSearchMovie(title, year, filePath, manualMatches, cach
       // Cache sin tmdbId
       console.log(`⚠️ Cache sin tmdbId, se intentará corregir: ${title}`);
     }
+  } else if (isProblematic) {
+    console.log(`🔥 Bypassing cache for problematic movie: ${title}`);
   }
   
   // Obtener duración local si no está en cache válido
@@ -393,7 +410,7 @@ async function getCachedOrSearchMovie(title, year, filePath, manualMatches, cach
   }
   
   // Buscar en TMDb
-  const movieData = await searchMovie(title, year, localRuntime, manualMatches);
+  const movieData = await searchMovie(title, year, localRuntime, manualMatches, isProblematic);
   
   // Si falla la búsqueda, conservar cache antiguo
   if (!movieData && cachedMovie) {
@@ -477,9 +494,10 @@ async function processInBatches(items, worker, concurrency = CONCURRENCY) {
  * @param {number} year - Año de lanzamiento
  * @param {number|null} localRuntime - Duración en minutos del archivo local
  * @param {Object} manualMatches - Coincidencias manuales (ya normalizadas)
+ * @param {boolean} isEnhanced - Si debe usar estrategias de búsqueda agresivas
  * @returns {Promise<Object|null>}
  */
-async function searchMovie(title, year, localRuntime, manualMatches) {
+async function searchMovie(title, year, localRuntime, manualMatches, isEnhanced = false) {
   // ==========================================
   // 1️⃣ VERIFICAR OVERRIDE MANUAL (PRIORIDAD ABSOLUTA)
   // ==========================================
@@ -545,7 +563,7 @@ async function searchMovie(title, year, localRuntime, manualMatches) {
     
     // Si encontró resultados con año, usar esos
     if (results.length > 0) {
-      const bestMatch = await findBestMatchWithRuntime(results, title, year, localRuntime);
+      const bestMatch = await findBestMatchWithRuntime(results, title, year, localRuntime, isEnhanced);
       if (bestMatch) return bestMatch;
     }
     
@@ -560,11 +578,44 @@ async function searchMovie(title, year, localRuntime, manualMatches) {
     results = data.results || [];
     
     if (results.length > 0) {
-      // Sin año, no aplicar bonus por año en la puntuación
-      const bestMatch = await findBestMatchWithRuntime(results, title, null, localRuntime);
+      const bestMatch = await findBestMatchWithRuntime(results, title, null, localRuntime, isEnhanced);
       if (bestMatch) {
         console.log(`✓ Encontrada sin año: ${title}`);
         return bestMatch;
+      }
+    }
+
+    // ==========================================
+    // 4️⃣ ENHANCED FALLBACKS (ONLY FOR PROBLEMATIC)
+    // ==========================================
+    if (isEnhanced) {
+      // 🧪 3. Clean title aggressively
+      const cleanTitle = cleanTitleAggressively(title);
+      if (cleanTitle !== title) {
+        console.log(`🧪 Trying simplified title: "${cleanTitle}"`);
+        url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(cleanTitle)}&language=es-MX`;
+        res = await fetch(url);
+        data = await res.json();
+        results = data.results || [];
+        if (results.length > 0) {
+          const bestMatch = await findBestMatchWithRuntime(results, cleanTitle, null, localRuntime, isEnhanced);
+          if (bestMatch) return bestMatch;
+        }
+      }
+
+      // 🧪 4. Partial title search (first 3 words)
+      const words = cleanTitle.split(" ");
+      if (words.length > 3) {
+        const partialTitle = words.slice(0, 3).join(" ");
+        console.log(`🧪 Trying partial title search: "${partialTitle}"`);
+        url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(partialTitle)}&language=es-MX`;
+        res = await fetch(url);
+        data = await res.json();
+        results = data.results || [];
+        if (results.length > 0) {
+          const bestMatch = await findBestMatchWithRuntime(results, partialTitle, null, localRuntime, isEnhanced);
+          if (bestMatch) return bestMatch;
+        }
       }
     }
     
@@ -580,15 +631,16 @@ async function searchMovie(title, year, localRuntime, manualMatches) {
 
 /**
  * Encuentra mejor coincidencia considerando runtime
- * Para los TOP 3 candidatos, obtiene runtime de TMDb y valida
+ * Para los TOP 3 (o 10 si enhanced) candidatos, obtiene runtime de TMDb y valida
  * 
  * @param {Array} results - Resultados de búsqueda de TMDb
  * @param {string} fileTitle - Título del archivo
  * @param {number|null} year - Año esperado
  * @param {number|null} localRuntime - Runtime local en minutos
+ * @param {boolean} isEnhanced - Si debe ser más permisivo
  * @returns {Promise<Object|null>}
  */
-async function findBestMatchWithRuntime(results, fileTitle, year, localRuntime) {
+async function findBestMatchWithRuntime(results, fileTitle, year, localRuntime, isEnhanced = false) {
   if (!results || results.length === 0) return null;
   
   // Calcular scores iniciales para todos los resultados
@@ -606,6 +658,14 @@ async function findBestMatchWithRuntime(results, fileTitle, year, localRuntime) 
     // Comparar año (solo si year está definido)
     if (year && movie.release_date && movie.release_date.startsWith(year)) {
       score += 1.5;
+    } else if (isEnhanced && year && movie.release_date) {
+      // Relaxed year match (+/- 1 year)
+      const movieYear = parseInt(movie.release_date.split("-")[0]);
+      const targetYear = parseInt(year);
+      if (Math.abs(movieYear - targetYear) <= 1) {
+        score += 1.0;
+        console.log(`🎯 Year relaxed match: ${movieYear} (target: ${targetYear})`);
+      }
     }
     
     // Bonus de popularidad (normalizado: máximo +1)
@@ -639,8 +699,9 @@ async function findBestMatchWithRuntime(results, fileTitle, year, localRuntime) 
   // Ordenar por score descendente
   scoredResults.sort((a, b) => b.score - a.score);
   
-  // Obtener TOP 3 candidatos para validar runtime
-  const topCandidates = scoredResults.slice(0, 3);
+  // Obtener TOP 3 (o 10) candidatos para validar runtime
+  const limit = isEnhanced ? 10 : 3;
+  const topCandidates = scoredResults.slice(0, limit);
   
   // Para cada candidato, obtener runtime de TMDb y comparar
   for (const candidate of topCandidates) {
@@ -674,6 +735,13 @@ async function findBestMatchWithRuntime(results, fileTitle, year, localRuntime) 
   // Reordenar por score final y devolver el mejor
   topCandidates.sort((a, b) => b.score - a.score);
   const bestMatch = topCandidates[0];
+  
+  // Scoring threshold check
+  const threshold = isEnhanced ? 1.0 : 2.0;
+  if (bestMatch.score < threshold) {
+    if (isEnhanced) console.log(`🎯 Low score accepted: ${bestMatch.score.toFixed(2)}`);
+    else return null;
+  }
   
   // Warning si el score es bajo (pero no en búsquedas sin año)
   if (year && bestMatch.score < 2) {
@@ -933,6 +1001,18 @@ async function initializePostersFolder() {
   }
 }
 
+// ═══════════════════════════════════════════════════════════════
+// MODE SYSTEM: full, repair, recover, safe (default)
+// ═══════════════════════════════════════════════════════════════
+const MODE = (process.argv[2] || "safe").toLowerCase();
+console.log(`🧠 Running in mode: ${MODE}`);
+
+if (!["full", "repair", "recover", "safe"].includes(MODE)) {
+  console.error(`❌ Invalid mode: ${MODE}`);
+  console.log(`Valid modes: full, repair, recover, safe`);
+  process.exit(1);
+}
+
 async function main() {
   console.time("Total");
   
@@ -967,71 +1047,208 @@ async function main() {
     const cacheKey = `${normalizedTitle}_${parsed.year}`;
 
     // Verificar si existe override manual
-    const hasManualOverride = manualMatches[normalizedTitle];
+    let hasManualOverride = manualMatches[normalizedTitle];
+
+    // 🔥 Flexible matching fallback
+    if (!hasManualOverride) {
+      for (const key of Object.keys(manualMatches)) {
+        if (
+          normalizedTitle.includes(key) ||
+          key.includes(normalizedTitle)
+        ) {
+          hasManualOverride = manualMatches[key];
+          console.log(`📌 Match manual flexible: "${parsed.title}" → "${key}"`);
+          break;
+        }
+      }
+    }
 
     // Buscar en películas existentes
     const foundInExisting = existingMovies.find(
       m => `${normalize(m.title)}_${m.year}` === cacheKey
     );
 
-    // 🔥 PRIORIDAD: si hay override manual, SIEMPRE reprocesar
-    if (hasManualOverride) {
-      console.log(`🔄 Reprocesando por override manual: ${parsed.title}`);
-      
+    // ⚠️ DEFINE "PROBLEMATIC / INCOMPLETE MOVIE"
+    const isIncomplete =
+      !foundInExisting ||
+      !foundInExisting.tmdbId ||
+      !foundInExisting.poster ||
+      !foundInExisting.overview ||
+      !foundInExisting.runtime ||
+      foundInExisting.overview === "" ||
+      foundInExisting.poster === "";
+
+    const isProblematic = isIncomplete;
+
+    // ⚠️ Safety log for manual overrides
+    if (hasManualOverride && foundInExisting) {
+      console.log(`⚠️ Override manual sobrescribirá datos existentes: ${parsed.title}`);
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    // MODE-BASED DECISION LOGIC
+    // ═══════════════════════════════════════════════════════════════
+
+    // 🧯 RECOVER MODE: Only fix incomplete movies
+    if (MODE === "recover") {
+      if (foundInExisting && isIncomplete) {
+        console.log(`🧯 Recovering: ${parsed.title}`);
+        moviesToProcess.push({
+          type: "recover",
+          file,
+          parsed,
+          foundInExisting,
+          isProblematic: true
+        });
+      } else if (foundInExisting) {
+        // Carry over valid existing movies to final array
+        moviesToProcess.push({
+          type: "existing",
+          file,
+          parsed,
+          movie: foundInExisting
+        });
+        processedIds.add(foundInExisting.tmdbId);
+      }
+      continue;
+    }
+    
+    // 🔥 FULL MODE: Reprocess ALL movies
+    if (MODE === "full") {
+      console.log(`🔄 FULL MODE: Reprocessing ${parsed.title}`);
       moviesToProcess.push({
         type: "new",
-        file,
-        parsed
-      });
-      
-    } else if (
-      foundInExisting &&
-      !processedIds.has(foundInExisting.tmdbId) &&
-      foundInExisting.runtime
-    ) {
-      
-      console.log(`📦 Usando existente: ${parsed.title}`);
-      moviesToProcess.push({
-        type: "existing",
         file,
         parsed,
-        movie: foundInExisting
+        foundInExisting,
+        isProblematic
       });
-      
-      processedIds.add(foundInExisting.tmdbId);
+      continue;
+    }
 
-    } else {
-      
-      moviesToProcess.push({
-        type: "new",
-        file,
-        parsed
-      });
+    // 🔧 REPAIR MODE: Only process incomplete/missing data
+    if (MODE === "repair") {
+      // 🔥 PRIORIDAD ABSOLUTA: manualMatches
+      if (hasManualOverride) {
+        console.log(`🔄 Repair (manual): ${parsed.title}`);
+        
+        moviesToProcess.push({
+          type: "new",
+          file,
+          parsed,
+          foundInExisting,
+          isProblematic
+        });
+        
+        continue;
+      }
+
+      // 🔧 Detect incomplete data
+      if (isProblematic) {
+        console.log(`🛠️ Repair (incomplete): ${parsed.title}`);
+        
+        moviesToProcess.push({
+          type: "new",
+          file,
+          parsed,
+          foundInExisting,
+          isProblematic
+        });
+      } else {
+        console.log(`✅ OK (skipped): ${parsed.title}`);
+        
+        moviesToProcess.push({
+          type: "existing",
+          file,
+          parsed,
+          movie: foundInExisting
+        });
+        processedIds.add(foundInExisting.tmdbId);
+      }
+
+      continue;
+    }
+
+    // 🔒 SAFE MODE (default): Only process new movies
+    if (MODE === "safe") {
+      if (hasManualOverride) {
+        console.log(`🔄 SAFE MODE: Reprocessing by override: ${parsed.title}`);
+        moviesToProcess.push({
+          type: "new",
+          file,
+          parsed,
+          foundInExisting,
+          isProblematic
+        });
+      } else if (
+        foundInExisting &&
+        !processedIds.has(foundInExisting.tmdbId) &&
+        foundInExisting.runtime &&
+        !isProblematic
+      ) {
+        console.log(`📦 SAFE MODE: Using existing "${parsed.title}"`);
+        moviesToProcess.push({
+          type: "existing",
+          file,
+          parsed,
+          movie: foundInExisting
+        });
+        processedIds.add(foundInExisting.tmdbId);
+      } else {
+        console.log(`➕ SAFE MODE: Processing new "${parsed.title}"`);
+        moviesToProcess.push({
+          type: "new",
+          file,
+          parsed,
+          foundInExisting,
+          isProblematic
+        });
+      }
+      continue;
     }
   }
 
   // Procesar películas nuevas en lotes con concurrencia controlada
-  const newMovies = moviesToProcess.filter(m => m.type === "new").map(m => ({
+  const itemsToProcess = moviesToProcess.filter(m => ["new", "recover"].includes(m.type)).map(m => ({
+    type: m.type,
     file: m.file,
     parsed: m.parsed,
-    posterOverrides: posterOverrides
+    posterOverrides: posterOverrides,
+    foundInExisting: m.foundInExisting,
+    isProblematic: m.isProblematic
   }));
 
-  const processedNewMovies = await processInBatches(
-    newMovies,
-    async (movieData) => {
-      const { file, parsed, posterOverrides } = movieData;
+  const processedItems = await processInBatches(
+    itemsToProcess,
+    async (item) => {
+      const { type, file, parsed, posterOverrides, foundInExisting, isProblematic } = item;
       console.log(`🔎 ${parsed.title} (${parsed.year})`);
+
+      if (isProblematic) {
+        console.log(`${type === "recover" ? "🧯" : "🔥"} Enhanced search triggered: ${parsed.title}`);
+      }
 
       console.time(`  ${parsed.title}`);
 
-      const movieInfo = await getCachedOrSearchMovie(
-        parsed.title,
-        parsed.year,
-        file,
-        manualMatches,
-        cache
-      );
+      let movieInfo = null;
+
+      // 🧯 RECOVER MODE SPECIAL LOGIC
+      if (type === "recover" && foundInExisting?.tmdbId) {
+        console.log(`🎬 Using existing tmdbId: ${foundInExisting.tmdbId}`);
+        // Case A: tmdbId exists, fetch directly
+        movieInfo = { id: foundInExisting.tmdbId };
+      } else {
+        if (type === "recover") console.log(`🔎 Re-searching (no tmdbId)`);
+        // Normal path or Case B (no tmdbId)
+        movieInfo = await getCachedOrSearchMovie(
+          parsed.title,
+          parsed.year,
+          file,
+          manualMatches,
+          cache,
+          isProblematic
+        );
+      }
 
       // Obtener duración local del video
       const absolutePath = path.join(MOVIES_FOLDER, file);
@@ -1054,30 +1271,59 @@ async function main() {
       }
 
       // Fetch Spanish localized data
+      if (type === "recover") console.log(`📝 Recovering overview`);
       const movieES = await getMovieDetails(movieInfo.id);
       await new Promise(r => setTimeout(r, 100)); // Delay reducido
 
-      // Selecciona y descarga el mejor poster
+      // Selecciona y descarga el mejor poster (siempre intentar si hay ID para verificar local)
       let posterPath = null;
-      if (movieInfo.poster_path) {
+      if (movieInfo.id) {
+        if (type === "recover") console.log(`🖼️ Recovering poster`);
         posterPath = await selectAndDownloadPoster(movieInfo.id, movieInfo.poster_path, posterOverrides);
       }
 
       // Asegurar que SIEMPRE se crea un movieRecord válido
       const movieRecord = {
-        title: movieES?.title ?? movieInfo.title,
-        originalTitle: movieInfo.original_title,
-        year: movieInfo.release_date?.split("-")[0] ?? parsed.year,
+        title: movieES?.title ?? foundInExisting?.title ?? movieInfo.title,
+        originalTitle: movieInfo.original_title ?? foundInExisting?.originalTitle,
+        year: movieInfo.release_date?.split("-")[0] ?? parsed.year ?? foundInExisting?.year,
         overview: movieES?.overview ?? movieInfo.overview ?? "",
         originalOverview: movieInfo.overview ?? "",
         poster: posterPath,
-        genres: transformGenres(movieES?.genres),
+        genres: transformGenres(movieES?.genres) || foundInExisting?.genres || [],
         tmdbId: movieInfo.id,
-        runtime: movieInfo.runtime ?? localRuntime ?? null,
+        runtime: movieInfo.runtime ?? localRuntime ?? foundInExisting?.runtime ?? null,
         sourceFile: file,
         parsedTitle: parsed.title,
         parsedYear: parsed.year
       };
+
+      // 🛡️ PROTECT EXISTING DATA: Preserve valid existing fields
+      if (foundInExisting) {
+        // Log preservation for debugging
+        if (!movieRecord.overview && foundInExisting.overview) {
+          console.log(`⚠️ Skipping overwrite of overview for "${parsed.title}" (existing value preserved)`);
+        }
+        if (!movieRecord.poster && foundInExisting.poster) {
+          console.log(`⚠️ Skipping overwrite of poster for "${parsed.title}" (existing value preserved)`);
+        }
+        if (!movieRecord.runtime && foundInExisting.runtime) {
+          console.log(`⚠️ Skipping overwrite of runtime for "${parsed.title}" (existing value preserved)`);
+        }
+
+        const mergedMovie = {
+          ...foundInExisting,
+          ...movieRecord,
+          // NEVER overwrite valid data with empty/null values
+          overview: movieRecord.overview || foundInExisting.overview || "",
+          poster: movieRecord.poster || foundInExisting.poster || null,
+          runtime: movieRecord.runtime || foundInExisting.runtime || null
+        };
+        
+        console.log(`🎬 Match (merged): "${parsed.title}" → "${mergedMovie.title}"`);
+        console.timeEnd(`  ${parsed.title}`);
+        return mergedMovie;
+      }
 
       if (!movieRecord.runtime) {
         console.warn(`⚠️ Runtime missing: ${parsed.title}`);
@@ -1090,21 +1336,54 @@ async function main() {
     CONCURRENCY
   );
 
+  // 📊 LOGGING: Movie count before processing
+  console.log(`\n📊 Películas antes: ${existingMovies.length}`);
+
   // Combinar películas existentes con nuevas
-  const existingOnly = moviesToProcess.filter(m => m.type === "existing").map(m => m.movie);
-  const newOnly = processedNewMovies.filter(m => m !== null && m !== undefined);
-  const finalMovies = [
-    ...existingOnly,
-    ...newOnly
-  ];
+  const processedNewOrRecovered = processedItems.filter(m => m !== null && m !== undefined);
+  let finalMovies;
+
+  if (MODE === "recover") {
+    // 🧯 RECOVER MODE: PATCH approach (do NOT remove anything)
+    const recoveredMap = new Map();
+    processedNewOrRecovered.forEach(m => {
+      if (m.tmdbId) recoveredMap.set(`id:${m.tmdbId}`, m);
+      const key = `${normalize(m.parsedTitle || m.title)}_${m.parsedYear || m.year}`;
+      recoveredMap.set(`key:${key}`, m);
+    });
+
+    finalMovies = existingMovies.map(movie => {
+      const idKey = movie.tmdbId ? `id:${movie.tmdbId}` : null;
+      const titleKey = `key:${normalize(movie.parsedTitle || movie.title)}_${movie.parsedYear || movie.year}`;
+      
+      const updated = (idKey && recoveredMap.get(idKey)) || recoveredMap.get(titleKey);
+      return updated || movie;
+    });
+
+    // 🛡️ SAFETY CHECK: Abort if count mismatch
+    if (finalMovies.length !== existingMovies.length) {
+      console.error(`❌ ERROR: Discrepancia en el conteo de películas (${finalMovies.length} vs ${existingMovies.length}). Abortando guardado por seguridad.`);
+      return;
+    }
+  } else {
+    // Standard behavior for other modes: Rebuild based on disk scan
+    const existingOnly = moviesToProcess.filter(m => m.type === "existing").map(m => m.movie);
+    finalMovies = [
+      ...existingOnly,
+      ...processedNewOrRecovered
+    ];
+  }
+
+  // 📊 LOGGING: Movie count after processing
+  console.log(`📊 Películas después: ${finalMovies.length}`);
 
   // Guardar resultados
   await fs.writeJson(OUTPUT_JSON, finalMovies, { spaces: 2 });
   await saveCache(cache);
 
   console.log(`\n✅ JSON generado con ${finalMovies.length} películas`);
-  const fallbackCount = newOnly.filter(m => m.tmdbId === null).length;
-  console.log(`   (${existingOnly.length} existentes + ${newOnly.length} nuevas${fallbackCount > 0 ? ` | ${fallbackCount} con fallback` : ""})`);
+  const fallbackCount = processedNewOrRecovered.filter(m => m.tmdbId === null).length;
+  console.log(`   (${finalMovies.length - processedNewOrRecovered.length} existentes + ${processedNewOrRecovered.length} procesadas${fallbackCount > 0 ? ` | ${fallbackCount} con fallback` : ""})`);
   console.timeEnd("Total");
 }
 
