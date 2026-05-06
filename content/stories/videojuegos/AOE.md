@@ -1,3 +1,5 @@
+📅 Fecha: 3 de febrero, 2026
+
 Un fin de semana acompañé a Tavo al bordo, porque me dijo que quería buscar un joystick para su computadora, la Compaq con procesador Pentium III que se acababa de comprar, entonces fui con él y anduvimos entre los puestos de juegos hasta que encontró uno, que además de su disco de controladores, incluía un disco lleno de demos de juegos. No era un disco "oficial", era un CD blanco sin marcas ni etiquetas, y venía en un sobre blanco, de papel. Se notaba que era una compilación de demos hecha por quien sabe quién.
 
 Creo que en aquel entonces yo no tenía quemador de CD's así que no le pude hacer una copia al disco, pero sí me lo prestó para estar probando algunos juegos en la computadora verde que teníamos. Me acuerdo que eran muchas carpetas de juegos, pero me di el tiempo de ir probando uno por uno, todos los juegos que venían ahí.

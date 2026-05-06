@@ -1,3 +1,5 @@
+📅 Fecha: 3 de febrero, 2026
+
 El primer acercamiento a los videojuegos no fue precisamente por el NES, sino por las computadoras. La verdad no estoy muy seguro cual sería el primer videojuego que jugué en toda mi vida. Tal vez fue el "gorillas", en la computadora de Chepo, la que aun ni siquiera tenía mouse ni monitor a color. Y aunque era muy divertido experimentar con aquellos juegos como el gorilla, nibbles e incluso el Wolfenstein 3D, para mí, no pasaba de ser una mera curiosidad y no algo que me haya enganchado demasiado.
 
 ![Gorillas](img/historias/videojuegos/gorillas.jpg)

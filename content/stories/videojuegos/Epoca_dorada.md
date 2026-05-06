@@ -1,3 +1,5 @@
+📅 Fecha: 3 de febrero, 2026
+
 Una de mis cosas favoritas eran los domingos cuando nos compraban cartuchos (piratotas) de family, un tiempo en el bordo y otro tiempo fue en un puesto de maravillas, saliendo de la misa de en la tarde.
 
 ![Piratotas](img/historias/videojuegos/piratotas.jpg)
