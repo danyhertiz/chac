@@ -168,6 +168,13 @@ main.video-page-main {
     object-fit: cover;
 }
 
+/* episodios.html usa videos 4:3; evita el recorte heredado de videos.html */
+.episode-page .video-card video {
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    background-color: #000;
+}
+
 
 
 /* Separación de la descripción dentro de la tarjeta */
