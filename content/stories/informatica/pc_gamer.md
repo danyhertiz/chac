@@ -1,3 +1,5 @@
+📅 17 de Diciembre, 2025
+
 Poco tiempo después de haber armado esa PC sencilla de la que te contaba, tuve también mis primeras tarjetas de crédito, una era de Inbursa y la otra de Banamex, así que una de las primeras cosas que me compré con ellas fueron componentes para una nueva PC, esta vez me enfocaría en la potencia para jugar videojuegos. Así que, acompañado por Petaca, fuí muchas veces a la plaza de la computación a cotizar y elegir los componentes. Después de mucho investigar y comparar precios, armé una PC que era bastante potente para la época. Las especificaciones eran:
 
 * Motherboard: Gigabyte GA-MA69VM-S2
