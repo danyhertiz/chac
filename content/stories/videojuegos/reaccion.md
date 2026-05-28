@@ -1,0 +1,8 @@
+📅 28 de mayo, 2026
+
+Hace unos días, platicando con mi Foza, llegamos al tema de cuando uno tarda en reaccionar o simplemente en procesar y darse cuenta de algo en una situación concreta. Entonces me empezó a dar risa porque me acordé de algo, y cuando me preguntó de qué me reía, le conté la historia de la reacción más retardada que he visto en toda mi vida.
+
+Fue a principios de los 2000, cuando teníamos el N64 y nuestros Game Boy Color. No sé si recuerdes que íbamos con cierta frecuencia al bordo, a los puestos de juegos para ver los cartuchos, y a veces nos comprábamos uno de Game Boy, otras veces de N64, y en ocasiones sólo queríamos ver que había de nuevo. Unas veces nos llevaba Pa, o el Pollo y otras veces Tavo. Y hubo una ocasión en la que, andábamos los 3 en el tianguis como siempre, no recuerdo si compramos algo, pero regresamos a la casa y el caso es que una semana más tarde, así de la nada, de pronto tú dijiste: “¡Ay! ¡Ahí estaba el Golden Eye!” y hasta a ti te dio mucha risa, el hecho de que te tomó varios días caer en la cuenta de lo que habías visto en el bordo la semana anterior. 🤣
+
+Claro que a mi Foza la tuve que poner primero en contexto, es decir, contarle sobre el tianguis del bordo, sobre nuestras consolas, los cartuchos y sobre todo que rayos es Golden Eye, para que cuando le contara la historia, ella supiera de que estaba hablando.
+![Golden Eye](img/historias/videojuegos/goldeneye.jpg)
