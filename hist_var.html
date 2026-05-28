@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/hertiz_ico.ico" type="image/x-icon">
-    <title>Videojuegos - Dany Hertiz</title>
+    <title>Historias Varias - Dany Hertiz</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/collapsible-cards.css">
     <link rel="stylesheet" href="css/binary-background.css">
@@ -15,46 +15,26 @@
 </head>
 <body>
 
-
     <main style="margin-top: 1.5rem;">
-    <div class="story-full">
-        <h1>🎮 Videojuegos</h1>
+        <article class="story-full">
+            <h1>📖 Historias Varias</h1>
                 <p>
-                    Si algo logró desplazar mis juguetes de la niñez por un tipo de entretenimiento que
-                    hasta la fecha sigo disfrutando mucho, son los videojuegos.
+                    Aquí hay anécdotas de temas tan diversos que no pude clasificar en otras secciones, pero que me parecieron interesantes de compartir.
                 </p>
-    </div>
-        <article class="collapsible-story">
-            <div class="story-header">
-                <h2>🕹️ Inicios</h2>
-            </div>
-            <div class="story-content" data-md="Inicios.md"></div>
         </article>
         <article class="collapsible-story">
             <div class="story-header">
-                <h2>💿 Cómo conocí Age of Empires</h2>
+                <h2>🎉 Fiestas</h2>
             </div>
-            <div class="story-content" data-md="AOE.md"></div>
+            <div class="story-content" data-md="fiestas.md"></div>
         </article>
         <article class="collapsible-story">
             <div class="story-header">
-                <h2>⭐ Epoca dorada</h2>
+                <h2>🧠 Reacción retardada</h2>
             </div>
-            <div class="story-content" data-md="Epoca_dorada.md"></div>
+            <div class="story-content" data-md="reaccion.md"></div>
         </article>
-        <article class="collapsible-story">
-            <div class="story-header">
-                <h2>📚 Revista Club Nintendo</h2>
-            </div>
-            <div class="story-content" data-md="Revista.md"></div>
-        </article>
-        <article class="collapsible-story">
-            <div class="story-header">
-                <h2>🚀 Pragmata (sin spoilers)</h2>
-            </div>
-            <div class="story-content" data-md="Pragmata.md"></div>
-        </article>
-
+        
     <a href="historias.html" class="back-link">← Volver a Historias</a>
     </main>
 
@@ -74,9 +54,10 @@
                 });
             });
 
+            // Cargar Markdown en elementos con data-md
             const loadMarkdown = async (filename) => {
                 try {
-                    const response = await fetch('content/stories/videojuegos/' + encodeURIComponent(filename));
+                    const response = await fetch('content/stories/varias/' + filename);
                     if (!response.ok) throw new Error('Not found: ' + filename);
                     const text = await response.text();
                     return marked.parse(text);
@@ -93,7 +74,9 @@
             });
         });
     </script>
-
 </body>
 </html>
+
+
+
 

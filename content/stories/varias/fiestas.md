@@ -1,0 +1,10 @@
+📅 28 de mayo, 2026
+
+Cuando empecé a vivir por acá en el estado de Veracruz, me di cuenta de hay muchas costumbres que difieren un poco de lo que nosotros vivimos de niños. Una de ellas son las fiestas. A nosotros nos hacían un festejo relativamente pequeño, porque normalmente solo era entre quienes vivíamos en la casa. Adornaban con globos y serpentinas, había un pastel suficientemente grande para todos, Mima hacía tamales y Mamita hacía gelatinas y preparaba chocolate.
+![Fiesta](img/historias/varias/fiesta_chac.jpg)
+Rara vez hubo invitados de otros lados, como cuando cumplí 7 años, hubo mucha gente que yo apenas conocía. Pero lo padre es que siempre había muchos regalos, y siempre eran juguetes. No sé tú, pero a mí sí me gustaban esas fiestas.
+![Mi fiesta de 7 años](img/historias/varias/fiesta_7.jpg)
+Llámame materialista pero sinceramente lo que me emocionaba de niño eran los regalos, jejeje. Pero también disfrutaba de los adornos, el pastel y la convivencia entre todos.
+![Regalos](img/historias/varias/fiesta_regalos.jpg)
+Acá donde vivo ahora, las fiestas son un poco diferentes, porque la prioridad es la comida, siempre en lo primero que piensan es en lo que se le dará de comer a los invitados, y no pueden ser sólo los de la casa del festejado, siempre hay que invitar a los vecinos y conocidos, lo cual hace un festejo mucho más grande. Los adornos no son relevantes, los regalos tampoco, aunque sí los hay, pero son simbólicos nada más, es decir, que es suficiente con que lleves un paquete de galletas o unos calcetines en una bolsita de regalo y ya, la gente no se fija en eso, lo importante para el festejado es que llegue mucha gente a comer. Hay pastel pero, es casi un accesorio nada más, porque toda gira en torno a la comida. Una fiesta como las que nos hacían a nosotros es impensable por acá.
+![Fista de rancho](img/historias/varias/fiesta_rancho.jpg)
