@@ -125,7 +125,7 @@
             // Cargar Markdown en elementos con data-md (carpeta series)
             const loadMarkdown = async (filename) => {
                 try {
-                    const response = await fetch('content/stories/series/' + encodeURIComponent(filename));
+                    const response = await fetch('stories/series/' + encodeURIComponent(filename));
                     if (!response.ok) throw new Error('Not found: ' + filename);
                     const text = await response.text();
                     return marked.parse(text);

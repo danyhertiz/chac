@@ -1,4 +1,4 @@
-// Cargar y renderizar un archivo Markdown desde /content/stories según ?post=
+// Cargar y renderizar un archivo Markdown desde /stories según ?post=
 (() => {
     const params = new URLSearchParams(window.location.search);
     let post = params.get('post') || 'prueba.md';
@@ -7,7 +7,7 @@
     if (!/\.md$/i.test(post)) post += '.md';
     
     // Usar ruta relativa que funciona en local y GitHub Pages
-    const mdPath = 'content/stories/';
+    const mdPath = 'stories/';
     
     const load = (filename) => {
         return fetch(mdPath + filename).then(resp => {

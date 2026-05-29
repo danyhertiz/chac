@@ -69,7 +69,7 @@
 
             const loadMarkdown = async (filename) => {
                 try {
-                    const response = await fetch('content/stories/juguetes/' + encodeURIComponent(filename));
+                    const response = await fetch('stories/juguetes/' + encodeURIComponent(filename));
                     if (!response.ok) throw new Error('Not found: ' + filename);
                     const text = await response.text();
                     return marked.parse(text);
