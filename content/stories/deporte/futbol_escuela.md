@@ -1,4 +1,4 @@
-9 de febrero, 2026
+📅 9 de febrero, 2026
 
 Las pocas veces que jugué fútbol fue durante la primaria. Apenas recuerdo que casi siempre era un tímido y lento defensa, a las órdenes del portero. Nunca me gustó estar ahí viendo cómo mis compañeros se peleaban por el balón.
 
@@ -12,4 +12,4 @@ Más allá de practicarlo, me gustaba más ser espectador. Y aunque nunca fui fa
 
 Pero es curioso cómo nunca me interesó ver los partidos, solo me sentía atraído por el ambiente.
 
-![Futbol](img/historias/deporte/futbol.jpg)
+![Futbol](img/historias/deporte/francia98.jpg)
