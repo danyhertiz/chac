@@ -4,6 +4,8 @@ El primer acercamiento a los videojuegos no fue precisamente por el NES, sino po
 
 ![Gorillas](img/historias/videojuegos/gorillas.jpg)
 
-Me gustaba mucho ver cómo el Pollo jugaba Wolfenstein, y jugar gorillas contra el Chepo. pero fue hasta que probé el NES que me quedé maravillado con los videjuegos. no sé por qué, pero, los de la computadora no me daban tanto esa sensación mágica y super genial que sí me transmitía el NES. Tal vez porque las computadoras ya eran para mí algo super sorprendente y no esperaba menos de ellas, mientas que el NES fue algo un poco distinto, ya que al conectarlo a la tele y ver los juegos a color, y juegos tan diferentes a los de la computadora, fue grandioso.
+Me gustaba mucho ver cómo el Pollo jugaba Wolfenstein, y jugar gorillas contra el Chepo. Pero fue hasta que probé el NES que me quedé maravillado con los videjuegos. No sé por qué, pero, los de la computadora no me daban tanto esa sensación mágica y super genial que sí me transmitía el NES. 
 
-![Gorillas](img/historias/videojuegos/wold3d.jpg)
+![Wolfenstein 3D](img/historias/videojuegos/wold3d.jpg)
+
+Tal vez porque las computadoras ya eran para mí algo super sorprendente y no esperaba menos de ellas, mientas que el NES fue algo un poco distinto, ya que al conectarlo a la tele y ver los juegos a color, y juegos tan diferentes a los de la computadora, fue grandioso.
