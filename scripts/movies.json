@@ -14689,24 +14689,6 @@
     "parsedYear": "2015"
   },
   {
-    "title": "El señor de los anillos: La comunidad del anillo",
-    "originalTitle": "The Lord of the Rings: The Fellowship of the Ring",
-    "year": "2001",
-    "overview": "En la Tierra Media, el Señor Oscuro Saurón creó los Grandes Anillos de Poder, forjados por los herreros Elfos. Tres para los reyes Elfos, siete para los Señores Enanos, y nueve para los Hombres Mortales. Secretamente, Saurón también forjó un anillo maestro, el Anillo Único, que contiene en sí el poder para esclavizar a toda la Tierra Media. Con la ayuda de un grupo de amigos y de valientes aliados, Frodo emprende un peligroso viaje con la misión de destruir el Anillo Único. Pero el Señor Oscuro Sauron, quien creara el Anillo, envía a sus servidores para perseguir al grupo. Si Sauron lograra recuperar el Anillo, sería el final de la Tierra Media. EXTENDIDA",
-    "originalOverview": "En la Tierra Media, el Señor Oscuro Saurón creó los Grandes Anillos de Poder, forjados por los herreros Elfos. Tres para los reyes Elfos, siete para los Señores Enanos, y nueve para los Hombres Mortales. Secretamente, Saurón también forjó un anillo maestro, el Anillo Único, que contiene en sí el poder para esclavizar a toda la Tierra Media. Con la ayuda de un grupo de amigos y de valientes aliados, Frodo emprende un peligroso viaje con la misión de destruir el Anillo Único. Pero el Señor Oscuro Sauron, quien creara el Anillo, envía a sus servidores para perseguir al grupo. Si Sauron lograra recuperar el Anillo, sería el final de la Tierra Media. EXTENDIDA",
-    "poster": "posters/120.jpg",
-    "genres": [
-      "Aventura",
-      "Fantasía",
-      "Acción"
-    ],
-    "tmdbId": 120,
-    "runtime": 228,
-    "sourceFile": "El señor de los anillos (2001).mkv",
-    "parsedTitle": "El señor de los anillos",
-    "parsedYear": "2001"
-  },
-  {
     "title": "El señor de los anillos: Las dos torres",
     "originalTitle": "The Lord of the Rings: The Two Towers",
     "year": "2002",
@@ -16953,24 +16935,6 @@
     "parsedYear": "1990"
   },
   {
-    "title": "La Sirenita",
-    "originalTitle": "The Little Mermaid",
-    "year": "1989",
-    "overview": "Una sirena princesa hace un trato fáustico en un intento de convertirse en humana y ganar el amor de un príncipe.",
-    "originalOverview": "Una sirena princesa hace un trato fáustico en un intento de convertirse en humana y ganar el amor de un príncipe.",
-    "poster": "posters/10144.jpg",
-    "genres": [
-      "Animación",
-      "Familia",
-      "Fantasía"
-    ],
-    "tmdbId": 10144,
-    "runtime": 83,
-    "sourceFile": "La Sirenita (1989).mkv",
-    "parsedTitle": "La Sirenita",
-    "parsedYear": "1989"
-  },
-  {
     "title": "La zona del silencio",
     "originalTitle": "La zona del silencio",
     "year": "1990",
@@ -17181,24 +17145,6 @@
     "sourceFile": "Leon peleador sin ley (1990).mkv",
     "parsedTitle": "Leon peleador sin ley",
     "parsedYear": "1990"
-  },
-  {
-    "title": "Lilo y Stitch",
-    "originalTitle": "Lilo & Stitch",
-    "year": "2002",
-    "overview": "Una chica joven y sin padres adopta un «perro» de la perrera local, sin saber que supuestamente es un peligroso experimento científico que se ha refugiado en la Tierra y que ahora se esconde de su creador y de quienes lo ven como una amenaza.",
-    "originalOverview": "Una chica joven y sin padres adopta un «perro» de la perrera local, sin saber que supuestamente es un peligroso experimento científico que se ha refugiado en la Tierra y que ahora se esconde de su creador y de quienes lo ven como una amenaza.",
-    "poster": "posters/11544.jpg",
-    "genres": [
-      "Animación",
-      "Familia",
-      "Comedia"
-    ],
-    "tmdbId": 11544,
-    "runtime": 85,
-    "sourceFile": "Lilo & Stitch (2002) Version 2.mkv",
-    "parsedTitle": "Lilo & Stitch",
-    "parsedYear": "2002"
   },
   {
     "title": "El gran pequeño",
@@ -17582,22 +17528,6 @@
     "sourceFile": "Madagascar 3 (2012).mkv",
     "parsedTitle": "Madagascar 3",
     "parsedYear": "2012"
-  },
-  {
-    "title": "Marcelino, Pan y Vino",
-    "originalTitle": "Marcelino pan y vino",
-    "year": "1955",
-    "overview": "Siglo XIX. Después de una larga guerra, un bebé es abandonado a la puerta de un convento de frailes franciscanos que intentan, sin éxito, buscarle una familia. Pasan los años, y aunque el niño vive feliz entre los monjes, no puede dejar de añorar a su madre. Marcelino se hace amigo de un Cristo crucificado que hay en el desván del convento: habla con él y le sube de la cocina pan, vino y otros víveres que puede encontrar.",
-    "originalOverview": "Siglo XIX. Después de una larga guerra, un bebé es abandonado a la puerta de un convento de frailes franciscanos que intentan, sin éxito, buscarle una familia. Pasan los años, y aunque el niño vive feliz entre los monjes, no puede dejar de añorar a su madre. Marcelino se hace amigo de un Cristo crucificado que hay en el desván del convento: habla con él y le sube de la cocina pan, vino y otros víveres que puede encontrar.",
-    "poster": "posters/62395.jpg",
-    "genres": [
-      "Drama"
-    ],
-    "tmdbId": 62395,
-    "runtime": 90,
-    "sourceFile": "Marcelino Pan y Vino (1954).mp4",
-    "parsedTitle": "Marcelino Pan y Vino",
-    "parsedYear": "1954"
   },
   {
     "title": "Bowling for Columbine",
@@ -19054,78 +18984,6 @@
     "sourceFile": "Rapido y Furioso 6 (2013).mkv",
     "parsedTitle": "Rapido y Furioso 6",
     "parsedYear": "2013"
-  },
-  {
-    "title": "Rápidos y Furiosos: 5in Control",
-    "originalTitle": "Fast Five",
-    "year": "2011",
-    "overview": "Dominic Toretto y su equipo de corredores callejeros planean un atraco masivo para comprar su libertad mientras están en la mira de un poderoso capo de la droga brasileño y un peligroso agente federal.",
-    "originalOverview": "Dominic Toretto y su equipo de corredores callejeros planean un atraco masivo para comprar su libertad mientras están en la mira de un poderoso capo de la droga brasileño y un peligroso agente federal.",
-    "poster": "posters/51497.jpg",
-    "genres": [
-      "Acción",
-      "Suspense",
-      "Crimen"
-    ],
-    "tmdbId": 51497,
-    "runtime": 140,
-    "sourceFile": "Rapido y Furioso 7 (2015).mkv",
-    "parsedTitle": "Rapido y Furioso 7",
-    "parsedYear": "2015"
-  },
-  {
-    "title": "Rápidos y Furiosos: 5in Control",
-    "originalTitle": "Fast Five",
-    "year": "2011",
-    "overview": "Dominic Toretto y su equipo de corredores callejeros planean un atraco masivo para comprar su libertad mientras están en la mira de un poderoso capo de la droga brasileño y un peligroso agente federal.",
-    "originalOverview": "Dominic Toretto y su equipo de corredores callejeros planean un atraco masivo para comprar su libertad mientras están en la mira de un poderoso capo de la droga brasileño y un peligroso agente federal.",
-    "poster": "posters/51497.jpg",
-    "genres": [
-      "Acción",
-      "Suspense",
-      "Crimen"
-    ],
-    "tmdbId": 51497,
-    "runtime": 136,
-    "sourceFile": "Rapido y Furioso 8 (2017).mp4",
-    "parsedTitle": "Rapido y Furioso 8",
-    "parsedYear": "2017"
-  },
-  {
-    "title": "Rápido y furioso",
-    "originalTitle": "The Fast and the Furious",
-    "year": "2001",
-    "overview": "El policía de Los Ángeles, Brian O'Conner, debe decidir dónde está realmente su lealtad cuando se enamore del mundo de las carreras callejeras al que ha sido enviado de incógnito para destruir.",
-    "originalOverview": "El policía de Los Ángeles, Brian O'Conner, debe decidir dónde está realmente su lealtad cuando se enamore del mundo de las carreras callejeras al que ha sido enviado de incógnito para destruir.",
-    "poster": "posters/9799.jpg",
-    "genres": [
-      "Acción",
-      "Crimen",
-      "Suspense"
-    ],
-    "tmdbId": 9799,
-    "runtime": 143,
-    "sourceFile": "Rapido y Furioso 9 (2021).mp4",
-    "parsedTitle": "Rapido y Furioso 9",
-    "parsedYear": "2021"
-  },
-  {
-    "title": "Rápidos y Furiosos: 5in Control",
-    "originalTitle": "Fast Five",
-    "year": "2011",
-    "overview": "Dominic Toretto y su equipo de corredores callejeros planean un atraco masivo para comprar su libertad mientras están en la mira de un poderoso capo de la droga brasileño y un peligroso agente federal.",
-    "originalOverview": "Dominic Toretto y su equipo de corredores callejeros planean un atraco masivo para comprar su libertad mientras están en la mira de un poderoso capo de la droga brasileño y un peligroso agente federal.",
-    "poster": "posters/51497.jpg",
-    "genres": [
-      "Acción",
-      "Suspense",
-      "Crimen"
-    ],
-    "tmdbId": 51497,
-    "runtime": 137,
-    "sourceFile": "Rapido y Furioso Hobbs Shaw (2019).mkv",
-    "parsedTitle": "Rapido y Furioso Hobbs Shaw",
-    "parsedYear": "2019"
   },
   {
     "title": "Rascacielos: Rescate En Las Alturas",
@@ -22073,5 +21931,312 @@
     "sourceFile": "Silencio (2016).mp4",
     "parsedTitle": "Silencio",
     "parsedYear": "2016"
+  },
+  {
+    "title": "Al filo del abismo",
+    "originalTitle": "Al filo del abismo",
+    "year": "2022",
+    "overview": "No disponible",
+    "originalOverview": "",
+    "poster": null,
+    "genres": [],
+    "tmdbId": null,
+    "runtime": null,
+    "sourceFile": "Al filo del abismo (2022).mp4",
+    "parsedTitle": "Al filo del abismo",
+    "parsedYear": "2022"
+  },
+  {
+    "title": "Avatar: Fuego y ceniza",
+    "originalTitle": "Avatar: Fire and Ash",
+    "year": "2025",
+    "overview": "Devastados por la guerra contra la RDA y la perdida de su hijo mayor, Jake Sully y Neytiri se enfrentan a una nueva amenaza en Pandora: el pueblo de la ceniza, una violenta tribu Na'vi ávida de poder liderada por los despiadados Varang.",
+    "originalOverview": "Devastados por la guerra contra la RDA y la perdida de su hijo mayor, Jake Sully y Neytiri se enfrentan a una nueva amenaza en Pandora: el pueblo de la ceniza, una violenta tribu Na'vi ávida de poder liderada por los despiadados Varang.",
+    "poster": "posters/83533.jpg",
+    "genres": [
+      "Ciencia ficción",
+      "Aventura",
+      "Fantasía"
+    ],
+    "tmdbId": 83533,
+    "runtime": 198,
+    "sourceFile": "Avatar Fuego y ceniza (2025).mkv",
+    "parsedTitle": "Avatar Fuego y ceniza",
+    "parsedYear": "2025"
+  },
+  {
+    "title": "WALL·E en BURN·E",
+    "originalTitle": "BURN·E",
+    "year": "2008",
+    "overview": "Cortometraje de Pixar.  ¿Hasta dónde llegaria un robot para hacer su trabajo?  BURN·E es un robot dedicado y trabajador que se encuentra encerrado en su barco (nave).  BURN·E aprende rápidamente que completar una tarea simple a menudo puede ser una tarea muy difícil.",
+    "originalOverview": "Cortometraje de Pixar.  ¿Hasta dónde llegaria un robot para hacer su trabajo?  BURN·E es un robot dedicado y trabajador que se encuentra encerrado en su barco (nave).  BURN·E aprende rápidamente que completar una tarea simple a menudo puede ser una tarea muy difícil.",
+    "poster": "posters/13413.jpg",
+    "genres": [
+      "Animación",
+      "Familia",
+      "Comedia",
+      "Ciencia ficción"
+    ],
+    "tmdbId": 13413,
+    "runtime": 8,
+    "sourceFile": "BURN-E (2008).mkv",
+    "parsedTitle": "BURN-E",
+    "parsedYear": "2008"
+  },
+  {
+    "title": "“Cumbres Borrascosas”",
+    "originalTitle": "\"Wuthering Heights\"",
+    "year": "2026",
+    "overview": "La tragedia golpea cuando Heathcliff se enamora de Catherine Earnshaw, una mujer de una familia adinerada de la Inglaterra del siglo XVIII",
+    "originalOverview": "La tragedia golpea cuando Heathcliff se enamora de Catherine Earnshaw, una mujer de una familia adinerada de la Inglaterra del siglo XVIII",
+    "poster": "posters/1316092.jpg",
+    "genres": [
+      "Romance",
+      "Drama"
+    ],
+    "tmdbId": 1316092,
+    "runtime": 136,
+    "sourceFile": "Cumbres Borrascosas (2026).mkv",
+    "parsedTitle": "Cumbres Borrascosas",
+    "parsedYear": "2026"
+  },
+  {
+    "title": "El Aprendiz del Brujo",
+    "originalTitle": "El Aprendiz del Brujo",
+    "year": "2010",
+    "overview": "No disponible",
+    "originalOverview": "",
+    "poster": null,
+    "genres": [],
+    "tmdbId": null,
+    "runtime": null,
+    "sourceFile": "El Aprendiz del Brujo (2010).mkv",
+    "parsedTitle": "El Aprendiz del Brujo",
+    "parsedYear": "2010"
+  },
+  {
+    "title": "El Chofer de la Señora Daisy1",
+    "originalTitle": "El Chofer de la Señora Daisy1",
+    "year": "1989",
+    "overview": "No disponible",
+    "originalOverview": "",
+    "poster": null,
+    "genres": [],
+    "tmdbId": null,
+    "runtime": null,
+    "sourceFile": "El Chofer de la Señora Daisy1 (1989).mp4",
+    "parsedTitle": "El Chofer de la Señora Daisy1",
+    "parsedYear": "1989"
+  },
+  {
+    "title": "Frankenstein",
+    "originalTitle": "Frankenstein",
+    "year": "2025",
+    "overview": "El Dr. Victor Frankenstein, un científico brillante pero egoísta, da vida a una criatura en un monstruoso experimento que finalmente conduce a la ruina tanto del creador como de su trágica creación.",
+    "originalOverview": "El Dr. Victor Frankenstein, un científico brillante pero egoísta, da vida a una criatura en un monstruoso experimento que finalmente conduce a la ruina tanto del creador como de su trágica creación.",
+    "poster": "posters/1062722.jpg",
+    "genres": [
+      "Drama",
+      "Fantasía",
+      "Terror"
+    ],
+    "tmdbId": 1062722,
+    "runtime": 152,
+    "sourceFile": "Frankenstein (2025).mkv",
+    "parsedTitle": "Frankenstein",
+    "parsedYear": "2025"
+  },
+  {
+    "title": "Proyecto Fin del Mundo",
+    "originalTitle": "Project Hail Mary",
+    "year": "2026",
+    "overview": "El profesor de ciencias Ryland Grace despierta en una nave espacial a años luz de su hogar sin recordar quién es ni cómo llegó allí. A medida que recupera la memoria, comienza a descubrir su misión: resolver el enigma de la misteriosa sustancia que está causando la extinción del sol.",
+    "originalOverview": "El profesor de ciencias Ryland Grace despierta en una nave espacial a años luz de su hogar sin recordar quién es ni cómo llegó allí. A medida que recupera la memoria, comienza a descubrir su misión: resolver el enigma de la misteriosa sustancia que está causando la extinción del sol.",
+    "poster": "posters/687163.jpg",
+    "genres": [
+      "Ciencia ficción",
+      "Aventura"
+    ],
+    "tmdbId": 687163,
+    "runtime": 156,
+    "sourceFile": "Proyecto Fin del Mundo (2026).mkv",
+    "parsedTitle": "Proyecto Fin del Mundo",
+    "parsedYear": "2026"
+  },
+  {
+    "title": "Scream 7",
+    "originalTitle": "Scream 7",
+    "year": "2026",
+    "overview": "La tranquila y rehecha vida Sidney Prescott se cae a pedazos cuando Ghostface llega al pueblo. Sin embargo, sus peores temores se hacen realidad cuando su hija Tatum se convierte en la próxima víctima.",
+    "originalOverview": "La tranquila y rehecha vida Sidney Prescott se cae a pedazos cuando Ghostface llega al pueblo. Sin embargo, sus peores temores se hacen realidad cuando su hija Tatum se convierte en la próxima víctima.",
+    "poster": "posters/1159559.jpg",
+    "genres": [
+      "Terror",
+      "Misterio",
+      "Crimen"
+    ],
+    "tmdbId": 1159559,
+    "runtime": 114,
+    "sourceFile": "Scream 7 (2026).mkv",
+    "parsedTitle": "Scream 7",
+    "parsedYear": "2026"
+  },
+  {
+    "title": "Super Mario Galaxy: La película",
+    "originalTitle": "The Super Mario Galaxy Movie",
+    "year": "2026",
+    "overview": "Mario y Luigi se enfrentan una nueva amenaza: Bowser Jr., quién está decidido liberar a su padre del cautiverio y restaurar el legado familiar. Junto con nuevos y viejos compañeros, los hermanos viajan a través de las estrellas para detener la cruzada del joven heredero.",
+    "originalOverview": "Mario y Luigi se enfrentan una nueva amenaza: Bowser Jr., quién está decidido liberar a su padre del cautiverio y restaurar el legado familiar. Junto con nuevos y viejos compañeros, los hermanos viajan a través de las estrellas para detener la cruzada del joven heredero.",
+    "poster": "posters/1226863.jpg",
+    "genres": [
+      "Familia",
+      "Comedia",
+      "Aventura",
+      "Fantasía",
+      "Animación"
+    ],
+    "tmdbId": 1226863,
+    "runtime": 98,
+    "sourceFile": "Super Mario Galaxy La Película (2026) 4K.mkv",
+    "parsedTitle": "Super Mario Galaxy La Película",
+    "parsedYear": "2026"
+  },
+  {
+    "title": "Terror en Silent Hill: Regreso al infierno",
+    "originalTitle": "Return to Silent Hill",
+    "year": "2026",
+    "overview": "Cuando James recibe una misteriosa carta de Mary, su amor perdido, se siente atraído por Silent Hill, un pueblo que antes le era familiar y ahora está sumido en la oscuridad.",
+    "originalOverview": "Cuando James recibe una misteriosa carta de Mary, su amor perdido, se siente atraído por Silent Hill, un pueblo que antes le era familiar y ahora está sumido en la oscuridad.",
+    "poster": "posters/680493.jpg",
+    "genres": [
+      "Misterio",
+      "Drama",
+      "Terror"
+    ],
+    "tmdbId": 680493,
+    "runtime": 106,
+    "sourceFile": "Terror en Silent Hill Regreso al infierno (2026).mkv",
+    "parsedTitle": "Terror en Silent Hill Regreso al infierno",
+    "parsedYear": "2026"
+  },
+  {
+    "title": "Los Tres Cerditos: El Lobo Feroz",
+    "originalTitle": "The Big Bad Wolf",
+    "year": "1934",
+    "overview": "Segundo de los cortos de Disney basados en los tres cerditos. Esta vez, se encuentran con Caperucita y deciden ayudarla a llegar a casa de su abuelita. 42º de los 75 cortos que forman las Silly Symphonies de Disney.",
+    "originalOverview": "Segundo de los cortos de Disney basados en los tres cerditos. Esta vez, se encuentran con Caperucita y deciden ayudarla a llegar a casa de su abuelita. 42º de los 75 cortos que forman las Silly Symphonies de Disney.",
+    "poster": "posters/109298.jpg",
+    "genres": [
+      "Animación",
+      "Comedia"
+    ],
+    "tmdbId": 109298,
+    "runtime": 9,
+    "sourceFile": "The Big Bad Wolf (1934).mkv",
+    "parsedTitle": "The Big Bad Wolf",
+    "parsedYear": "1934"
+  },
+  {
+    "title": "Los Tres Cerditos",
+    "originalTitle": "Three Little Pigs",
+    "year": "1933",
+    "overview": "Los tres cerditos vivían en el bosque con su madre hasta que se hicieron mayores. Uno se hizo una casa de paja trabajando pero un día apareció el lobo y al no abrirle se la tiró. El segundo cerdito la hizo de madera y cuando la hubo terminado apareció su hermano se metieron en la casa pero el lobo también la derrumbó. El tercer cerdito la hizo de ladrillos y ahí se refugiaron todos. Como el lobo no consiguió que salieran de casa se coló por la chimenea cayendo al fuego y no volviendo a saber más de él.",
+    "originalOverview": "Los tres cerditos vivían en el bosque con su madre hasta que se hicieron mayores. Uno se hizo una casa de paja trabajando pero un día apareció el lobo y al no abrirle se la tiró. El segundo cerdito la hizo de madera y cuando la hubo terminado apareció su hermano se metieron en la casa pero el lobo también la derrumbó. El tercer cerdito la hizo de ladrillos y ahí se refugiaron todos. Como el lobo no consiguió que salieran de casa se coló por la chimenea cayendo al fuego y no volviendo a saber más de él.",
+    "poster": "posters/34463.jpg",
+    "genres": [
+      "Música",
+      "Animación",
+      "Comedia",
+      "Familia"
+    ],
+    "tmdbId": 34463,
+    "runtime": 9,
+    "sourceFile": "Three Little Pigs (1933).mkv",
+    "parsedTitle": "Three Little Pigs",
+    "parsedYear": "1933"
+  },
+  {
+    "title": "Una Navidad Charlie Brown",
+    "originalTitle": "Una Navidad Charlie Brown",
+    "year": "1965",
+    "overview": "No disponible",
+    "originalOverview": "",
+    "poster": null,
+    "genres": [],
+    "tmdbId": null,
+    "runtime": null,
+    "sourceFile": "Una Navidad Charlie Brown (1965).mkv",
+    "parsedTitle": "Una Navidad Charlie Brown",
+    "parsedYear": "1965"
+  },
+  {
+    "title": "Marcelino Pan y Vino",
+    "originalTitle": "Marcelino Pan y Vino",
+    "year": "1954",
+    "overview": "No disponible",
+    "originalOverview": "",
+    "poster": null,
+    "genres": [],
+    "tmdbId": null,
+    "runtime": null,
+    "sourceFile": "Marcelino Pan y Vino (1954).mp4",
+    "parsedTitle": "Marcelino Pan y Vino",
+    "parsedYear": "1954"
+  },
+  {
+    "title": "Rapido y Furioso 7",
+    "originalTitle": "Rapido y Furioso 7",
+    "year": "2015",
+    "overview": "No disponible",
+    "originalOverview": "",
+    "poster": null,
+    "genres": [],
+    "tmdbId": null,
+    "runtime": null,
+    "sourceFile": "Rapido y Furioso 7 (2015).mkv",
+    "parsedTitle": "Rapido y Furioso 7",
+    "parsedYear": "2015"
+  },
+  {
+    "title": "Rapido y Furioso 8",
+    "originalTitle": "Rapido y Furioso 8",
+    "year": "2017",
+    "overview": "No disponible",
+    "originalOverview": "",
+    "poster": null,
+    "genres": [],
+    "tmdbId": null,
+    "runtime": null,
+    "sourceFile": "Rapido y Furioso 8 (2017).mp4",
+    "parsedTitle": "Rapido y Furioso 8",
+    "parsedYear": "2017"
+  },
+  {
+    "title": "Rapido y Furioso 9",
+    "originalTitle": "Rapido y Furioso 9",
+    "year": "2021",
+    "overview": "No disponible",
+    "originalOverview": "",
+    "poster": null,
+    "genres": [],
+    "tmdbId": null,
+    "runtime": null,
+    "sourceFile": "Rapido y Furioso 9 (2021).mp4",
+    "parsedTitle": "Rapido y Furioso 9",
+    "parsedYear": "2021"
+  },
+  {
+    "title": "Rapido y Furioso Hobbs Shaw",
+    "originalTitle": "Rapido y Furioso Hobbs Shaw",
+    "year": "2019",
+    "overview": "No disponible",
+    "originalOverview": "",
+    "poster": null,
+    "genres": [],
+    "tmdbId": null,
+    "runtime": null,
+    "sourceFile": "Rapido y Furioso Hobbs Shaw (2019).mkv",
+    "parsedTitle": "Rapido y Furioso Hobbs Shaw",
+    "parsedYear": "2019"
   }
 ]

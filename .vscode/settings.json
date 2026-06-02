@@ -40,6 +40,10 @@
         "/^node test_convert\\.js$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^node scripts/limpiarduplicados\\.mjs$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
