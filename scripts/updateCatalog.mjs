@@ -246,26 +246,7 @@ async function updateCatalog() {
     // =========================================
 
     if (!basicMovie) {
-
-      console.log(`⚠️ Sin match TMDb`);
-
-      newMovies.push({
-        title: parsed.title,
-        originalTitle: parsed.title,
-        year: parsed.year,
-        overview: "No disponible",
-        originalOverview: "",
-        poster: null,
-        genres: [],
-        tmdbId: null,
-        runtime: null,
-        sourceFile: file,
-        parsedTitle: parsed.title,
-        parsedYear: parsed.year
-      });
-
-      existingMovieKeys.add(movieKey);
-
+      console.log(`⚠️ Sin match TMDb, no se creará entrada: ${parsed.title} (${parsed.year})`);
       continue;
     }
 

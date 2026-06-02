@@ -21933,20 +21933,6 @@
     "parsedYear": "2016"
   },
   {
-    "title": "Al filo del abismo",
-    "originalTitle": "Al filo del abismo",
-    "year": "2022",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
-    "runtime": null,
-    "sourceFile": "Al filo del abismo (2022).mp4",
-    "parsedTitle": "Al filo del abismo",
-    "parsedYear": "2022"
-  },
-  {
     "title": "Avatar: Fuego y ceniza",
     "originalTitle": "Avatar: Fire and Ash",
     "year": "2025",
@@ -21999,34 +21985,6 @@
     "sourceFile": "Cumbres Borrascosas (2026).mkv",
     "parsedTitle": "Cumbres Borrascosas",
     "parsedYear": "2026"
-  },
-  {
-    "title": "El Aprendiz del Brujo",
-    "originalTitle": "El Aprendiz del Brujo",
-    "year": "2010",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
-    "runtime": null,
-    "sourceFile": "El Aprendiz del Brujo (2010).mkv",
-    "parsedTitle": "El Aprendiz del Brujo",
-    "parsedYear": "2010"
-  },
-  {
-    "title": "El Chofer de la Señora Daisy1",
-    "originalTitle": "El Chofer de la Señora Daisy1",
-    "year": "1989",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
-    "runtime": null,
-    "sourceFile": "El Chofer de la Señora Daisy1 (1989).mp4",
-    "parsedTitle": "El Chofer de la Señora Daisy1",
-    "parsedYear": "1989"
   },
   {
     "title": "Frankenstein",
@@ -22156,43 +22114,19 @@
     "parsedYear": "1933"
   },
   {
-    "title": "Una Navidad Charlie Brown",
-    "originalTitle": "Una Navidad Charlie Brown",
-    "year": "1965",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
-    "runtime": null,
-    "sourceFile": "Una Navidad Charlie Brown (1965).mkv",
-    "parsedTitle": "Una Navidad Charlie Brown",
-    "parsedYear": "1965"
-  },
-  {
-    "title": "Marcelino Pan y Vino",
-    "originalTitle": "Marcelino Pan y Vino",
-    "year": "1954",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
-    "runtime": null,
-    "sourceFile": "Marcelino Pan y Vino (1954).mp4",
-    "parsedTitle": "Marcelino Pan y Vino",
-    "parsedYear": "1954"
-  },
-  {
     "title": "Rapido y Furioso 7",
     "originalTitle": "Rapido y Furioso 7",
     "year": "2015",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
-    "runtime": null,
+    "overview": "Ha pasado un año desde que el equipo de Dominic Torreto y Brian pudiera regresar finalmente a Estados Unidos, tras ser indultados. Desean adaptarse a una vida en la legalidad, pero el entorno ya no es el mismo. Dom intenta acercarse a Letty, y Brian lucha para acostumbrarse a la vida en una urbanización con Mia y su hijo. Ninguno de ellos imagina que un frío asesino británico, entrenado para realizar operaciones secretas, se cruzará en sus vidas para convertirse en su mayor enemigo.",
+    "originalOverview": "Ha pasado un año desde que el equipo de Dominic Torreto y Brian pudiera regresar finalmente a Estados Unidos, tras ser indultados. Desean adaptarse a una vida en la legalidad, pero el entorno ya no es el mismo. Dom intenta acercarse a Letty, y Brian lucha para acostumbrarse a la vida en una urbanización con Mia y su hijo. Ninguno de ellos imagina que un frío asesino británico, entrenado para realizar operaciones secretas, se cruzará en sus vidas para convertirse en su mayor enemigo.",
+    "poster": "posters/168259.jpg",
+    "genres": [
+      "Acción",
+      "Crimen",
+      "Suspense"
+    ],
+    "tmdbId": 168259,
+    "runtime": 137,
     "sourceFile": "Rapido y Furioso 7 (2015).mkv",
     "parsedTitle": "Rapido y Furioso 7",
     "parsedYear": "2015"
@@ -22201,12 +22135,16 @@
     "title": "Rapido y Furioso 8",
     "originalTitle": "Rapido y Furioso 8",
     "year": "2017",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
-    "runtime": null,
+    "overview": "Con Dom y Letty de luna de miel, Brian y Mia fuera del juego y el resto de la pandilla exonerada de todo cargo, el equipo está instalado en una vida aparentemente normal. Pero cuando una misteriosa mujer (Theron) seduce a Dom (Diesel) para regresar nuevamente al mundo del crimen, se ve incapaz de rechazar la oportunidad, traicionando así a todo el mundo cercano a él.",
+    "originalOverview": "Con Dom y Letty de luna de miel, Brian y Mia fuera del juego y el resto de la pandilla exonerada de todo cargo, el equipo está instalado en una vida aparentemente normal. Pero cuando una misteriosa mujer (Theron) seduce a Dom (Diesel) para regresar nuevamente al mundo del crimen, se ve incapaz de rechazar la oportunidad, traicionando así a todo el mundo cercano a él.",
+    "poster": "posters/337339.jpg",
+    "genres": [
+      "Acción",
+      "Crimen",
+      "Suspense"
+    ],
+    "tmdbId": 337339,
+    "runtime": 136,
     "sourceFile": "Rapido y Furioso 8 (2017).mp4",
     "parsedTitle": "Rapido y Furioso 8",
     "parsedYear": "2017"
@@ -22215,12 +22153,16 @@
     "title": "Rapido y Furioso 9",
     "originalTitle": "Rapido y Furioso 9",
     "year": "2021",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
-    "runtime": null,
+    "overview": "Domic Toretto lleva una vida tranquila, lejos de todo, con Letty y su hijo, el pequeño Brian. el peligro está siempre al acecho. Esta vez, esta amenaza obligará a Domic Toretto a enfrentarse a los pecados de su pasado para salvar a los que más quiere. Su equipo se reúne de nuevo para detener un plan que conmocionó al mundo, liderado por el mejor piloto y el mayor asesino que han encontrado: Jakob, el hermano abandonado de Domic.",
+    "originalOverview": "Domic Toretto lleva una vida tranquila, lejos de todo, con Letty y su hijo, el pequeño Brian. el peligro está siempre al acecho. Esta vez, esta amenaza obligará a Domic Toretto a enfrentarse a los pecados de su pasado para salvar a los que más quiere. Su equipo se reúne de nuevo para detener un plan que conmocionó al mundo, liderado por el mejor piloto y el mayor asesino que han encontrado: Jakob, el hermano abandonado de Domic.",
+    "poster": "posters/385128.jpg",
+    "genres": [
+      "Acción",
+      "Aventura",
+      "Crimen"
+    ],
+    "tmdbId": 385128,
+    "runtime": 143,
     "sourceFile": "Rapido y Furioso 9 (2021).mp4",
     "parsedTitle": "Rapido y Furioso 9",
     "parsedYear": "2021"
@@ -22229,14 +22171,91 @@
     "title": "Rapido y Furioso Hobbs Shaw",
     "originalTitle": "Rapido y Furioso Hobbs Shaw",
     "year": "2019",
-    "overview": "No disponible",
-    "originalOverview": "",
-    "poster": null,
-    "genres": [],
-    "tmdbId": null,
-    "runtime": null,
+    "overview": "Desde que Hobbs, agente del Servicio de Seguridad Diplomática de Estados Unidos, y el británico Shaw, proscrito sin ley, se enfrentaron por primera vez, solo han intercambiado bofetadas y malas palabras. Pero cuando las despiadadas acciones de Brixton, un anarquista cibergenéticamente mejorado, amenazan el futuro de la humanidad, ambos se unen para derrotarlo.",
+    "originalOverview": "Desde que Hobbs, agente del Servicio de Seguridad Diplomática de Estados Unidos, y el británico Shaw, proscrito sin ley, se enfrentaron por primera vez, solo han intercambiado bofetadas y malas palabras. Pero cuando las despiadadas acciones de Brixton, un anarquista cibergenéticamente mejorado, amenazan el futuro de la humanidad, ambos se unen para derrotarlo.",
+    "poster": "posters/384018.jpg",
+    "genres": [
+      "Acción",
+      "Aventura",
+      "Comedia"
+    ],
+    "tmdbId": 384018,
+    "runtime": 137,
     "sourceFile": "Rapido y Furioso Hobbs Shaw (2019).mkv",
     "parsedTitle": "Rapido y Furioso Hobbs Shaw",
     "parsedYear": "2019"
+  },
+  {
+    "title": "El abismo",
+    "originalTitle": "The Ledge",
+    "year": "2022",
+    "overview": "Una aventura de montañismo se convierte en una terrorífica pesadilla. Después de que Kelly es testigo de un crimen, los responsables la persiguen y su única salida es huir a una montaña peligrosa.",
+    "originalOverview": "Una aventura de montañismo se convierte en una terrorífica pesadilla. Después de que Kelly es testigo de un crimen, los responsables la persiguen y su única salida es huir a una montaña peligrosa.",
+    "poster": "posters/924482.jpg",
+    "genres": [
+      "Suspense",
+      "Aventura"
+    ],
+    "tmdbId": 924482,
+    "runtime": 86,
+    "sourceFile": "The Ledge (2022).mp4",
+    "parsedTitle": "The Ledge",
+    "parsedYear": "2022"
+  },
+  {
+    "title": "El señor de los anillos: La comunidad del anillo",
+    "originalTitle": "The Lord of the Rings: The Fellowship of the Ring",
+    "year": "2001",
+    "overview": "En la Tierra Media, el Señor Oscuro Saurón creó los Grandes Anillos de Poder, forjados por los herreros Elfos. Tres para los reyes Elfos, siete para los Señores Enanos, y nueve para los Hombres Mortales. Secretamente, Saurón también forjó un anillo maestro, el Anillo Único, que contiene en sí el poder para esclavizar a toda la Tierra Media. Con la ayuda de un grupo de amigos y de valientes aliados, Frodo emprende un peligroso viaje con la misión de destruir el Anillo Único. Pero el Señor Oscuro Sauron, quien creara el Anillo, envía a sus servidores para perseguir al grupo. Si Sauron lograra recuperar el Anillo, sería el final de la Tierra Media. EXTENDIDA",
+    "originalOverview": "En la Tierra Media, el Señor Oscuro Saurón creó los Grandes Anillos de Poder, forjados por los herreros Elfos. Tres para los reyes Elfos, siete para los Señores Enanos, y nueve para los Hombres Mortales. Secretamente, Saurón también forjó un anillo maestro, el Anillo Único, que contiene en sí el poder para esclavizar a toda la Tierra Media. Con la ayuda de un grupo de amigos y de valientes aliados, Frodo emprende un peligroso viaje con la misión de destruir el Anillo Único. Pero el Señor Oscuro Sauron, quien creara el Anillo, envía a sus servidores para perseguir al grupo. Si Sauron lograra recuperar el Anillo, sería el final de la Tierra Media. EXTENDIDA",
+    "poster": "posters/120.jpg",
+    "genres": [
+      "Aventura",
+      "Fantasía",
+      "Acción"
+    ],
+    "tmdbId": 120,
+    "runtime": 179,
+    "sourceFile": "El señor de los anillos (2001).mkv",
+    "parsedTitle": "El señor de los anillos",
+    "parsedYear": "2001"
+  },
+  {
+    "title": "Lilo y Stitch",
+    "originalTitle": "Lilo & Stitch",
+    "year": "2002",
+    "overview": "Una chica joven y sin padres adopta un «perro» de la perrera local, sin saber que supuestamente es un peligroso experimento científico que se ha refugiado en la Tierra y que ahora se esconde de su creador y de quienes lo ven como una amenaza.",
+    "originalOverview": "Una chica joven y sin padres adopta un «perro» de la perrera local, sin saber que supuestamente es un peligroso experimento científico que se ha refugiado en la Tierra y que ahora se esconde de su creador y de quienes lo ven como una amenaza.",
+    "poster": "posters/11544.jpg",
+    "genres": [
+      "Animación",
+      "Familia",
+      "Comedia",
+      "Ciencia ficción"
+    ],
+    "tmdbId": 11544,
+    "runtime": 85,
+    "sourceFile": "Lilo y Stitch (2002) Original.mkv",
+    "parsedTitle": "Lilo y Stitch",
+    "parsedYear": "2002"
+  },
+  {
+    "title": "La Navidad de Charlie Brown",
+    "originalTitle": "A Charlie Brown Christmas",
+    "year": "1965",
+    "overview": "Charlie Brown está deprimido porque piensa que la Navidad carece de sentido. Ve a Lucy y Snoopy obsesionados con regalos y decoraciones, Schroeder obsesionado con la obra de navidad, y todos los demás concentrados en las tarjetas y cartas a Santa; todo esto lo hace cuestionarse el verdadero significado de la Navidad.",
+    "originalOverview": "Charlie Brown está deprimido porque piensa que la Navidad carece de sentido. Ve a Lucy y Snoopy obsesionados con regalos y decoraciones, Schroeder obsesionado con la obra de navidad, y todos los demás concentrados en las tarjetas y cartas a Santa; todo esto lo hace cuestionarse el verdadero significado de la Navidad.",
+    "poster": "posters/13187.jpg",
+    "genres": [
+      "Animación",
+      "Familia",
+      "Comedia",
+      "Película de TV"
+    ],
+    "tmdbId": 13187,
+    "runtime": 25,
+    "sourceFile": "La Navidad de Charlie Brown (1965).mkv",
+    "parsedTitle": "La Navidad de Charlie Brown",
+    "parsedYear": "1965"
   }
 ]
