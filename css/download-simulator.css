@@ -27,6 +27,10 @@
   border-radius: 4px;
   font-size: 0.9rem;
 }
+/* Ancho de la caja de texto */
+#download-simulator #ds-size {
+  width: 70px;
+}
 
 #download-simulator .ds-controls button {
   padding: 0.4rem 0.8rem;
@@ -382,4 +386,14 @@
   100% {
     transform: translateX(120%);
   }
+}
+
+/* Hide modern theme option */
+#download-simulator select option[value="modern"] {
+  display: none;
+}
+
+/* Style for theme selector label */
+#download-simulator .ds-theme-selector label {
+  color: black;
 }

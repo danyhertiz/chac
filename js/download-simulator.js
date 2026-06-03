@@ -13,10 +13,10 @@
   // Load saved theme
   const allowedThemes = ['modern', 'vista', 'mac2000'];
 
-  let savedTheme = localStorage.getItem('ds-theme') || 'modern';
+  let savedTheme = localStorage.getItem('ds-theme') || 'vista';
 
   if (!allowedThemes.includes(savedTheme)) {
-    savedTheme = 'modern';
+    savedTheme = 'vista';
   }
 
   simulator.setAttribute('data-theme', savedTheme);
