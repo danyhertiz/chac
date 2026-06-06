@@ -159,3 +159,35 @@ Lo primero que hice en diciembre de 2022 fue comprar el CPU con su motherboard y
 ![Motherboard y GPU](img/historias/informatica/sexta_gpu.jpg)
 Esta PC, aunque era considerada “gama de entrada” ya me permitió entrar de lleno a todo lo nuevo que iba saliendo, en ella al fin pude emular Switch y probé muchísimos de sus juegos. Me permitió terminar Hogwarts Legacy, Ace Combat 7, Halo Infinite y Titanfall 2.
 Al agregar la tarjeta de video (a finales de 2023) seguí jugando lo mismo pero en configuraciones de video más altas y con mucha mejor fluidez. En ese tiempo ya te grababa muchos videos por lo que todo esto está mejor documentado en ellos.
+
+---
+## Septima PC
+📅 06 de junio, 2026
+
+Al cambiar de trabajo, con mi nuevo sueldo, además de poder costear un cuartito aparte para no ocupar más la casa de mis suegros, también pude empezar un ahorro, pequeño pero constante. Así que en noviembre de 2025 decidí armar una nueva PC, pero esta vez sí estaría encaminada a los videojuegos más recientes. No será una PC de la NASA, pero sí es bastante buena. En esta ocasión los componentes son:
+* CPU: Ryzen 7 7800 X 3D
+* Motherboard: ASUS B650-PLUS WiFi
+* GPU: NVIDIA RTX 3060 12GB VRAM
+* RAM: 32 GB DDR5
+* SSD: NVMe de 1TB para sistema operativo y programas
+* SSD: NVMe de 2TB para documentos, imágenes y música
+* HDD: 8 TB para almacenamiento de series y películas
+* HDD: 4 TB para almacenamiento de juegos, emuladores y ROMs
+
+![PC Ryzen 7](img/historias/informatica/ryzen7.jpg)
+![PC Ryzen 7](img/historias/informatica/ryzen7b.jpg)
+
+La compré justo a tiempo, apenas un par de semanas antes de que los precios de la RAM se dispararan a causa de la escasez provocada por la industria de la inteligencia artificial.
+Instalé todo en el mismo gabinete que ya tenía, y aunque al principio hubo ciertos problemas con la BIOS, logré resolverlos y estoy encantado con mi super PC. En ella ya jugué títulos como:
+* Ace Combat7
+* Hogwarts Legacy
+* Call of Duty Modern Warfare (2019)
+* Call of Duty Modern Warfare 2 (2022)
+* Call of Duty Modern Warfare 3 (2023)
+* Titanfall 2
+* Halo Infinite
+* Jedi fallen Order
+* Pragmata
+
+Todos ellos a su máxima calidad y con un framerate más que decente. Esto sumado a que, poco antes de mudarme me había comprado un monitor curvo de 27 pulgadas, hizo que la experiencia de juego sea muy buena.
+Adicionalmente me compré también un monitor secundario para trabajo, es sencillo, pero también de 27 pulgadas, y me ha hecho mucho más cómoda la experiencia de trabajo.
