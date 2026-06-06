@@ -10,3 +10,4 @@ En ese entonces, como trabajaba con el tío de mi Foza, él me permitió llevarm
 ![3 monitores](img/historias/informatica/baticueva.jpg)
 En la segunda mitad de 2020, el trabajo disminuyó bastante (al igual que mi sueldo), por lo que tuve mucho tiempo libre. A veces usaba uno de los monitores para hacer mis experimentos, ya sabes, me gustaba mucho instalar sistemas antiguos como Windows 98 o Windows XP en las motherboards viejas que tenía guardadas.
 ![Instalando XP](img/historias/informatica/setup_xp.jpg)
+Al renunciar al empleo con el tío de mi foza, le entregué su computadora y yo seguí jugando y experimentando con mi ensamble con procesador A10, hasta finales de 2022.

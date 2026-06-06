@@ -4,8 +4,10 @@ No tengo clara la fecha en la que el Chepo se compró su primera computadora, pe
 ![Banner Manía](img/historias/informatica/bannermania.jpg)
 
 Ya posterior a eso, recuerdo la computadora de Martín, en la que el Pollo jugaba Heretic, Paco jugaba Doom y nosotros nos gastábamos la tinta imprimiendo dibujos que hacíamos en Power Point jejeje. 😅
+![Galería Office 97](img/historias/informatica/galeria_office97.jpg)
 
-Fue una época genial, en la que experimentábamos juegos como Rise of the Triad, Dark Forces, Descent, etc. Incluso era entretenido "hojear" la enciclopedia multimedia y ver sus diminutos clips de video.
+
+Fue una época genial, en la que experimentábamos juegos como Rise of the Triad, Dark Forces, Descent, etc. Incluso era entretenido "hojear" la enciclopedia multimedia y ver sus diminutos clips de video. Aún conservo el disco original de esa enciclopedia. Como puedes ver ya está roto, pero antes de que se dañara, hice una copia y por eso aun tengo la posibilidad de instalarla en una máquina virtual para seguir viéndola y recordadndo viejos tiempos.
 ![Enciclopedia Multimedia Monitor](img/historias/informatica/enciclopedia.jpg)
 
 Más o menos por esos años fue que el Chepo se compró una laptop marca Toshiba, era de la serie Satellite, aunque no recuerdo el modelo. Cuando yo estaba en tercero de secundaria, él me la prestaba para hacer mis tareas, y ahí yo aprovechaba para conocer y experimentar con windows. Me gustaba jugar solitario, buscaminas, experimentar con la grabadora de sonidos de windows y ver las animaciones de Norton antivirus.

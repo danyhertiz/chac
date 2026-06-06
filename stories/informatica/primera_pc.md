@@ -1,6 +1,6 @@
 📅 27 de Noviembre, 2025
 
-Aunque ya llevaba años siendo un asiduo videojugador, mi época en el CCH me dio la libertad de jugar un poco de todo, además de poder destinar el tiempo que quisiera para jugar. La computadora verde que tuve en aquél entonces fue la que me permitió experimentar muchos videojuegos, que ya poco o nada tenían que ver con lo que estábamos acostumbrados en las consolas, fueran de sobremesa o portátiles.
+Aunque ya llevaba años siendo un asiduo videojugador, mi época en el CCH me dio la libertad de jugar un poco de todo, además de poder destinar a los videojuegos el tiempo que quisiera. La computadora verde que tuve en aquél entonces fue la que me permitió experimentar muchos videojuegos, que ya poco o nada tenían que ver con lo que estábamos acostumbrados en las consolas, fueran de sobremesa o portátiles.
 
 Hasta ese momento sólo había jugado juegos de Nintendo y uno que otro de MS-DOS. Pero con esa computadora conocí todo tipo de juegos, tanto de PC como de Play Station gracias a los primeros emuladores que encontré en internet.
 
