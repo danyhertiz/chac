@@ -232,7 +232,7 @@ main.video-page-main {
     font-size: 0.75rem;
 }
 
-.story-content h2 {
+.story-content > h2 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
     font-size: 1.1rem;

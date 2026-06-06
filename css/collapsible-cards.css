@@ -33,6 +33,20 @@
     margin-top: 1.5rem;
 }
 
+.collapsible-story .story-content h2 {
+    font-size: 1.6rem;
+    margin: 1.6rem 0 0.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.collapsible-story .story-content h3 {
+    font-size: 1.25rem;
+    margin: 1.6rem 0 0.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
 .collapsible-story .story-content p {
     margin-bottom: 1rem;
     font-size: 1.3rem;

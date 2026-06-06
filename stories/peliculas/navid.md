@@ -1,3 +1,6 @@
+
+---
+## El origen de los guardianes
 ![El Origen de los Guardianes](img/historias/cine/origen_guardianes.jpg)
 
 Cambiando de tema, hacia las películas navideñas, también hay algunas que no puedo dejar de ver por lo menos una vez al año. Como las dos primeras de **"Mi pobre angelito"** (terrible adaptación del nombre original, jejeje), la de **Una Navidad con Mickey** también se ha vuelto una de mis favoritas, y de hecho, me gusta tanto ese cuento de navidad, que me he visto casi todas sus adaptaciones y hasta algunas parodias. La del **Grinch** con Jim Carrey me trae muy buenos recuerdos de cuando Paco nos llevaba al cine a Plaza Aragón. **El Expreso Polar** es un gusto culposo ya que, aunque la animación es un tanto rara, sí me gustó mucho la historia. Y por último, aunque no es una película propiamente navideña, no puedo dejar de mencionar la de **El Origen de los Guardianes**, esa la vi en el cine y automáticamente cayó entre mi listado de favoritas.
