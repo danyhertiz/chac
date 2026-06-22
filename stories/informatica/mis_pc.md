@@ -170,7 +170,7 @@ Al cambiar de trabajo, con mi nuevo sueldo, además de poder costear un cuartito
 * GPU: NVIDIA RTX 3060 12GB VRAM
 * RAM: 32 GB DDR5
 * SSD: NVMe de 1TB para sistema operativo y programas
-* SSD: NVMe de 2TB para documentos, imágenes y música
+* SSD: NVMe de 1TB para documentos, imágenes y música
 * HDD: 8 TB para almacenamiento de series y películas
 * HDD: 4 TB para almacenamiento de juegos, emuladores y ROMs
 
