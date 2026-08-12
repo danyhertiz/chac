@@ -1,7 +1,7 @@
 📅 Fecha: 12 de Agosto, 2026
 
 Para hablar de consolas, quise poner primero a Xbox, pero no porque me guste más, sino porque es de la que menos tengo que contar. Nunca he tenido predilección por estas consolas. Y aunque en su momento me llegaron a gustar algunos de sus juegos, realmente nunca tuve necesidad de comprarme la consola porque eventualmente esos juegos fueron saliendo en PC.
-![Xbox Clásico](img/historias/videojuegos/Xbox_clasico.jpg)
+![Xbox Clásico](img/historias/videojuegos/xbox_clasico.jpg)
 
 ---
 ## Xbox Clásico
