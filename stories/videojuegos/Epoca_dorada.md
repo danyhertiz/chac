@@ -12,6 +12,6 @@ En aquella época, pasábamos los días jugando los tres juntos a todo lo imagin
 
 ![Revistas de videojuegos](img/historias/videojuegos/revista.jpg)
 
-No sé si te acuerdes, que el pollo nos llevaba cada fin de semana el bazar zaragoza y a veces él nos compraba juegos de 64 o de Gameboy, y a veces nosotros los comprábamos con nuestros ahorros. Siempre que pienso en aquella época me acuerdo mucho de las cámaras de GameBoy, del F Zero de 64, de Donkey Kong 64, de un juego de carreras que tuve en GameBoy Color que tenía vibrador integrado, de tu juego de Wario Land 2, el de Star Wars Racer, el Zelda Awakening DX, etc. Fueron tiempos geniales en los que aun sentía esa "magia" en el ambiente, la emoción al leer una revista, al comprar un juego nuevo, o al compartirnos cosas a través del cable link.
+No sé si te acuerdes, que el pollo nos llevaba cada fin de semana al bazar zaragoza. A veces él nos compraba juegos de 64 o de Gameboy, y otras veces nosotros los comprábamos con nuestros ahorros. Siempre que pienso en aquella época me acuerdo mucho de las cámaras de GameBoy, del F Zero X, de Donkey Kong 64, de un juego de carreras que tuve en GameBoy Color que tenía vibrador integrado, de tu juego de Wario Land 2, el de Star Wars Racer, el Zelda Awakening DX, etc. Fueron tiempos geniales en los que aun sentía esa "magia" en el ambiente, la emoción al leer una revista, al comprar un juego nuevo, o al compartirnos cosas a través del cable link.
 
 ![Bazar](img/historias/videojuegos/bazar.jpg)
