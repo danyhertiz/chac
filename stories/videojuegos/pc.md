@@ -18,6 +18,7 @@ Mi lista de favoritos de PC en esa década:
 * Solitario
 * Wolfenstein 3D
 * Doom
+* Heretic
 
 ![Solitario Windows 95](img/historias/videojuegos/solitario.jpg)
 
