@@ -2,7 +2,7 @@
 
 A pesar de que ya puse un pequeño listado de “favoritos” en el apartado de cada plataforma. Este es el listado definitivo, donde está lo mejor de lo mejor para mí. Aquellos juegos que me marcaron de alguna manera y a los que vuelvo de vez en cuando para revivir viejos tiempos.
 
-Para no tener una infinidad de secciones por separado en la página, decidí hacer una única sección en la que pueda abordar con un poco más de profundidad sobre estos juegos favoritos de todos los tiempos. Pero para eso, primero me detuve a pensar ¿Qué significa para mí favorito?, porque no necesariamente significa “el mejor”. Para mí, un juego puede clasificarse como favorito siguiendo principalmente tres criterios: ¿Qué tanto lo disfruté?, ¿Me gustaría volver a jugarlo? y, por último, ¿tengo algún vínculo emocional con él?, o en otras palabras ¿qué tano me marcó? Con estas preguntas en mente, seleccioné algunos de los juegos a los que puedo regresar una y otra vez sin sentirlos aburridos. Independientemente de si son considerados buenos o malos por la crítica o la comunidad de jugadores.
+Para no tener una infinidad de secciones por separado en la página, decidí hacer una única sección en la que pueda abordar con un poco más de profundidad sobre estos juegos favoritos de todos los tiempos. Pero para eso, primero me detuve a pensar ¿Qué significa para mí favorito?, porque no necesariamente significa “el mejor”. Para mí, un juego puede clasificarse como favorito siguiendo principalmente tres criterios: ¿Qué tanto lo disfruté?, ¿Me gustaría volver a jugarlo? y, por último, ¿tengo algún vínculo emocional con él?, o en otras palabras ¿qué tanto me marcó? Con estas preguntas en mente, seleccioné algunos de los juegos a los que puedo regresar una y otra vez sin sentirlos aburridos. Independientemente de si son considerados buenos o malos por la crítica o la comunidad de jugadores.
 
 ### Nota:
 
@@ -34,4 +34,34 @@ Eso es lo que me marcó en este caso, no el juego como tal, sino lo que nos perm
 
 ![Shy Guy](img/historias/videojuegos/shy_guy.png)
 
-## Continuará...
+---
+## Super Mario Bros 3
+
+La primera vez que vi el Mario 3 fue en una maquinita de la tienda de don Beto ¿Te acuerdas de esa tienda? Una ocasión en la que me mandaron a comprar algo a esa tienda, y vi que unos niños estaban jugando en la maquinita, me acerqué a ver y para mi sorpresa era un juego de Super Mario que yo nunca había visto. Me sorprendió mucho cuando vi que, al agarrar la hoja, le salían orejas y cola a Mario, y me quedé con el ojo cuadrado cuando vi que los niños que estaban jugando lo hicieron volar. No me quedé a ver más, pero esa escena se me quedó muy grabada en la mente y nunca la he olvidado. En ese momento me quedé pensando que ese juego estaría solo en maquinitas, porque lo vi demasiado avanzado gráficamente como para el NES.
+
+![Super Mario Bros 3 Arcade](img/historias/videojuegos/smb3_arcade.jpg)
+
+Posteriormente no recuerdo como fue que llegó el juego a nuestras manos, pero tengo dos posibles teorías. Una es que tal vez lo rentamos, al ver a Mario en la portada de la caja con orejas y cola posiblemente lo reconocí y nos lo terminamos llevando en renta. Pero la otra teoría que tengo y que creo que es la correcta, es que tal vez nos lo prestó Moisés. Para cuando el Nintendo que compró Tavo pasó a ser de nosotros, Moisés ya nos prestaba muchos cartuchos. De hecho, fue gracias a él, que descubrimos que aquellos cartuchos pequeños, o sea los del family, también podían jugarse en NES a través de un adaptador, lo que nos abrió mucho las posibilidades al poder comprar también cartuchos de family, que incluso eran más baratos que los de NES. Entonces yo pienso que lo más probable es que el Mario 3 nos lo haya prestado también, y luego terminamos comprando nuestra propia copia.
+
+![Adaptador NES](img/historias/videojuegos/adapter_nes.jpg)
+
+De cualquier manera, el Mario 3 se volvió parte de nuestra colección “fija”, es decir, de esos cartuchos que ya no cambiábamos. Porque no sé si recuerdes que, en aquel tiempo hicimos costumbre de cambiar cartuchos en los tianguis. Casi cada fin de semana, llevábamos uno o dos cartuchos a cambiar. Incluso teníamos clasificados nuestros juegos en: “Juegos para cambiar” y “Juegos que ya se quedan en casa”.
+
+Otro recuerdo muy arraigado relacionado con el Mario 3, y que es uno de los más felices que tengo, es cuando Moisés lo terminó y vimos el final por primera vez. Nos enseño que las flautas servían para acceder a niveles mas avanzados sin tener que pasar por todos los mundos. Pero creo que en esa ocasión sí lo jugamos todo de corrido. Uno de esos raros días en los que el Nintendo estuvo encendido prácticamente todo el día. Porque recuerdo que esa vez fue que, ya en el mundo 7, Moisés llegó al castillo que está lleno de bloques amarillos, y nos mostró que ya había encontrado el switch que los convierte en monedas. Luego me pasó el control a mí, y me dejó haciendo muchas vidas para que al llegar al mundo 8 tuviéramos las suficientes oportunidades para terminar el juego.
+
+![Super Mario Bros 3 Castillo de monedas](img/historias/videojuegos/smb3_fortress.jpg)
+
+Los tres estábamos muy emocionados de haber llegado tan lejos y ver tantas cosas nuevas. Me parece recordar que incluso nos turnábamos, cada quien pasaba uno o dos niveles, y cuando llegábamos a uno que se nos hiciera imposible, le dábamos el control a Moisés. Así fue como ya en la noche, por fin llegó al ultimo castillo y lo vimos derrotar a Bowser.
+
+Ese día debe haber sido el cumpleaños de alguno de nosotros o alguna fiesta en particular porque recuerdo que, terminando de ver el final, yo fui a la cocina por unos tamales y regresé al cuarto a comer y a platica con ustedes sobre el final del juego. Hasta me acuerdo de que fue una de esas noches lluviosas. Imagino que sí era cumpleaños de alguien porque tal vez por esa razón nos dejaron jugar prácticamente todo el día.
+
+![Super Mario Bros 3 Ending](img/historias/videojuegos/smb3_ending.jpg)
+
+Es curioso como funciona la memoria, porque, hace unos años yo tenía un perfume que me parece que nos compramos Petaca y yo en el bordo. Lo tuve guardado mucho tiempo, y años después, al poco tiempo de haberme casado, cada vez que lo olía le decía a mi Foza: “¡Ese perfume huele a Mario Bros 3!”. A ella le daba mucha risa, pero es verdad, en cuanto percibía el aroma de ese perfume, inevitablemente regresaban a mi mente recuerdos de ese juego. No sé por qué, pero siempre se me hizo muy curioso.
+
+---
+## Double Dragon 3
+
+---
+## Tecmo Bowl
+
