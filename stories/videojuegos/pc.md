@@ -1,10 +1,13 @@
-📅 Fecha: 7 de Agosto, 2026
+<p style="text-align: right;">📅 7 de Agosto, 2026</p>
+
+<div style="width: 300px; margin: auto;">
+
+![Steam](img/historias/videojuegos/steam_logo.png)
+</div>
 
 No encontraba la manera de organizarme para hablar de videojuegos, pero me pareció una buena idea agruparlos por plataforma, es decir: Juegos de PC, de Nintendo, de Sony y de Microsoft. Dejo fuera plataformas como las consolas de SEGA o de Atari porque al nunca haber tenido una de esas consolas, no tengo prácticamente nada que decir sobre ellas.
 Así que comenzaré con PC, porque fue la plataforma en la que conocí los videojuegos y la que hasta la fecha me parece una de las mejores para jugar. De hecho, creo que la dupla PC + Nintendo es la que abarca el 90% del catálogo de videojuegos y una combinación perfecta. Hasta la fecha no tengo interés por un PlayStation o una Xbox, creo que con mi PC y mi Switch 2 tengo más que suficiente.
 Es difícil recordar toda una vida de videojuegos, y aun más difícil recordarlos en orden. Pero lo dividiré por décadas para facilitar el relato.
-
-![PC](img/historias/videojuegos/acermate.jpg)
 
 ---
 ## Década de los 90

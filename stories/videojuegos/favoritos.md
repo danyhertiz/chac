@@ -1,4 +1,4 @@
-📅 Fecha: 12 de agosto, 2026
+<p style="text-align: right;">📅 12 de agosto, 2026</p>
 
 A pesar de que ya puse un pequeño listado de “favoritos” en el apartado de cada plataforma. Este es el listado definitivo, donde está lo mejor de lo mejor para mí. Aquellos juegos que me marcaron de alguna manera y a los que vuelvo de vez en cuando para revivir viejos tiempos.
 
@@ -10,6 +10,7 @@ Hay tantos juegos de los que me gustaría hablar y que no quiero dejar fuera, pe
 
 ---
 ## Solitario
+<p style="text-align: right;">📅 12 de agosto, 2026</p>
 
 Alguna vez escuché que el pack de juegos que vino con Windows 95, como le solitario y el buscaminas entre otros, estaba encaminado a que las personas se familiarizaran con el uso del mouse, ya que en aquella época era una novedad. Así que, mediante juegos, esperaban que las personas supieran lo que era un clic izquierdo, un clic derecho, arrastrar, etc. No sé si es sólo una suposición, pero creo que tiene sentido.
 
@@ -21,6 +22,8 @@ Hasta la fecha, cuando me siento estresado por el trabajo, pero no tengo tiempo 
 
 ---
 ## Super Mario Bros 2
+
+<p style="text-align: right;">📅 12 de agosto, 2026</p>
 
 Creo que nos fue mejor que a los japoneses al tener 3 juegos de Super Mario en el NES completamente diferentes. Ya ves que en japón el Super Mario Bros 2 es prácticamente una expansión del 1, no cambiaron los gráficos ni las mecánicas, solo son niveles nuevos. Mientras que nosotros, a pesar de que recibimos una adaptación de otro juego, creo que quedó mejor, porque así tuvimos tres juegos perfectamente diferenciados uno de otro en cuanto a su estética, narrativa y mecánicas.
 
@@ -36,6 +39,8 @@ Eso es lo que me marcó en este caso, no el juego como tal, sino lo que nos perm
 
 ---
 ## Super Mario Bros 3
+
+<p style="text-align: right;">📅 13 de agosto, 2026</p>
 
 La primera vez que vi el Mario 3 fue en una maquinita de la tienda de don Beto ¿Te acuerdas de esa tienda? Una ocasión en la que me mandaron a comprar algo a esa tienda, y vi que unos niños estaban jugando en la maquinita, me acerqué a ver y para mi sorpresa era un juego de Super Mario que yo nunca había visto. Me sorprendió mucho cuando vi que, al agarrar la hoja, le salían orejas y cola a Mario, y me quedé con el ojo cuadrado cuando vi que los niños que estaban jugando lo hicieron volar. No me quedé a ver más, pero esa escena se me quedó muy grabada en la mente y nunca la he olvidado. En ese momento me quedé pensando que ese juego estaría solo en maquinitas, porque lo vi demasiado avanzado gráficamente como para el NES.
 
@@ -62,6 +67,31 @@ Es curioso como funciona la memoria, porque, hace unos años yo tenía un perfum
 ---
 ## Double Dragon 3
 
+<p style="text-align: right;">📅 13 de agosto, 2026</p>
+
+Los juegos de Double Dragon los conocimos en el orden inverso. Primero jugamos el 3 y lo rentábamos tanto que ya después mejor nos lo compraron. Luego probamos el 2 y también nos gustó. Y aunque al final conocimos el 1, yo ya estaba tan acostumbrado al los otros dos que el primero casi no me llamó la atención.
+
+![Double Dragon 3](img/historias/videojuegos/dd3.jpg)
+
+Me parece recordar que en algún momento lo llegamos a tener dos veces. Primero la versión de Family, que era un cartucho amarillo y de hecho sí había ciertas diferencias, como que los personajes tenían menos barras de vida que en el original de NES, pero el de Family también tenía la ventaja de contar con ese cheat que se activaba cuando presionabas “Pausa + A” y te llevaba al siguiente escenario.
+
+![Double Dragon 3 Family](img/historias/videojuegos/dd3_family.jpg)
+
+Ese es uno de los juegos en los que sí me llegué a considerar experto. Me gustaba mucho cuando lo jugábamos tu y yo en cooperativo
+
 ---
 ## Tecmo Bowl
+
+---
+## Pragmata
+
+<p style="text-align: right;">📅 5 de mayo, 2026</p>
+
+Debido a mi baja tolerancia a la frustración, durante mucho tiempo he estado evitando juegos que me parezcan a simple vista difíciles o retadores. Pero Pragmata me empezó a llamar la atención por su temáica espacial, por el carisma de sus protagonistas y por su corta duración. Así que le di una oportunidad al demo. Lo descargué en mi Switch 2 y cuando terminé de jugarlo, estaba seguro de que ese sería el próximo juego que me compraría. A pesar de que la versión de PC es capaz de entregar la mejor calidad de imágen, decidí comprarlo en Switch por la comodidad y la practicidad. Lo terminé en una semana exactamente y me gustó tanto que después me lo compre también en Steam y lo jugué de nuevo en la computadora. Puedo decir sin equivocarme, que este juego será uno de mis favoritos de todos los tiempos, a la par de otros como Ocarina of Time.
+
+![Pragmata](img/historias/videojuegos/pragmata.jpg)
+
+Lo tiene todo, un sistema de combate frenético y bien diseñado, un motor gráfico sorprendente, una historia sencilla pero entrañable, una banda sonora que acompaña de manera perfecta a la historia y la acción, haciendo más inmersivo el juego, y la duración del propio juego es más que razonable. Es perfecto.
+
+![Pragmata](img/historias/videojuegos/pragmata_b.jpg)
 

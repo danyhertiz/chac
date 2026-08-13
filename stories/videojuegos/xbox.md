@@ -1,10 +1,16 @@
-📅 Fecha: 12 de Agosto, 2026
+<p style="text-align: right;">📅 12 de Agosto, 2026</p>
+
+<div style="width: 400px; margin: auto;">
+
+![Xbox](img/historias/videojuegos/xbox_logo.png)
+</div>
 
 Para hablar de consolas, quise poner primero a Xbox, pero no porque me guste más, sino porque es de la que menos tengo que contar. Nunca he tenido predilección por estas consolas. Y aunque en su momento me llegaron a gustar algunos de sus juegos, realmente nunca tuve necesidad de comprarme la consola porque eventualmente esos juegos fueron saliendo en PC.
-![Xbox Clásico](img/historias/videojuegos/xbox_clasico.jpg)
 
 ---
 ## Xbox Clásico
+
+![Xbox Clásico](img/historias/videojuegos/xbox_clasico.png)
 
 Yo estaba en el CCH cuando empezó la sexta generación de consolas, pero mi interés estaba en los juegos de Nintendo y acababa de descubrir algunas joyas en PS2, por lo que casi no tuvo impacto en mí el lanzamiento de la primera Xbox.
 
