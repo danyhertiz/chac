@@ -385,6 +385,12 @@ main.video-page-main {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
+/* Elimina box-shadow y border-radius en imágenes PNG para evitar visible container shadow con fondos transparentes */
+.story-full img[src$=".png"] {
+    box-shadow: none;
+    border-radius: 0;
+}
+
 @keyframes neonPulse {
     0%, 100% {
         text-shadow:

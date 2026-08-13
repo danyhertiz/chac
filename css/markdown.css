@@ -72,6 +72,12 @@
   border-radius: 6px;
 }
 
+/* Elimina box-shadow y border-radius en imágenes PNG para evitar visible container shadow con fondos transparentes */
+#content img[src$=".png"] {
+  box-shadow: none;
+  border-radius: 0;
+}
+
 #content blockquote {
   margin: 1.1rem 0;
   padding: 0.75rem 1rem;
