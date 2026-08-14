@@ -35,7 +35,10 @@ Para mí es muy grato recordar esas tardes en las que la experiencia de jugar NE
 
 Eso es lo que me marcó en este caso, no el juego como tal, sino lo que nos permitía imaginar, bromear y pasarla genial. Por eso lo considero uno de mis favoritos. Además, tenía unos escenarios y personajes muy variados. Es curioso como de ese juego que no pertenecía al mundo de Super Mario, se terminaron adoptando muchos personajes que ahora son parte de la franquicia. Mis favoritos son los Shy Guy. Con el paso de los años les han dado mucha personalidad.
 
+<div style="width: 300px; margin: auto;">
+
 ![Shy Guy](img/historias/videojuegos/shy_guy.png)
+</div>
 
 ---
 ## Super Mario Bros 3
