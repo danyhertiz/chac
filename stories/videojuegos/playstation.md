@@ -61,7 +61,7 @@ Cuando el emulador PCSX2 evolucionó lo suficiente para emular a la perfección 
 
 ![PlayStation 3](img/historias/videojuegos/ps3.png)
 
-Durante el primer par de años de vida del PS3, seguí de cerca las noticias de sus lanzamientos, pero no porque me interesara comprarlo, sino porque me entretenía enterarme de sus capacidades técnicas y de la trama de sus nuevos juegos. Por ejemplo, me gustaba ver trailers del videojuego Lair, que era uno de los más impresionantes gráficamente en aquél entonces. También me entretenía escuchando podcast en los que platicaban de las nuevas cosas que se podían hacer en Metal Gear Solid 4.
+Durante el primer par de años de vida del PS3, seguí de cerca las noticias de sus lanzamientos, pero no porque me interesara comprarlo, sino porque me entretenía saber sobre sus capacidades técnicas o de la temática de sus nuevos juegos. Por ejemplo, me gustaba ver trailers del videojuego Lair, que era uno de los más impresionantes gráficamente en aquél entonces. También me entretenía escuchando un podcast de videojuegos, recuerdo cómo platicaban de las nuevas cosas que se podrían hacer en Metal Gear Solid 4.
 
 ![Metal Gear Solid 4](img/historias/videojuegos/mgs4.jpg)
 
