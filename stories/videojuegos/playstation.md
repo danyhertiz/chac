@@ -39,5 +39,39 @@ A pesar de que nunca tuve la consola, llegué a conocer bastantes juegos gracias
 ---
 ## PlayStation 2
 
+<p style="text-align: right;">📅 14 de agosto, 2026</p>
+
 ![PlayStation 2](img/historias/videojuegos/ps2.png)
 
+Después de mis experiencias con el PlayStation 2 en los cibercafés sí se me desarrolló un fuerte deseo por tener la consola. Más que nada por los Ace Combat y los Metal Gear. Pero durante muchos años no me fue posible. Aún así no me quedé sin jugar, ya que, de nuevo, Petaca me prestaba su consola y pude jugar a tope todo lo que más me interesaba.
+
+![Ace Combat 5](img/historias/videojuegos/ac5.jpg)
+
+![Metal Gear Solid 2](img/historias/videojuegos/mgs2.jpg)
+
+Posteriormente, ya en la era del PS4, por fin logré hacerme de un PS2 Slim, y lo único que hacía era jugar una y otra vez los Ace Combat. No significa que fueran los únicos juegos que me llegaron a gustar de esa consola, pero fueron los únicos a los que decidí dedicarles tiempo. De ahí en fuera no me sentí especialmente atraído por algún juego más.
+
+![Emulador PCSX2](img/historias/videojuegos/pcsx2.jpg)
+
+Cuando el emulador PCSX2 evolucionó lo suficiente para emular a la perfección los juegos y además mejorarlos en muchos sentidos, decidí que era hora de vender mi PS2. Ahora cada vez que tengo ganas de jugar algo de esa consola lo hago desde la computadora.
+
+---
+## PlayStation 3
+
+
+![PlayStation 3](img/historias/videojuegos/ps3.png)
+
+Durante el primer par de años de vida del PS3, seguí de cerca las noticias de sus lanzamientos, pero no porque me interesara comprarlo, sino porque me entretenía enterarme de sus capacidades técnicas y de la trama de sus nuevos juegos. Por ejemplo, me gustaba ver trailers del videojuego Lair, que era uno de los más impresionantes gráficamente en aquél entonces. También me entretenía escuchando podcast en los que platicaban de las nuevas cosas que se podían hacer en Metal Gear Solid 4.
+
+![Metal Gear Solid 4](img/historias/videojuegos/mgs4.jpg)
+
+Pero no fue sino hasta 2017 aproximadamente, que pude jugar algo de PS3. Una amiga de mi Foza nos invitó a su casa, y el esposo de esta amiga tenía un PS3, así que en lo que ellas platicaban, nosotros nos pusimos a jugar. Aunque más bien era yo el que jugaba y él me dirigía. Me puso The Last of Us, y quedé encantado con la mecánica de ese juego, es decir, un poco de sigilo, otro poco de acción, una historia interesante, etc. En ocasiones posteriores los volvimos a visitar y continué mi partida de The Last of Us un par de veces más, pero no lo terminé. Después de un tiempo dejamos de vernos y a la fecha ya no los hemos visitado. Sin embargo, más tarde sí conseguí el remaster en PC de ese juego, y aunque todavía no lo termino, pues sí me dejó una buena experiencia. Y pues eso es prácticamente lo único que he jugado en PS3.
+
+![The Last of Us](img/historias/videojuegos/tlou.jpg)
+
+---
+## PlayStation 4 y 5
+
+![PlayStation 4](img/historias/videojuegos/ps4.png)
+
+Estas consolas ya no entran dentro de mis anécdotas ya que jamás he estado en contacto con ellas ni me ha llamado la atención obtenerlas. Para cuando salió el PS4, ya ninguno de sus exclusivos me atraía, y lo poco que hubiera que sí me gustaba, también salía en PC, así que de ahí en adelante, PlayStation perdió toda mi atención, tal como pasó con Xbox.
