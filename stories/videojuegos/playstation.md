@@ -74,4 +74,6 @@ Pero no fue sino hasta 2017 aproximadamente, que pude jugar algo de PS3. Una ami
 
 ![PlayStation 4](img/historias/videojuegos/ps4.png)
 
-Estas consolas ya no entran dentro de mis anécdotas ya que jamás he estado en contacto con ellas ni me ha llamado la atención obtenerlas. Para cuando salió el PS4, ya ninguno de sus exclusivos me atraía, y lo poco que hubiera que sí me gustaba, también salía en PC, así que de ahí en adelante, PlayStation perdió toda mi atención, tal como pasó con Xbox.
+Estas consolas ya no entran dentro de mis anécdotas ya que jamás he estado en contacto con ellas ni me ha llamado la atención obtenerlas. Para cuando salió el PS4, ya ninguno de sus exclusivos me atraía, y los pocos que me gustaban, también estaban en PC, así que de ahí en adelante, PlayStation perdió toda mi atención, tal como pasó con Xbox.
+
+![PlayStation 5](img/historias/videojuegos/ps5.png)
