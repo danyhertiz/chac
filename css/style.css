@@ -106,6 +106,13 @@ main {
     padding: 2rem 1rem 1rem 1rem; /* Padding general para todo el contenido principal */
 }
 
+.imagen-icono {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    object-fit: contain;
+}
+
 .card {
     background-color: var(--card-bg-color-alpha);
     border-radius: 8px;
