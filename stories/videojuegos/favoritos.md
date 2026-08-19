@@ -6,7 +6,7 @@ Para no tener una infinidad de secciones por separado en la página, decidí hac
 
 ### Nota:
 
-Hay tantos juegos de los que me gustaría hablar y que no quiero dejar fuera, pero para ser sincero, son juegos que tal vez no me dan ganas de volver a jugar pero que sí significaron mucho para mí en su momento, así que los dejaré como “Menciónes honoríficas”.
+Hay tantos juegos de los que me gustaría hablar y que no quiero dejar fuera, pero para ser sincero, son juegos que tal vez no me dan ganas de volver a jugar pero que sí significaron mucho para mí en su momento, así que los dejaré al final como “Menciónes honoríficas”.
 
 ---
 ## Solitario
@@ -61,6 +61,12 @@ Otro recuerdo muy arraigado relacionado con el Mario 3, y que es uno de los más
 
 Los tres estábamos muy emocionados de haber llegado tan lejos y ver tantas cosas nuevas. Me parece recordar que incluso nos turnábamos, cada quien pasaba uno o dos niveles, y cuando llegábamos a uno que se nos hiciera imposible, le dábamos el control a Moisés. Así fue como ya en la noche, por fin llegó al ultimo castillo y lo vimos derrotar a Bowser.
 
+<div style="text-align: center; margin: 20px 0;">
+  <img src="img/historias/videojuegos/smb3_b.gif" 
+       alt="Super Mario Bros 3 Bowser"
+       style="width: 800px; max-width: 100%; height: auto; display: block; margin: 0 auto;">
+</div>
+
 Ese día debe haber sido el cumpleaños de alguno de nosotros o alguna fiesta en particular porque recuerdo que, terminando de ver el final, yo fui a la cocina por unos tamales y regresé al cuarto a comer y a platica con ustedes sobre el final del juego. Hasta me acuerdo de que fue una de esas noches lluviosas. Imagino que sí era cumpleaños de alguien porque tal vez por esa razón nos dejaron jugar prácticamente todo el día.
 
 ![Super Mario Bros 3 Ending](img/historias/videojuegos/smb3_ending.jpg)
@@ -102,14 +108,30 @@ Hoy en día ya tengo muchas maneras de jugarlo, pero una de mis favoritas es la 
 ![Tecmo Bowl 3DS](img/historias/videojuegos/tb_3ds.jpg)
 
 ---
+## Mario Kart
+
+<p style="text-align: right;">📅 19 de agosto, 2026</p>
+
+Pasando a juegos de SNES, son pocos los que jugué, pero uno de los que más me gustan y al que vuelvo constantemente después de un tiempo, es Mario Kart. Lo que lo hace especial no es simplemente haber sido el primero, sino que fue un parteaguas. Prácticamente creó y popularizó el género de carreras de karts.
+
+Recuerdo las tardes que pasábamos partiéndonos de risa con este juego. A veces lo jugábamos en solitario y otras en multijugador, pero siempre que alguien jugaba, estábamos los demás viendo.
+
+![Mario Kart](img/historias/videojuegos/mk.jpg)
+
+Hoy en día se habla mucho sobre las maravillas de ingeniería que tuvieron que hacer los desarrolladores para poder crear este juego, como la implementación del famoso “Modo 7” y otras cosas. Pero en aquellos años, lo único que importaba es que era uno de los juegos de carreras más divertidos que había. En este juego fue donde empecé a simpatizar con los Koopa Troopa, hicieron muy simpática la tortuguita.
+
+![Koopa Mario Kart](img/historias/videojuegos/kt_mk.webp)
+
+---
 ## Pragmata
 
 <p style="text-align: right;">📅 5 de mayo, 2026</p>
 
-Debido a mi baja tolerancia a la frustración, durante mucho tiempo he estado evitando juegos que me parezcan a simple vista difíciles o retadores. Pero Pragmata me empezó a llamar la atención por su temáica espacial, por el carisma de sus protagonistas y por su corta duración. Así que le di una oportunidad al demo. Lo descargué en mi Switch 2 y cuando terminé de jugarlo, estaba seguro de que ese sería el próximo juego que me compraría. A pesar de que la versión de PC es capaz de entregar la mejor calidad de imágen, decidí comprarlo en Switch por la comodidad y la practicidad. Lo terminé en una semana exactamente y me gustó tanto que después me lo compre también en Steam y lo jugué de nuevo en la computadora. Puedo decir sin equivocarme, que este juego será uno de mis favoritos de todos los tiempos, a la par de otros como Ocarina of Time.
+Debido a mi baja tolerancia a la frustración, durante mucho tiempo he estado evitando juegos que me parezcan a simple vista difíciles o retadores. Pero Pragmata me empezó a llamar la atención por su temática espacial, por el carisma de sus protagonistas y por su corta duración. Así que le di una oportunidad al demo. Lo descargué en mi Switch 2 y cuando terminé de jugarlo, estaba seguro de que ese sería el próximo juego que me compraría. A pesar de que la versión de PC es capaz de entregar la mejor calidad de imágen, decidí comprarlo en Switch por la comodidad y la practicidad. Lo terminé en una semana exactamente y me gustó tanto que después me lo compre también en Steam y lo jugué de nuevo en la computadora. Puedo decir sin equivocarme, que este juego será uno de mis favoritos de todos los tiempos, a la par de otros como Ocarina of Time.
 
 ![Pragmata](img/historias/videojuegos/pragmata.jpg)
 
 Lo tiene todo, un sistema de combate frenético y bien diseñado, un motor gráfico sorprendente, una historia sencilla pero entrañable, una banda sonora que acompaña de manera perfecta a la historia y la acción, haciendo más inmersivo el juego, y la duración del propio juego es más que razonable. Es perfecto.
 
 ![Pragmata](img/historias/videojuegos/pragmata_b.jpg)
+
