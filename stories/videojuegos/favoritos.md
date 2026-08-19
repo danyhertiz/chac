@@ -93,7 +93,7 @@ No me considero fanático del futbol americano ni de sus videojuegos, pero el Te
 
 Para mí, su punto fuerte nunca estuvo en los gráficos o la simulación del deporte, sino en tomar como base el futbol americano y simplificarlo lo suficiente para que entrara en una consola de 8 bits, pero sin perder la emoción, la tensión y lo impredecible que es ese deporte. De ese modo el resultado es un juego divertido y adictivo, pero sin pretender ser un simulador realista, tal como intentan los juegos de deportes de hoy en día.
 
-Una de las cosas mas geniales que había en aquél entonces era la posibilidad de jugar versiones portátiles de muy parecidas a los juegos de consola. Algunas adaptaciones eran bastante fieles a la versión de sobremesa, pero en este caso era una copia exacta, las únicas diferencias era la adaptación de los sprites a la pequeña pantalla del Game Boy y el hecho de que era en blanco y negro. Pero creo recordar que incluso los passwords de NES funcionaban en la versión de Game Boy. Además, era lo máximo poder jugar de a dos por medio del cable link.
+Una de las cosas mas geniales que había en aquél entonces era la posibilidad de jugar versiones portátiles muy parecidas a los juegos de consola. Algunas adaptaciones eran bastante fieles a la versión de sobremesa, pero en este caso era una copia exacta, las únicas diferencias era la adaptación de los sprites a la pequeña pantalla del Game Boy y el hecho de que era en blanco y negro. Pero creo recordar que incluso los passwords de NES funcionaban en la versión de Game Boy. Además, era lo máximo poder jugar de a dos por medio del cable link.
 
 ![Tecmo Bowl Game Boy](img/historias/videojuegos/tb_gb.jpg)
 
