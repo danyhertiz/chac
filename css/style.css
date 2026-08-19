@@ -113,6 +113,15 @@ main {
     object-fit: contain;
 }
 
+.video-muted {
+    display: block;
+    width: 800px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+}
+
 .card {
     background-color: var(--card-bg-color-alpha);
     border-radius: 8px;

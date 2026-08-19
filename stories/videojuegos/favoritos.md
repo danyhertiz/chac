@@ -31,7 +31,11 @@ Creo que nos fue mejor que a los japoneses al tener 3 juegos de Super Mario en e
 
 Para mí es muy grato recordar esas tardes en las que la experiencia de jugar NES no era solitaria, sino colectiva, uno jugaba mientras los otros observábamos y comentábamos. En especial recuerdo cómo jugábamos a imaginar que los personajes del Super Mario Bros 2, avanzaban con diferentes objetivos que no tenían nada que ver con los del juego. Como cuando decíamos que la princesa iba de compras, y cada enemigo que levantaba era algo que echaba a su carrito del super. O cada vez que era alcanzada por un enemigo se quejaba de que maltrataban su cutis jejeje. Incluso jugábamos a que preparaba recetas, en lugar de estar peleando contra algún jefe, imaginábamos que estaba cocinando. Estábamos bien locos, pero eran tardes muy agradables.
 
-![Super Mario Bros 2 Box](img/historias/videojuegos/smb2_box.jpg)
+<div style="text-align: center; margin: 20px 0;">
+  <img src="img/historias/videojuegos/smb2.gif" 
+       alt="Super Mario Bros 2 Gameplay"
+       style="width: 800px; max-width: 100%; height: auto; display: block; margin: 0 auto;">
+</div>
 
 Eso es lo que me marcó en este caso, no el juego como tal, sino lo que nos permitía imaginar, bromear y pasarla genial. Por eso lo considero uno de mis favoritos. Además, tenía unos escenarios y personajes muy variados. Es curioso como de ese juego que no pertenecía al mundo de Super Mario, se terminaron adoptando muchos personajes que ahora son parte de la franquicia. Mis favoritos son los Shy Guy. Con el paso de los años les han dado mucha personalidad.
 
@@ -80,13 +84,17 @@ Es curioso como funciona la memoria, porque, hace unos años yo tenía un perfum
 
 Los juegos de Double Dragon los conocimos en el orden inverso. Primero jugamos el 3 y lo rentábamos tanto que ya después mejor nos lo compraron. Luego probamos el 2 y también nos gustó. Y aunque al final conocimos el 1, yo ya estaba tan acostumbrado al los otros dos que el primero casi no me llamó la atención.
 
-![Double Dragon 3](img/historias/videojuegos/dd3.jpg)
+<div style="text-align: center; margin: 20px 0;">
+  <img src="img/historias/videojuegos/dd3.webp" 
+       alt="Double Dragon 3 Gameplay"
+       style="width: 800px; max-width: 100%; height: auto; display: block; margin: 0 auto;">
+</div>
 
 Me parece recordar que en algún momento lo llegamos a tener dos veces. Primero la versión de Family, que era un cartucho amarillo y de hecho sí había ciertas diferencias, como que los personajes tenían menos barras de vida que en el original de NES, pero el de Family también tenía la ventaja de contar con ese cheat que se activaba cuando presionabas “Pausa + A” y te llevaba al siguiente escenario.
 
 ![Double Dragon 3 Family](img/historias/videojuegos/dd3_family.jpg)
 
-Ese es uno de los juegos en los que sí me llegué a considerar experto. Me gustaba mucho cuando lo jugábamos tu y yo en cooperativo
+Ese es uno de los juegos en los que sí me llegué a considerar experto. Me gustaba mucho cuando lo jugábamos tu y yo en cooperativo.
 
 ---
 ## Tecmo Bowl
@@ -95,7 +103,9 @@ Ese es uno de los juegos en los que sí me llegué a considerar experto. Me gust
 
 No me considero fanático del futbol americano ni de sus videojuegos, pero el Tecmo Bowl siempre me gustó por su sencillez y su forma de recrear un partido de americano en la medida de las posibilidades de la consola. Fue hasta años después de conocerlo, cuando entendí por qué los escudos de sus equipos no coincidían con los escudos reales, y era por el tema de las licencias, pero eso nunca me importó. Lo que realmente importaba era que el juego reducía la complejidad del fútbol americano a sus elementos más esenciales, creando una experiencia inmediata y adictiva. El libro de jugadas contaba con 4 en total, lo que convertía la idea original de “estrategia” en un simple “piedra, papel o tijeras”
 
-![Tecmo Bowl](img/historias/videojuegos/tb.jpg)
+<video autoplay loop muted playsinline class="video-muted">
+  <source src="img/historias/videojuegos/tecmo.mp4" type="video/mp4">
+  </video>
 
 Para mí, su punto fuerte nunca estuvo en los gráficos o la simulación del deporte, sino en tomar como base el futbol americano y simplificarlo lo suficiente para que entrara en una consola de 8 bits, pero sin perder la emoción, la tensión y lo impredecible que es ese deporte. De ese modo el resultado es un juego divertido y adictivo, pero sin pretender ser un simulador realista, tal como intentan los juegos de deportes de hoy en día.
 
@@ -116,7 +126,11 @@ Pasando a juegos de SNES, son pocos los que jugué, pero uno de los que más me 
 
 Recuerdo las tardes que pasábamos partiéndonos de risa con este juego. A veces lo jugábamos en solitario y otras en multijugador, pero siempre que alguien jugaba, estábamos los demás viendo.
 
-![Mario Kart](img/historias/videojuegos/mk.jpg)
+<div style="text-align: center; margin: 20px 0;">
+  <img src="img/historias/videojuegos/mk.gif" 
+       alt="Mario Kart Gameplay"
+       style="width: 800px; max-width: 100%; height: auto; display: block; margin: 0 auto;">
+</div>
 
 Hoy en día se habla mucho sobre las maravillas de ingeniería que tuvieron que hacer los desarrolladores para poder crear este juego, como la implementación del famoso “Modo 7” y otras cosas. Pero en aquellos años, lo único que importaba es que era uno de los juegos de carreras más divertidos que había. En este juego fue donde empecé a simpatizar con los Koopa Troopa, hicieron muy simpática la tortuguita.
 
@@ -147,11 +161,16 @@ Me da gusto que hasta ahora no han dejado en el olvido a la franquicia. De vez e
 
 ![Star Fox 64](img/historias/videojuegos/sf64.jpg)
 
+  <video autoplay loop muted playsinline class="video-muted">
+  <source src="img/historias/videojuegos/sfs.mp4" type="video/mp4">
+  </video>
 
 ---
 ## Pragmata
 
 <p style="text-align: right;">📅 5 de mayo, 2026</p>
+
+![Pragmata](img/historias/videojuegos/pragmata_b.jpg)
 
 Debido a mi baja tolerancia a la frustración, durante mucho tiempo he estado evitando juegos que me parezcan a simple vista difíciles o retadores. Pero Pragmata me empezó a llamar la atención por su temática espacial, por el carisma de sus protagonistas y por su corta duración. Así que le di una oportunidad al demo. Lo descargué en mi Switch 2 y cuando terminé de jugarlo, estaba seguro de que ese sería el próximo juego que me compraría. A pesar de que la versión de PC es capaz de entregar la mejor calidad de imagen, decidí comprarlo en Switch por la comodidad y la practicidad. Lo terminé en una semana exactamente y me gustó tanto que después me lo compré también en Steam y lo jugué de nuevo en la computadora. Puedo decir sin equivocarme, que este juego será uno de mis favoritos de todos los tiempos, a la par de otros como Ocarina of Time.
 
@@ -159,12 +178,6 @@ Debido a mi baja tolerancia a la frustración, durante mucho tiempo he estado ev
 
 Lo tiene todo, un sistema de combate frenético y bien diseñado, un motor gráfico sorprendente, una historia sencilla pero entrañable, una banda sonora que acompaña de manera perfecta a la historia y la acción, haciendo más inmersivo el juego, y la duración del propio juego es más que razonable. Es perfecto.
 
-![Pragmata](img/historias/videojuegos/pragmata_b.jpg)
-
-<div style="text-align: center; margin: 20px 0;">
-  <img src="img/historias/videojuegos/pragmata_animado.webp" 
-       alt="Pragmata gameplay"
-       style="width: 800px; max-width: 100%; height: auto; display: block; margin: 0 auto;">
-</div>
-
-
+<video autoplay loop muted playsinline class="video-muted">
+  <source src="img/historias/videojuegos/prag.mp4" type="video/mp4">
+  </video>
