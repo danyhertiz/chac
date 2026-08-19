@@ -123,15 +123,48 @@ Hoy en día se habla mucho sobre las maravillas de ingeniería que tuvieron que 
 ![Koopa Mario Kart](img/historias/videojuegos/kt_mk.webp)
 
 ---
+## Star Fox
+
+<p style="text-align: right;">📅 19 de agosto, 2026</p>
+
+Ningún otro juego de SNES me causó tanto impacto como Star Fox, ni siquiera los de Mario. Y es que no era el típico juego de Super Nintendo con sprites planos y fondos coloridos. Algo tenía diferente a todo lo que había visto antes, en ese momento no supe que era, pero ese algo eran los polígonos.
+
+<div style="text-align: center; margin: 20px 0;">
+  <img src="img/historias/videojuegos/sf_a.gif" 
+       alt="Star Fox SNES"
+       style="width: 800px; max-width: 100%; height: auto; display: block; margin: 0 auto;">
+</div>
+
+El framerate era bajísimo y los controles algo toscos, pero todo eso quedaba opacado por lo divertido y emocionante que era. Muchas veces tuve sueños relacionados con ese juego, pero nunca se los conté a nadie. A la fecha ya solo recuerdo vagamente escenas concretas, como una gigantesca Arwing descendiendo en el patio de la casa. O uno en el que tu y yo íbamos pilotando cada quien su Arwing y atravesando por un agujero de gusano en el espacio. Ya sabes, cosas locas que sueña uno cuando es niño.
+
+<div style="text-align: center; margin: 20px 0;">
+  <img src="img/historias/videojuegos/sf_b.gif" 
+       alt="Star Fox"
+       style="width: 800px; max-width: 100%; height: auto; display: block; margin: 0 auto;">
+</div>
+
+Me da gusto que hasta ahora no han dejado en el olvido a la franquicia. De vez en cuando siguen sacando juegos de Star Fox. Creo que todos han sido buenos, a su manera. Pero mis favoritos siempre serán el de 64 y sus respectivos remakes.
+
+![Star Fox 64](img/historias/videojuegos/sf64.jpg)
+
+
+---
 ## Pragmata
 
 <p style="text-align: right;">📅 5 de mayo, 2026</p>
 
-Debido a mi baja tolerancia a la frustración, durante mucho tiempo he estado evitando juegos que me parezcan a simple vista difíciles o retadores. Pero Pragmata me empezó a llamar la atención por su temática espacial, por el carisma de sus protagonistas y por su corta duración. Así que le di una oportunidad al demo. Lo descargué en mi Switch 2 y cuando terminé de jugarlo, estaba seguro de que ese sería el próximo juego que me compraría. A pesar de que la versión de PC es capaz de entregar la mejor calidad de imágen, decidí comprarlo en Switch por la comodidad y la practicidad. Lo terminé en una semana exactamente y me gustó tanto que después me lo compre también en Steam y lo jugué de nuevo en la computadora. Puedo decir sin equivocarme, que este juego será uno de mis favoritos de todos los tiempos, a la par de otros como Ocarina of Time.
+Debido a mi baja tolerancia a la frustración, durante mucho tiempo he estado evitando juegos que me parezcan a simple vista difíciles o retadores. Pero Pragmata me empezó a llamar la atención por su temática espacial, por el carisma de sus protagonistas y por su corta duración. Así que le di una oportunidad al demo. Lo descargué en mi Switch 2 y cuando terminé de jugarlo, estaba seguro de que ese sería el próximo juego que me compraría. A pesar de que la versión de PC es capaz de entregar la mejor calidad de imagen, decidí comprarlo en Switch por la comodidad y la practicidad. Lo terminé en una semana exactamente y me gustó tanto que después me lo compré también en Steam y lo jugué de nuevo en la computadora. Puedo decir sin equivocarme, que este juego será uno de mis favoritos de todos los tiempos, a la par de otros como Ocarina of Time.
 
 ![Pragmata](img/historias/videojuegos/pragmata.jpg)
 
 Lo tiene todo, un sistema de combate frenético y bien diseñado, un motor gráfico sorprendente, una historia sencilla pero entrañable, una banda sonora que acompaña de manera perfecta a la historia y la acción, haciendo más inmersivo el juego, y la duración del propio juego es más que razonable. Es perfecto.
 
 ![Pragmata](img/historias/videojuegos/pragmata_b.jpg)
+
+<div style="text-align: center; margin: 20px 0;">
+  <img src="img/historias/videojuegos/pragmata_animado.webp" 
+       alt="Pragmata gameplay"
+       style="width: 800px; max-width: 100%; height: auto; display: block; margin: 0 auto;">
+</div>
+
 
