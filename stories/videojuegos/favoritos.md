@@ -85,6 +85,22 @@ Ese es uno de los juegos en los que sí me llegué a considerar experto. Me gust
 ---
 ## Tecmo Bowl
 
+<p style="text-align: right;">📅 19 de agosto, 2026</p>
+
+No me considero fanático del futbol americano ni de sus videojuegos, pero el Tecmo Bowl siempre me gustó por su sencillez y su forma de recrear un partido de americano en la medida de las posibilidades de la consola. Fue hasta años después de conocerlo, cuando entendí por qué los escudos de sus equipos no coincidían con los escudos reales, y era por el tema de las licencias, pero eso nunca me importó. Lo que realmente importaba era que el juego reducía la complejidad del fútbol americano a sus elementos más esenciales, creando una experiencia inmediata y adictiva. El libro de jugadas contaba con 4 en total, lo que convertía la idea original de “estrategia” en un simple “piedra, papel o tijeras”
+
+![Tecmo Bowl](img/historias/videojuegos/tb.jpg)
+
+Para mí, su punto fuerte nunca estuvo en los gráficos o la simulación del deporte, sino en tomar como base el futbol americano y simplificarlo lo suficiente para que entrara en una consola de 8 bits, pero sin perder la emoción, la tensión y lo impredecible que es ese deporte. De ese modo el resultado es un juego divertido y adictivo, pero sin pretender ser un simulador realista, tal como intentan los juegos de deportes de hoy en día.
+
+Una de las cosas mas geniales que había en aquél entonces era la posibilidad de jugar versiones portátiles de muy parecidas a los juegos de consola. Algunas adaptaciones eran bastante fieles a la versión de sobremesa, pero en este caso era una copia exacta, las únicas diferencias era la adaptación de los sprites a la pequeña pantalla del Game Boy y el hecho de que era en blanco y negro. Pero creo recordar que incluso los passwords de NES funcionaban en la versión de Game Boy. Además, era lo máximo poder jugar de a dos por medio del cable link.
+
+![Tecmo Bowl Game Boy](img/historias/videojuegos/tb_gb.jpg)
+
+Hoy en día ya tengo muchas maneras de jugarlo, pero una de mis favoritas es la versión de NES en mi 3DS. Ver ese juego en una pequeña y brillante pantalla a todo color, es para mí una de las mejores maneras de revivir aquellos tiempos.
+
+![Tecmo Bowl 3DS](img/historias/videojuegos/tb_3ds.jpg)
+
 ---
 ## Pragmata
 
@@ -97,4 +113,3 @@ Debido a mi baja tolerancia a la frustración, durante mucho tiempo he estado ev
 Lo tiene todo, un sistema de combate frenético y bien diseñado, un motor gráfico sorprendente, una historia sencilla pero entrañable, una banda sonora que acompaña de manera perfecta a la historia y la acción, haciendo más inmersivo el juego, y la duración del propio juego es más que razonable. Es perfecto.
 
 ![Pragmata](img/historias/videojuegos/pragmata_b.jpg)
-
