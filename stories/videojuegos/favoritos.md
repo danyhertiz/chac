@@ -61,7 +61,9 @@ De cualquier manera, el Mario 3 se volvió parte de nuestra colección “fija�
 
 Otro recuerdo muy arraigado relacionado con el Mario 3, y que es uno de los más felices que tengo, es cuando Moisés lo terminó y vimos el final por primera vez. Nos enseño que las flautas servían para acceder a niveles mas avanzados sin tener que pasar por todos los mundos. Pero creo que en esa ocasión sí lo jugamos todo de corrido. Uno de esos raros días en los que el Nintendo estuvo encendido prácticamente todo el día. Porque recuerdo que esa vez fue que, ya en el mundo 7, Moisés llegó al castillo que está lleno de bloques amarillos, y nos mostró que ya había encontrado el switch que los convierte en monedas. Luego me pasó el control a mí, y me dejó haciendo muchas vidas para que al llegar al mundo 8 tuviéramos las suficientes oportunidades para terminar el juego.
 
-![Super Mario Bros 3 Castillo de monedas](img/historias/videojuegos/smb3_fortress.jpg)
+<video autoplay loop muted playsinline class="video-muted">
+  <source src="img/historias/videojuegos/smb3_monedas.mp4" type="video/mp4">
+  </video>
 
 Los tres estábamos muy emocionados de haber llegado tan lejos y ver tantas cosas nuevas. Me parece recordar que incluso nos turnábamos, cada quien pasaba uno o dos niveles, y cuando llegábamos a uno que se nos hiciera imposible, le dábamos el control a Moisés. Así fue como ya en la noche, por fin llegó al ultimo castillo y lo vimos derrotar a Bowser.
 
@@ -164,6 +166,25 @@ Me da gusto que hasta ahora no han dejado en el olvido a la franquicia. De vez e
   <video autoplay loop muted playsinline class="video-muted">
   <source src="img/historias/videojuegos/sfs.mp4" type="video/mp4">
   </video>
+
+---
+## Super Mario 64
+
+<p style="text-align: right;">📅 20 de agosto, 2026</p>
+
+Según mis vagos recuerdos. La primera vez que supimos de la existencia de Mario 64 fue cuando Paco entró al cuarto y nos platicó que el próximo juego de Mario iba a ser en tres dimensiones, y hasta nos explicó que era como si la cámara estuviera siguiendo a Mario y se le pudiera ver desde cualquier ángulo. No sé en dónde lo vería, pero estoy seguro de que eso nos lo platicó mucho antes de que viéramos imágenes en Nintendomanía.
+
+<div style="text-align: center; margin: 20px 0;">
+  <img src="img/historias/videojuegos/sm64.webp" 
+       alt="Super Mario 64"
+       style="width: 800px; max-width: 100%; height: auto; display: block; margin: 0 auto;">
+</div>
+
+Me parece recordar que en alguna tienda departamental pudimos ver el N64 tras una vitrina, y al menos a mí me sorprendió el tamaño y la forma de los enchufes de los controles y también el tamaño de los botones “C”. Son de esas veces en que, aunque ya hayas visto algo muchas veces en la tele, ya cuando te toca verlo en persona es mucho más sorprendente.
+
+Posteriormente nos tocó ver la consola en acción. Hubo un día en que Lucha y Moisés nos llevaron a ver una película en el cine a plaza Tepeyac, y terminamos viendo dos 🤭 Recuerdo que ellos nos llevaron a ver la de Tarzán y cuando salimos nos dieron a elegir, si queríamos no sé qué cosa o ver otra película, así que elegimos ver el Episodio 1 de Star Wars. El caso es que, andando en esa plaza, entramos a una tienda departamental y vimos uno de esos “stands” en el que había un Nintendo 64 encerrado en su burbujita y conectado a una tele. La consola estaba encendida y tenía puesto el cartucho de Mario 64. Nos quedamos ahí viendo la introducción una y otra vez.
+
+![Nintendo 64 Stand](img/historias/videojuegos/n64_stand.jpg)
 
 ---
 ## Pragmata

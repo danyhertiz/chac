@@ -130,6 +130,7 @@ main {
     width: 800px;
     max-width: 100%;
     height: auto;
+    aspect-ratio: auto;
     margin: 0 auto 20px;
     border-radius: 8px;
 }
