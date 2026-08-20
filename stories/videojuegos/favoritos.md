@@ -12,7 +12,7 @@ Hay tantos juegos de los que me gustaría hablar y que no quiero dejar fuera, pe
 ## Solitario
 <p style="text-align: right;">📅 12 de agosto, 2026</p>
 
-Alguna vez escuché que el pack de juegos que vino con Windows 95, como le solitario y el buscaminas entre otros, estaba encaminado a que las personas se familiarizaran con el uso del mouse, ya que en aquella época era una novedad. Así que, mediante juegos, esperaban que las personas supieran lo que era un clic izquierdo, un clic derecho, arrastrar, etc. No sé si es sólo una suposición, pero creo que tiene sentido.
+Alguna vez escuché que el pack de juegos que vino con Windows 95, como el solitario y el buscaminas entre otros, estaba encaminado a que las personas se familiarizaran con el uso del mouse, ya que en aquella época era una novedad. Así que, mediante juegos, esperaban que las personas supieran lo que era un clic izquierdo, un clic derecho, arrastrar, etc. No sé si es sólo una suposición, pero creo que tiene sentido.
 
 Aunque tal vez no coincida del todo en el concepto moderno de “videojuego”, creo que al menos por definición lo es. Y al ser una de mis primeras experiencias con los juegos de computadora, decidí agregarlo a la lista.
 

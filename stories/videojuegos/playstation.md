@@ -16,7 +16,7 @@ Aunque sé que el primer modelo es el conocido como PSX, yo me familiaricé más
 
 ![Emurayden](img/historias/videojuegos/emurayden.jpg)
 
-En ese entonces juagaba PS2 en el mismo café internet de la Agrícola Oriental al que iba con mis compañeros del CCH. Quedé fascinado por el Metal Gear Solid 2 y el Ace Combat 4, pero al no tener PS2 en casa, lo más cercano a eso eran los juegos de PS1, fue así como comencé a jugar Metal Gear Solid en la computadora. Era muy fácil seguirle la pista al juego ya que venía en español. Me gustó mucho y a partir de ahí fui siguiendo al menos de reojo el progreso de la franquicia.
+En ese entonces jugaba PS2 en el mismo café internet de la Agrícola Oriental al que iba con mis compañeros del CCH. Quedé fascinado por el Metal Gear Solid 2 y el Ace Combat 4, pero al no tener PS2 en casa, lo más cercano a eso eran los juegos de PS1, fue así como comencé a jugar Metal Gear Solid en la computadora. Era muy fácil seguirle la pista al juego ya que venía en español. Me gustó mucho y a partir de ahí fui siguiendo al menos de reojo el progreso de la franquicia.
 
 ![Metal Gear Solid](img/historias/videojuegos/mgs1.jpg)
 

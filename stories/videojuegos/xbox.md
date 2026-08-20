@@ -37,6 +37,8 @@ Mis favoritos de Xbox Clásico:
 ---
 ## Xbox 360
 
+![Xbox 360](img/historias/videojuegos/360.png)
+
 Si de la primera Xbox tuve poco que decir, de las siguientes generaciones es aun menos. Si bien tengo en mente algunos trailers o videos de juegos en los que me sorprendía su potencia gráfica como Lost Planet, Kameo, Gears of War o Halo 3, apenas recuerdo vagamente haber tocado un control de 360. Y aún conservo el Gears of War para PC que me regalaste. 😊
 
 ![Gears of War](img/historias/videojuegos/gears.jpg)
@@ -48,8 +50,12 @@ Mis favoritos de Xbox 360:
 * Ninguno
 
 ---
-## Xbox One / Xbox Series X
+## Xbox One y Xbox Series X
+
+![Xbox One](img/historias/videojuegos/xbox_one.png)
 
 Prácticamente hasta aquí llega mi historia con Xbox. Nunca me atrapó como consumidor y mucho menos como fan de la marca. De las ultimas dos consolas no he sabido nada y los pocos juegos que me gustan, también están en PC, así que nunca tuve un incentivo para querer una consola Xbox. A lo más que he llegado es a comprarme un control de Series X para jugar en la computadora, y eso solamente por la compatibilidad total que tiene con Windows, aunque veo que Steam ya puede hacer uso de cualquier control sin problemas, incluso con mi Pro Controller de Switch 2, por lo que no creo volver a comprar otro control de Xbox, tal vez me compre uno de PS5 después. Pero bueno, volviendo al tema de las consolas, esa fue mi corta historia con Xbox.
+
+![Xbox Series X](img/historias/videojuegos/seriesx.png)
 
 ![Control Xbox Series X](img/historias/videojuegos/xboxx_control.jpg)
