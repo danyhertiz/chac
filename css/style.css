@@ -107,8 +107,12 @@ main {
 }
 
 .imagen-icono {
+    display: inline-block;
     width: 1em;
     height: 1em;
+    max-width: none;
+    max-height: none;
+    margin: 0;
     vertical-align: -0.15em;
     object-fit: contain;
 }
@@ -399,6 +403,13 @@ main.video-page-main {
     margin: 1.5rem auto;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.story-full h1 .imagen-icono {
+    display: inline-block;
+    max-width: none;
+    max-height: none;
+    margin: 0;
 }
 
 /* Elimina box-shadow y border-radius en imágenes PNG para evitar visible container shadow con fondos transparentes */
