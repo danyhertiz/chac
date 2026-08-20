@@ -71,7 +71,7 @@ Los tres estábamos muy emocionados de haber llegado tan lejos y ver tantas cosa
        style="width: 800px; max-width: 100%; height: auto; display: block; margin: 0 auto;">
 </div>
 
-Ese día debe haber sido el cumpleaños de alguno de nosotros o alguna fiesta en particular porque recuerdo que, terminando de ver el final, yo fui a la cocina por unos tamales y regresé al cuarto a comer y a platica con ustedes sobre el final del juego. Hasta me acuerdo de que fue una de esas noches lluviosas. Imagino que sí era cumpleaños de alguien porque tal vez por esa razón nos dejaron jugar prácticamente todo el día.
+Ese día debe haber sido el cumpleaños de alguno de nosotros o alguna fiesta en particular porque recuerdo que, terminando de ver el final, yo fui a la cocina por unos tamales y regresé al cuarto a comer y a platicar con ustedes sobre el final del juego. Hasta me acuerdo de que fue una de esas noches lluviosas. Imagino que sí era cumpleaños de alguien porque tal vez por esa razón nos dejaron jugar prácticamente todo el día.
 
 ![Super Mario Bros 3 Ending](img/historias/videojuegos/smb3_ending.jpg)
 
