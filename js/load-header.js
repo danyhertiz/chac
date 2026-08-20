@@ -17,7 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const headerHTML = `<header>
         <div class="header-main">
             <div class="binary-container"></div>
-            <h1><a href="${basePath}index.html" style="text-decoration: none; color: inherit;">Dany Hertiz</a></h1>
+            <div class="header-brand">
+                <h1><a href="${basePath}index.html" style="text-decoration: none; color: inherit;">Dany Hertiz</a></h1>
+            </div>
             <nav class="main-nav">
                 <ul class="nav-links" id="nav-links">
                     <li><a href="${basePath}historias.html">Historias</a></li>
@@ -33,10 +35,36 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         insertionPoint.insertAdjacentHTML('afterbegin', headerHTML);
     }
+
+    initializeHeaderScroll();
     
     // Inicializar la animación del fondo binario DESPUÉS de inyectar el header
     initializeBinaryBackground();
 });
+
+function initializeHeaderScroll() {
+    const header = document.querySelector('header');
+    if (!header) return;
+
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    function updateHeader() {
+        const currentScrollY = window.scrollY;
+        const scrollingDown = currentScrollY > lastScrollY;
+
+        header.classList.toggle('header-collapsed', scrollingDown && currentScrollY > 20);
+        lastScrollY = currentScrollY;
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateHeader);
+            ticking = true;
+        }
+    }, { passive: true });
+}
 
 // Función para inicializar el fondo binario
 function initializeBinaryBackground() {
