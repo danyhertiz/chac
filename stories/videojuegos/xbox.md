@@ -1,8 +1,9 @@
 <p style="text-align: right;">📅 12 de Agosto, 2026</p>
 
-<div style="width: 400px; margin: auto;">
-
-![Xbox](img/historias/videojuegos/xbox_logo.png)
+<div style="text-align: center; margin: 20px 0;">
+  <img src="img/historias/videojuegos/xbox_logo.png" 
+       alt="Xbox"
+       style="width: 400px; max-width: 100%; height: auto; display: block; margin: 0 auto;">
 </div>
 
 Para hablar de consolas, quise poner primero a Xbox, pero no porque me guste más, sino porque es de la que menos tengo que contar. Nunca he tenido predilección por estas consolas. Y aunque en su momento me llegaron a gustar algunos de sus juegos, realmente nunca tuve necesidad de comprarme la consola porque eventualmente esos juegos fueron saliendo en PC.
