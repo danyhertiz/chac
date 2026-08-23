@@ -1,0 +1,27 @@
+.emoji-container {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.emoji-flake {
+    animation: fall linear infinite;
+    color: white;
+    position: absolute;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.5);
+    top: -20px;
+    --horizontal-drift: 0px;
+}
+
+@keyframes fall {
+    0% { opacity: 0; transform: translateY(0) translateX(0); }
+    10% { opacity: 1; }
+    90% { opacity: 0.8; }
+    100% { opacity: 0; transform: translateY(100vh) translateX(var(--horizontal-drift)); }
+}
