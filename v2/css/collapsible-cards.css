@@ -16,7 +16,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem 2rem;
     margin-bottom: 0.75rem;
-    cursor: pointer;
+    cursor: default;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     min-width: 0;
     max-width: 100%;
@@ -62,6 +62,7 @@
 
 .collapsible-story .story-content {
     display: none;
+    cursor: default;
     color: var(--text-color);
     font-size: 1.15rem;
     line-height: 1.7;
@@ -113,6 +114,14 @@
     margin: 1.5rem auto;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.collapsible-story .story-content video,
+.collapsible-story .story-content iframe,
+.collapsible-story .story-content lite-youtube {
+    display: block;
+    max-width: 100%;
+    margin: 1.5rem auto;
 }
 
 .collapsible-story .story-content img[src$=".png"] {

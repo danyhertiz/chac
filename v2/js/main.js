@@ -203,5 +203,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    loadSection('videojuegos');
 });
