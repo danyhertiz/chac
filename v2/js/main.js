@@ -45,7 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (menu) {
-        menu.querySelectorAll('.menu-group').forEach((group) => {
+        const menuGroups = menu.querySelectorAll('.menu-group');
+
+        menuGroups.forEach((group) => {
             const parentButton = group.querySelector('.menu-parent');
 
             if (!parentButton) {
@@ -55,6 +57,17 @@ document.addEventListener('DOMContentLoaded', () => {
             parentButton.addEventListener('click', () => {
                 const isExpanded = group.classList.toggle('is-expanded');
                 parentButton.setAttribute('aria-expanded', String(isExpanded));
+
+                if (isExpanded) {
+                    menuGroups.forEach((otherGroup) => {
+                        if (otherGroup === group) {
+                            return;
+                        }
+
+                        otherGroup.classList.remove('is-expanded');
+                        otherGroup.querySelector('.menu-parent')?.setAttribute('aria-expanded', 'false');
+                    });
+                }
             });
         });
     }
@@ -71,6 +84,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const storiesMap = {
+        mamita: [
+            { file: 'golosinas.md', title: '🍫 Golosinas' },
+            { file: 'no_clases.md', title: '🎒 Mañana no hay clases' },
+            { file: 'esquema.md', title: '🌷 El esquema de la flor' },
+            { file: 'comida.md', title: '🍽️ Comida' }
+        ],
+        foza: [
+            { file: 'Prólogo.md', title: '📖 Prólogo' },
+            { file: 'Capítulo 1.md', title: '📖 Capítulo 1' },
+            { file: 'Capítulo 2.md', title: '📖 Capítulo 2' },
+            { file: 'Capítulo 3.md', title: '📖 Capítulo 3' },
+            { file: 'Capítulo 4.md', title: '📖 Capítulo 4' },
+            { file: 'Capítulo 5.md', title: '📖 Capítulo 5' },
+            { file: 'Capítulo 6.md', title: '📖 Capítulo 6' },
+            { file: 'Capítulo 7.md', title: '📖 Capítulo 7' },
+            { file: 'Epílogo.md', title: '📖 Epílogo' }
+        ],
         videojuegos: [
             { file: 'Inicios.md', title: '🕹️ Inicios' },
             { file: 'pc.md', title: 'PC', icon: '../img/historias/videojuegos/steam_logo.png' },
@@ -172,6 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    // INICIO: código que inserta contenido en el contenedor principal.
     const loadSection = async (sectionName) => {
         if (!mainContent || !storiesMap[sectionName]) {
             return;
@@ -190,6 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
             mainContent.innerHTML = `<div class="card"><p>Error al cargar la sección: ${error.message}</p></div>`;
         }
     };
+    // FIN: código que inserta contenido en el contenedor principal.
 
     menu?.querySelectorAll('.submenu button, nav > button').forEach((button) => {
         const sectionName = button.dataset.section || button.textContent.trim().toLowerCase();

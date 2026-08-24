@@ -69,19 +69,24 @@ header {
 }
 
 main {
-    margin-left: var(--menu-width);
-    max-width: 1200px;
+    /* Posición horizontal: centra el contenedor dentro del espacio disponible. */
+    margin-left: max(var(--menu-width), calc((100vw + var(--menu-width) - 1500px) / 2));
+    /* Dimensiones del contenedor principal: ajustar aquí el ancho máximo y la altura mínima. */
+    max-width: 1500px;
     min-height: calc(100vh - var(--header-height) - 80px);
+    /* Padding del contenedor principal: espacio entre sus límites y el contenido. */
     padding: 3rem 2rem;
     position: relative;
     z-index: 1;
 }
 
 .main-container {
+    /* Alineación del contenido: controla la posición de las tarjetas dentro del contenedor. */
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    /* Padding entre el contenedor principal y las tarjetas. */
     padding: 20px;
 }
 
@@ -89,6 +94,7 @@ main {
     background: var(--panel-bg);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Padding interno de las tarjetas: espacio alrededor del texto y demás contenido. */
     padding: 1.5rem;
     width: 100%;
 }
@@ -181,7 +187,7 @@ main {
     color: white;
     cursor: pointer;
     font: inherit;
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 1rem;
     text-align: left;
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
@@ -196,7 +202,7 @@ main {
 .submenu button {
     background: rgba(45, 56, 77, 0.62);
     font-size: 0.95rem;
-    padding: 0.6rem 0.85rem;
+    padding: 0.35rem 0.85rem;
 }
 
 .menu-toggle,
@@ -235,15 +241,18 @@ footer {
 
     main {
         margin-left: 0;
+        /* Padding del contenedor principal en móviles. */
         padding: 2rem 0.75rem;
     }
 
     .main-container {
         flex-direction: column;
+        /* Padding entre el contenedor y las tarjetas en móviles. */
         padding: 0;
     }
 
     .card {
+        /* Padding interno de las tarjetas en móviles. */
         padding: 1rem;
     }
 
