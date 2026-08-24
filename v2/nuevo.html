@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dany Hertiz | Nueva versión</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/collapsible-cards.css">
     <link rel="stylesheet" href="css/binary-background.css">
     <link rel="stylesheet" href="css/emoji-background.css">
 </head>
@@ -37,7 +38,7 @@
                 <button class="menu-parent" type="button" aria-expanded="false" aria-controls="hobbies-submenu">Aficiones</button>
                 <div class="submenu" id="hobbies-submenu">
                     <button type="button">Informática</button>
-                    <button type="button">Videojuegos</button>
+                    <button type="button" data-section="videojuegos">Videojuegos</button>
                     <button type="button">Películas</button>
                     <button type="button">Series</button>
                     <button type="button">Música</button>
@@ -75,7 +76,7 @@
     </aside>
     <div class="menu-backdrop" aria-hidden="true"></div>
 
-    <main>
+    <main id="main-content">
         <div class="main-container">
             <div class="card">
                 <div class="welcome-section">
@@ -99,6 +100,7 @@
         <p>&copy; 2025 Dany Hertiz</p>
     </footer>
 
+    <script src="../js/marked.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
