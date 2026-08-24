@@ -6,22 +6,28 @@
 
 #stories-container {
     display: grid;
-    gap: 1.5rem;
+    gap: 0.75rem;
+    margin-top: 1rem;
 }
 
 .collapsible-story {
     background-color: var(--card-bg-color-alpha);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    margin-bottom: 1.5rem;
+    padding: 1rem 2rem;
+    margin-bottom: 0.75rem;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     min-width: 0;
     max-width: 100%;
 }
 
-.collapsible-story:hover {
+.collapsible-story.expanded {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.collapsible-story:not(.expanded):hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
@@ -72,6 +78,7 @@
 }
 
 .collapsible-story .story-content h2 {
+    color: var(--primary-color);
     font-size: 1.6rem;
     margin: 1.6rem 0 0.6rem;
     font-weight: 700;
@@ -89,6 +96,7 @@
     margin-bottom: 1rem;
     font-size: 1.15rem;
     line-height: 1.7;
+    text-align: justify;
 }
 
 .collapsible-story .story-content ul,
@@ -113,6 +121,22 @@
 }
 
 .collapsible-story.expanded .story-content {
+    display: block;
+}
+
+.collapse-story-button {
+    display: none;
+    margin: 1.5rem auto 0;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--primary-color);
+    cursor: pointer;
+    font: inherit;
+}
+
+.collapsible-story.expanded .collapse-story-button {
     display: block;
 }
 

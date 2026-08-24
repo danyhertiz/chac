@@ -112,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h2>${icon}${title}</h2>
                 </div>
                 <div class="story-content"></div>
+                <button type="button" class="collapse-story-button" aria-label="Colapsar tarjeta">Cerrar</button>
             `;
 
             const titleIcon = article.querySelector('.story-header h2 img.imagen-icono');
@@ -135,10 +136,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const header = article.querySelector('.story-header');
             const content = article.querySelector('.story-content');
+            const collapseButton = article.querySelector('.collapse-story-button');
 
             header.addEventListener('click', (event) => {
                 event.stopPropagation();
                 article.classList.toggle('expanded');
+            });
+
+            collapseButton.addEventListener('click', (event) => {
+                event.stopPropagation();
+                article.classList.remove('expanded');
             });
 
             const loadMarkdown = async () => {
