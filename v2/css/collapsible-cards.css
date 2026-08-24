@@ -129,6 +129,10 @@
     margin: 1.5rem auto;
 }
 
+.collapsible-story .story-content lite-youtube > iframe {
+    margin: 0;
+}
+
 .collapsible-story .story-content video[controls] {
     display: block;
     width: 100%;
