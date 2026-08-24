@@ -101,6 +101,10 @@ document.addEventListener('DOMContentLoaded', () => {
             { file: 'Capítulo 7.md', title: '📖 Capítulo 7' },
             { file: 'Epílogo.md', title: '📖 Epílogo' }
         ],
+        informatica: [
+            { file: 'inicios_informatica.md', title: '⌨️ Inicios en la informática' },
+            { file: 'mis_pc.md', title: '🖥️ Mis computadoras' },
+        ],
         videojuegos: [
             { file: 'Inicios.md', title: '🕹️ Inicios' },
             { file: 'pc.md', title: 'PC', icon: '../img/historias/videojuegos/steam_logo.png' },
@@ -108,6 +112,48 @@ document.addEventListener('DOMContentLoaded', () => {
             { file: 'playstation.md', title: 'PlayStation', icon: '../img/historias/videojuegos/ps_logo.png' },
             { file: 'nintendo.md', title: 'Nintendo', icon: '../img/historias/videojuegos/n64logo.png' },
             { file: 'favoritos.md', title: '🥇 Mis favoritos' }
+        ],
+        peliculas: [
+            { file: 'sagas.md', title: 'Sagas' },
+            { file: 'anime.md', title: 'Anime' },
+            { file: 'drama.md', title: 'Drama' },
+            { file: 'suspenso.md', title: 'Suspenso' },
+            { file: 'infantil.md', title: 'Infantiles' },
+            { file: 'navid.md', title: 'Navidadeñas' },
+        ],
+        series: [
+            { file: 'Dinosaurios.md', title: 'Dinosaurios' },
+            { file: 'Heidi.md', title: 'Heidi' },
+            { file: 'Calabozos.md', title: 'Calabozos y Dragones' },
+            { file: 'Historias_asobrosas.md', title: 'Historias asombrosas' },
+            { file: 'Cazafantasmas.md', title: 'Los Verdaderos Cazafantasmas' },
+            { file: 'Simpsons.md', title: 'Los Simpson' },
+            { file: 'Hey_Arnold.md', title: 'Hey Arnold' },
+            { file: 'Escandalosos.md', title: 'Escandalosos' },
+            { file: 'Maravillosos.md', title: 'Los Años Maravillosos' },
+            { file: 'House.md', title: 'Dr. House' },
+            { file: 'Eva.md', title: 'Todo Sobre Eva' },
+            { file: 'Beakman.md', title: 'El mundo de Beakman' },
+            { file: 'Mas_series.md', title: 'Más series' },
+        ],
+        musica: [
+            { file: 'Inicios.md', title: '🎵 Inicios en la música' },
+            { file: 'Grabadoras.md', title: 'Grabadoras' },
+        ],
+        juguetes: [
+            { file: 'camiones.md', title: 'Maquinaria de construcción' },
+            { file: 'Bloques.md', title: 'Cubos y bloques de madera' },
+            { file: 'Linternas.md', title: 'Linternas' },
+            { file: 'cotidianos.md', title: 'Juguetes cotidianos' },
+        ],
+        deportes: [
+            { file: 'futbol_escuela.md', title: '⚽ Fútbol' },
+            { file: 'basquetbol.md', title: '🏀 Basquetbol' },
+            { file: 'karate.md', title: '🥋 Karate' },
+        ],
+        varias: [
+            { file: 'fiestas.md', title: 'Fiestas' },
+            { file: 'reaccion.md', title: 'Reacción retardada' },
         ]
     };
 
@@ -118,6 +164,10 @@ document.addEventListener('DOMContentLoaded', () => {
             .filter(Boolean)
             .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
             .join(' ');
+    };
+
+    const storyDirectories = {
+        deportes: 'deporte'
     };
 
     const renderStories = (sectionName) => {
@@ -180,7 +230,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const loadMarkdown = async () => {
                 try {
-                    const response = await fetch(`../stories/${sectionName}/${encodeURIComponent(filename)}`);
+                    const storyDirectory = storyDirectories[sectionName] || sectionName;
+                    const response = await fetch(`../stories/${storyDirectory}/${encodeURIComponent(filename)}`);
                     if (!response.ok) {
                         throw new Error(`No se pudo cargar ${filename}`);
                     }

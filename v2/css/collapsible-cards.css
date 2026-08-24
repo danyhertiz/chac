@@ -121,11 +121,19 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.collapsible-story .story-content video,
 .collapsible-story .story-content iframe,
 .collapsible-story .story-content lite-youtube {
     display: block;
+    width: 100%;
     max-width: 100%;
+    margin: 1.5rem auto;
+}
+
+.collapsible-story .story-content video[controls] {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     margin: 1.5rem auto;
 }
 
