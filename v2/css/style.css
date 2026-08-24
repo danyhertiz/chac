@@ -1,5 +1,5 @@
 :root {
-    --header-height: 100px;
+    --header-height: 80px;
     --menu-width: 230px;
     --page-bg: #0f1624;
     --panel-bg: rgba(26, 26, 46, 0.72);
@@ -217,7 +217,7 @@ footer {
 
 @media (max-width: 768px) {
     :root {
-        --header-height: 100px;
+        --header-height: 80px;
     }
 
     body {
@@ -235,16 +235,28 @@ footer {
 
     main {
         margin-left: 0;
-        padding: 2rem 1rem;
+        padding: 2rem 0.75rem;
     }
 
     .main-container {
         flex-direction: column;
+        padding: 0;
+    }
+
+    .card {
+        padding: 1rem;
     }
 
     .welcome-section {
         margin-bottom: 20px;
         margin-right: 0;
+    }
+
+    .welcome-section img {
+        float: none;
+        height: auto;
+        margin: 0 auto 1rem;
+        max-width: 100%;
     }
 
     .side-menu {
@@ -267,14 +279,15 @@ footer {
         cursor: pointer;
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 4px;
         justify-content: center;
         left: 1rem;
-        padding: 0.7rem;
+        padding: 0.5rem;
         position: fixed;
-        top: 1rem;
-        width: 46px;
-        height: 46px;
+        top: calc(var(--header-height) / 2);
+        transform: translateY(-50%);
+        width: 38px;
+        height: 38px;
         z-index: 1100;
     }
 
@@ -282,7 +295,7 @@ footer {
         background: white;
         display: block;
         height: 2px;
-        width: 23px;
+        width: 20px;
     }
 
     .menu-backdrop {
