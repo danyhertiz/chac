@@ -221,6 +221,43 @@ footer {
     z-index: 1;
 }
 
+#video-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.video-card {
+    background: var(--panel-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    padding: 12px;
+}
+
+.video-card video,
+.video-card lite-youtube,
+.video-card iframe {
+    aspect-ratio: 16 / 9;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+}
+
+.video-card .description {
+    margin-top: 8px;
+    padding: 0 4px 4px;
+}
+
+.episode-page .video-card video {
+    aspect-ratio: 4 / 3;
+    background: #000;
+    object-fit: contain;
+}
+
 @media (max-width: 768px) {
     :root {
         --header-height: 80px;
@@ -320,6 +357,10 @@ footer {
 
     footer {
         margin-left: 0;
+    }
+
+    #video-gallery {
+        grid-template-columns: 1fr;
     }
 }
 

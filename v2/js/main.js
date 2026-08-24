@@ -254,8 +254,10 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // INICIO: código que inserta contenido en el contenedor principal.
+    const staticSections = new Set(['mis_videos', 'mis_episodios']);
+
     const loadSection = async (sectionName) => {
-        if (!mainContent || !storiesMap[sectionName]) {
+        if (!mainContent) {
             return;
         }
 
@@ -266,7 +268,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             mainContent.innerHTML = await response.text();
-            renderStories(sectionName);
+            mainContent.classList.toggle('video-page-main', staticSections.has(sectionName));
+            mainContent.classList.toggle('episode-page', sectionName === 'mis_episodios');
+
+            if (storiesMap[sectionName]) {
+                renderStories(sectionName);
+            }
         } catch (error) {
             console.error('Error loading section:', error);
             mainContent.innerHTML = `<div class="card"><p>Error al cargar la sección: ${error.message}</p></div>`;
@@ -276,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     menu?.querySelectorAll('.submenu button, nav > button').forEach((button) => {
         const sectionName = button.dataset.section || button.textContent.trim().toLowerCase();
-        if (!storiesMap[sectionName]) {
+        if (!storiesMap[sectionName] && !staticSections.has(sectionName)) {
             return;
         }
 

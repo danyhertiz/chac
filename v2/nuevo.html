@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/collapsible-cards.css">
     <link rel="stylesheet" href="css/binary-background.css">
     <link rel="stylesheet" href="css/emoji-background.css">
-    <link rel="stylesheet" href="../css/lite-yt-embed.css">
+    <link rel="stylesheet" href="css/lite-yt-embed.css">
 </head>
 <body>
     <header>
@@ -56,14 +56,14 @@
             <div class="menu-group">
                 <button class="menu-parent" type="button" aria-expanded="false" aria-controls="multimedia-submenu">Multimedia</button>
                 <div class="submenu" id="multimedia-submenu">
-                    <button type="button">Mis videos</button>
-                    <button type="button">Episodios</button>
+                    <button type="button" data-section="mis_videos">Mis videos</button>
+                    <button type="button" data-section="mis_episodios">Episodios</button>
                 </div>
             </div>
             <div class="menu-group">
                 <button class="menu-parent" type="button" aria-expanded="false" aria-controls="catalogs-submenu">Catálogos</button>
                 <div class="submenu" id="catalogs-submenu">
-                    <button type="button">Mis películas</button>
+                    <button type="button" data-section="mis_peliculas">Mis películas</button>
                 </div>
             </div>
             <div class="menu-group">
@@ -102,7 +102,7 @@
     </footer>
 
     <script src="../js/marked.min.js"></script>
-    <script src="../js/lite-yt-embed.js"></script>
+    <script src="js/lite-yt-embed.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
