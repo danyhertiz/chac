@@ -114,12 +114,12 @@ document.addEventListener('DOMContentLoaded', () => {
             { file: 'favoritos.md', title: '🥇 Mis favoritos' }
         ],
         peliculas: [
-            { file: 'sagas.md', title: 'Sagas' },
-            { file: 'anime.md', title: 'Anime' },
-            { file: 'drama.md', title: 'Drama' },
-            { file: 'suspenso.md', title: 'Suspenso' },
-            { file: 'infantil.md', title: 'Infantiles' },
-            { file: 'navid.md', title: 'Navidadeñas' },
+            { file: 'sagas.md', title: 'Sagas', icon: '../img/iconos/movies.png' },
+            { file: 'anime.md', title: 'Anime', icon: '../img/iconos/anime.png' },
+            { file: 'drama.md', title: 'Drama', icon: '../img/iconos/drama.png' },
+            { file: 'suspenso.md', title: 'Suspenso', icon: '../img/iconos/horror.png' },
+            { file: 'infantil.md', title: 'Infantiles', icon: '../img/iconos/infantil.png' },
+            { file: 'navid.md', title: 'Navideñas', icon: '../img/iconos/navidad.png' },
         ],
         series: [
             { file: 'Dinosaurios.md', title: 'Dinosaurios' },
