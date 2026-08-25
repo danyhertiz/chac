@@ -124,6 +124,13 @@ main {
     margin-right: 15px;
 }
 
+.video-muted {
+    display: block;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .intro-panel {
     background: var(--panel-bg);
     border: 1px solid rgba(116, 201, 255, 0.18);

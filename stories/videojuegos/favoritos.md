@@ -163,7 +163,7 @@ Me da gusto que hasta ahora no han dejado en el olvido a la franquicia. De vez e
 
 ![Star Fox 64](img/historias/videojuegos/sf64.jpg)
 
-  <video autoplay loop muted playsinline class="video-muted">
+  <video autoplay loop muted playsinline class="video-muted" style="width: 800px; max-width: 100%; height: auto;">
   <source src="img/historias/videojuegos/sfs.mp4" type="video/mp4">
   </video>
 
