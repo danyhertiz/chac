@@ -255,18 +255,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // INICIO: código que inserta contenido en el contenedor principal.
     const staticSections = new Set(['mis_videos', 'mis_episodios', 'mis_peliculas']);
-    const sectionFiles = {
+    const routeMap = {
+        mamita: 'sections/mamita.html',
+        foza: 'sections/foza.html',
+        informatica: 'sections/informatica.html',
+        videojuegos: 'sections/videojuegos.html',
+        peliculas: 'sections/peliculas.html',
+        series: 'sections/series.html',
+        musica: 'sections/musica.html',
+        juguetes: 'sections/juguetes.html',
+        deportes: 'sections/deportes.html',
+        varias: 'sections/varias.html',
+        mis_videos: 'sections/mis_videos.html',
+        mis_episodios: 'sections/mis_episodios.html',
+        mis_peliculas: 'sections/mis_peliculas.html',
         p_simulador: 'sections/p_simulador.html',
         p_traductordino: 'sections/p_traductordino.html'
     };
 
-    const loadSection = async (sectionName) => {
+    const loadSection = async (sectionName, { updateHistory = false } = {}) => {
         if (!mainContent) {
             return;
         }
 
         try {
-            const sectionFile = sectionFiles[sectionName] || `sections/${sectionName}.html`;
+            const sectionFile = routeMap[sectionName];
+            if (!sectionFile) {
+                throw new Error(`Ruta no encontrada: ${sectionName}`);
+            }
+
+            if (updateHistory) {
+                const url = new URL(window.location.href);
+                url.searchParams.set('page', sectionName);
+                window.history.pushState({ page: sectionName }, '', url);
+            }
+
             const response = await fetch(sectionFile);
             if (!response.ok) {
                 throw new Error(`Sección no encontrada: ${sectionName}`);
@@ -301,14 +324,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     menu?.querySelectorAll('.submenu button, nav > button').forEach((button) => {
         const sectionName = button.dataset.section || button.textContent.trim().toLowerCase();
-        if (!storiesMap[sectionName] && !staticSections.has(sectionName) && !sectionFiles[sectionName]) {
+        if (!routeMap[sectionName]) {
             return;
         }
 
         button.addEventListener('click', () => {
-            loadSection(sectionName);
+            loadSection(sectionName, { updateHistory: true });
             closeMenu();
         });
     });
+
+    window.addEventListener('popstate', () => {
+        const params = new URLSearchParams(window.location.search);
+        const page = params.get('page');
+
+        if (page && routeMap[page]) {
+            loadSection(page);
+        } else {
+            window.location.reload();
+        }
+    });
+
+    const params = new URLSearchParams(window.location.search);
+    const initialPage = params.get('page');
+    if (initialPage && routeMap[initialPage]) {
+        loadSection(initialPage);
+    }
 
 });
