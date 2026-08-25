@@ -1,0 +1,56 @@
+<section class="movie-gallery-page">
+    <article class="gallery-page-intro">
+        <h1>📽️ Galería de películas</h1>
+        <p style="text-align: justify;">Este catálogo tiene casi todas las películas que conservo en mi videoteca personal. Explora los carteles, toca cualquiera para abrir la ficha completa. Puedes filtrarlas por género, año o duración.</p>
+    </article>
+
+    <section class="gallery-controls card">
+        <div class="search-bar-wrapper">
+            <div class="control-group full-width">
+                <label for="search-input">Buscar película</label>
+                <input id="search-input" type="search" placeholder="Buscar por título..." aria-label="Buscar películas por título">
+            </div>
+            <button id="toggleFilters" class="toggle-filters-btn" type="button" aria-label="Mostrar u ocultar filtros">Filtros</button>
+        </div>
+        <div id="filtersContainer" class="filters-collapsed">
+            <div class="control-group">
+                <label for="genre-filter">Filtrar por género</label>
+                <select id="genre-filter"><option value="Todos">Todos</option></select>
+            </div>
+            <div class="control-group">
+                <label for="year-filter">Filtrar por año</label>
+                <select id="year-filter"><option value="all">Todos los años</option></select>
+            </div>
+            <div class="control-group">
+                <label for="sortSelect">Ordenar películas</label>
+                <select id="sortSelect">
+                    <option value="year_desc">Año (más reciente)</option>
+                    <option value="year_asc">Año (más antiguo)</option>
+                    <option value="title_asc">Título (A-Z)</option>
+                    <option value="title_desc">Título (Z-A)</option>
+                    <option value="duration_asc">Duración (corta)</option>
+                    <option value="duration_desc">Duración (larga)</option>
+                </select>
+            </div>
+        </div>
+        <p id="resultsCount" class="results-count" aria-live="polite"></p>
+    </section>
+
+    <section class="movies-page-main">
+        <div id="movies-grid" class="gallery-grid" aria-live="polite"></div>
+    </section>
+    <section id="pagination-controls" class="pagination-container" aria-label="Controles de paginación"></section>
+
+    <div id="movie-modal" class="modal-overlay hidden" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <button type="button" class="modal-close" aria-label="Cerrar ventana">×</button>
+            <img id="modal-poster" class="modal-poster" src="" alt="Póster de película">
+            <div class="modal-body">
+                <h2 id="modal-title">Título</h2>
+                <p class="modal-meta" id="modal-year">Año</p>
+                <div class="movie-genres" id="modal-genres"></div>
+                <p class="overview" id="modal-overview">Descripción</p>
+            </div>
+        </div>
+    </div>
+</section>

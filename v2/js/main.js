@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // INICIO: código que inserta contenido en el contenedor principal.
-    const staticSections = new Set(['mis_videos', 'mis_episodios']);
+    const staticSections = new Set(['mis_videos', 'mis_episodios', 'mis_peliculas']);
 
     const loadSection = async (sectionName) => {
         if (!mainContent) {
@@ -270,9 +270,14 @@ document.addEventListener('DOMContentLoaded', () => {
             mainContent.innerHTML = await response.text();
             mainContent.classList.toggle('video-page-main', staticSections.has(sectionName));
             mainContent.classList.toggle('episode-page', sectionName === 'mis_episodios');
+            mainContent.classList.toggle('movie-page-main', sectionName === 'mis_peliculas');
 
             if (storiesMap[sectionName]) {
                 renderStories(sectionName);
+            }
+
+            if (sectionName === 'mis_peliculas') {
+                window.initMovieGallery?.(mainContent);
             }
         } catch (error) {
             console.error('Error loading section:', error);
