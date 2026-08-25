@@ -1,4 +1,4 @@
-📅 9 de febrero, 2026
+<p style="text-align: right;">📅 9 de febrero, 2026</p>
 
 Las pocas veces que jugué fútbol fue durante la primaria. Apenas recuerdo que casi siempre era un tímido y lento defensa, a las órdenes del portero. Nunca me gustó estar ahí viendo cómo mis compañeros se peleaban por el balón.
 

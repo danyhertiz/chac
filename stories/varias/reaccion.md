@@ -1,4 +1,4 @@
-📅 28 de mayo, 2026
+<p style="text-align: right;">📅 28 de mayo, 2026</p>
 
 Hace unos días, platicando con mi Foza, llegamos al tema de cuando uno tarda en reaccionar o simplemente en procesar y darse cuenta de algo en una situación concreta. Entonces me empezó a dar risa porque me acordé de algo, y cuando me preguntó de qué me reía, le conté la historia de la reacción más retardada que he visto en toda mi vida.
 

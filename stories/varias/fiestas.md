@@ -1,4 +1,4 @@
-📅 28 de mayo, 2026
+<p style="text-align: right;">📅 28 de mayo, 2026</p>
 
 Cuando empecé a vivir por acá en el estado de Veracruz, me di cuenta de hay muchas costumbres que difieren un poco de lo que nosotros vivimos de niños. Una de ellas son las fiestas. A nosotros nos hacían un festejo relativamente pequeño, porque normalmente solo era entre quienes vivíamos en la casa. Adornaban con globos y serpentinas, había un pastel suficientemente grande para todos, Mima hacía tamales y Mamita hacía gelatinas y preparaba chocolate.
 ![Fiesta](img/historias/varias/fiesta_chac.jpg)

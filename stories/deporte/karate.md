@@ -1,4 +1,4 @@
-📅 29 de mayo, 2026
+<p style="text-align: right;">📅 9 de febrero, 2026</p>
 
 Cuando Paco te inscribió a ti en clases de taekwondo, me parece que fue Pá quien nos dijo a Petaca y a mí que, si también queríamos practicar algún tipo de arte marcial, así que fuimos a la unidad deportiva que está en donde vivíamos Pá y yo, en Iztapalapa, y nos inscribió.
 El maestro era un viejito que se la pasaba bromeando y platicando con las mamás de los niños que iban. No era nada estricto, de hecho, resultó ser muy pasivo. Enseñaba bien, pero no era gritón ni exigente como lo son la mayoría de las personas que enseñan este tipo de disciplinas. Por eso la clase era amena y divertida.

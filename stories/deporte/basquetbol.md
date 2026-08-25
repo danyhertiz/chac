@@ -1,4 +1,4 @@
-📅 9 de febrero, 2026
+<p style="text-align: right;">📅 9 de febrero, 2026</p>
 
 Otro deporte con el que me topé levemente fue el basquetbol. Si el fútbol no me gustaba, el basquetbol definitivamente lo detestaba. No niego que disfrutaba tirar al aro, pero fuera de eso, no me gustaban los empujones o manotazos que uno tenía que llevarse cada vez que jugaba.
 

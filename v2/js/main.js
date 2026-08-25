@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { file: 'favoritos.md', title: '🥇 Mis favoritos' }
         ],
         peliculas: [
-            { file: 'sagas.md', title: 'Sagas', icon: '../img/iconos/movies.png' },
+            { file: 'sagas.md', title: 'Sagas', icon: '../img/iconos/starwars-ico.png' },
             { file: 'anime.md', title: 'Anime', icon: '../img/iconos/anime.png' },
             { file: 'drama.md', title: 'Drama', icon: '../img/iconos/drama.png' },
             { file: 'suspenso.md', title: 'Suspenso', icon: '../img/iconos/horror.png' },
