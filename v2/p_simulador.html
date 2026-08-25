@@ -1,0 +1,36 @@
+<section class="story-full simulator-page">
+    <h1>Simulador de descarga de archivos</h1>
+    <p>
+        Simula la velocidad de descarga a diferentes anchos de banda. Define el tamaño del archivo y compara el tiempo estimado desde una conexión de 56 Kbps hasta fibra óptica de 10 Gbps.
+    </p>
+
+    <section id="download-simulator" data-theme="vista" aria-labelledby="download-simulator-title">
+        <h2 id="download-simulator-title">Simulador de descarga</h2>
+
+        <div class="ds-theme-selector">
+            <label for="ds-theme">Estilo:</label>
+            <select id="ds-theme">
+                <option value="modern">Moderno</option>
+                <option value="vista">Windows Vista</option>
+                <option value="mac2000">Mac clásico</option>
+            </select>
+        </div>
+
+        <div class="ds-controls">
+            <label class="sr-only" for="ds-size">Tamaño del archivo</label>
+            <input type="number" id="ds-size" value="100" min="1" step="any">
+
+            <label class="sr-only" for="ds-unit">Unidad del archivo</label>
+            <select id="ds-unit">
+                <option value="kb">KB</option>
+                <option value="mb" selected>MB</option>
+                <option value="gb">GB</option>
+                <option value="tb">TB</option>
+            </select>
+
+            <button id="ds-start" type="button">Iniciar</button>
+        </div>
+
+        <div id="ds-list" aria-live="polite"></div>
+    </section>
+</section>

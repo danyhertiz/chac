@@ -1,0 +1,188 @@
+#download-simulator {
+    margin: 1rem 0;
+    padding: 0.75rem;
+    border: 1px solid #c7d3e0;
+    border-radius: 8px;
+    background: #f3f6fb;
+    color: #333;
+}
+
+#download-simulator h2 {
+    margin: 0 0 0.75rem;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+#download-simulator .ds-theme-selector,
+#download-simulator .ds-controls {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+}
+
+#download-simulator .ds-theme-selector label {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+#download-simulator .ds-controls input,
+#download-simulator .ds-controls select,
+#download-simulator .ds-theme-selector select {
+    min-height: 2.25rem;
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+#download-simulator #ds-size {
+    width: 90px;
+}
+
+#download-simulator .ds-controls button {
+    min-height: 2.25rem;
+    padding: 0.4rem 0.8rem;
+    border: 0;
+    border-radius: 4px;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+#download-simulator .ds-controls button:hover {
+    background: #0056b3;
+}
+
+#download-simulator #ds-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#download-simulator .ds-item {
+    padding: 0.5rem;
+    border: 1px solid #d0d7e2;
+    border-radius: 6px;
+    background: #fff;
+}
+
+#download-simulator .ds-meta {
+    display: grid;
+    grid-template-columns: minmax(5rem, auto) 60px minmax(0, 1fr);
+    align-items: center;
+    column-gap: 8px;
+    margin-bottom: 4px;
+    color: #666;
+    font-size: 0.75rem;
+}
+
+#download-simulator .ds-speed {
+    justify-self: start;
+    color: #333;
+    font-weight: 700;
+}
+
+#download-simulator .ds-percent {
+    justify-self: center;
+    text-align: center;
+}
+
+#download-simulator .ds-time {
+    justify-self: end;
+    overflow-wrap: anywhere;
+    text-align: right;
+}
+
+#download-simulator .ds-bar {
+    position: relative;
+    width: 100%;
+    height: 14px;
+    overflow: hidden;
+    border-radius: 3px;
+    background: #dbe3ec;
+}
+
+#download-simulator .ds-fill {
+    position: absolute;
+    inset: 0 auto 0 0;
+    z-index: 1;
+    display: block;
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: #22c55e;
+    transition: width 0.1s ease;
+}
+
+#download-simulator .ds-blocks {
+    display: none;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    align-items: center;
+    gap: 2px;
+}
+
+#download-simulator .ds-block {
+    display: block;
+    flex: 0 0 auto;
+    width: 6px;
+    height: 100%;
+    background: transparent;
+}
+
+#download-simulator[data-theme="vista"] .ds-fill {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #4ade80, #22c55e);
+}
+
+#download-simulator[data-theme="vista"] .ds-fill::after,
+#download-simulator[data-theme="mac2000"] .ds-fill::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background: linear-gradient(120deg, transparent 48%, rgba(255, 255, 255, 0.25) 50%, transparent 52%);
+    transform: translateX(-100%);
+    animation: ds-shine 3s linear infinite;
+    pointer-events: none;
+}
+
+#download-simulator[data-theme="mac2000"] {
+    border-color: #999;
+    background: #f0f0f0;
+}
+
+#download-simulator[data-theme="mac2000"] .ds-fill {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #60a5fa, #3b82f6);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#download-simulator[data-theme="mac2000"] .ds-fill::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.35) 0 10px, transparent 10px 20px);
+    animation: ds-stripes 1s linear infinite;
+}
+
+@keyframes ds-shine {
+    0% { transform: translateX(-120%); }
+    60%, 100% { transform: translateX(120%); }
+}
+
+@keyframes ds-stripes {
+    to { background-position: 20px 0; }
+}
+
+@media (max-width: 520px) {
+    #download-simulator .ds-meta {
+        grid-template-columns: minmax(4rem, auto) 48px minmax(0, 1fr);
+        font-size: 0.7rem;
+    }
+}

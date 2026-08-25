@@ -255,6 +255,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // INICIO: código que inserta contenido en el contenedor principal.
     const staticSections = new Set(['mis_videos', 'mis_episodios', 'mis_peliculas']);
+    const sectionFiles = {
+        p_simulador: 'p_simulador.html',
+        p_traductordino: 'p_traductordino.html'
+    };
 
     const loadSection = async (sectionName) => {
         if (!mainContent) {
@@ -262,7 +266,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
-            const response = await fetch(`sections/${sectionName}.html`);
+            const sectionFile = sectionFiles[sectionName] || `sections/${sectionName}.html`;
+            const response = await fetch(sectionFile);
             if (!response.ok) {
                 throw new Error(`Sección no encontrada: ${sectionName}`);
             }
@@ -279,6 +284,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (sectionName === 'mis_peliculas') {
                 window.initMovieGallery?.(mainContent);
             }
+
+            if (sectionName === 'p_simulador') {
+                window.initDownloadSimulator?.();
+            }
+
+            if (sectionName === 'p_traductordino') {
+                window.initDinoTranslator?.();
+            }
         } catch (error) {
             console.error('Error loading section:', error);
             mainContent.innerHTML = `<div class="card"><p>Error al cargar la sección: ${error.message}</p></div>`;
@@ -288,7 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     menu?.querySelectorAll('.submenu button, nav > button').forEach((button) => {
         const sectionName = button.dataset.section || button.textContent.trim().toLowerCase();
-        if (!storiesMap[sectionName] && !staticSections.has(sectionName)) {
+        if (!storiesMap[sectionName] && !staticSections.has(sectionName) && !sectionFiles[sectionName]) {
             return;
         }
 
