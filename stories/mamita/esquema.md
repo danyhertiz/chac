@@ -1,3 +1,5 @@
+<p style="text-align: right;">📅 30 de mayo, 2026</p>
+
 Mamita nos ayudaba mucho con las tareas, pero no sólo eso, sino que se aseguraba de que siempre fueran muy limpias y bien hechas, por eso, gracias a ella, nuestros trabajos eran frecuentemente muy originales.
 
 Hubo una vez en que, no recuerdo si yo iba en tercero o cuarto de primaria, pero nos encargaron un esquema de las partes de una flor. La idea era comprar un papel cascarón o una tabla y dibujarlo con plastilina. Pero a Mamita se le ocurrió que, en lugar del cascarón o la tabla, lo llevara hecho en un vidrio. Así que me lo consiguieron, ella le pegó por detrás una monografía del esquema de la flor y pues, gracias a eso, resultó incluso más sencillo hacerlo, porque solamente me dediqué a calcar, pegando la plastilina sobre el vidrio mientras que la imagen de atrás servía de guía. Cuando terminé, le pegó unas etiquetas blancas con los nombres que debía llevar el esquema, las escribió ella, así que iban con su letra. Al final le puso cinta masking en las orillas para que no me fuera a cortar con el filo del vidrio.

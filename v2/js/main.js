@@ -102,8 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
             { file: 'Epílogo.md', title: '📖 Epílogo' }
         ],
         informatica: [
-            { file: 'inicios_informatica.md', title: '⌨️ Inicios en la informática' },
-            { file: 'mis_pc.md', title: '🖥️ Mis computadoras' },
+            { file: 'inicios_informatica.md', title: 'Inicios en la informática', icon: '../img/iconos/PC_vieja.png' },
+            { file: 'mis_pc.md', title: 'Mis computadoras', icon: '../img/iconos/computadora.png' },
         ],
         videojuegos: [
             { file: 'Inicios.md', title: '🕹️ Inicios' },

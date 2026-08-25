@@ -1,7 +1,8 @@
 
 ---
 ## Mi primer PC
-📅 27 de Noviembre, 2025
+
+<p style="text-align: right;">📅 27 de noviembre, 2025</p>
 
 Aunque ya llevaba años siendo un asiduo videojugador, mi época en el CCH me dio la libertad de jugar un poco de todo, además de poder destinar a los videojuegos el tiempo que quisiera. La computadora verde que tuve en aquél entonces fue la que me permitió experimentar muchos videojuegos, que ya poco o nada tenían que ver con lo que estábamos acostumbrados en las consolas, fueran de sobremesa o portátiles.
 
@@ -19,7 +20,8 @@ En fin, le pusieron un procesador más potente, me parece que ya era uno con 700
 
 ---
 ## Un tiempo sin computadora
-📅 27 de Noviembre, 2025
+
+<p style="text-align: right;">📅 27 de noviembre, 2025</p>
 
 Desde que dejé de vivir en casa de Mima, pasé un tiempo sin computadora. Iba constantemente a los laboratorios de cómputo del CCH a experimentar todo lo que iba aprendiendo: desde programación en Turbo Pascal hasta diseño web en HTML. Fue en esa época cuando dejé mi interés por la medicina y me enamoré por completo de la informática. Me encantaba la clase de cibernética y computación; ahí aprendí las bases de la computación y la programación. Hice verdaderas maravillas con Turbo Pascal. De hecho, hasta el maestro me pidió mi disquete con los programas para mostrarlos a otros grupos. Tenía un respaldo de todo en disquetes, pero con el tiempo se fueron dañando y ya no los tengo.
 
@@ -33,7 +35,8 @@ Fíjate que a pesar de no tener PC, no vivía frustrado, al contrario, me concen
 
 ---
 ## Segunda PC
-📅 27 de Noviembre, 2025
+
+<p style="text-align: right;">📅 27 de noviembre, 2025</p>
 
 Cuando Pá y yo nos mudamos a Iztapalapa (aproximadamente en 2004), hubo oportunidad de armar una PC muy modesta, así que fui a la plaza de la computación y elegí los componentes más baratos que encontré. El caso era armar una computadora, mi intención era ir mejorándola con el tiempo. El resultado fue una computadora que, si bien no era una maravilla, me sirvió muy bien para practicar mi HTML, programación en Turbo Pascal, y por supuesto, para jugar algunos videojuegos. Era realmente poco lo que podía jugar con una computadora tan sencilla, tenía un procesador VIA C3 a 800 Mhz, con un chipset gráfico integrado, el procesador iba soldado a la motherboard (Mercury PVCLE266M-L). Pero la aproveché al máximo. Fue la primera PC que usé con internet de banda ancha, así que pasaba horas navegando y bajando todo tipo de cosas. Fue en esa época en la que abrí mi primer canal de YouTube y empecé a subir cuanta tontería se me ocurría.
 
@@ -43,7 +46,8 @@ Solamente tengo una foto de esa computadora, y eso porque se la tomé a Pá un d
 
 ---
 ## Tercera PC
-📅 17 de Diciembre, 2025
+
+<p style="text-align: right;">📅 17 de diciembre, 2025</p>
 
 Poco tiempo después de haber armado esa PC sencilla de la que te contaba, tuve también mis primeras tarjetas de crédito, una era de Inbursa y la otra de Banamex, así que una de las primeras cosas que me compré con ellas fueron componentes para una nueva PC, esta vez me enfocaría en la potencia para jugar videojuegos. Esto ya fue en el año 2006 o 2007 mas o menos. Así que, acompañado por Petaca, fuí muchas veces a la plaza de la computación a cotizar y elegir los componentes. Después de mucho investigar y comparar precios, armé una PC que era bastante potente para la época. Las especificaciones eran:
 
@@ -62,7 +66,8 @@ No tengo fotos de esa primer PC gamer, pero no había ninguna diferencia externa
 
 ---
 ## Mi primera laptop
-📅 17 de Diciembre, 2025
+
+<p style="text-align: right;">📅 17 de diciembre, 2025</p>
 
 En 2008, cuando Pá y yo nos mudamos para Veracrúz, estuve un tiempo sin computadora, ya que, a pesar de que ya vivíamos acá, tardamos como tres meses en poder trasladar nuestras cosas desde Iztapalapa, y cuando lo hicimos, ya casi no usaba mi computadora, por falta de espacio, de internet y admito que también por falta de interés, ya que en ese tiempo conocí a mi Foza y andaba más interesado en visitarla a ella que estar en casa jugando con la computadora.
 
@@ -88,7 +93,8 @@ Con esa laptop también entretenía a mi cuñada, mientras yo pasaba tiempo con 
 
 ---
 ## Cuarta PC
-📅 18 de Diciembre, 2025
+
+<p style="text-align: right;">📅 18 de diciembre, 2025</p>
 
 Poco antes de casarme, decidí que era hora de renovar mi PC de escritorio, acababa de empezar la carrera de administración en la Universidad Veracruzana, y mi laptop ya estaba quedando un poco corta para mis necesidades. Así que busqué las piezas por internet y terminé comprándolas en Mercado Libre. Como mi presupuesto era limitado, volví a elegir una motherboard con procesador integrado, es decir, soldado a la placa. Fue la ASRock QC5000M, y al poco tiempo le compré una tarjetita gráfica sencilla, la ASUS GT 730 de NVIDIA. La verdad es que no era una maravilla, pero me sirvió muy bien para mis estudios y para algunos juegos no muy pesados.
 
@@ -102,7 +108,8 @@ Estas son fotos de la placa y de la tarjeta gráfica, le puse 2 módulos de RAM 
 
 ---
 ## Segunda laptop
- 📅 30 de mayo, 2026
+
+<p style="text-align: right;">📅 30 de mayo, 2026</p>
 
 Cuando estaba casi terminando la carrera de administración en la Universidad Veracruzana, tenía un compañero al que su papá le ayudó a poner un negocio, abrió un pequeño bar, y como necesitaba entre muchas otras cosas un manual de operaciones y otro de procedimientos, me preguntó que si le podía hacer los manuales, dijo que obviamente me iba a pagar, así que se los hice, me tomó como dos meses pero los terminé y se los entregué, la verdad me pagó bien, y con eso, en mayo de 2017 me encargué por Amazon una laptop ASUS Vivobook, era el modelo X541UA.
 
@@ -126,7 +133,8 @@ Un par de años después de comprarla le instalé un SSD porque originalmente ve
 
 ---
 ## Quinta PC
-📅 28 de mayo, 2026
+
+<p style="text-align: right;">📅 28 de mayo, 2026</p>
 
 Después de algunos años, alrededor de 2019 logré actualizar un poco mi PC de escritorio, pasé de la motherboard sencilla que tenía el procesador soldado a la placa a una motherboard de la marca Gigabyte modelo A320M-S2H en la que instalé un procesador AMD A10 9700 y continué con 8GB de RAM que en aquél entonces todavía eran suficientes.
 ![5a PC](img/historias/informatica/gigabyte.jpg)
@@ -142,7 +150,8 @@ Al renunciar al empleo con el tío de mi foza, le entregué su computadora y yo 
 
 ---
 ## Sexta PC
-📅 29 de mayo, 2026
+
+<p style="text-align: right;">📅 29 de mayo, 2026</p>
 
 En diciembre de 2022, gracias a uno de esos trabajos de reparación y mantenimiento que hago por fuera de mi empleo, logré ahorrar lo suficiente para renovar totalmente mi PC. Esta vez los componentes elegidos fueron:
 
@@ -162,7 +171,8 @@ Al agregar la tarjeta de video (a finales de 2023) seguí jugando lo mismo pero 
 
 ---
 ## Septima PC
-📅 06 de junio, 2026
+
+<p style="text-align: right;">📅 06 de junio, 2026</p>
 
 Al cambiar de trabajo, con mi nuevo sueldo, además de poder costear un cuartito aparte para no ocupar más la casa de mis suegros, también pude empezar un ahorro, pequeño pero constante. Así que en noviembre de 2025 decidí armar una nueva PC, pero esta vez sí estaría encaminada a los videojuegos más recientes. No será una PC de la NASA, pero sí es bastante buena. En esta ocasión los componentes son:
 * CPU: Ryzen 7 7800 X 3D

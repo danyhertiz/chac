@@ -1,3 +1,5 @@
+<p style="text-align: right;">📅 30 de mayo, 2026</p>
+
 Los bloques casi siempre son lo clásico que se le regala a un niño para que juegue, y en mi caso no fue la excepción. Se me quedó muy grabado en la memoria el día en que, yo estaba sentado en la cama y Tavo llegó con las manos detrás de la espalda, porque venía escondiendo una sorpresa para mí, traía una bolsa de plástico que luego vació en la cama. Eran muchos cubos de madera, me dijeron que me los había hecho nuestro abuelito David, que en aquél entonces todos le decíamos “mi papá”.
 
 Pues Tavo se puso a jugar conmigo ese día a construir cosas con los cubos, y no tengo mayores recuerdos, solo son flashbacks muy vagos de situaciones concretas.

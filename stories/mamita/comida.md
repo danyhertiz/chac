@@ -1,4 +1,4 @@
-📅 24 de mayo, 2026
+<p style="text-align: right;">📅 24 de mayo, 2026</p>
 
 Pienso que Mamita era una buena cocinera, hasta donde yo recuerdo, siempre me gustó mucho todo lo que hacía. Claro que había excepciones, pero era porque a veces, uno de niño tiende a ser muy fastidioso y no come de todo. Pero gracias a ella me empezaron a gustar, por ejemplo, los nopales, las ensaladas y algunas verduras. Nos acostumbró a las comidas de dos tiempos, es decir, primero una entrada como sopa o arroz y después un guisado.
 

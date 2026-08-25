@@ -1,3 +1,5 @@
+<p style="text-align: right;">📅 30 de mayo, 2026</p>
+
 Entre tantos juguetes que tuvimos, hay unos que puedo considerar como los cotidianos, es decir, juguetes relativamente sencillos, que nos compraban en la juguetería del mercado, en la farmacia, afuera de la escuela o en promociones como las de Bimbo o Coca Cola. Por ejemplo, los yoyos de coca. Personalmente me gustaban un poco más los yoyos Duncan, creo recordar que hubo unos que usaban pilas para encender foquitos internos cuando giraban, eso se veía super genial, aunque por esa misma razón eran los más voluminosos, pesados y no se podía hacer trucos o cosas así con esos yoyos.
 
 ![Yoyo Duncan](img/historias/juguetes/yoyo_duncan.jpg)
