@@ -135,7 +135,7 @@ const initializeSite = () => {
             { file: 'Dinosaurios.md', title: '🦖 Dinosaurios' },
             { file: 'Heidi.md', title: '🏔️ Heidi' },
             { file: 'Calabozos.md', title: 'Calabozos y Dragones', icon: 'img/iconos/dungeons.png' },
-            { file: 'Historias_asobrosas.md', title: 'Historias asombrosas', icon: 'img/iconos/libro-magico.png' },
+            { file: 'Historias_asombrosas.md', title: 'Historias asombrosas', icon: 'img/iconos/libro-magico.png' },
             { file: 'Cazafantasmas.md', title: 'Los Verdaderos Cazafantasmas', icon: 'img/iconos/ghostbusters.png' },
             { file: 'Simpsons.md', title: 'Los Simpson', icon: 'img/iconos/simpsons-tv.png' },
             { file: 'Hey_Arnold.md', title: 'Hey Arnold', icon: 'img/iconos/arnold.png' },
