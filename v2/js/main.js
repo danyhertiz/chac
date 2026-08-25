@@ -256,8 +256,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // INICIO: código que inserta contenido en el contenedor principal.
     const staticSections = new Set(['mis_videos', 'mis_episodios', 'mis_peliculas']);
     const sectionFiles = {
-        p_simulador: 'p_simulador.html',
-        p_traductordino: 'p_traductordino.html'
+        p_simulador: 'sections/p_simulador.html',
+        p_traductordino: 'sections/p_traductordino.html'
     };
 
     const loadSection = async (sectionName) => {
