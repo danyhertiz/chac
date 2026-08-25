@@ -1,487 +1,82 @@
 const MOVIES_DATA_PATH = 'scripts/movies.json';
 const ITEMS_PER_PAGE = 60;
-const PLACEHOLDER_IMAGE = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='600' viewBox='0 0 400 600'%3E%3Crect width='400' height='600' fill='%231e1e1e'/%3E%3Ctext x='50%25' y='50%25' fill='%23cccccc' font-family='Segoe UI,Arial,sans-serif' font-size='24' text-anchor='middle' dominant-baseline='middle'%3ENo poster%3C/text%3E%3C/svg%3E";
+const PLACEHOLDER_IMAGE = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='600' viewBox='0 0 400 600'%3E%3Crect width='400' height='600' fill='%231e1e1e'/%3E%3Ctext x='50%25' y='50%25' fill='%23cccccc' font-family='sans-serif' font-size='24' text-anchor='middle' dominant-baseline='middle'%3ESin póster%3C/text%3E%3C/svg%3E";
 
-const moviesGrid = document.getElementById('movies-grid');
-const searchInput = document.getElementById('search-input');
-const genreFilter = document.getElementById('genre-filter');
-const yearFilter = document.getElementById('year-filter');
-const paginationControls = document.getElementById('pagination-controls');
-const modalOverlay = document.getElementById('movie-modal');
-const modalPoster = document.getElementById('modal-poster');
-const modalTitle = document.getElementById('modal-title');
-const modalYear = document.getElementById('modal-year');
-const modalRuntime = document.getElementById('modal-runtime');
-const modalGenres = document.getElementById('modal-genres');
-const modalOverview = document.getElementById('modal-overview');
-const modalClose = document.querySelector('.modal-close');
+function initMovieGallery(root = document) {
+    const grid = root.querySelector('#movies-grid');
+    if (!grid || grid.dataset.initialized === 'true') return;
+    grid.dataset.initialized = 'true';
 
-const state = {
-    fullMovies: [],
-    filteredMovies: [],
-    currentPage: 1,
-    searchQuery: '',
-    selectedGenre: 'Todos',
-    selectedYear: 'all',
-};
-
-// New sorting variable
-let currentSort = 'year_desc';
-
-// Sorting options
-const sortOptions = {
-    year_desc: (a, b) => b.year - a.year,
-    year_asc: (a, b) => a.year - b.year,
-    title_asc: (a, b) => (a.title || a.originalTitle || '').localeCompare(b.title || b.originalTitle || '', 'es', { sensitivity: 'base' }),
-    title_desc: (a, b) => (b.title || b.originalTitle || '').localeCompare(a.title || a.originalTitle || '', 'es', { sensitivity: 'base' }),
-    duration_asc: (a, b) => (a.runtime || 0) - (b.runtime || 0),
-    duration_desc: (a, b) => (b.runtime || 0) - (a.runtime || 0),
-};
-
-function debounce(fn, delay = 180) {
-    let timeoutId;
-    return (...args) => {
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => fn(...args), delay);
+    const search = root.querySelector('#search-input');
+    const genre = root.querySelector('#genre-filter');
+    const year = root.querySelector('#year-filter');
+    const sort = root.querySelector('#sortSelect');
+    const pagination = root.querySelector('#pagination-controls');
+    const modal = root.querySelector('#movie-modal');
+    const modalPoster = root.querySelector('#modal-poster');
+    const modalTitle = root.querySelector('#modal-title');
+    const modalYear = root.querySelector('#modal-year');
+    const modalGenres = root.querySelector('#modal-genres');
+    const modalOverview = root.querySelector('#modal-overview');
+    const results = root.querySelector('#resultsCount');
+    const state = { movies: [], filtered: [], page: 1, query: '', genre: 'Todos', year: 'all', sort: 'year_desc' };
+    const compare = {
+        year_desc: (a, b) => Number(b.year) - Number(a.year), year_asc: (a, b) => Number(a.year) - Number(b.year),
+        title_asc: (a, b) => (a.title || a.originalTitle || '').localeCompare(b.title || b.originalTitle || '', 'es'),
+        title_desc: (a, b) => (b.title || b.originalTitle || '').localeCompare(a.title || a.originalTitle || '', 'es'),
+        duration_asc: (a, b) => (a.runtime || 0) - (b.runtime || 0), duration_desc: (a, b) => (b.runtime || 0) - (a.runtime || 0)
     };
-}
 
-function formatRuntime(minutes) {
-    if (!minutes || minutes <= 0) return null;
-    const hours = Math.floor(minutes / 60);
-    const mins = minutes % 60;
-    if (hours > 0 && mins > 0) {
-        return `${hours}h ${mins}min`;
-    } else if (hours > 0) {
-        return `${hours}h`;
+    function card(movie) {
+        const title = movie.title || movie.originalTitle || 'Título desconocido';
+        const button = document.createElement('button');
+        button.type = 'button'; button.className = 'movie-card'; button.dataset.movieId = String(movie.tmdbId ?? title);
+        button.innerHTML = `<img class="movie-poster" loading="lazy" alt="${title} - cartel"><span class="movie-title"></span><span class="movie-meta"></span>`;
+        const image = button.querySelector('img'); image.src = movie.poster ? movie.poster : PLACEHOLDER_IMAGE; image.onerror = () => { image.src = PLACEHOLDER_IMAGE; };
+        button.querySelector('.movie-title').textContent = title;
+        button.querySelector('.movie-meta').textContent = `${movie.year || '—'}${movie.runtime ? ` • ${movie.runtime} min` : ''}`;
+        return button;
     }
-    return `${mins} min`;
-}
 
-function createMovieCard(movie) {
-    const displayTitle = movie.title || movie.originalTitle || 'Título desconocido';
-    const hasOriginalTitle = movie.originalTitle && movie.originalTitle !== displayTitle;
+    function render() {
+        grid.replaceChildren();
+        const start = (state.page - 1) * ITEMS_PER_PAGE;
+        state.filtered.slice(start, start + ITEMS_PER_PAGE).forEach((movie) => grid.appendChild(card(movie)));
+        results.textContent = `Mostrando ${state.filtered.length} película${state.filtered.length === 1 ? '' : 's'}`;
+        pagination.replaceChildren();
+        const pages = Math.ceil(state.filtered.length / ITEMS_PER_PAGE);
+        for (let page = 1; page <= pages; page += 1) {
+            const button = document.createElement('button'); button.type = 'button'; button.className = 'pagination-button'; button.textContent = page; button.dataset.page = page;
+            button.disabled = page === state.page; pagination.appendChild(button);
+        }
+    }
 
-    const card = document.createElement('button');
-    card.type = 'button';
-    card.className = 'movie-card';
-    card.dataset.movieId = movie.tmdbId != null ? String(movie.tmdbId) : displayTitle;
-    card.title = `Ver detalles de ${displayTitle}`;
+    function filter() {
+        const query = state.query.trim().toLowerCase();
+        state.filtered = state.movies.filter((movie) => (movie.title || movie.originalTitle || '').toLowerCase().includes(query)
+            && (state.year === 'all' || String(movie.year) === state.year)
+            && (state.genre === 'Todos' || (movie.genres || []).includes(state.genre)));
+        state.filtered.sort(compare[state.sort]); state.page = 1; render();
+    }
 
-    const poster = document.createElement('img');
-    poster.className = 'movie-poster';
-    poster.src = movie.poster || PLACEHOLDER_IMAGE;
-    poster.alt = `${displayTitle} - cartel`;
-    poster.loading = 'lazy';
-    poster.addEventListener('error', () => {
-        poster.src = PLACEHOLDER_IMAGE;
+    fetch(MOVIES_DATA_PATH).then((response) => response.json()).then((movies) => {
+        state.movies = movies; [...new Set(movies.flatMap((movie) => movie.genres || []))].sort().forEach((item) => genre.append(new Option(item, item)));
+        [...new Set(movies.map((movie) => movie.year).filter(Boolean))].sort((a, b) => b - a).forEach((item) => year.append(new Option(item, item)));
+        filter();
+    }).catch(() => { grid.textContent = 'No se pudo cargar el catálogo de películas.'; });
+
+    search.addEventListener('input', () => { state.query = search.value; filter(); });
+    genre.addEventListener('change', () => { state.genre = genre.value; filter(); }); year.addEventListener('change', () => { state.year = year.value; filter(); });
+    sort.addEventListener('change', () => { state.sort = sort.value; filter(); });
+    root.querySelector('#toggleFilters').addEventListener('click', () => root.querySelector('#filtersContainer').classList.toggle('filters-collapsed'));
+    pagination.addEventListener('click', (event) => { if (event.target.dataset.page) { state.page = Number(event.target.dataset.page); render(); } });
+    grid.addEventListener('click', (event) => {
+        const movie = state.filtered.find((item) => String(item.tmdbId ?? (item.title || item.originalTitle)) === event.target.closest('.movie-card')?.dataset.movieId);
+        if (!movie) return; const title = movie.title || movie.originalTitle || 'Título desconocido';
+        modalPoster.src = movie.poster ? movie.poster : PLACEHOLDER_IMAGE; modalTitle.textContent = title; modalYear.textContent = movie.year || 'Año desconocido';
+        modalGenres.replaceChildren(...(movie.genres || []).map((item) => { const chip = document.createElement('span'); chip.className = 'genre-chip'; chip.textContent = item; return chip; }));
+        modalOverview.textContent = movie.overview || movie.originalOverview || 'No hay descripción disponible.'; modal.classList.add('visible'); modal.classList.remove('hidden'); modal.setAttribute('aria-hidden', 'false');
     });
-
-    const title = document.createElement('div');
-    title.className = 'movie-title';
-    
-    // Build year and duration metadata
-    const yearText = movie.year ? String(movie.year) : '—';
-    const durationText = movie.runtime ? ` • ${movie.runtime} min` : '';
-    const metaText = `${yearText}${durationText}`;
-    
-    // Set title with metadata
-    title.innerHTML = `${displayTitle}<span class="movie-meta">(${metaText})</span>`;
-
-    card.appendChild(poster);
-    card.appendChild(title);
-
-    if (hasOriginalTitle) {
-        const originalTitle = document.createElement('div');
-        originalTitle.className = 'movie-original-title';
-        originalTitle.textContent = movie.originalTitle;
-        card.appendChild(originalTitle);
-    }
-
-    return card;
+    const close = () => { modal.classList.remove('visible'); modal.classList.add('hidden'); modal.setAttribute('aria-hidden', 'true'); };
+    root.querySelector('.modal-close').addEventListener('click', close); modal.addEventListener('click', (event) => { if (event.target === modal) close(); });
 }
-
-function renderMovies(movies) {
-    moviesGrid.innerHTML = '';
-
-    if (!movies.length) {
-        const message = document.createElement('p');
-        message.className = 'empty-state';
-        message.textContent = 'No se encontraron películas con los filtros actuales.';
-        moviesGrid.appendChild(message);
-        return;
-    }
-
-    const fragment = document.createDocumentFragment();
-    movies.forEach((movie) => fragment.appendChild(createMovieCard(movie)));
-    moviesGrid.appendChild(fragment);
-}
-
-function openModal(movie) {
-    const displayTitle = movie.title || movie.originalTitle || 'Título no disponible';
-    const originalTitle = movie.originalTitle && movie.originalTitle !== displayTitle ? movie.originalTitle : '';
-
-    modalPoster.src = movie.poster || PLACEHOLDER_IMAGE;
-    modalPoster.alt = `${displayTitle} - cartel`;
-    modalTitle.textContent = displayTitle;
-
-    let originalTitleElement = modalOverlay.querySelector('#modal-original-title');
-    if (originalTitle) {
-        if (!originalTitleElement) {
-            originalTitleElement = document.createElement('p');
-            originalTitleElement.id = 'modal-original-title';
-            originalTitleElement.className = 'modal-original-title';
-            modalTitle.insertAdjacentElement('afterend', originalTitleElement);
-        }
-        originalTitleElement.textContent = originalTitle;
-    } else if (originalTitleElement) {
-        originalTitleElement.remove();
-    }
-
-    const yearText = movie.year ? `${movie.year}` : 'Año desconocido';
-    const runtimeText = movie.runtime ? formatRuntime(movie.runtime) : null;
-    
-    if (runtimeText) {
-        modalYear.textContent = `${yearText} • ${runtimeText}`;
-        modalRuntime.hidden = true;
-    } else {
-        modalYear.textContent = `Año: ${yearText}`;
-        modalRuntime.hidden = true;
-    }
-
-    if (Array.isArray(movie.genres) && movie.genres.length) {
-        modalGenres.innerHTML = movie.genres
-            .map((genre) => `<span class="genre-chip">${genre}</span>`)
-            .join('');
-        modalGenres.hidden = false;
-    } else {
-        modalGenres.innerHTML = '';
-        modalGenres.hidden = true;
-    }
-
-    modalOverview.textContent = movie.overview || movie.originalOverview || 'No hay descripción disponible.';
-    modalOverlay.classList.remove('hidden');
-    modalOverlay.classList.add('visible');
-    modalOverlay.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeModal() {
-    if (!modalOverlay.classList.contains('visible')) {
-        return;
-    }
-    modalOverlay.classList.remove('visible');
-    modalOverlay.classList.add('hidden');
-    modalOverlay.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-}
-
-function showError(message) {
-    moviesGrid.innerHTML = `<p class="empty-state">${message}</p>`;
-    paginationControls.innerHTML = '';
-}
-
-function getPaginatedMovies() {
-    const startIndex = (state.currentPage - 1) * ITEMS_PER_PAGE;
-    return state.filteredMovies.slice(startIndex, startIndex + ITEMS_PER_PAGE);
-}
-
-function createEllipsis() {
-    const span = document.createElement('span');
-    span.className = 'pagination-ellipsis';
-    span.textContent = '...';
-    span.setAttribute('aria-hidden', 'true');
-    return span;
-}
-
-function setupPagination() {
-    const totalPages = Math.max(1, Math.ceil(state.filteredMovies.length / ITEMS_PER_PAGE));
-    if (state.currentPage > totalPages) {
-        state.currentPage = totalPages;
-    }
-
-    // Detect mobile and set max visible pages
-    const isMobile = window.innerWidth <= 640;
-    const maxVisiblePages = isMobile ? 3 : 5;
-
-    const prevButton = document.createElement('button');
-    prevButton.type = 'button';
-    prevButton.className = 'pagination-button pagination-prev';
-    prevButton.textContent = isMobile ? '←' : 'Anterior';
-    prevButton.setAttribute('aria-label', 'Anterior');
-    prevButton.disabled = state.currentPage === 1;
-    prevButton.dataset.page = String(state.currentPage - 1);
-
-    const nextButton = document.createElement('button');
-    nextButton.type = 'button';
-    nextButton.className = 'pagination-button pagination-next';
-    nextButton.textContent = isMobile ? '→' : 'Siguiente';
-    nextButton.setAttribute('aria-label', 'Siguiente');
-    nextButton.disabled = state.currentPage === totalPages;
-    nextButton.dataset.page = String(state.currentPage + 1);
-
-    const pagesWrapper = document.createElement('div');
-    pagesWrapper.className = 'pagination-pages';
-
-    // Calculate window around current page
-    const halfWindow = Math.floor(maxVisiblePages / 2);
-    let startPage = Math.max(1, state.currentPage - halfWindow);
-    let endPage = Math.min(totalPages, state.currentPage + halfWindow);
-
-    // Adjust if at boundaries
-    if (endPage - startPage + 1 < maxVisiblePages) {
-        if (startPage === 1) {
-            endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
-        } else if (endPage === totalPages) {
-            startPage = Math.max(1, endPage - maxVisiblePages + 1);
-        }
-    }
-
-    // Add first page and ellipsis if needed
-    if (startPage > 1) {
-        const firstPageButton = document.createElement('button');
-        firstPageButton.type = 'button';
-        firstPageButton.className = 'pagination-button page-number';
-        firstPageButton.textContent = '1';
-        firstPageButton.dataset.page = '1';
-        pagesWrapper.appendChild(firstPageButton);
-
-        if (startPage > 2) {
-            pagesWrapper.appendChild(createEllipsis());
-        }
-    }
-
-    // Add visible page numbers
-    for (let page = startPage; page <= endPage; page += 1) {
-        const pageButton = document.createElement('button');
-        pageButton.type = 'button';
-        pageButton.className = `pagination-button page-number${page === state.currentPage ? ' active' : ''}`;
-        pageButton.textContent = String(page);
-        pageButton.dataset.page = String(page);
-        if (page === state.currentPage) {
-            pageButton.disabled = true;
-        }
-        pagesWrapper.appendChild(pageButton);
-    }
-
-    // Add ellipsis and last page if needed
-    if (endPage < totalPages) {
-        if (endPage < totalPages - 1) {
-            pagesWrapper.appendChild(createEllipsis());
-        }
-
-        const lastPageButton = document.createElement('button');
-        lastPageButton.type = 'button';
-        lastPageButton.className = 'pagination-button page-number';
-        lastPageButton.textContent = String(totalPages);
-        lastPageButton.dataset.page = String(totalPages);
-        pagesWrapper.appendChild(lastPageButton);
-    }
-
-    paginationControls.innerHTML = '';
-    paginationControls.appendChild(prevButton);
-    paginationControls.appendChild(pagesWrapper);
-    paginationControls.appendChild(nextButton);
-}
-
-function updateFilteredMovies() {
-    const titleQuery = state.searchQuery.trim().toLowerCase();
-    state.filteredMovies = state.fullMovies.filter((movie) => {
-        const title = movie.title || movie.originalTitle || '';
-        const matchesTitle = title.toLowerCase().includes(titleQuery);
-        const matchesYear = state.selectedYear === 'all' || String(movie.year) === state.selectedYear;
-        const genres = Array.isArray(movie.genres) ? movie.genres : [];
-        const matchesGenre = state.selectedGenre === 'Todos' || genres.includes(state.selectedGenre);
-        
-        return matchesTitle && matchesYear && matchesGenre;
-    });
-    
-    // Apply sorting
-    state.filteredMovies.sort(sortOptions[currentSort]);
-    
-    state.currentPage = 1;
-    updateResultsCount();
-}
-
-function populateYearFilter() {
-    const years = Array.from(new Set(state.fullMovies
-        .map((movie) => movie.year)
-        .filter(Boolean)))
-        .sort((a, b) => Number(b) - Number(a));
-
-    yearFilter.innerHTML = '<option value="all">Todos los años</option>';
-    years.forEach((year) => {
-        const option = document.createElement('option');
-        option.value = String(year);
-        option.textContent = year;
-        yearFilter.appendChild(option);
-    });
-}
-
-function populateGenreFilter() {
-    const genres = Array.from(new Set(state.fullMovies
-        .flatMap((movie) => Array.isArray(movie.genres) ? movie.genres : [])))
-        .filter(Boolean)
-        .sort((a, b) => a.localeCompare(b, 'es', { sensitivity: 'base' }));
-
-    genreFilter.innerHTML = '<option value="Todos">Todos</option>';
-    genres.forEach((genre) => {
-        const option = document.createElement('option');
-        option.value = genre;
-        option.textContent = genre;
-        genreFilter.appendChild(option);
-    });
-}
-
-function renderCurrentPage() {
-    if (!state.fullMovies.length) {
-        return;
-    }
-
-    const pagedMovies = getPaginatedMovies();
-    renderMovies(pagedMovies);
-    setupPagination();
-}
-
-function updateResultsCount() {
-    const resultsCount = document.getElementById('resultsCount');
-    if (resultsCount) {
-        resultsCount.textContent = `Mostrando ${state.filteredMovies.length} película${state.filteredMovies.length !== 1 ? 's' : ''}`;
-    }
-}
-
-async function loadMovies() {
-    try {
-        const response = await fetch(MOVIES_DATA_PATH);
-
-        if (!response.ok) {
-            throw new Error(`Error HTTP ${response.status} al cargar ${MOVIES_DATA_PATH}`);
-        }
-
-        const data = await response.json();
-
-        if (!Array.isArray(data)) {
-            throw new Error('movies.json no contiene una lista de películas válida');
-        }
-
-        state.fullMovies = data;
-        if (!state.fullMovies.length) {
-            showError('No hay películas disponibles en el catálogo.');
-            return;
-        }
-
-        populateGenreFilter();
-        populateYearFilter();
-        updateFilteredMovies();
-        renderCurrentPage();
-    } catch (error) {
-        console.error('Error cargando películas:', error);
-        showError('Ocurrió un error al cargar la colección de películas.');
-    }
-}
-
-function handleGridClick(event) {
-    const card = event.target.closest('.movie-card');
-    if (!card) {
-        return;
-    }
-
-    const movieId = card.dataset.movieId;
-    const movie = state.filteredMovies.find((item) => String(item.tmdbId) === movieId || item.title === movieId);
-    if (movie) {
-        openModal(movie);
-    }
-}
-
-function handlePaginationClick(event) {
-    const button = event.target.closest('button[data-page]');
-    if (!button) {
-        return;
-    }
-
-    const selectedPage = Number(button.dataset.page);
-    if (Number.isNaN(selectedPage) || selectedPage === state.currentPage) {
-        return;
-    }
-
-    state.currentPage = Math.max(1, selectedPage);
-    renderCurrentPage();
-    
-    // Scroll al grid de películas, considerando la altura del header fixed
-    const header = document.querySelector('header');
-    const headerHeight = header ? header.offsetHeight : 0;
-    const gridTop = moviesGrid.getBoundingClientRect().top + window.scrollY;
-    window.scrollTo({ 
-        top: gridTop - headerHeight - 20, 
-        behavior: 'smooth' 
-    });
-}
-
-function handleSearchInput(event) {
-    state.searchQuery = event.target.value;
-    updateFilteredMovies();
-    renderCurrentPage();
-}
-
-function handleYearFilterChange(event) {
-    state.selectedYear = event.target.value;
-    updateFilteredMovies();
-    renderCurrentPage();
-}
-
-function handleGenreFilterChange(event) {
-    state.selectedGenre = event.target.value;
-    updateFilteredMovies();
-    renderCurrentPage();
-}
-
-function handleKeyDown(event) {
-    if (event.key === 'Escape') {
-        closeModal();
-    }
-}
-
-function handleOverlayClick(event) {
-    if (event.target === modalOverlay) {
-        closeModal();
-    }
-}
-
-// Simple toggle for collapsible filters
-function toggleFiltersContainer() {
-    const filtersContainer = document.getElementById('filtersContainer');
-    filtersContainer.classList.toggle('filters-collapsed');
-}
-
-window.addEventListener('DOMContentLoaded', () => {
-    loadMovies();
-    moviesGrid.addEventListener('click', handleGridClick);
-    paginationControls.addEventListener('click', handlePaginationClick);
-    searchInput.addEventListener('input', debounce(handleSearchInput));
-    genreFilter.addEventListener('change', handleGenreFilterChange);
-    yearFilter.addEventListener('change', handleYearFilterChange);
-    modalOverlay.addEventListener('click', handleOverlayClick);
-    modalClose.addEventListener('click', closeModal);
-    document.addEventListener('keydown', handleKeyDown);
-    
-    // Toggle filters button
-    const toggleBtn = document.getElementById('toggleFilters');
-    if (toggleBtn) {
-        toggleBtn.addEventListener('click', toggleFiltersContainer);
-    }
-    
-    // Sort select
-    const sortSelect = document.getElementById('sortSelect');
-    if (sortSelect) {
-        sortSelect.addEventListener('change', (e) => {
-            currentSort = e.target.value;
-            updateFilteredMovies();
-            renderCurrentPage();
-        });
-    }
-
-    // Handle window resize for responsive pagination
-    window.addEventListener('resize', debounce(() => {
-        renderCurrentPage();
-    }, 200));
-});

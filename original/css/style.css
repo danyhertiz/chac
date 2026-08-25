@@ -1,0 +1,624 @@
+/* --- Reset Básico y Configuración General (Global) --- */
+:root {
+    --primary-color: #448AFF; /* Un azul más claro para el modo oscuro */
+    --header-bg: #1a1a2e; /* Un azul oscuro casi negro */
+    --nav-bg: #16213e; /* Un azul más oscuro */
+    --nav-button-bg: #4A90E2; /* Azul más claro para botones */
+    --secondary-color: #E91E63; /* Un rosa más oscuro */
+    --text-color: #e0e0e0; /* Un gris claro para el texto */
+    --bg-color: #0f1624; /* Un fondo muy oscuro */
+    --card-bg-color: #1a1a2e; /* Un color de tarjeta oscuro */
+    --card-bg-color-alpha: rgba(26, 26, 46, 0.7);
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-top: 170px;
+    font-size: 1.3rem;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+/* --- Layout y Contenedores (Global) --- */
+header {
+    color: white;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-main {
+    background: linear-gradient(135deg, #0a1828 0%, #1e3a5f 50%, #2c5f8d 100%);
+    padding: 10px 1rem 1rem;
+    position: relative;
+    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: min-height 0.25s ease, padding 0.25s ease;
+}
+
+.header-brand {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.header-main > * {
+    position: relative;
+    z-index: 2;
+}
+
+.header-main h1 {
+    background: linear-gradient(45deg, #e0f0ff 0%, #f0f8ff 25%, #ffffff 50%, #f0f8ff 75%, #e0f0ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    z-index: 10;
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+    padding: 0.5rem 0;
+}
+
+header img {
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-weight: 700;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+    text-shadow:
+        0 0 10px rgba(0, 200, 255, 1),
+        0 0 20px rgba(0, 200, 255, 0.8),
+        0 0 30px rgba(0, 200, 255, 0.6),
+        0 0 40px rgba(0, 150, 255, 0.5),
+        0 0 60px rgba(0, 100, 255, 0.4),
+        0 0 80px rgba(0, 50, 255, 0.3);
+    animation: shimmer 3s linear infinite, float 4s ease-in-out infinite, neonPulse 2s ease-in-out infinite;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem;
+}
+
+main {
+    text-align: justify;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem 1rem 1rem; /* Padding general para todo el contenido principal */
+}
+
+.imagen-icono {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    vertical-align: -0.15em;
+    object-fit: contain;
+}
+
+.video-muted {
+    display: block;
+    width: 800px;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+}
+
+.card {
+    background-color: var(--card-bg-color-alpha);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+}
+
+/* Grid layout para galerías (historias y videos) */
+main.video-page-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 0.5rem; /* Reducido para disminuir espacio vertical entre los artículos */
+    padding: 2rem; /* Increased padding for galleries */
+    margin-top: 1.5rem; /* More space from header */
+}
+
+#story-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 2rem;
+    margin-top: 1.5rem;
+}
+
+
+
+/* --- Reglas específicas para la subpágina videos.html (videos.html):
+   3 columnas cuando el ancho lo permita, espacio entre tarjetas y 1 columna <768px.
+   No afecta al header (selectores limitados a .video-page-main). */
+.video-page-main #video-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;               /* espacio entre tarjetas */
+    align-items: start;
+    padding: 4px 0; /* ligeramente reducido para compactar aún más */
+    margin-top: 0;  /* asegurar que no haya margen extra sobre la galería */
+    box-sizing: border-box;
+    grid-column: 1 / -1; /* aseguramos que la galería quede debajo del artículo y ocupe todo el ancho */
+}
+
+/* Misma apariencia translúcida y padding que el resto de las tarjetas */
+.video-page-main .video-card {
+    background-color: var(--card-bg-color-alpha);
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+
+
+/* Multimedia dentro de cada tarjeta ocupa todo el ancho y mantiene proporción */
+.video-page-main .video-card video,
+.video-page-main .video-card lite-youtube,
+.video-page-main .video-card iframe {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+/* episodios.html usa videos 4:3; evita el recorte heredado de videos.html */
+.episode-page .video-card video {
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    background-color: #000;
+}
+
+
+
+/* Separación de la descripción dentro de la tarjeta */
+.video-page-main .video-card .description {
+    margin-top: 8px;
+    padding: 0 4px 4px;
+}
+
+/* Responsive: una sola columna en pantallas menores a 768px (no afecta header) */
+@media (max-width: 767px) {
+
+    .video-page-main #video-gallery {
+        grid-template-columns: 1fr;
+    }
+} 
+
+/* --- Estilos de las Tarjetas de Historia (historias.html, story.html) --- */
+.story-card {
+    background-color: var(--card-bg-color-alpha);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+    height: 140px;
+}
+
+.story-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.story-card img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.story-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    min-width: 0;
+}
+
+.story-date {
+    font-size: 0.75rem;
+}
+
+.story-content > h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#story-gallery .story-content h2 {
+    font-size: 1.4rem;
+}
+
+.story-content p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* --- Estilos del Menú de Navegación --- */
+.main-nav {
+    background-color: rgba(34, 100, 211, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    position: relative;
+    z-index: 2;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    margin-bottom: -1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-grow: 1; /* Make nav-links take available space */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.25rem 1rem;
+    border-radius: 50px;
+    background-color: rgba(74, 144, 226, 0.5);
+    transition: all 0.3s ease;
+    display: block;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.header-collapsed .header-main {
+    min-height: 0;
+    height: 3.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.header-collapsed .header-brand {
+    position: absolute;
+    inset: 0 0 auto;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.header-collapsed .main-nav {
+    margin-top: 0;
+}
+
+/* --- Ajustes para Dispositivos Móviles --- */
+@media (max-width: 768px) {
+    body {
+        padding-top: 140px;
+    }
+
+    main {
+        padding: 1.5rem 0.5rem 2rem 0.5rem; /* Padding general para móvil (increased bottom) */
+    }
+    
+    main#story-gallery,
+    main.video-page-main {
+        padding-top: 1.5rem; /* Mismo padding superior para galerías en móvil */
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .header-main {
+        padding: 0.75rem 0.75rem 0;
+        min-height: 0;
+        height: 140px;
+    }
+
+    .header-collapsed .header-main {
+        height: 3.5rem;
+    }
+
+    .main-nav {
+        padding: 0.5rem;
+    }
+
+    .nav-links {
+        padding: 0.25rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* Desplazamiento suave en iOS */
+        -ms-overflow-style: none;  /* Ocultar scrollbar en IE y Edge */
+        scrollbar-width: none;  /* Ocultar scrollbar en Firefox */
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none;
+    }
+
+    #story-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Estilos para Tarjetas como Enlaces --- */
+.story-card-link {
+    text-decoration: none;
+    color: inherit; /* Hereda el color del texto para que no se vea azul por defecto */
+    display: block; /* Asegura que el enlace ocupe todo el espacio de la tarjeta */
+}
+
+/* --- Estilos para la Página de Historia Individual (story.html) --- */
+.story-full {
+    /* Ocupa el 100% del ancho del contenedor principal y se sitúa como fila completa en la grid */
+    max-width: none; /* elimina la restricción anterior */
+    width: 100%;
+    margin: 0; /* eliminar centrado para ocupar todo el ancho */
+    background-color: var(--card-bg-color-alpha);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem; /* Reducido para compactar la separación con la galería */
+    grid-column: 1 / -1; /* forzar a ocupar todas las columnas del grid */
+}
+
+/* --- Ajuste específico para videos.html: reducir espacio entre el artículo introductorio y la galería --- */
+/* No modifica .story-full global para evitar afectar otras páginas que la usan */
+.video-page-main .story-full {
+    margin-bottom: 0.5rem; /* espacio reducido solo en la página de videos */
+}
+
+.story-full h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.story-full img {
+    max-width: 100%;
+    height: auto;
+    max-height: 80vh;
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.story-full h1 .imagen-icono {
+    display: inline-block;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+}
+
+/* Elimina box-shadow y border-radius en imágenes PNG para evitar visible container shadow con fondos transparentes */
+.story-full img[src$=".png"] {
+    box-shadow: none;
+    border-radius: 0;
+}
+
+@keyframes neonPulse {
+    0%, 100% {
+        text-shadow:
+            0 0 10px rgba(0, 200, 255, 1),
+            0 0 20px rgba(0, 200, 255, 0.8),
+            0 0 30px rgba(0, 200, 255, 0.6),
+            0 0 40px rgba(0, 150, 255, 0.5),
+            0 0 60px rgba(0, 100, 255, 0.4),
+            0 0 80px rgba(0, 50, 255, 0.3);
+    }
+    50% {
+        text-shadow:
+            0 0 20px rgba(0, 200, 255, 1),
+            0 0 40px rgba(0, 200, 255, 1),
+            0 0 60px rgba(0, 200, 255, 0.8),
+            0 0 80px rgba(0, 150, 255, 0.7),
+            0 0 100px rgba(0, 100, 255, 0.6),
+            0 0 120px rgba(0, 50, 255, 0.5);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.welcome-section {
+    margin-right: 20px;
+}
+
+.welcome-content::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.welcome-section img {
+    float: left;
+    height: 350px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .welcome-section {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* Estilos para el formulario de inicio de sesión */
+#login-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+#login-form {
+    background: var(--card-bg-color-alpha);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
+    width: 320px;
+}
+
+#login-form h2 {
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+#login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#login-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5cb85c;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#login-form button:hover {
+    background-color: #4cae4c;
+}
+
+#login-error {
+    color: #d9534f;
+    margin-top: 10px;
+    height: 20px;
+}
+
+/* Media queries para tarjetas de historia */
+@media (max-width: 768px) {
+    #story-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .story-card {
+        height: auto;
+        padding: 10px;
+    }
+    .story-card img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* --- Superficie de tarjetas unificada (transparencia centralizada) --- */
+/* Usa --card-bg-color-alpha para controlar la transparencia de todas las tarjetas */
+
+.card,
+.story-card,
+.story-full,
+#login-form,
+.video-card {
+    background-color: var(--card-bg-color-alpha);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* --- Ajuste: descripciones de tarjetas de video se muestran como texto normal sobre la tarjeta --- */
+/* --- Estilos de descripción de tarjetas de video (videos.html) --- */
+.video-card .description {
+    background-color: transparent; /* sin fondo independiente */
+    color: var(--text-color);
+    padding: 1.5rem;               /* que se integren con el padding del contenedor */
+    border-radius: 0;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    display: block;          /* comportamiento de bloque como un párrafo normal */
+    max-width: 100%;
+    box-shadow: none;
+    margin: 0;    /* separación superior mínima */
+    line-height: 1.6;
+    font-size: 0.95rem;
+}

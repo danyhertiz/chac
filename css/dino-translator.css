@@ -1,84 +1,87 @@
 #dino-translator {
+    width: min(100%, 700px);
     margin: 1.5rem auto;
-    max-width: 600px;
     padding: 1rem;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    border: 1px solid #eaeaea;
+    border: 1px solid #b8d3e8;
+    border-radius: 8px;
+    background: #f7fbff;
+    color: #263746;
+    box-shadow: 0 4px 18px rgba(18, 56, 84, 0.18);
 }
 
 #dino-translator h2 {
-    margin-top: 0;
-    text-align: center;
-    color: #2c3e50;
-    font-size: 1.2rem;
-    border-bottom: 1px solid #f0f0f0;
+    margin: 0 0 1rem;
     padding-bottom: 0.5rem;
-    margin-bottom: 0.8rem;
+    border-bottom: 1px solid #dbeaf5;
+    color: #1c4f70;
+    font-size: 1.25rem;
+    text-align: center;
 }
 
 #dino-translator .translator-controls {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 0.9rem;
 }
 
 #dino-translator .control-group {
     display: flex;
     flex-direction: column;
-    gap: 0.3rem;
+    gap: 0.35rem;
 }
 
 #dino-translator label {
-    font-weight: 600;
-    font-size: 0.85rem;
-    color: #555;
+    color: #36566b;
+    font-size: 0.9rem;
+    font-weight: 700;
 }
 
-#dino-translator select, 
+#dino-translator select,
 #dino-translator textarea {
     width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-family: inherit;
-    box-sizing: border-box;
-    transition: border-color 0.2s;
+    padding: 0.6rem;
+    border: 1px solid #a9c4d8;
+    border-radius: 5px;
+    background: #fff;
+    color: #263746;
+    font: inherit;
+}
+
+#dino-translator select:focus,
+#dino-translator textarea:focus {
+    outline: 2px solid #68a9d2;
+    outline-offset: 1px;
 }
 
 #dino-translator textarea {
-    min-height: 80px;
+    min-height: 120px;
     resize: vertical;
 }
 
 #dino-translator .output-container {
-    margin-top: 0.5rem;
-    padding: 0.4rem 0.8rem;
-    background-color: #f8f9fa;
-    border-radius: 6px;
-    border-left: 5px solid #3498db;
-    min-height: auto;
-    word-break: break-all;
+    min-height: 4rem;
+    margin-top: 0.25rem;
+    padding: 0.65rem 0.85rem;
+    border-left: 5px solid #2f8ac4;
+    border-radius: 5px;
+    background: #eaf4fb;
     font-size: 1.1rem;
+    overflow-wrap: anywhere;
 }
 
 #dino-translator .output-label {
-    font-weight: 700;
-    font-size: 0.75rem;
-    margin-bottom: 0.6rem;
     display: block;
-    color: #7f8c8d;
+    margin-bottom: 0.5rem;
+    color: #55788d;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
 #dino-translator #dino-output {
-    line-height: 1.3;
-    color: #2c3e50;
+    min-height: 1.4em;
+    color: #1c4f70;
+    line-height: 1.4;
     white-space: pre-wrap;
-    min-height: 1.3em;
 }

@@ -1,39 +1,90 @@
-/* Estilos para tarjetas colapsables */
+:root {
+    --card-bg-color-alpha: rgba(26, 26, 46, 0.72);
+    --primary-color: #74c9ff;
+    --text-color: #e0e0e0;
+}
+
+#stories-container {
+    display: grid;
+    gap: 0.25rem;
+    margin-top: 1rem;
+}
+
 .collapsible-story {
     background-color: var(--card-bg-color-alpha);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 2rem;
-    margin-bottom: 1.5rem;
-    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    margin-bottom: 0.25rem;
+    cursor: default;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 0;
+    max-width: 100%;
 }
 
-.collapsible-story:hover {
+.collapsible-story:not(.expanded) {
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.collapsible-story.expanded {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.collapsible-story:not(.expanded):hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.story-header {
+    cursor: pointer;
 }
 
 .collapsible-story .story-header h2 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
+    font-size: clamp(1.4rem, 2vw, 2rem);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
-.collapsible-story .date {
-    font-size: 0.9rem;
-    color: var(--text-color);
-    margin-top: 0.5rem;
+.collapsible-story .story-header h2 .imagen-icono {
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    max-width: 1.2em;
+    max-height: 1.2em;
+    margin: 0;
+    padding: 0;
+    vertical-align: text-bottom;
+    object-fit: contain;
+    flex-shrink: 0;
+    line-height: 1;
 }
 
 .collapsible-story .story-content {
     display: none;
+    cursor: default;
     color: var(--text-color);
-    font-size: 1.3rem;
-    line-height: 1.6;
+    font-size: var(--content-font-size);
+    line-height: 1.7;
     margin-top: 1.5rem;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.collapsible-story .story-content * {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .collapsible-story .story-content h2 {
+    color: var(--primary-color);
     font-size: 1.6rem;
     margin: 1.6rem 0 0.6rem;
     font-weight: 700;
@@ -49,14 +100,17 @@
 
 .collapsible-story .story-content p {
     margin-bottom: 1rem;
-    font-size: 1.3rem;
-    line-height: 1.6;
+    font-family: var(--content-font-family);
+    font-size: var(--content-font-size);
+    line-height: 1.7;
+    text-align: justify;
 }
 
 .collapsible-story .story-content ul,
 .collapsible-story .story-content ol {
     margin-bottom: 1rem;
-    padding-left: 2rem;}
+    padding-left: 2rem;
+}
 
 .collapsible-story .story-content img {
     max-width: 100%;
@@ -65,10 +119,29 @@
     display: block;
     margin: 1.5rem auto;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Elimina box-shadow y border-radius en imágenes PNG para evitar visible container shadow con fondos transparentes */
+.collapsible-story .story-content iframe,
+.collapsible-story .story-content lite-youtube {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 1.5rem auto;
+}
+
+.collapsible-story .story-content lite-youtube > iframe {
+    margin: 0;
+}
+
+.collapsible-story .story-content video[controls] {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem auto;
+}
+
 .collapsible-story .story-content img[src$=".png"] {
     box-shadow: none;
     border-radius: 0;
@@ -76,4 +149,113 @@
 
 .collapsible-story.expanded .story-content {
     display: block;
+}
+
+.collapse-story-button {
+    display: none;
+    margin: 1.5rem auto 0;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--primary-color);
+    cursor: pointer;
+    font: inherit;
+}
+
+.collapsible-story.expanded .collapse-story-button {
+    display: block;
+}
+
+.story-full {
+    width: 100%;
+    margin: 0 0 1.5rem;
+    background-color: var(--card-bg-color-alpha);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.story-full h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.story-full p {
+    color: var(--text-color);
+    font-family: var(--content-font-family);
+    font-size: var(--content-font-size);
+    line-height: 1.7;
+}
+
+.story-full img {
+    max-width: 100%;
+    height: auto;
+    max-height: 80vh;
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+section.story-full > h1 .imagen-icono,
+.story-full h1 .imagen-icono {
+    display: inline-block !important;
+    width: 1em !important;
+    height: 1em !important;
+    max-width: 1em !important;
+    max-height: 1em !important;
+    margin: 0 0.25em 0 0 !important;
+    padding: 0 !important;
+    vertical-align: text-bottom !important;
+    object-fit: contain !important;
+    flex-shrink: 0 !important;
+    line-height: 1 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+.story-full img[src$=".png"] {
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/* Padding de las tarjetas colapsables*/
+
+@media (max-width: 768px) {
+    .story-full {
+        padding: 0.5rem;
+    }
+
+    .collapsible-story {
+        padding: 1rem 1rem;
+    }
+
+    .collapsible-story:not(.expanded) {
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+    }
+
+    .collapsible-story.expanded {
+        padding-bottom: 1.25rem;
+        padding-top: 1.25rem;
+    }
+}
+
+.story-full .collapsible-story .story-header h2 img.imagen-icono,
+section.story-full .collapsible-story .story-header h2 img.imagen-icono {
+    display: inline-block !important;
+    width: 1.2em !important;
+    height: 1.2em !important;
+    max-width: 1.2em !important;
+    max-height: 1.2em !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    vertical-align: text-bottom !important;
+    object-fit: contain !important;
+    flex-shrink: 0 !important;
+    line-height: 1 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
 }

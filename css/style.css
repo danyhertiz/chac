@@ -1,492 +1,110 @@
-/* --- Reset Básico y Configuración General (Global) --- */
 :root {
-    --primary-color: #448AFF; /* Un azul más claro para el modo oscuro */
-    --header-bg: #1a1a2e; /* Un azul oscuro casi negro */
-    --nav-bg: #16213e; /* Un azul más oscuro */
-    --nav-button-bg: #4A90E2; /* Azul más claro para botones */
-    --secondary-color: #E91E63; /* Un rosa más oscuro */
-    --text-color: #e0e0e0; /* Un gris claro para el texto */
-    --bg-color: #0f1624; /* Un fondo muy oscuro */
-    --card-bg-color: #1a1a2e; /* Un color de tarjeta oscuro */
-    --card-bg-color-alpha: rgba(26, 26, 46, 0.7);
-    transition: background-color 0.4s ease, color 0.4s ease;
+    --header-height: 80px;
+    --menu-width: 230px;
+    --page-bg: #0f1624;
+    --panel-bg: rgba(26, 26, 46, 0.72);
+    --text: #e0e0e0;
+    --accent: #74c9ff;
+    --content-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --content-font-size: 1.15rem;
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    min-height: 100vh;
+    background: var(--page-bg);
+    color: var(--text);
+    font-family: var(--content-font-family);
+    font-size: 1.1rem;
     line-height: 1.6;
-    padding-top: 170px;
-    font-size: 1.3rem;
+    padding-top: var(--header-height);
 }
 
-main {
-    position: relative;
-    z-index: 1;
+p {
+    font-family: var(--content-font-family);
+    font-size: var(--content-font-size);
+    text-align: justify;
 }
 
-
-
-/* --- Layout y Contenedores (Global) --- */
 header {
     color: white;
-    text-align: center;
     position: fixed;
-    top: 0;
+    inset: 0 0 auto;
     width: 100%;
     z-index: 1000;
 }
 
 .header-main {
     background: linear-gradient(135deg, #0a1828 0%, #1e3a5f 50%, #2c5f8d 100%);
+    min-height: var(--header-height);
     padding: 10px 1rem 1rem;
     position: relative;
-    min-height: 170px;
     display: flex;
-    flex-direction: column;
     overflow: hidden;
-    transition: min-height 0.25s ease, padding 0.25s ease;
 }
 
 .header-brand {
+    align-items: center;
+    display: flex;
+    justify-content: center;
     position: relative;
-    flex: 1;
-    min-height: 0;
-    transition: transform 0.25s ease, opacity 0.25s ease;
-}
-
-.header-main > * {
-    position: relative;
+    width: 100%;
     z-index: 2;
 }
 
-.header-main h1 {
+.header-brand h1 {
+    animation: shimmer 3s linear infinite, float 4s ease-in-out infinite, neonPulse 2s ease-in-out infinite;
     background: linear-gradient(45deg, #e0f0ff 0%, #f0f8ff 25%, #ffffff 50%, #f0f8ff 75%, #e0f0ff 100%);
-    -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    position: relative;
-    z-index: 10;
     font-size: 3rem;
     letter-spacing: 0.1em;
-    padding: 0.5rem 0;
-}
-
-header img {
-    margin-bottom: 10px;
-}
-
-header h1 {
-    font-weight: 700;
-    margin-bottom: 0;
-    position: relative;
-    z-index: 2;
-    text-shadow:
-        0 0 10px rgba(0, 200, 255, 1),
-        0 0 20px rgba(0, 200, 255, 0.8),
-        0 0 30px rgba(0, 200, 255, 0.6),
-        0 0 40px rgba(0, 150, 255, 0.5),
-        0 0 60px rgba(0, 100, 255, 0.4),
-        0 0 80px rgba(0, 50, 255, 0.3);
-    animation: shimmer 3s linear infinite, float 4s ease-in-out infinite, neonPulse 2s ease-in-out infinite;
-}
-
-footer {
     text-align: center;
-    padding: 1.5rem 1rem;
-    margin-top: 2rem;
-    background-color: #333;
-    color: white;
-    font-size: 0.9rem;
+}
+
+.header-brand a {
+    color: inherit;
+    text-decoration: none;
 }
 
 main {
-    text-align: justify;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1rem 1rem 1rem; /* Padding general para todo el contenido principal */
-}
-
-.imagen-icono {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    max-width: none;
-    max-height: none;
-    margin: 0;
-    vertical-align: -0.15em;
-    object-fit: contain;
-}
-
-.video-muted {
-    display: block;
-    width: 800px;
-    max-width: 100%;
-    height: auto;
-    aspect-ratio: auto;
-    margin: 0 auto 20px;
-    border-radius: 8px;
-}
-
-.card {
-    background-color: var(--card-bg-color-alpha);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 1.5rem;
-}
-
-/* Grid layout para galerías (historias y videos) */
-main.video-page-main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 0.5rem; /* Reducido para disminuir espacio vertical entre los artículos */
-    padding: 2rem; /* Increased padding for galleries */
-    margin-top: 1.5rem; /* More space from header */
-}
-
-#story-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 2rem;
-    margin-top: 1.5rem;
-}
-
-
-
-/* --- Reglas específicas para la subpágina videos.html (videos.html):
-   3 columnas cuando el ancho lo permita, espacio entre tarjetas y 1 columna <768px.
-   No afecta al header (selectores limitados a .video-page-main). */
-.video-page-main #video-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;               /* espacio entre tarjetas */
-    align-items: start;
-    padding: 4px 0; /* ligeramente reducido para compactar aún más */
-    margin-top: 0;  /* asegurar que no haya margen extra sobre la galería */
-    box-sizing: border-box;
-    grid-column: 1 / -1; /* aseguramos que la galería quede debajo del artículo y ocupe todo el ancho */
-}
-
-/* Misma apariencia translúcida y padding que el resto de las tarjetas */
-.video-page-main .video-card {
-    background-color: var(--card-bg-color-alpha);
-    padding: 12px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-    overflow: hidden;
-}
-
-
-
-/* Multimedia dentro de cada tarjeta ocupa todo el ancho y mantiene proporción */
-.video-page-main .video-card video,
-.video-page-main .video-card lite-youtube,
-.video-page-main .video-card iframe {
-    width: 100%;
-    height: auto;
-    display: block;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-}
-
-/* episodios.html usa videos 4:3; evita el recorte heredado de videos.html */
-.episode-page .video-card video {
-    aspect-ratio: 4 / 3;
-    object-fit: contain;
-    background-color: #000;
-}
-
-
-
-/* Separación de la descripción dentro de la tarjeta */
-.video-page-main .video-card .description {
-    margin-top: 8px;
-    padding: 0 4px 4px;
-}
-
-/* Responsive: una sola columna en pantallas menores a 768px (no afecta header) */
-@media (max-width: 767px) {
-
-    .video-page-main #video-gallery {
-        grid-template-columns: 1fr;
-    }
-} 
-
-/* --- Estilos de las Tarjetas de Historia (historias.html, story.html) --- */
-.story-card {
-    background-color: var(--card-bg-color-alpha);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    gap: 15px;
-    height: 140px;
-}
-
-.story-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-}
-
-.story-card img {
-    width: 110px;
-    height: 110px;
-    object-fit: cover;
-    border-radius: 8px;
-    flex-shrink: 0;
-}
-
-.story-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 6px;
-    min-width: 0;
-}
-
-.story-date {
-    font-size: 0.75rem;
-}
-
-.story-content > h2 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-#story-gallery .story-content h2 {
-    font-size: 1.4rem;
-}
-
-.story-content p {
-    font-size: 0.9rem;
-    line-height: 1.4;
-}
-
-/* --- Estilos del Menú de Navegación --- */
-.main-nav {
-    background-color: rgba(34, 100, 211, 0.1);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    padding: 0.5rem 1rem;
-    display: flex;
-    align-items: center;
-    margin-top: auto;
+    /* Posición horizontal: centra el contenedor dentro del espacio disponible. */
+    margin-left: max(var(--menu-width), calc((100vw + var(--menu-width) - 1500px) / 2));
+    /* Dimensiones del contenedor principal: ajustar aquí el ancho máximo y la altura mínima. */
+    max-width: 1500px;
+    min-height: calc(100vh - var(--header-height) - 80px);
+    /* Padding del contenedor principal: espacio entre sus límites y el contenido. */
+    padding: 3rem 2rem;
     position: relative;
-    z-index: 2;
-    margin-left: -1rem;
-    margin-right: -1rem;
-    margin-bottom: -1px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-grow: 1; /* Make nav-links take available space */
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.25rem 1rem;
-    border-radius: 50px;
-    background-color: rgba(74, 144, 226, 0.5);
-    transition: all 0.3s ease;
-    display: block;
-    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    font-size: 1rem;
-}
-
-.nav-links a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
-.header-collapsed .header-main {
-    min-height: 0;
-    height: 3.5rem;
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-.header-collapsed .header-brand {
-    position: absolute;
-    inset: 0 0 auto;
-    transform: translateY(-100%);
-    opacity: 0;
-    pointer-events: none;
-}
-
-.header-collapsed .main-nav {
-    margin-top: 0;
-}
-
-/* --- Ajustes para Dispositivos Móviles --- */
-@media (max-width: 768px) {
-    body {
-        padding-top: 140px;
-    }
-
-    main {
-        padding: 1.5rem 0.5rem 2rem 0.5rem; /* Padding general para móvil (increased bottom) */
-    }
-    
-    main#story-gallery,
-    main.video-page-main {
-        padding-top: 1.5rem; /* Mismo padding superior para galerías en móvil */
-    }
-
-    header {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-    }
-
-    .header-main {
-        padding: 0.75rem 0.75rem 0;
-        min-height: 0;
-        height: 140px;
-    }
-
-    .header-collapsed .header-main {
-        height: 3.5rem;
-    }
-
-    .main-nav {
-        padding: 0.5rem;
-    }
-
-    .nav-links {
-        padding: 0.25rem;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch; /* Desplazamiento suave en iOS */
-        -ms-overflow-style: none;  /* Ocultar scrollbar en IE y Edge */
-        scrollbar-width: none;  /* Ocultar scrollbar en Firefox */
-    }
-
-    .nav-links::-webkit-scrollbar {
-        display: none;
-    }
-
-    #story-gallery {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* --- Estilos para Tarjetas como Enlaces --- */
-.story-card-link {
-    text-decoration: none;
-    color: inherit; /* Hereda el color del texto para que no se vea azul por defecto */
-    display: block; /* Asegura que el enlace ocupe todo el espacio de la tarjeta */
-}
-
-/* --- Estilos para la Página de Historia Individual (story.html) --- */
-.story-full {
-    /* Ocupa el 100% del ancho del contenedor principal y se sitúa como fila completa en la grid */
-    max-width: none; /* elimina la restricción anterior */
-    width: 100%;
-    margin: 0; /* eliminar centrado para ocupar todo el ancho */
-    background-color: var(--card-bg-color-alpha);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-bottom: 1.5rem; /* Reducido para compactar la separación con la galería */
-    grid-column: 1 / -1; /* forzar a ocupar todas las columnas del grid */
-}
-
-/* --- Ajuste específico para videos.html: reducir espacio entre el artículo introductorio y la galería --- */
-/* No modifica .story-full global para evitar afectar otras páginas que la usan */
-.video-page-main .story-full {
-    margin-bottom: 0.5rem; /* espacio reducido solo en la página de videos */
-}
-
-.story-full h1 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-.story-full img {
-    max-width: 100%;
-    height: auto;
-    max-height: 80vh;
-    display: block;
-    margin: 1.5rem auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-.story-full h1 .imagen-icono {
-    display: inline-block;
-    max-width: none;
-    max-height: none;
-    margin: 0;
-}
-
-/* Elimina box-shadow y border-radius en imágenes PNG para evitar visible container shadow con fondos transparentes */
-.story-full img[src$=".png"] {
-    box-shadow: none;
-    border-radius: 0;
-}
-
-@keyframes neonPulse {
-    0%, 100% {
-        text-shadow:
-            0 0 10px rgba(0, 200, 255, 1),
-            0 0 20px rgba(0, 200, 255, 0.8),
-            0 0 30px rgba(0, 200, 255, 0.6),
-            0 0 40px rgba(0, 150, 255, 0.5),
-            0 0 60px rgba(0, 100, 255, 0.4),
-            0 0 80px rgba(0, 50, 255, 0.3);
-    }
-    50% {
-        text-shadow:
-            0 0 20px rgba(0, 200, 255, 1),
-            0 0 40px rgba(0, 200, 255, 1),
-            0 0 60px rgba(0, 200, 255, 0.8),
-            0 0 80px rgba(0, 150, 255, 0.7),
-            0 0 100px rgba(0, 100, 255, 0.6),
-            0 0 120px rgba(0, 50, 255, 0.5);
-    }
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+    z-index: 1;
 }
 
 .main-container {
-    display: flex;
+    /* Alineación del contenido: controla la posición de las tarjetas dentro del contenedor. */
     align-items: center;
-    justify-content: center;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    /* Padding entre el contenedor principal y las tarjetas. */
     padding: 20px;
+}
+
+.card {
+    background: var(--panel-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Padding interno de las tarjetas: espacio alrededor del texto y demás contenido. */
+    padding: 1.5rem;
+    width: 100%;
 }
 
 .welcome-section {
@@ -494,131 +112,281 @@ main.video-page-main {
 }
 
 .welcome-content::after {
-    content: "";
     clear: both;
+    content: "";
     display: table;
 }
 
 .welcome-section img {
     float: left;
     height: 350px;
-    margin-right: 15px;
     margin-bottom: 10px;
+    margin-right: 15px;
+}
+
+.intro-panel {
+    background: var(--panel-bg);
+    border: 1px solid rgba(116, 201, 255, 0.18);
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    max-width: 760px;
+    padding: clamp(2rem, 5vw, 4rem);
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.intro-panel h2 {
+    color: #f0f8ff;
+    font-size: clamp(1.8rem, 4vw, 3.2rem);
+    line-height: 1.15;
+    margin: 0.8rem 0 1.2rem;
+}
+
+.intro-panel p:last-child {
+    max-width: 58ch;
+}
+
+.side-menu {
+    background: rgba(12, 16, 27, 0.5);
+    backdrop-filter: blur(8px);
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    height: calc(100vh - var(--header-height));
+    left: 0;
+    overflow-y: auto;
+    padding: 2rem 1rem;
+    position: fixed;
+    top: var(--header-height);
+    width: var(--menu-width);
+    z-index: 900;
+}
+
+.side-menu nav {
+    display: grid;
+    gap: 0.65rem;
+}
+
+.menu-group {
+    display: grid;
+    gap: 0.45rem;
+}
+
+.submenu {
+    display: none;
+    gap: 0.45rem;
+    margin-left: 1rem;
+    padding-left: 0.75rem;
+    border-left: 2px solid rgba(116, 201, 255, 0.45);
+}
+
+.menu-group.is-expanded .submenu {
+    display: grid;
+}
+
+.side-menu button {
+    background: rgba(58, 70, 94, 0.62);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font: inherit;
+    padding: 0.5rem 1rem;
+    text-align: left;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.side-menu button:hover,
+.side-menu button:focus-visible {
+    background: rgba(74, 144, 226, 0.82);
+    outline: none;
+    transform: translateX(4px);
+}
+
+.submenu button {
+    background: rgba(45, 56, 77, 0.62);
+    font-size: 0.95rem;
+    padding: 0.35rem 0.85rem;
+}
+
+.menu-toggle,
+.menu-backdrop {
+    display: none;
+}
+
+footer {
+    background: rgba(16, 20, 30, 0.75);
+    color: #c4ccd8;
+    font-size: 0.85rem;
+    margin-left: var(--menu-width);
+    padding: 1.25rem;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+footer p {
+    text-align: center;
+}
+
+#video-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.video-card {
+    background: var(--panel-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    padding: 12px;
+}
+
+.video-card video,
+.video-card lite-youtube,
+.video-card iframe {
+    aspect-ratio: 16 / 9;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+}
+
+.video-card .description {
+    margin-top: 8px;
+    padding: 0 4px 4px;
+}
+
+.episode-page .video-card video {
+    aspect-ratio: 4 / 3;
+    background: #000;
+    object-fit: contain;
 }
 
 @media (max-width: 768px) {
+    :root {
+        --header-height: 80px;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+
+    .header-main {
+        min-height: var(--header-height);
+        padding: 0.75rem;
+    }
+
+    .header-brand h1 {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+    main {
+        margin-left: 0;
+        /* Padding del contenedor principal en móviles. */
+        padding: 2rem 0.75rem;
+    }
+
     .main-container {
         flex-direction: column;
+        /* Padding entre el contenedor y las tarjetas en móviles. */
+        padding: 0;
+    }
+
+    .card {
+        /* Padding interno de las tarjetas en móviles. */
+        padding: 1rem;
     }
 
     .welcome-section {
-        margin-right: 0;
         margin-bottom: 20px;
+        margin-right: 0;
     }
-}
 
-/* Estilos para el formulario de inicio de sesión */
-#login-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2000;
-}
+    .welcome-section img {
+        float: none;
+        height: auto;
+        margin: 0 auto 1rem;
+        max-width: 100%;
+    }
 
-#login-form {
-    background: var(--card-bg-color-alpha);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    text-align: center;
-    width: 320px;
-}
+    .side-menu {
+        height: calc(100vh - var(--header-height));
+        padding-top: 5rem;
+        transform: translateX(-100%);
+        transition: transform 0.25s ease;
+        width: min(var(--menu-width), 82vw);
+    }
 
-#login-form h2 {
-    margin-bottom: 20px;
-    color: var(--text-color);
-}
+    .side-menu.is-open {
+        transform: translateX(0);
+    }
 
-#login-form input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
+    .menu-toggle {
+        align-items: center;
+        background: rgba(12, 16, 27, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        justify-content: center;
+        left: 1rem;
+        padding: 0.5rem;
+        position: fixed;
+        top: calc(var(--header-height) / 2);
+        transform: translateY(-50%);
+        width: 38px;
+        height: 38px;
+        z-index: 1100;
+    }
 
-#login-form button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #5cb85c;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
+    .menu-toggle span {
+        background: white;
+        display: block;
+        height: 2px;
+        width: 20px;
+    }
 
-#login-form button:hover {
-    background-color: #4cae4c;
-}
+    .menu-backdrop {
+        background: rgba(0, 0, 0, 0.42);
+        inset: 0;
+        position: fixed;
+        z-index: 800;
+    }
 
-#login-error {
-    color: #d9534f;
-    margin-top: 10px;
-    height: 20px;
-}
+    .menu-backdrop.is-visible {
+        display: block;
+    }
 
-/* Media queries para tarjetas de historia */
-@media (max-width: 768px) {
-    #story-gallery {
+    footer {
+        margin-left: 0;
+    }
+
+    #video-gallery {
         grid-template-columns: 1fr;
     }
 }
 
-@media (max-width: 480px) {
-    .story-card {
-        height: auto;
-        padding: 10px;
-    }
-    .story-card img {
-        width: 80px;
-        height: 80px;
-    }
+@keyframes shimmer {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.25); }
 }
 
-/* --- Superficie de tarjetas unificada (transparencia centralizada) --- */
-/* Usa --card-bg-color-alpha para controlar la transparencia de todas las tarjetas */
-
-.card,
-.story-card,
-.story-full,
-#login-form,
-.video-card {
-    background-color: var(--card-bg-color-alpha);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+@keyframes neonPulse {
+    0%, 100% { text-shadow: 0 0 10px rgba(0, 200, 255, 0.8), 0 0 30px rgba(0, 150, 255, 0.4); }
+    50% { text-shadow: 0 0 20px rgba(0, 200, 255, 1), 0 0 55px rgba(0, 150, 255, 0.7); }
 }
 
-/* --- Ajuste: descripciones de tarjetas de video se muestran como texto normal sobre la tarjeta --- */
-/* --- Estilos de descripción de tarjetas de video (videos.html) --- */
-.video-card .description {
-    background-color: transparent; /* sin fondo independiente */
-    color: var(--text-color);
-    padding: 1.5rem;               /* que se integren con el padding del contenedor */
-    border-radius: 0;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    display: block;          /* comportamiento de bloque como un párrafo normal */
-    max-width: 100%;
-    box-shadow: none;
-    margin: 0;    /* separación superior mínima */
-    line-height: 1.6;
-    font-size: 0.95rem;
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
 }
