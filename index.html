@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dany Hertiz | Nueva versión</title>
+    <link rel="icon" href="/img/hertiz_ico.ico" type="image/x-icon">
+    <title>Dany Hertiz</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/collapsible-cards.css">
     <link rel="stylesheet" href="css/binary-background.css">
@@ -12,8 +13,23 @@
     <link rel="stylesheet" href="css/galeria.css">
     <link rel="stylesheet" href="css/download-simulator.css">
     <link rel="stylesheet" href="css/dino-translator.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <script src="js/auth.js"></script>
 </head>
 <body>
+    <section class="auth-screen" id="auth-screen" aria-labelledby="auth-title">
+        <form class="auth-panel" id="auth-form">
+            <p class="auth-kicker">Dany Hertiz</p>
+            <h1 id="auth-title">Bienvenido Chac</h1>
+            <p>Introduce la contraseña para entrar.</p>
+            <label for="auth-password">Contraseña</label>
+            <input id="auth-password" name="password" type="password" autocomplete="current-password" required>
+            <p class="auth-error" id="auth-error" role="alert" aria-live="polite"></p>
+            <button type="submit">Entrar</button>
+        </form>
+    </section>
+
+    <div id="site-content">
     <header>
         <div class="header-main">
             <div class="binary-container" aria-hidden="true"></div>
@@ -103,6 +119,7 @@
     <footer>
         <p>&copy; 2025 Dany Hertiz</p>
     </footer>
+    </div>
 
     <script src="js/marked.min.js"></script>
     <script src="js/lite-yt-embed.js"></script>

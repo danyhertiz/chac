@@ -1,4 +1,14 @@
-document.addEventListener('DOMContentLoaded', () => {
+const initializeSite = () => {
+    if (window.siteInitialized) {
+        return;
+    }
+
+    if (window.authenticated !== true) {
+        return;
+    }
+
+    window.siteInitialized = true;
+
     const binaryContainer = document.querySelector('.binary-container');
     const binaryColumns = 13;
 
@@ -351,4 +361,9 @@ document.addEventListener('DOMContentLoaded', () => {
         loadSection(initialPage);
     }
 
-});
+};
+
+window.addEventListener('authenticated', initializeSite, { once: true });
+if (window.authenticated === true) {
+    initializeSite();
+}
