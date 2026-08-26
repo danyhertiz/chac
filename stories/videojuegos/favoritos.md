@@ -215,7 +215,7 @@ Al final ambos sabemos lo que pasó, terminé comprando primero el Game Cube neg
 
 ![Zelda Collector’s Edition](img/historias/videojuegos/oot_col.jpg)
 
-En fin, el caso es que desde ese momento quedé fascinado por los juegos de Zelda, en especial por el Ocarina. De hecho, la salida de su adaptación para 3DS fue la razón por la que me compré la consola en su momento. Es un juego al que vuelvo constantemente, lo termino al menos una vez cada año. Y ya te podrás imaginar las ganas que tengo de jugar el remake que viene para Switch 2
+En fin, el caso es que desde ese momento quedé fascinado por los juegos de Zelda, en especial por el Ocarina. De hecho, la salida de su adaptación para 3DS fue la razón por la que me compré la consola en su momento. Es un juego al que vuelvo constantemente, lo termino al menos una vez cada año. Y ya te podrás imaginar las ganas que tengo de jugar el remake que viene para Switch 2.
 
 ![Ocarina of Time Remake](img/historias/videojuegos/oot_re.jpg)
 
@@ -223,8 +223,6 @@ En fin, el caso es que desde ese momento quedé fascinado por los juegos de Zeld
 ## Pragmata
 
 <p style="text-align: right;">📅 5 de mayo, 2026</p>
-
-![Pragmata](img/historias/videojuegos/pragmata_b.jpg)
 
 Debido a mi baja tolerancia a la frustración, durante mucho tiempo he estado evitando juegos que me parezcan a simple vista difíciles o retadores. Pero Pragmata me empezó a llamar la atención por su temática espacial, por el carisma de sus protagonistas y por su corta duración. Así que le di una oportunidad al demo. Lo descargué en mi Switch 2 y cuando terminé de jugarlo, estaba seguro de que ese sería el próximo juego que me compraría. A pesar de que la versión de PC es capaz de entregar la mejor calidad de imagen, decidí comprarlo en Switch por la comodidad y la practicidad. Lo terminé en una semana exactamente y me gustó tanto que después me lo compré también en Steam y lo jugué de nuevo en la computadora. Puedo decir sin equivocarme, que este juego será uno de mis favoritos de todos los tiempos, a la par de otros como Ocarina of Time.
 
