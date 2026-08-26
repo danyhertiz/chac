@@ -151,7 +151,7 @@ const initializeSite = () => {
             { file: 'Grabadoras.md', title: '📻 Grabadoras' },
         ],
         juguetes: [
-            { file: 'camiones.md', title: '🏗️ Maquinaria de construcción' },
+            { file: 'Camiones.md', title: '🏗️ Maquinaria de construcción' },
             { file: 'Bloques.md', title: '🧱 Cubos y bloques de madera' },
             { file: 'Linternas.md', title: '🔦 Linternas' },
             { file: 'cotidianos.md', title: '🧸 Juguetes cotidianos' },
