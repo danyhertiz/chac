@@ -49,7 +49,7 @@ Eso es lo que me marcó en este caso, no el juego como tal, sino lo que nos perm
 
 <p style="text-align: right;">📅 13 de agosto, 2026</p>
 
-La primera vez que vi el Mario 3 fue en una maquinita de la tienda de don Beto ¿Te acuerdas de esa tienda? Una ocasión en la que me mandaron a comprar algo a esa tienda, y vi que unos niños estaban jugando en la maquinita, me acerqué a ver y para mi sorpresa era un juego de Super Mario que yo nunca había visto. Me sorprendió mucho cuando vi que, al agarrar la hoja, le salían orejas y cola a Mario, y me quedé con el ojo cuadrado cuando vi que los niños que estaban jugando lo hicieron volar. No me quedé a ver más, pero esa escena se me quedó muy grabada en la mente y nunca la he olvidado. En ese momento me quedé pensando que ese juego estaría solo en maquinitas, porque lo vi demasiado avanzado gráficamente como para el NES.
+La primera vez que vi el Mario 3 fue en una maquinita de la tienda de don Beto ¿Te acuerdas de esa tienda? Una ocasión en la que me mandaron a comprar algo, vi que unos niños estaban jugando en la maquinita, me acerqué a ver y para mi sorpresa era un juego de Super Mario que yo nunca había visto. Me sorprendió mucho cuando vi que, al agarrar la hoja, le salían orejas y cola a Mario, y me quedé con el ojo cuadrado cuando vi que los niños que estaban jugando lo hicieron volar. No me quedé a ver más, pero esa escena se me quedó muy grabada en la mente y nunca la he olvidado. En ese momento me quedé pensando que ese juego estaría solo en maquinitas, porque lo vi demasiado avanzado gráficamente como para el NES.
 
 ![Super Mario Bros 3 Arcade](img/historias/videojuegos/smb3_arcade.jpg)
 
@@ -59,7 +59,7 @@ Posteriormente no recuerdo como fue que llegó el juego a nuestras manos, pero t
 
 De cualquier manera, el Mario 3 se volvió parte de nuestra colección “fija”, es decir, de esos cartuchos que ya no cambiábamos. Porque no sé si recuerdes que, en aquel tiempo hicimos costumbre de cambiar cartuchos en los tianguis. Casi cada fin de semana, llevábamos uno o dos cartuchos a cambiar. Incluso teníamos clasificados nuestros juegos en: “Juegos para cambiar” y “Juegos que ya se quedan en casa”.
 
-Otro recuerdo muy arraigado relacionado con el Mario 3, y que es uno de los más felices que tengo, es cuando Moisés lo terminó y vimos el final por primera vez. Nos enseño que las flautas servían para acceder a niveles mas avanzados sin tener que pasar por todos los mundos. Pero creo que en esa ocasión sí lo jugamos todo de corrido. Uno de esos raros días en los que el Nintendo estuvo encendido prácticamente todo el día. Porque recuerdo que esa vez fue que, ya en el mundo 7, Moisés llegó al castillo que está lleno de bloques amarillos, y nos mostró que ya había encontrado el switch que los convierte en monedas. Luego me pasó el control a mí, y me dejó haciendo muchas vidas para que al llegar al mundo 8 tuviéramos las suficientes oportunidades para terminar el juego.
+Otro recuerdo muy arraigado relacionado con el Mario 3, y que es uno de los más felices que tengo, es cuando Moisés lo terminó y vimos el final por primera vez. Nos enseño que las flautas servían para acceder a niveles mas avanzados sin tener que pasar por todos los mundos. Pero creo que en esa ocasión sí lo jugamos todo de corrido. Uno de esos raros días en los que el Nintendo estuvo encendido prácticamente todo el día. Según mis recuerdos, ya en el mundo 7, Moisés llegó al castillo que está lleno de bloques amarillos, y nos mostró que ya había encontrado el switch que los convierte en monedas. Luego me pasó el control y me dejó haciendo muchas vidas para que al llegar al mundo 8 tuviéramos las suficientes oportunidades para terminar el juego.
 
 <video autoplay loop muted playsinline class="video-muted">
   <source src="img/historias/videojuegos/smb3_monedas.mp4" type="video/mp4">
@@ -73,11 +73,11 @@ Los tres estábamos muy emocionados de haber llegado tan lejos y ver tantas cosa
        style="width: 800px; max-width: 100%; height: auto; display: block; margin: 0 auto;">
 </div>
 
-Ese día debe haber sido el cumpleaños de alguno de nosotros o alguna fiesta en particular porque recuerdo que, terminando de ver el final, yo fui a la cocina por unos tamales y regresé al cuarto a comer y a platicar con ustedes sobre el final del juego. Hasta me acuerdo de que fue una de esas noches lluviosas. Imagino que sí era cumpleaños de alguien porque tal vez por esa razón nos dejaron jugar prácticamente todo el día.
+Ese día debe haber sido el cumpleaños de alguno de nosotros o alguna fiesta en particular porque recuerdo que, terminando de ver el final, yo fui a la cocina por unos tamales y regresé al cuarto a comer y a platicar con ustedes sobre el final del juego. Hasta me acuerdo de que fue una de esas noches lluviosas. Imagino que sí era cumpleaños de alguien,  ya que tal vez por esa razón nos dejaron jugar prácticamente todo el día.
 
 ![Super Mario Bros 3 Ending](img/historias/videojuegos/smb3_ending.jpg)
 
-Es curioso como funciona la memoria, porque, hace unos años yo tenía un perfume que me parece que nos compramos Petaca y yo en el bordo. Lo tuve guardado mucho tiempo, y años después, al poco tiempo de haberme casado, cada vez que lo olía le decía a mi Foza: “¡Ese perfume huele a Mario Bros 3!”. A ella le daba mucha risa, pero es verdad, en cuanto percibía el aroma de ese perfume, inevitablemente regresaban a mi mente recuerdos de ese juego. No sé por qué, pero siempre se me hizo muy curioso.
+Es curioso como funciona la memoria, porque, hace unos años tenía un perfume que me parece que nos compramos Petaca y yo en el bordo. Lo tuve guardado mucho tiempo, y años después, al poco tiempo de haberme casado, cada vez que lo olía le decía a mi Foza: “¡Ese perfume huele a Mario Bros 3!”. A ella le daba mucha risa, pero es verdad, en cuanto percibía el aroma de ese perfume, inevitablemente regresaban a mi mente recuerdos de ese juego. No sé por qué, pero siempre se me hizo muy curioso.
 
 ---
 ## Double Dragon 3
@@ -96,7 +96,9 @@ Me parece recordar que en algún momento lo llegamos a tener dos veces. Primero 
 
 ![Double Dragon 3 Family](img/historias/videojuegos/dd3_family.jpg)
 
-Ese es uno de los juegos en los que sí me llegué a considerar experto. Me gustaba mucho cuando lo jugábamos tu y yo en cooperativo.
+Ese es uno de los juegos en los que sí me llegué a considerar experto. Me gustaba mucho cuando lo jugábamos tu y yo en cooperativo. No se me olvida lo de "...y Chin es más rápido que una centella!..." 🤣
+
+Esas primeras experiencias coopertivas, desde mi punto de vista, nunca serán superadas por el multijugador online. No hay nada como estar lado a lado con quien juegas, partiéndose de risa. Realmente extraño eso.
 
 ---
 ## Tecmo Bowl
@@ -109,15 +111,23 @@ No me considero fanático del futbol americano ni de sus videojuegos, pero el Te
   <source src="img/historias/videojuegos/tecmo.mp4" type="video/mp4">
   </video>
 
-Para mí, su punto fuerte nunca estuvo en los gráficos o la simulación del deporte, sino en tomar como base el futbol americano y simplificarlo lo suficiente para que entrara en una consola de 8 bits, pero sin perder la emoción, la tensión y lo impredecible que es ese deporte. De ese modo el resultado es un juego divertido y adictivo, pero sin pretender ser un simulador realista, tal como intentan los juegos de deportes de hoy en día.
+Para mí, su punto fuerte nunca estuvo en los gráficos o la simulación del deporte, sino en tomar como base el futbol americano y simplificarlo lo suficiente para que entrara en una consola de 8 bits, pero sin perder la emoción, la tensión y lo impredecible que es ese deporte. De ese modo el resultado es un juego divertido y adictivo, sin pretender ser un simulador realista, cosa que intentan mucho los juegos de deportes de hoy en día.
 
 Una de las cosas mas geniales que había en aquél entonces era la posibilidad de jugar versiones portátiles muy parecidas a los juegos de consola. Algunas adaptaciones eran bastante fieles a la versión de sobremesa, pero en este caso era una copia exacta, las únicas diferencias era la adaptación de los sprites a la pequeña pantalla del Game Boy y el hecho de que era en blanco y negro. Pero creo recordar que incluso los passwords de NES funcionaban en la versión de Game Boy. Además, era lo máximo poder jugar de a dos por medio del cable link.
 
-![Tecmo Bowl Game Boy](img/historias/videojuegos/tb_gb.jpg)
+<div style="text-align: center; margin: 20px 0;">
+  <img src="img/historias/videojuegos/tb_gb.jpg" 
+       alt="Tecmo Bowl Game Boy"
+       style="width: 800px; max-width: 100%; height: auto; display: block; margin: 0 auto;">
+</div>
 
 Hoy en día ya tengo muchas maneras de jugarlo, pero una de mis favoritas es la versión de NES en mi 3DS. Ver ese juego en una pequeña y brillante pantalla a todo color, es para mí una de las mejores maneras de revivir aquellos tiempos.
 
-![Tecmo Bowl 3DS](img/historias/videojuegos/tb_3ds.jpg)
+<div style="text-align: center; margin: 20px 0;">
+  <img src="img/historias/videojuegos/tb_3ds.jpg" 
+       alt="Tecmo Bowl 3DS"
+       style="width: 800px; max-width: 100%; height: auto; display: block; margin: 0 auto;">
+</div>
 
 ---
 ## Mario Kart
@@ -149,7 +159,7 @@ Ningún otro juego de SNES me causó tanto impacto como Star Fox, ni siquiera lo
        style="width: 800px; max-width: 100%; height: auto; display: block; margin: 0 auto;">
 </div>
 
-El framerate era bajísimo y los controles algo toscos, pero todo eso quedaba opacado por lo divertido y emocionante que era. Muchas veces tuve sueños relacionados con ese juego, pero nunca se los conté a nadie. A la fecha ya solo recuerdo vagamente escenas concretas, como una gigantesca Arwing descendiendo en el patio de la casa. O uno en el que tu y yo íbamos pilotando cada quien su Arwing y atravesando por un agujero de gusano en el espacio. Ya sabes, cosas locas que sueña uno cuando es niño.
+El framerate era bajísimo y los controles algo toscos, pero todo eso quedaba opacado por lo divertido y emocionante que era. Muchas veces tuve sueños relacionados con ese juego, pero nunca se los conté a nadie. A la fecha ya solo recuerdo vagamente escenas concretas de aquellos sueños, como una gigantesca Arwing descendiendo en el patio de la casa. O uno en el que tu y yo íbamos pilotando cada quien su Arwing y atravesando por un agujero de gusano en el espacio. Ya sabes, cosas locas que sueña uno cuando es niño.
 
 <div style="text-align: center; margin: 20px 0;">
   <img src="img/historias/videojuegos/sf_b.gif" 
@@ -180,7 +190,7 @@ Según mis vagos recuerdos. La primera vez que supimos de la existencia de Mario
 
 Me parece recordar que en alguna tienda departamental pudimos ver el N64 tras una vitrina, y al menos a mí me sorprendió el tamaño y la forma de los enchufes de los controles y también el tamaño de los botones “C”. Son de esas veces en que, aunque ya hayas visto algo muchas veces en la tele, ya cuando te toca verlo en persona es mucho más sorprendente.
 
-Posteriormente nos tocó ver la consola en acción. Hubo un día en que Lucha y Moisés nos llevaron a ver una película en el cine a plaza Tepeyac, y terminamos viendo dos 🤭 Recuerdo que ellos nos llevaron a ver la de Tarzán y cuando salimos nos dieron a elegir, si queríamos no sé qué cosa o ver otra película, así que elegimos ver el Episodio 1 de Star Wars. El caso es que, andando en esa plaza, entramos a una tienda departamental y vimos uno de esos “stands” en el que había un Nintendo 64 encerrado en su burbujita y conectado a una tele. La consola estaba encendida y tenía puesto el cartucho de Mario 64. Nos quedamos ahí viendo la introducción una y otra vez.
+Posteriormente nos tocó ver la consola en acción. Hubo un día en que Lucha y Moisés nos llevaron a ver una película en el cine a plaza Tepeyac, y terminamos viendo dos 🤭 Recuerdo que ellos nos llevaron a ver la de Tarzán y cuando salimos nos dieron a elegir, si queríamos no sé qué cosa o ver otra película, así que elegimos ver el Episodio 1 de Star Wars. El caso es que, andando en esa plaza, entramos a una tienda departamental y vimos uno de esos “stands” en el que había un Nintendo 64 encerrado en su burbujita y conectado a una tele. La consola estaba encendida y tenía puesto el cartucho de Mario 64. Nos quedamos ahí viendo el demo de introducción una y otra vez.
 
 ![Nintendo 64 Stand](img/historias/videojuegos/n64_stand.jpg)
 
@@ -189,8 +199,7 @@ Posteriormente nos tocó ver la consola en acción. Hubo un día en que Lucha y 
 
 <p style="text-align: right;">📅 25 de agosto, 2026</p>
 
-
-Hasta donde recuerdo, nunca me había llamado la atención ningún juego de Zelda, hasta que tuvimos el Nintendo 64. Los primeros juegos que tuvimos fueron el Super Mario 64 y el Star Wars Espisode 1 Racer. Pero un buen día Paco dijo que iba a comprar Zelda. En ese momento, para mí era un juego del que se hablaba mucho, pero al que yo no le prestaba mucha atención. Tiempo después, cuando Paco lo compró y lo jugamos un rato, me empezó a gustar su ambientación y estilo, pero debido a nuestra falta de experiencia no avanzábamos mucho. Fuiste tu quien leyó en una revista, dónde conseguir la primera espada, y la manera de entrar al árbol Deku. Después una telaraña nos impedía llegar a una puerta, pero ninguno de nosotros intuyó la solución, hasta que vi a unos niños jugando en Plaza Zaragoza que me di cuenta de que con ayuda de los palos podíamos llevar el fuego hasta las telarañas para quemarlas. Eso me sorprendió mucho porque era un nivel de realismo que no habíamos visto antes. El hecho de que los objetos del inventario interactuaran de esa manera con el ambiente podrá parecer algo básico hoy en día, pero en aquel momento era algo nuevo.
+Hasta donde recuerdo, nunca me había llamado la atención ningún juego de Zelda, hasta que tuvimos el Nintendo 64. Los primeros juegos que tuvimos fueron el Super Mario 64 y el Star Wars Espisode 1 Racer. Pero un buen día, Paco dijo que iba a comprar Zelda. En ese momento, para mí era un juego del que se hablaba mucho, pero al que yo no le prestaba mucha atención. Tiempo después, cuando Paco lo compró y lo jugamos un rato, me empezó a gustar su ambientación y estilo, pero debido a nuestra falta de experiencia no avanzábamos mucho. Fuiste tu quien leyó en una revista dónde conseguir la primera espada y la manera de entrar al árbol Deku. Después, una telaraña nos impedía llegar a una puerta, pero ninguno de nosotros intuyó la solución, hasta que vi a unos tipos jugando en Plaza Zaragoza que me di cuenta de que con ayuda de los palos podíamos llevar el fuego hasta las telarañas para quemarlas. Eso me sorprendió mucho porque era un nivel de realismo que no habíamos visto antes. El hecho de que los objetos del inventario interactuaran de esa manera con el escenario, podrá parecer algo básico hoy en día, pero en aquel momento era algo nuevo.
 
 <video autoplay loop muted playsinline class="video-muted" style="width: 800px; max-width: 100%; height: auto;">
   <source src="img/historias/videojuegos/zoot.mp4" type="video/mp4">
@@ -221,7 +230,7 @@ Debido a mi baja tolerancia a la frustración, durante mucho tiempo he estado ev
 
 ![Pragmata](img/historias/videojuegos/pragmata.jpg)
 
-Lo tiene todo, un sistema de combate frenético y bien diseñado, un motor gráfico sorprendente, una historia sencilla pero entrañable, una banda sonora que acompaña de manera perfecta a la historia y la acción, haciendo más inmersivo el juego, y la duración del propio juego es más que razonable. Es perfecto.
+Lo tiene todo, un sistema de combate frenético y bien diseñado, un motor gráfico sorprendente, una historia sencilla pero entrañable, una banda sonora que acompaña de manera perfecta a la historia y la acción, haciendo más inmersivo el juego, y su duración es más que razonable, la primera vez lo terminé en 17 horas, la segunda en sólo 9. Es prácticamente perfecto. Y creo que Capcom está hacendo un magnífico trabajo con sus ports a Switch 2, ya que en cuanto a calidad visual no le piden nada a los de las otras consolas.
 
 <video autoplay loop muted playsinline class="video-muted">
   <source src="img/historias/videojuegos/prag.mp4" type="video/mp4">
