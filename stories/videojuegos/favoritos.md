@@ -185,6 +185,32 @@ Posteriormente nos tocó ver la consola en acción. Hubo un día en que Lucha y 
 ![Nintendo 64 Stand](img/historias/videojuegos/n64_stand.jpg)
 
 ---
+## The Legend of Zelda: Ocarina of Time
+
+<p style="text-align: right;">📅 25 de agosto, 2026</p>
+
+
+Hasta donde recuerdo, nunca me había llamado la atención ningún juego de Zelda, hasta que tuvimos el Nintendo 64. Los primeros juegos que tuvimos fueron el Super Mario 64 y el Star Wars Espisode 1 Racer. Pero un buen día Paco dijo que iba a comprar Zelda. En ese momento, para mí era un juego del que se hablaba mucho, pero al que yo no le prestaba mucha atención. Tiempo después, cuando Paco lo compró y lo jugamos un rato, me empezó a gustar su ambientación y estilo, pero debido a nuestra falta de experiencia no avanzábamos mucho. Fuiste tu quien leyó en una revista, dónde conseguir la primera espada, y la manera de entrar al árbol Deku. Después una telaraña nos impedía llegar a una puerta, pero ninguno de nosotros intuyó la solución, hasta que vi a unos niños jugando en Plaza Zaragoza que me di cuenta de que con ayuda de los palos podíamos llevar el fuego hasta las telarañas para quemarlas. Eso me sorprendió mucho porque era un nivel de realismo que no habíamos visto antes. El hecho de que los objetos del inventario interactuaran de esa manera con el ambiente podrá parecer algo básico hoy en día, pero en aquel momento era algo nuevo.
+
+<video autoplay loop muted playsinline class="video-muted" style="width: 800px; max-width: 100%; height: auto;">
+  <source src="img/historias/videojuegos/zoot.mp4" type="video/mp4">
+  </video>
+
+Tiempo después compré la guía del juego, ahí mismo en la Plaza Zaragoza, y fue entonces que empezamos a avanzar mucho más rápido, hasta el día en que logramos terminarlo. Sus dimensiones y duración me hacían preguntarme cómo es que podía caber una aventura tan gigantesca en un cartucho tan pequeño.
+
+Con el tiempo se volvió mi favorito y presté más atención al resto de los juegos de Zelda. Todavía recuerdo aquellos años previos a tener mi propio Game Cube, cuando ansiaba hacerme con la "Collector’s Edition", esa que solo se conseguía como parte del pack de la consola y que no se vendía de forma independiente. Un día, al pasar frente al Liverpool del centro, vi cómo descargaban de un camión varias unidades de ese bundle. Las reconocí al instante porque todas llevaban una etiqueta que anunciaba la inclusión de la edición especial.
+
+![Game Cube Bundle](img/historias/videojuegos/gcz.jpg)
+
+Al final ambos sabemos lo que pasó, terminé comprando primero el Game Cube negro con el Star Fox Adeventures, al poco tiempo te lo di a ti y me compré la versión Platinum sin juego. Y tiempo después tu me regalaste la Collector’s Edition que tanto había querido. Y aun la conservo.
+
+![Zelda Collector’s Edition](img/historias/videojuegos/oot_col.jpg)
+
+En fin, el caso es que desde ese momento quedé fascinado por los juegos de Zelda, en especial por el Ocarina. De hecho, la salida de su adaptación para 3DS fue la razón por la que me compré la consola en su momento. Es un juego al que vuelvo constantemente, lo termino al menos una vez cada año. Y ya te podrás imaginar las ganas que tengo de jugar el remake que viene para Switch 2
+
+![Ocarina of Time Remake](img/historias/videojuegos/oot_re.jpg)
+
+---
 ## Pragmata
 
 <p style="text-align: right;">📅 5 de mayo, 2026</p>

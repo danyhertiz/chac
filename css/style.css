@@ -130,6 +130,7 @@ main {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1.5rem;
+    border-radius: 8px;
 }
 
 .intro-panel {
