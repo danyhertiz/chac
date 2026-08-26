@@ -11,7 +11,7 @@ const __dirname = dirname(__filename);
 const API_KEY = "79babdd2d24b858c4488b987a2743aef";
 const OUTPUT_JSON = "./movies.json";
 const MANUAL_MATCHES_JSON = "./manualMatches.json";
-const POSTERS_FOLDER = path.join(__dirname, "..", "..", "img", "posters");
+const POSTERS_FOLDER = path.join(__dirname, "..", "img", "posters");
 const TMDB_POSTER_BASE_URL = "https://image.tmdb.org/t/p/w500";
 
 /**

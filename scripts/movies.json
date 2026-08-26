@@ -22286,5 +22286,19 @@
     ],
     "tmdbId": 936075,
     "runtime": 128
+  },
+  {
+    "title": "El día de la revelación",
+    "originalTitle": "Disclosure Day",
+    "year": "2026",
+    "overview": "Si descubrieras que no estamos solos, si alguien te abriera los ojos y te lo demostrase, ¿te asustarías?",
+    "originalOverview": "Si descubrieras que no estamos solos, si alguien te abriera los ojos y te lo demostrase, ¿te asustarías?",
+    "poster": "img/posters/1275779.jpg",
+    "genres": [
+      "Ciencia ficción",
+      "Suspense"
+    ],
+    "tmdbId": 1275779,
+    "runtime": 146
   }
 ]
