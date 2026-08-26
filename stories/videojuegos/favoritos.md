@@ -128,11 +128,9 @@ Pasando a juegos de SNES, son pocos los que jugué, pero uno de los que más me 
 
 Recuerdo las tardes que pasábamos partiéndonos de risa con este juego. A veces lo jugábamos en solitario y otras en multijugador, pero siempre que alguien jugaba, estábamos los demás viendo.
 
-<div style="text-align: center; margin: 20px 0;">
-  <img src="img/historias/videojuegos/mk.gif" 
-       alt="Mario Kart Gameplay"
-       style="width: 800px; max-width: 100%; height: auto; display: block; margin: 0 auto;">
-</div>
+<video autoplay loop muted playsinline class="video-muted">
+  <source src="img/historias/videojuegos/mk.mp4" type="video/mp4">
+  </video>
 
 Hoy en día se habla mucho sobre las maravillas de ingeniería que tuvieron que hacer los desarrolladores para poder crear este juego, como la implementación del famoso “Modo 7” y otras cosas. Pero en aquellos años, lo único que importaba es que era uno de los juegos de carreras más divertidos que había. En este juego fue donde empecé a simpatizar con los Koopa Troopa, hicieron muy simpática la tortuguita.
 
