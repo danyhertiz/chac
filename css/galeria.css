@@ -1,33 +1,68 @@
+/* Contenedor general de la pagina de la galeria. */
 .movie-gallery-page { width: 100%; }
+/* Presentacion inicial y panel de controles de la galeria. */
 .gallery-page-intro, .gallery-controls { background: var(--panel-bg); border-radius: 8px; padding: 1.25rem; }
+/* Separa la introduccion de los controles. */
 .gallery-page-intro { margin-bottom: 1rem; }
+/* Titulo principal de la galeria. */
 .gallery-page-intro h1 { color: #fff; margin-bottom: .5rem; }
+/* Limita el ancho de lectura del texto introductorio. */
 .gallery-page-intro p { max-width: 980px; }
+/* Organiza verticalmente la barra de controles. */
 .gallery-controls { display: flex; flex-direction: column; gap: .75rem; margin-bottom: 1rem; }
+/* Agrupa la busqueda y el boton de filtros. */
 .search-bar-wrapper { display: flex; gap: .75rem; align-items: end; }
+/* Apila cada etiqueta y su campo de control. */
 .control-group { display: flex; flex-direction: column; gap: .25rem; width: 100%; }
+/* Apariencia comun de los campos de busqueda y seleccion. */
 .control-group input, .control-group select { width: 100%; padding: .6rem .75rem; border: 1px solid rgba(255,255,255,.15); border-radius: 5px; background: #141414; color: #f3f3f3; font: inherit; }
+/* Botones de filtros y paginacion. */
 .toggle-filters-btn, .pagination-button { border: 1px solid rgba(255,255,255,.15); border-radius: 5px; background: rgba(255,255,255,.08); color: #fff; cursor: pointer; padding: .6rem .9rem; }
+/* Oculta los filtros hasta que el usuario los despliega. */
 .filters-collapsed { display: none; }
+/* Distribuye los filtros visibles en tres columnas. */
 #filtersContainer:not(.filters-collapsed) { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; }
+/* Texto que indica la cantidad de peliculas mostradas. */
 .results-count { color: #c4ccd8; font-size: .9rem; }
+/* Rejilla de posters del catalogo. */
 .gallery-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1rem; }
+/* Tarjeta clicable de cada pelicula en el catalogo. */
 .movie-card { background: var(--panel-bg); border: 1px solid rgba(255,255,255,.08); border-radius: 8px; color: #fff; cursor: pointer; display: flex; flex-direction: column; padding: .65rem; text-align: center; transition: transform .2s ease, filter .2s ease; }
+/* Realce de la tarjeta al pasar el cursor. */
 .movie-card:hover { filter: brightness(1.12); transform: translateY(-3px); }
+/* Poster con proporcion vertical constante dentro de la rejilla. */
 .movie-poster { aspect-ratio: 2 / 3; background: #111; border-radius: 5px; display: block; object-fit: cover; width: 100%; }
+/* Titulo de la pelicula bajo el poster. */
 .movie-title { font-weight: 700; line-height: 1.3; margin-top: .6rem; }
+/* Ano y duracion de la pelicula. */
 .movie-meta { color: #9aa3b1; font-size: .8rem; margin-top: .25rem; }
+/* Centra y separa los botones de paginacion. */
 .pagination-container { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; margin-top: 1.25rem; }
+/* Fondo fijo que cubre la pagina cuando se abre el modal. */
 .modal-overlay { align-items: center; background: rgba(0,0,0,.86); display: flex; inset: 0; justify-content: center; opacity: 0; padding: 1rem; pointer-events: none; position: fixed; transition: opacity .2s ease; z-index: 2000; }
+/* Hace visible y habilita la interaccion del modal. */
 .modal-overlay.visible { opacity: 1; pointer-events: auto; }
+/* Mantiene el modal fuera de la vista cuando esta cerrado. */
 .modal-overlay.hidden { visibility: hidden; }
+/* Caja principal del modal: poster a la izquierda y ficha a la derecha. */
 .modal-content { background: var(--panel-bg); border-radius: 8px; display: grid; grid-template-columns: 280px minmax(0,1fr); max-height: 90vh; max-width: 900px; overflow: auto; position: relative; width: 100%; }
+/* Boton circular para cerrar la ficha. */
 .modal-close { background: rgba(0,0,0,.45); border: 0; border-radius: 50%; color: #fff; cursor: pointer; font-size: 1.5rem; height: 36px; position: absolute; right: .75rem; top: .75rem; width: 36px; z-index: 1; }
+/* Imagen del poster dentro de la ficha del modal. */
 .modal-poster { height: 100%; object-fit: cover; width: 100%; }
+/* Espaciado interior de la informacion de la pelicula. */
 .modal-body { padding: 1.5rem; }
+/* Titulo de la ficha del modal. */
 .modal-body h2 { color: #fff; }
+/* Color del ano y de la sinopsis. */
 .modal-meta, .overview { color: #d8d8d8; }
+/* Coloca los generos en etiquetas que pueden saltar de linea. */
 .movie-genres { display: flex; flex-wrap: wrap; gap: .4rem; margin: .75rem 0; }
+/* Estilo de cada etiqueta de genero. */
 .genre-chip { background: rgba(116,201,255,.16); border-radius: 999px; color: #d9e7ff; padding: .25rem .6rem; }
+/* Ajusta la rejilla del catalogo en pantallas medianas. */
 @media (max-width: 1200px) { .gallery-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-@media (max-width: 768px) { .search-bar-wrapper, #filtersContainer:not(.filters-collapsed) { grid-template-columns: 1fr; display: grid; } .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .modal-content { grid-template-columns: 1fr; } .modal-poster { max-height: 35vh; } }
+/* Ajustes exclusivos para moviles. */
+/* En movil, el modal se apila y se reduce para que poster y ficha quepan mejor. */
+/* El cuerpo tiene desplazamiento propio para poder leer la sinopsis sin ampliar toda la tarjeta. */
+@media (max-width: 768px) { .search-bar-wrapper, #filtersContainer:not(.filters-collapsed) { grid-template-columns: 1fr; display: grid; } .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .modal-content { grid-template-columns: 1fr; max-height: 80vh; max-width: min(92vw, 420px); } .modal-poster { height: 38vh; max-height: none; object-fit: contain; } .modal-body { max-height: 44vh; overflow-y: auto; padding: 1rem; } }
