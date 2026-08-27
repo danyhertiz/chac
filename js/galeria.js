@@ -20,12 +20,35 @@ function initMovieGallery(root = document) {
     const modalOverview = root.querySelector('#modal-overview');
     const results = root.querySelector('#resultsCount');
     const state = { movies: [], filtered: [], page: 1, query: '', genre: 'Todos', year: 'all', sort: 'year_desc' };
+    const compareByReleaseDate = (a, b, direction) => {
+        if (a.releaseDate && b.releaseDate) return direction * b.releaseDate.localeCompare(a.releaseDate);
+        return direction * (Number(b.year) - Number(a.year));
+    };
     const compare = {
-        year_desc: (a, b) => Number(b.year) - Number(a.year), year_asc: (a, b) => Number(a.year) - Number(b.year),
+        year_desc: (a, b) => compareByReleaseDate(a, b, 1), year_asc: (a, b) => compareByReleaseDate(a, b, -1),
         title_asc: (a, b) => (a.title || a.originalTitle || '').localeCompare(b.title || b.originalTitle || '', 'es'),
         title_desc: (a, b) => (b.title || b.originalTitle || '').localeCompare(a.title || a.originalTitle || '', 'es'),
         duration_asc: (a, b) => (a.runtime || 0) - (b.runtime || 0), duration_desc: (a, b) => (b.runtime || 0) - (a.runtime || 0)
     };
+
+    function formatRuntime(runtime) {
+        if (!Number.isFinite(Number(runtime)) || Number(runtime) <= 0) return 'Duración desconocida';
+        const totalMinutes = Number(runtime);
+        const hours = Math.floor(totalMinutes / 60);
+        const minutes = totalMinutes % 60;
+        const hourText = hours === 1 ? 'hora' : 'horas';
+        const minuteText = minutes === 1 ? 'minuto' : 'minutos';
+        if (!hours) return `${minutes} ${minuteText}`;
+        if (!minutes) return `${hours} ${hourText}`;
+        return `${hours} ${hourText} y ${minutes} ${minuteText}`;
+    }
+
+    function formatReleaseDate(releaseDate, year) {
+        const months = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+        const match = typeof releaseDate === 'string' ? releaseDate.match(/^(\d{4})-(\d{2})-(\d{2})$/) : null;
+        if (!match) return `Estreno: ${year || 'fecha desconocida'}`;
+        return `Estreno: ${Number(match[3])}/${months[Number(match[2]) - 1]}/${match[1]}`;
+    }
 
     function card(movie) {
         const title = movie.title || movie.originalTitle || 'Título desconocido';
@@ -73,7 +96,7 @@ function initMovieGallery(root = document) {
     grid.addEventListener('click', (event) => {
         const movie = state.filtered.find((item) => String(item.tmdbId ?? (item.title || item.originalTitle)) === event.target.closest('.movie-card')?.dataset.movieId);
         if (!movie) return; const title = movie.title || movie.originalTitle || 'Título desconocido';
-        modalPoster.src = movie.poster ? movie.poster : PLACEHOLDER_IMAGE; modalTitle.textContent = title; modalYear.textContent = movie.year || 'Año desconocido';
+        modalPoster.src = movie.poster ? movie.poster : PLACEHOLDER_IMAGE; modalTitle.textContent = title; modalYear.textContent = `${formatReleaseDate(movie.releaseDate, movie.year)} • ${formatRuntime(movie.runtime)}`;
         modalGenres.replaceChildren(...(movie.genres || []).map((item) => { const chip = document.createElement('span'); chip.className = 'genre-chip'; chip.textContent = item; return chip; }));
         modalOverview.textContent = movie.overview || movie.originalOverview || 'No hay descripción disponible.'; modal.classList.add('visible'); modal.classList.remove('hidden'); modal.setAttribute('aria-hidden', 'false');
     });
