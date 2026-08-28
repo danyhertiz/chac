@@ -18,6 +18,8 @@
 .control-group input, .control-group select { width: 100%; padding: .6rem .75rem; border: 1px solid rgba(255,255,255,.15); border-radius: 5px; background: #141414; color: #f3f3f3; font: inherit; }
 /* Botones de filtros y paginacion. */
 .toggle-filters-btn, .pagination-button { border: 1px solid rgba(255,255,255,.15); border-radius: 5px; background: rgba(255,255,255,.08); color: #fff; cursor: pointer; padding: .6rem .9rem; }
+/* Resalta la pagina que se esta visualizando. */
+.pagination-button.is-active { background: var(--accent); border-color: var(--accent); color: #0f1624; font-weight: 700; }
 /* Oculta los filtros hasta que el usuario los despliega. */
 .filters-collapsed { display: none; }
 /* Distribuye los filtros visibles en tres columnas. */

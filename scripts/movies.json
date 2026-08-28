@@ -23522,5 +23522,19 @@
     ],
     "tmdbId": 1206089,
     "runtime": 102
+  },
+  {
+    "title": "Los Diez Mandamientos",
+    "originalTitle": "The Ten Commandments",
+    "year": "1956",
+    "overview": "Drama bíblico ambientado en el Antiguo Egipto que narra la historia de Moisés, favorito de la familia del faraón, que decide renunciar a su vida de privilegios para conducir a su pueblo, los hebreos esclavizados en Egipto, hacia la libertad.",
+    "originalOverview": "Drama bíblico ambientado en el Antiguo Egipto que narra la historia de Moisés, favorito de la familia del faraón, que decide renunciar a su vida de privilegios para conducir a su pueblo, los hebreos esclavizados en Egipto, hacia la libertad.",
+    "poster": "img/posters/6844.jpg",
+    "genres": [
+      "Drama",
+      "Historia"
+    ],
+    "tmdbId": 6844,
+    "runtime": 231
   }
 ]

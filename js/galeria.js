@@ -19,6 +19,7 @@ function initMovieGallery(root = document) {
     const modalGenres = root.querySelector('#modal-genres');
     const modalOverview = root.querySelector('#modal-overview');
     const results = root.querySelector('#resultsCount');
+    const galleryControls = root.querySelector('.gallery-controls');
     const state = { movies: [], filtered: [], page: 1, query: '', genre: 'Todos', year: 'all', sort: 'year_desc' };
     const compareByReleaseDate = (a, b, direction) => {
         if (a.releaseDate && b.releaseDate) return direction * b.releaseDate.localeCompare(a.releaseDate);
@@ -61,7 +62,7 @@ function initMovieGallery(root = document) {
         return button;
     }
 
-    function render() {
+    function render({ resetScroll = false } = {}) {
         grid.replaceChildren();
         const start = (state.page - 1) * ITEMS_PER_PAGE;
         state.filtered.slice(start, start + ITEMS_PER_PAGE).forEach((movie) => grid.appendChild(card(movie)));
@@ -70,7 +71,18 @@ function initMovieGallery(root = document) {
         const pages = Math.ceil(state.filtered.length / ITEMS_PER_PAGE);
         for (let page = 1; page <= pages; page += 1) {
             const button = document.createElement('button'); button.type = 'button'; button.className = 'pagination-button'; button.textContent = page; button.dataset.page = page;
-            button.disabled = page === state.page; pagination.appendChild(button);
+            if (page === state.page) {
+                button.classList.add('is-active');
+                button.setAttribute('aria-current', 'page');
+                button.disabled = true;
+            }
+            pagination.appendChild(button);
+        }
+
+        if (resetScroll && galleryControls) {
+            const headerHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 0;
+            const controlsTop = galleryControls.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({ top: Math.max(0, controlsTop - headerHeight), left: 0, behavior: 'instant' });
         }
     }
 
@@ -92,7 +104,12 @@ function initMovieGallery(root = document) {
     genre.addEventListener('change', () => { state.genre = genre.value; filter(); }); year.addEventListener('change', () => { state.year = year.value; filter(); });
     sort.addEventListener('change', () => { state.sort = sort.value; filter(); });
     root.querySelector('#toggleFilters').addEventListener('click', () => root.querySelector('#filtersContainer').classList.toggle('filters-collapsed'));
-    pagination.addEventListener('click', (event) => { if (event.target.dataset.page) { state.page = Number(event.target.dataset.page); render(); } });
+    pagination.addEventListener('click', (event) => {
+        if (event.target.dataset.page) {
+            state.page = Number(event.target.dataset.page);
+            render({ resetScroll: true });
+        }
+    });
     grid.addEventListener('click', (event) => {
         const movie = state.filtered.find((item) => String(item.tmdbId ?? (item.title || item.originalTitle)) === event.target.closest('.movie-card')?.dataset.movieId);
         if (!movie) return; const title = movie.title || movie.originalTitle || 'Título desconocido';

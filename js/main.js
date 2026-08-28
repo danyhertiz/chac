@@ -283,7 +283,7 @@ const initializeSite = () => {
         p_traductordino: 'sections/p_traductordino.html'
     };
 
-    const loadSection = async (sectionName, { updateHistory = false } = {}) => {
+    const loadSection = async (sectionName, { updateHistory = false, resetScroll = false } = {}) => {
         if (!mainContent) {
             return;
         }
@@ -325,6 +325,10 @@ const initializeSite = () => {
             if (sectionName === 'p_traductordino') {
                 window.initDinoTranslator?.();
             }
+
+            if (resetScroll) {
+                window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+            }
         } catch (error) {
             console.error('Error loading section:', error);
             mainContent.innerHTML = `<div class="card"><p>Error al cargar la sección: ${error.message}</p></div>`;
@@ -339,7 +343,7 @@ const initializeSite = () => {
         }
 
         button.addEventListener('click', () => {
-            loadSection(sectionName, { updateHistory: true });
+            loadSection(sectionName, { updateHistory: true, resetScroll: true });
             closeMenu();
         });
     });
@@ -349,7 +353,7 @@ const initializeSite = () => {
         const page = params.get('page');
 
         if (page && routeMap[page]) {
-            loadSection(page);
+            loadSection(page, { resetScroll: true });
         } else {
             window.location.reload();
         }
