@@ -23550,5 +23550,19 @@
     ],
     "tmdbId": 289,
     "runtime": 102
+  },
+  {
+    "title": "Snoopy presenta: Hogar, dulce hogar",
+    "originalTitle": "Snoopy Presents: There's No Place Like Home, Snoopy",
+    "year": "2026",
+    "overview": "Cuando su amada casita desaparece, Snoopy intenta buscarla y descubre qué es lo que hace que una casa se sienta como un hogar.",
+    "originalOverview": "Cuando su amada casita desaparece, Snoopy intenta buscarla y descubre qué es lo que hace que una casa se sienta como un hogar.",
+    "poster": "img/posters/1698575.jpg",
+    "genres": [
+      "Animación",
+      "Familia"
+    ],
+    "tmdbId": 1698575,
+    "runtime": 32
   }
 ]
