@@ -23564,5 +23564,20 @@
     ],
     "tmdbId": 1698575,
     "runtime": 32
+  },
+  {
+    "title": "Contracara",
+    "originalTitle": "Face/Off",
+    "year": "1997",
+    "overview": "Para frustrar un complot terrorista, un agente del FBI se somete a una cirugía de transplante facial y asume la identidad de un cerebro criminal, que asesinó a su único hijo. El plan se torna agrio cuando el criminal se despierta prematuramente y busca venganza.",
+    "originalOverview": "Para frustrar un complot terrorista, un agente del FBI se somete a una cirugía de transplante facial y asume la identidad de un cerebro criminal, que asesinó a su único hijo. El plan se torna agrio cuando el criminal se despierta prematuramente y busca venganza.",
+    "poster": "img/posters/754.jpg",
+    "genres": [
+      "Acción",
+      "Crimen",
+      "Ciencia ficción"
+    ],
+    "tmdbId": 754,
+    "runtime": 138
   }
 ]
