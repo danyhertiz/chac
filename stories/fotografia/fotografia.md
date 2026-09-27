@@ -15,12 +15,12 @@ Mas tarde, cuando vivía en Iztapalapa, me compre en un Aurrerá mi primera cám
 
 ![Samsung A402](img/historias/fotografia/A402B.jpg)
 
-![Glorieta del Angel](img/historias/fotografia/glorieta_a402.jpg)
+![Glorieta del Angel](img/historias/fotografia/glorieta_a402.JPG)
 
 Fue hasta mediados de 2008 cuando Pá compró una cámara Panasonic Lumix, modelo DMC-LZ6 que empezó a llamarme la atención las fotografías de alta calidad. Aquella cámara no era lo mas avanzado que había, también era una compacta, pero al tener un pequeño zoom (6x) ya permitía algunos efectos interesantes. Entonces me topé en internet con un curso de fotografía llamado “Trípode”. Entonces empecé a aprender las bases de la fotografía y comenzó mi interés por hacer buenas fotografías.
 
 ![Panasonic DMC-LZ6](img/historias/fotografia/Lumix_LZ6.jpg)
-![Flor](img/historias/fotografia/LZ6_foto.jpg)
+![Flor](img/historias/fotografia/LZ6_foto.JPG)
 
 Mas tarde conseguí en una tienda de empeño una cámara bridge, concretamente una Fujifilm modelo S2950, la cual tenía un zoom significativamente mejor (18x) y mayores prestaciones. Con ella pude empezar a hacer fotos realmente interesantes.
 
