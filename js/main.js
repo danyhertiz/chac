@@ -146,6 +146,9 @@ const initializeSite = () => {
             { file: 'Beakman.md', title: 'El mundo de Beakman', icon: 'img/iconos/beakman.png' },
             { file: 'Mas_series.md', title: 'Más series', icon: 'img/iconos/serie-tv2.png' },
         ],
+        fotografia: [
+            { file: 'fotografia.md', title: '📷 Mis cámaras' },
+        ],
         musica: [
             { file: 'Inicios.md', title: '🎵 Inicios en la música' },
             { file: 'Grabadoras.md', title: '📻 Grabadoras' },
@@ -272,6 +275,7 @@ const initializeSite = () => {
         videojuegos: 'sections/videojuegos.html',
         peliculas: 'sections/peliculas.html',
         series: 'sections/series.html',
+        fotografia: 'sections/fotografia.html',
         musica: 'sections/musica.html',
         juguetes: 'sections/juguetes.html',
         deportes: 'sections/deportes.html',

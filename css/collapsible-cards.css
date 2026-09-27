@@ -147,6 +147,17 @@
     border-radius: 0;
 }
 
+/* Normaliza el ancho de imagenes JPG/JPEG, AVIF y WebP en Markdown. */
+.collapsible-story .story-content img[src$=".jpg" i],
+.collapsible-story .story-content img[src$=".jpeg" i],
+.collapsible-story .story-content img[src$=".avif" i],
+.collapsible-story .story-content img[src$=".webp" i] {
+    width: 800px;
+    max-width: min(800px, 100%);
+    height: auto;
+    max-height: none;
+}
+
 .collapsible-story.expanded .story-content {
     display: block;
 }
