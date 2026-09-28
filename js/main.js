@@ -152,7 +152,7 @@ const initializeSite = () => {
         musica: [
             { file: 'Inicios.md', title: '🎵 Inicios en la música' },
             { file: 'Grabadoras.md', title: '📻 Grabadoras' },
-            { file: 'vinilos.md', title: '💿 Discos de Vinilo' },
+            { file: 'vinilos.md', title: 'Discos de Vinilo', icon: 'img/iconos/LP.png' },
         ],
         juguetes: [
             { file: 'Camiones.md', title: '🏗️ Maquinaria de construcción' },
