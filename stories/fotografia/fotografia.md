@@ -1,4 +1,4 @@
-<p style="text-align: right;">📅 12 de agosto, 2026</p>
+<p style="text-align: right;">📅 27 de septiembre, 2026</p>
 
 Hacia principios de los 2000 recibí mi primera cámara fotográfica, era una sencilla cámara de rollo de 35mm. Era de color verde transparente, completamente manual, me parece que para lo único que usaba pilas era para disparar el flash. Era muy divertido tomar fotos con ella, la llevé a muchos lados y tomé fotos que aun conservo.
 
