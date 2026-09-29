@@ -24,4 +24,6 @@ Hoy en día ha cobrado mucha fuerza nuevamente el movimiento de los discos de vi
 
 ![Soundtrack Zelda BOTW](img/historias/musica/botw.jpg)
 
-No siento necesidad de adquirir un tocadiscos y empezar a comprar música en ese formato, pero me gusta recordar esa época en la que yo era todo un experto en el uso del tornamesa.
+No siento necesidad de adquirir un tocadiscos ni de empezar a comprar música en ese formato, era bonita la experiencia pero prefiero la comodidad y la calidad de la música digital. Aún así, me gusta recordar esa época en la que yo era todo un experto en el uso del tornamesa.
+
+![Bart](img/historias/musica/BartMusic.gif)
