@@ -55,13 +55,13 @@ Me tomó cerca de 2 horas lograr esta fotografía de la luna, fue todo un reto p
 
 ![Fujifilm Luna](img/historias/fotografia/luna_4500.jpg)
 
-Una de las cosas que más me gustan ds los teleobjetivos, es decir, los lentes que son como telescopios, es que no solo tienen un gran alcance, sino que logran difuminar el fondo con mayor facilidad. La foto de esta esfera la tomé en casa de una de las tías de mi Foza. Salió un tanto borrosa, pero estaba experimentanto con la fotografía de detalle.
+Una de las cosas que más me gustan de los teleobjetivos, es decir, de los lentes que son como telescopios, es que no solo tienen un gran alcance, sino que logran difuminar el fondo con mayor facilidad. La foto de esta esfera la tomé en casa de una de las tías de mi Foza. No logré enfocar a la perfección la esfera, pero creo que no salió tan mal, en ese momento estaba experimentanto con la fotografía de detalle.
 
 ![Esfera](img/historias/fotografia/4500_esfera.jpg)
 
-Desde entonces, con esas ultimas dos cámaras bridge de Fujifilm, el curso Trípode y los diversos tutoriales que vi en YouTube, se despertó mi lado creativo, y empecé a soñar con el día en el que me podría comprar una cámara réflex. Pero con el paso de los años, esas cámaras quedaron atrás y hoy en día las actuales son mirrorless. Estas cámaras (réflex y mirrorless), además de tener mejores sensores que las compactas, sus lentes son intercambiables, además de tener la posibilidad de manejar todos sus parámetros de forma manual para controlar mucho mejor la luz, ya que las compactas al hacer todo en automático, no le dejan al usuario ningún control, solo se centran en que la imagen no quede oscura y esté enfocada. Pero se pierde la oportunidad de crear atmósfera.
+Desde entonces, con esas ultimas dos cámaras bridge de Fujifilm, el curso Trípode y los diversos tutoriales que vi en YouTube, se despertó mi lado creativo, y empecé a soñar con el día en el que me podría comprar una cámara réflex. Con el paso de los años, esas cámaras empezaron a quedar atrás y hoy en día las actuales son mirrorless. Estas cámaras tanto las réflex como las mirrorless, además de tener mejores sensores que las compactas, sus lentes son intercambiables y es posible manejar todos sus parámetros de forma manual, por lo que se tiene un mejor control de la luz, ya que las compactas al hacer todo en automático, no le dejan al usuario ningúna posibilidad de decisión, esas cámaras solo se centran en que la imagen no quede oscura y esté enfocada. Pero se pierde la oportunidad de crear atmósfera.
 
-En este ejemplo que encontré en internet, se compara cómo tomaría una foto un usuario común con la cámara en automático, y del lado derecho se vé cómo tomaría la foto un fotógrafo experimentado con la misma cámara. La diferencia es eveidente.
+En este ejemplo que encontré en internet, se compara cómo tomaría una foto un usuario común con la cámara en modo automático, y del lado derecho se vé cómo lo haría un fotógrafo experimentado con la misma cámara. La diferencia es eveidente.
 
 ![Comparativa](img/historias/fotografia/comparativa.jpg)
 
