@@ -5,9 +5,13 @@ Hacia principios de los 2000 recibí mi primera cámara fotográfica, era una se
 ![Primera cámara](img/historias/fotografia/camara1.webp)
 ![Primeras fotos](img/historias/fotografia/Scan0031.jpg)
 
+---
+
 Sin embargo, la que me trae mejores recuerdos es mi Game Boy Camera. En aquél entonces era muy raro ver fotografías en una pantalla de computadora, y aun más en un dispositivo portátil como el Game Boy. Es esa época apenas empezaba a haber cámaras digitales y eran muy costosas, por lo que tener una cámara en el Game Boy, aunque fuera en blanco y negro, resultaba sumamente divertido. Lamentablemente no hubo manera de sacar esas fotos de la cámara hasta muchos años después. Hoy en día es relativamente fácil, con sólo comprar un dispositivo que actúa de puente entre la cámara y la PC es posible extraer las fotos.
 
 ![Game Boy Camera](img/historias/fotografia/gbcamera.webp)
+
+---
 
 Mas tarde, cuando vivía en Iztapalapa, me compre en un Aurrerá mi primera cámara digital, era una Samsung Modelo Digimax A402. También era de lo más sencillo que había en aquel momento, pero al menos ya podía ver las fotos en la computadora, editarlas, imprimirlas y respaldarlas. Y aunque ya me servía para registrar eventos sociales y momentos puntuales, aun no tenía una afición por la fotografía como tal.
 
@@ -19,6 +23,8 @@ Esta foto la tomé en la glorieta del ángel de la independencia un día que lle
 
 ![Glorieta del Angel](img/historias/fotografia/glorieta_a402.JPG)
 
+---
+
 Fue hasta mediados de 2008 cuando Pá compró una cámara Panasonic Lumix, modelo DMC-LZ6 que empezó a llamarme la atención las fotografías de alta calidad. Aquella cámara no era lo mas avanzado que había, también era una compacta, pero al tener un pequeño zoom de 6x ya permitía hacer algunos efectos interesantes. Entonces me topé en internet con un curso de fotografía llamado “Trípode” y empecé a aprender las bases de la fotografía. Fue en ese momento cuando comenzó mi interés por hacer buenas fotografías, con técnica y estilo.
 
 ![Panasonic DMC-LZ6](img/historias/fotografia/Lumix_LZ6.jpg)
@@ -27,7 +33,9 @@ Este es un ejemplo de las fotos que hacía con aquella cámara Panasonic. Me gus
 
 ![Flor](img/historias/fotografia/LZ6_foto.JPG)
 
-Mas tarde conseguí en una tienda de empeño una cámara bridge, concretamente una Fujifilm modelo S2950, la cual tenía un zoom significativamente mejor, de 18x y también mayores prestaciones a nivel técnico. Con ella pude empezar a hacer fotos realmente interesantes.
+---
+
+Algunos años después, conseguí en una tienda de empeño una cámara bridge, concretamente una Fujifilm modelo S2950, la cual tenía un zoom significativamente mejor, de 18x y también mayores prestaciones a nivel técnico. Con ella pude empezar a hacer fotos realmente interesantes.
 
 ![Fujifilm S2950](img/historias/fotografia/Fujifilm_S2950.jpg)
 ![Fujifilm S2950](img/historias/fotografia/Fujifilm_S2950B.jpg)
@@ -35,6 +43,8 @@ Mas tarde conseguí en una tienda de empeño una cámara bridge, concretamente u
 Esta foto la tomé en los lagos de Xalapa. Empezaba a tener algunas nociones de composición, es decir, acomodar los objetos dentro del encuadre para obtener una imágen armónica y balanceada.
 
 ![Lagos Xalapa](img/historias/fotografia/2950_DSCF0708.jpg)
+
+---
 
 Después de un tiempo le regalé esa cámara a Ana y me compré otra muy parecida, pero con mayor zoom (30x). También era Fujifilm, pero esta vez el modelo S4500, recuerdo que con esa cámara pasé mucho tiempo intentando tomar una foto decente de la luna, y quedé maravillado con el resultado cuando lo logré.
 
@@ -54,6 +64,8 @@ Desde entonces, con esas ultimas dos cámaras bridge de Fujifilm, el curso Tríp
 En este ejemplo que encontré en internet, se compara cómo tomaría una foto un usuario común con la cámara en automático, y del lado derecho se vé cómo tomaría la foto un fotógrafo experimentado con la misma cámara. La diferencia es eveidente.
 
 ![Comparativa](img/historias/fotografia/comparativa.jpg)
+
+---
 
 Pues por fin, después de tanto tiempo, apenas en septiembre de 2026 logré comprarme una cámara mirrorless Canon, modelo EOS R50. Es considerada una cámara de entrada, es decir, para principiantes, pero ya me ha permitido saltar la línea entre el usuario común y el aficionado a la fotografía. Ahora más allá del equipo y accesorios que pueda comprar o del conocimiento nuevo que pueda adquirir sobre el tema, lo que necesito es mucha práctica, porque ya he visto cuanto tutorial y curso he encontrado en internet. Ahora me toca llevar a la práctica toda la teoría que he aprendido. Y mi primer reto será la fiesta de cumpleaños de mi suegra, en la que espero obtener mejores imágenes de las que se pudiera sacar simplemente con el celular.
 
