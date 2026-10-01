@@ -55,7 +55,7 @@ Después de un tiempo, regalé esa última cámara y me compré otra muy parecid
 ![Fujifilm S4500](img/historias/fotografia/Fujifilm_S4500.avif)
 ![Fujifilm S4500](img/historias/fotografia/Fujifilm_S4500B.webp)
 
-Me tomó un poco más de 2 horas de prueba y error para lograr esta fotografía de la luna. Fue todo un reto pero creo que logré una imagen relativamente nítida.
+Me tomó un poco más de 2 horas de prueba y error para lograr esta fotografía de la luna. Fue todo un reto, pero creo que conseguí una buena imagen, relativamente nítida.
 
 ![Fujifilm Luna](img/historias/fotografia/luna_4500.jpg)
 
