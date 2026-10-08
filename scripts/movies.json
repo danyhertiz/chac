@@ -23579,5 +23579,20 @@
     ],
     "tmdbId": 754,
     "runtime": 138
+  },
+  {
+    "title": "Hechizo de amor",
+    "originalTitle": "Practical Magic",
+    "year": "1998",
+    "overview": "Como consecuencia de la maldición lanzada por uno de sus antepasados, todas las mujeres de la familia a la que pertenecen las hermanas Sally y Gilliam, han sufrido a lo largo de la historia la muerte trágica de los hombre de quienes se han enamorado. Ahora viven con sus tías, que son brujas, pero Sally, más rebelde que Gilliam, está dispuesta a alejarse de ellas para vivir con el amor de su vida.",
+    "originalOverview": "Como consecuencia de la maldición lanzada por uno de sus antepasados, todas las mujeres de la familia a la que pertenecen las hermanas Sally y Gilliam, han sufrido a lo largo de la historia la muerte trágica de los hombre de quienes se han enamorado. Ahora viven con sus tías, que son brujas, pero Sally, más rebelde que Gilliam, está dispuesta a alejarse de ellas para vivir con el amor de su vida.",
+    "poster": "img/posters/6435.jpg",
+    "genres": [
+      "Romance",
+      "Fantasía",
+      "Comedia"
+    ],
+    "tmdbId": 6435,
+    "runtime": 104
   }
 ]
