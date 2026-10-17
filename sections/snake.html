@@ -1,0 +1,52 @@
+<section id="snake-game-root">
+<div class="game-container">
+    <div class="header">
+      <div class="header-left">
+        <div class="score-box" id="scoreBox">🍎 <span id="scoreDisplay">0</span>/10</div>
+        <div class="score-box level-box">NIVEL <span id="levelDisplay">1</span>/10</div>
+      </div>
+      <div class="header-right">
+        <div class="score-box lives-box">❤️ <span id="livesDisplay">3</span></div>
+      </div>
+    </div>
+
+    <div class="canvas-wrapper">
+      <canvas id="gameCanvas" width="500" height="500"></canvas>
+    </div>
+
+    <!-- Controles táctiles -->
+    <div class="controls">
+      <div class="dpad">
+        <button class="dpad-btn up" data-dir="up" aria-label="Arriba">▲</button>
+        <button class="dpad-btn left" data-dir="left" aria-label="Izquierda">◀</button>
+        <button class="dpad-btn down" data-dir="down" aria-label="Abajo">▼</button>
+        <button class="dpad-btn right" data-dir="right" aria-label="Derecha">▶</button>
+      </div>
+      <div class="game-actions">
+        <button class="icon-btn" id="pauseButton" aria-label="Pausar juego">⏸</button>
+        <button class="icon-btn" id="restartButton" aria-label="Reiniciar juego">↻</button>
+      </div>
+    </div>
+
+    <div class="hint">Flechas / pad táctil · P o Enter para pausar · R para reiniciar</div>
+
+    <!-- Pantalla de bienvenida -->
+    <div class="welcome-screen" id="welcomeScreen">
+      <h1>🐍 SNAKE</h1>
+      <h2>10 niveles · 10 frutas distintas · 3 vidas</h2>
+
+      <div class="fruit-preview">🍎 🍌 🍒 🍇 🍊 🍓 🍍 🍉 🍋 🍈</div>
+
+      <div class="rules">
+        <div class="rule-item"><span class="rule-icon">🎯</span><span>Come <strong>10 frutas</strong> para subir de nivel. Cada nivel estrena fruta y sube la velocidad.</span></div>
+        <div class="rule-item"><span class="rule-icon">📈</span><span>La serpiente crece <strong>más por fruta</strong> en niveles avanzados (hasta 5 puntos desde el nivel 5).</span></div>
+        <div class="rule-item"><span class="rule-icon">❤️</span><span>Empiezas con <strong>3 vidas</strong> y ganas <strong>+1 vida</strong> al superar cada nivel.</span></div>
+        <div class="rule-item"><span class="rule-icon">🏁</span><span>Supera los <strong>10 niveles</strong> para completar el juego. ¡Cuidado con las paredes y tu propio cuerpo!</span></div>
+        <div class="rule-item"><span class="rule-icon">⏸️</span><span>Pulsa <strong>P</strong> o <strong>Enter</strong> (o el botón ⏸) para pausar.</span></div>
+      </div>
+
+      <button class="start-btn" id="startButton">Iniciar</button>
+      <div class="pc-hint">También puedes pulsar <strong>Enter</strong> en PC</div>
+    </div>
+  </div>
+</section>

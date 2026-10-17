@@ -1,0 +1,405 @@
+
+    #snake-game-root, #snake-game-root * {
+      box-sizing: border-box;
+      margin: 0;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    #snake-game-root {
+      min-height: calc(100vh - var(--header-height, 80px) - 11rem);
+      min-height: calc(100svh - var(--header-height, 80px) - 11rem);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', system-ui, monospace;
+      padding: 12px;
+      margin: 0;
+    }
+
+    #snake-game-root .game-container {
+      background: #2b3e2b;
+      padding: 20px 22px 24px;
+      border-radius: 48px;
+      box-shadow: 0 20px 25px -10px rgba(0, 0, 0, 0.8), inset 0 2px 5px rgba(255, 255, 200, 0.2);
+      border: 1px solid #6c8c6c;
+      position: relative;
+      max-width: 560px;
+      width: min(100%, 560px);
+    }
+
+    #snake-game-root .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      padding: 0 4px;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    #snake-game-root .header-left {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    #snake-game-root .header-right {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    #snake-game-root .score-box {
+      background: #1e2b1e;
+      color: #d8f0c0;
+      padding: 8px 16px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: 1px;
+      box-shadow: inset 0 3px 8px #0b130b, 0 4px 6px black;
+      border: 1px solid #789678;
+      white-space: nowrap;
+    }
+
+    #snake-game-root .score-box.level-box {
+      color: #ffe28a;
+    }
+
+    #snake-game-root .score-box.lives-box {
+      color: #ff9b9b;
+    }
+
+    #snake-game-root .icon-btn {
+      background: #3a553a;
+      border: none;
+      color: #e2ffd6;
+      font-size: 1.5rem;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 5px 0 #101b10, 0 6px 10px black;
+      transition: 0.08s linear;
+      border: 1px solid #9ac09a;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    #snake-game-root .icon-btn:active {
+      transform: translateY(4px);
+      box-shadow: 0 1px 0 #101b10, 0 4px 8px black;
+    }
+
+    #snake-game-root .icon-btn:hover {
+      background: #4f6e4f;
+    }
+
+    #snake-game-root .icon-btn.paused {
+      background: #6e5a3a;
+      border-color: #e0c58a;
+      color: #ffe9b0;
+    }
+
+    #snake-game-root .canvas-wrapper {
+      position: relative;
+      max-width: 500px;
+      width: min(100%, 500px, max(240px, calc(100vh - 560px)));
+      width: min(100%, 500px, max(240px, calc(100svh - 560px)));
+      margin: 0 auto;
+    }
+
+    #snake-game-root canvas {
+      display: block;
+      margin: 0 auto;
+      border-radius: 28px;
+      box-shadow: inset 0 0 0 3px #1d2a1d, 0 18px 25px -5px #0a0f0a, 0 0 0 2px #6f936f;
+      background: #1c2a1c;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1/1;
+      touch-action: none;
+    }
+
+    /* ---------- CONTROLES DIRECCIONALES TÁCTILES ---------- */
+    #snake-game-root .controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      margin-top: 16px;
+      touch-action: manipulation;
+    }
+
+    #snake-game-root .game-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    #snake-game-root .dpad {
+      display: grid;
+      grid-template-columns: 72px 72px 72px;
+      grid-template-rows: 72px 72px;
+      gap: 8px;
+    }
+
+    #snake-game-root .dpad-btn {
+      background: #3a553a;
+      border: 1px solid #9ac09a;
+      color: #e2ffd6;
+      font-size: 2rem;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 6px 0 #101b10, 0 7px 10px black;
+      transition: 0.06s linear;
+      line-height: 1;
+      touch-action: manipulation;
+      padding: 0;
+    }
+
+    #snake-game-root .dpad-btn:active {
+      transform: translateY(5px);
+      box-shadow: 0 1px 0 #101b10, 0 5px 8px black;
+      background: #4f6e4f;
+    }
+
+    #snake-game-root .dpad-btn.up {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    #snake-game-root .dpad-btn.left {
+      grid-column: 1;
+      grid-row: 2;
+    }
+    #snake-game-root .dpad-btn.down {
+      grid-column: 2;
+      grid-row: 2;
+    }
+    #snake-game-root .dpad-btn.right {
+      grid-column: 3;
+      grid-row: 2;
+    }
+
+    #snake-game-root .hint {
+      text-align: center;
+      color: #93ad93;
+      font-size: 0.8rem;
+      margin-top: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ---------- PANTALLA DE BIENVENIDA ---------- */
+    #snake-game-root .welcome-screen {
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 20, 10, 0.96);
+      border-radius: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 26px;
+      z-index: 100;
+      text-align: center;
+      box-shadow: inset 0 0 0 2px #6f936f;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+
+    #snake-game-root .welcome-screen.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    #snake-game-root .welcome-screen h1 {
+      color: #ffe28a;
+      font-size: 2.2rem;
+      margin-bottom: 6px;
+      text-shadow: 0 3px 8px black;
+      letter-spacing: 1px;
+    }
+
+    #snake-game-root .welcome-screen h2 {
+      color: #c8e6b0;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+      letter-spacing: 0.5px;
+    }
+
+    #snake-game-root .rules {
+      text-align: left;
+      color: #d8f0c0;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 22px;
+      background: rgba(30, 43, 30, 0.7);
+      border: 1px solid #4e6c4e;
+      border-radius: 18px;
+      padding: 16px 20px;
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.4);
+    }
+
+    #snake-game-root .rules .rule-item {
+      margin-bottom: 8px;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    #snake-game-root .rules .rule-item:last-child {
+      margin-bottom: 0;
+    }
+
+    #snake-game-root .rules .rule-icon {
+      flex-shrink: 0;
+      font-size: 1.05rem;
+      line-height: 1.4;
+    }
+
+    #snake-game-root .welcome-screen .fruit-preview {
+      font-size: 1.35rem;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 3px 5px black);
+    }
+
+    #snake-game-root .start-btn {
+      background: #5a8f5a;
+      border: 2px solid #b0e0b0;
+      color: #ffffff;
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      padding: 16px 60px;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 7px 0 #1f361f, 0 10px 16px black;
+      transition: 0.08s linear;
+      text-transform: uppercase;
+    }
+
+    #snake-game-root .start-btn:active {
+      transform: translateY(5px);
+      box-shadow: 0 2px 0 #1f361f, 0 6px 10px black;
+    }
+
+    #snake-game-root .start-btn:hover {
+      background: #6aa86a;
+    }
+
+    #snake-game-root .welcome-screen .pc-hint {
+      color: #93ad93;
+      font-size: 0.8rem;
+      margin-top: 14px;
+    }
+
+    @media (max-width: 520px) {
+      #snake-game-root {
+        padding: 8px 0;
+      }
+      #snake-game-root .game-container {
+        padding: 14px 4px 18px;
+        border-radius: 36px;
+      }
+      #snake-game-root .score-box {
+        font-size: 0.95rem;
+        padding: 5px 10px;
+      }
+      #snake-game-root .icon-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 1.25rem;
+      }
+      #snake-game-root .canvas-wrapper {
+        width: min(100%, 500px, max(240px, calc(100vh - 505px)));
+        width: min(100%, 500px, max(240px, calc(100svh - 505px)));
+      }
+      #snake-game-root .dpad {
+        grid-template-columns: repeat(3, clamp(46px, 12.5vw, 58px));
+        grid-template-rows: repeat(2, clamp(46px, 12.5vw, 58px));
+        gap: clamp(4px, 1.5vw, 6px);
+      }
+      #snake-game-root .dpad-btn {
+        font-size: 1.6rem;
+        border-radius: 14px;
+      }
+      #snake-game-root .welcome-screen h1 {
+        font-size: 1.7rem;
+      }
+      #snake-game-root .welcome-screen .fruit-preview {
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+      }
+      #snake-game-root .start-btn {
+        font-size: 1.25rem;
+        padding: 14px 45px;
+      }
+    }
+
+    @media (min-width: 900px) {
+      #snake-game-root .game-container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 310px;
+        grid-template-rows: auto auto auto;
+        align-items: center;
+        gap: 24px 16px;
+        width: min(100%, 900px);
+        max-width: 900px;
+        height: min(calc(100svh - var(--header-height, 80px) - 90px), 970px);
+        padding: 12px;
+        border-radius: 36px;
+      }
+
+      #snake-game-root .canvas-wrapper {
+        grid-column: 1;
+        grid-row: 1 / 4;
+        align-self: center;
+        width: min(100%, calc(100svh - 248px));
+        max-width: none;
+      }
+
+      #snake-game-root .header {
+        grid-column: 2;
+        grid-row: 1;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+        margin: 0;
+      }
+
+      #snake-game-root .header-left,
+      #snake-game-root .header-right {
+        justify-content: center;
+      }
+
+      #snake-game-root .controls {
+        grid-column: 2;
+        grid-row: 2;
+        margin-top: 0;
+      }
+
+      #snake-game-root .hint {
+        grid-column: 2;
+        grid-row: 3;
+      }
+    }
+
+    @media (max-height: 760px) {
+      #snake-game-root .welcome-screen {
+        justify-content: flex-start;
+        overflow-y: auto;
+        padding-block: 20px;
+      }
+    }
+  

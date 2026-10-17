@@ -285,7 +285,8 @@ const initializeSite = () => {
         mis_episodios: 'sections/mis_episodios.html',
         mis_peliculas: 'sections/mis_peliculas.html',
         p_simulador: 'sections/p_simulador.html',
-        p_traductordino: 'sections/p_traductordino.html'
+        p_traductordino: 'sections/p_traductordino.html',
+        p_snake: 'sections/snake.html'
     };
 
     const loadSection = async (sectionName, { updateHistory = false, resetScroll = false } = {}) => {
@@ -310,6 +311,7 @@ const initializeSite = () => {
                 throw new Error(`Sección no encontrada: ${sectionName}`);
             }
 
+            window.destroySnakeGame?.();
             mainContent.innerHTML = await response.text();
             mainContent.classList.toggle('video-page-main', staticSections.has(sectionName));
             mainContent.classList.toggle('episode-page', sectionName === 'mis_episodios');
@@ -329,6 +331,10 @@ const initializeSite = () => {
 
             if (sectionName === 'p_traductordino') {
                 window.initDinoTranslator?.();
+            }
+
+            if (sectionName === 'p_snake') {
+                window.initSnakeGame?.();
             }
 
             if (resetScroll) {
