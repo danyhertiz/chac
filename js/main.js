@@ -286,7 +286,8 @@ const initializeSite = () => {
         mis_peliculas: 'sections/mis_peliculas.html',
         p_simulador: 'sections/p_simulador.html',
         p_traductordino: 'sections/p_traductordino.html',
-        p_snake: 'sections/snake.html'
+        p_snake: 'sections/snake.html',
+        p_tetris: 'sections/p_tetris.html'
     };
 
     const loadSection = async (sectionName, { updateHistory = false, resetScroll = false } = {}) => {
@@ -312,6 +313,7 @@ const initializeSite = () => {
             }
 
             window.destroySnakeGame?.();
+            window.destroyTetrisGame?.();
             mainContent.innerHTML = await response.text();
             mainContent.classList.toggle('video-page-main', staticSections.has(sectionName));
             mainContent.classList.toggle('episode-page', sectionName === 'mis_episodios');
@@ -337,11 +339,16 @@ const initializeSite = () => {
                 window.initSnakeGame?.();
             }
 
+            if (sectionName === 'p_tetris') {
+                window.initTetrisGame?.();
+            }
+
             if (resetScroll) {
                 window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
             }
         } catch (error) {
             console.error('Error loading section:', error);
+            window.destroyTetrisGame?.();
             mainContent.innerHTML = `<div class="card"><p>Error al cargar la sección: ${error.message}</p></div>`;
         }
     };

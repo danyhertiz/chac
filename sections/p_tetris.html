@@ -1,0 +1,30 @@
+<section class="story-full tetris-page">
+    <h1>Tetris</h1>
+    <div id="tetris-game">
+        <div class="game-wrapper">
+            <div class="board-section">
+                <div class="board-container">
+                    <canvas id="tetrisCanvas" width="300" height="600" aria-label="Tablero de Tetris"></canvas>
+                </div>
+            </div>
+
+            <div class="info-panel">
+                <div class="next-piece">
+                    <h2>Siguiente</h2>
+                    <canvas id="nextCanvas" width="120" height="120" aria-label="Siguiente pieza"></canvas>
+                </div>
+                <div class="score-box" aria-live="polite">
+                    <span>Puntos</span>
+                    <span class="value" id="scoreDisplay">0</span>
+                </div>
+                <div class="controls" aria-label="Controles">
+                    <div><kbd>←</kbd> <kbd>→</kbd> mover</div>
+                    <div><kbd>↑</kbd> rotar</div>
+                    <div><kbd>↓</kbd> bajar</div>
+                    <div><kbd>Espacio</kbd> caída rápida</div>
+                </div>
+                <button class="btn-restart" id="restartButton" type="button">Nueva partida</button>
+            </div>
+        </div>
+    </div>
+</section>
