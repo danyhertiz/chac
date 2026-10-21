@@ -159,6 +159,7 @@ const initializeSite = () => {
             { file: 'Bloques.md', title: '🧱 Cubos y bloques de madera' },
             { file: 'Linternas.md', title: '🔦 Linternas' },
             { file: 'cotidianos.md', title: '🧸 Juguetes cotidianos' },
+            { file: 'mecanyks.md', title: '🔧 Mecanyks' },
         ],
         deportes: [
             { file: 'futbol_escuela.md', title: '⚽ Fútbol' },
