@@ -23594,5 +23594,22 @@
     ],
     "tmdbId": 6435,
     "runtime": 104
+  },
+  {
+    "title": "Hoppers: Operación castor",
+    "originalTitle": "Hoppers",
+    "year": "2026",
+    "overview": "Mabel, una amante de los animales, utiliza una nueva e inteligente tecnología diseñada para \"transmitir\" la conciencia humana a animales robóticos realistas en un intento de comunicarse con los castores, descubriendo misterios dentro del mundo animal más allá de lo que pudiera haber imaginado.",
+    "originalOverview": "Mabel, una amante de los animales, utiliza una nueva e inteligente tecnología diseñada para \"transmitir\" la conciencia humana a animales robóticos realistas en un intento de comunicarse con los castores, descubriendo misterios dentro del mundo animal más allá de lo que pudiera haber imaginado.",
+    "poster": "img/posters/1327819.jpg",
+    "genres": [
+      "Animación",
+      "Aventura",
+      "Comedia",
+      "Familia",
+      "Ciencia ficción"
+    ],
+    "tmdbId": 1327819,
+    "runtime": 105
   }
 ]
