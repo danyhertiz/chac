@@ -23611,5 +23611,21 @@
     ],
     "tmdbId": 1327819,
     "runtime": 105
+  },
+  {
+    "title": "Hombre de familia",
+    "originalTitle": "The Family Man",
+    "year": "2000",
+    "overview": "Jack Campbell es un exitoso corredor de bolsa que tras un encuentro mágico se despierta en una realidad alternativa donde tiene una familia. Enfrentado a decisiones pasadas y nuevas oportunidades, Jack aprende sobre el verdadero significado del amor y la felicidad.",
+    "originalOverview": "Jack Campbell es un exitoso corredor de bolsa que tras un encuentro mágico se despierta en una realidad alternativa donde tiene una familia. Enfrentado a decisiones pasadas y nuevas oportunidades, Jack aprende sobre el verdadero significado del amor y la felicidad.",
+    "poster": "img/posters/5994.jpg",
+    "genres": [
+      "Comedia",
+      "Drama",
+      "Romance",
+      "Fantasía"
+    ],
+    "tmdbId": 5994,
+    "runtime": 120
   }
 ]
