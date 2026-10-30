@@ -18862,24 +18862,24 @@
     "releaseDate": "2025-05-17"
   },
   {
-    "title": "Moana: Un mar de aventuras",
+    "title": "Moana",
     "originalTitle": "Moana",
-    "year": "2016",
-    "overview": "En la antigua Polinesia, cuando una terrible maldición del semidiós Maui llega a la isla de Moana, ella responde al llamado del océano para buscar al semidiós y arreglar las cosas.",
-    "originalOverview": "En la antigua Polinesia, cuando una terrible maldición del semidiós Maui llega a la isla de Moana, ella responde al llamado del océano para buscar al semidiós y arreglar las cosas.",
-    "poster": "img/posters/277834.jpg",
+    "year": "2026",
+    "overview": "Moana que quiere ser una viajera marinera. Cuando su isla natal se ve amenazada, Moana debe adentrarse en el mar junto a un semidiós llamado Maui para salvar a su pueblo.",
+    "originalOverview": "Moana que quiere ser una viajera marinera. Cuando su isla natal se ve amenazada, Moana debe adentrarse en el mar junto a un semidiós llamado Maui para salvar a su pueblo.",
+    "poster": "img/posters/1108427.jpg",
     "genres": [
-      "Aventura",
-      "Comedia",
       "Familia",
-      "Animación"
+      "Fantasía",
+      "Comedia",
+      "Aventura"
     ],
-    "tmdbId": 277834,
-    "runtime": 107,
-    "sourceFile": "Moana (2016).mkv",
+    "tmdbId": 1108427,
+    "runtime": 115,
+    "sourceFile": "Moana (2026).mkv",
     "parsedTitle": "Moana",
-    "parsedYear": "2016",
-    "releaseDate": "2016-10-13"
+    "parsedYear": "2026",
+    "releaseDate": "2026-08-07"
   },
   {
     "title": "Monster Pets: A Hotel Transylvania Short",
@@ -23117,7 +23117,9 @@
     ],
     "tmdbId": 27022,
     "runtime": 109,
-    "releaseDate": "2010-07-13"
+    "releaseDate": "2010-07-13",
+    "parsedTitle": "El Aprendiz de Brujo",
+    "parsedYear": "2010"
   },
   {
     "title": "Silencio",
@@ -23477,7 +23479,9 @@
     ],
     "tmdbId": 1084244,
     "runtime": 102,
-    "releaseDate": "2026-06-17"
+    "releaseDate": "2026-06-17",
+    "parsedTitle": "Toy Story 5",
+    "parsedYear": "2026"
   },
   {
     "title": "Michael",
@@ -23492,7 +23496,9 @@
     ],
     "tmdbId": 936075,
     "runtime": 128,
-    "releaseDate": "2026-04-22"
+    "releaseDate": "2026-04-22",
+    "parsedTitle": "Michael",
+    "parsedYear": "2026"
   },
   {
     "title": "El día de la revelación",
@@ -23507,7 +23513,9 @@
     ],
     "tmdbId": 1275779,
     "runtime": 146,
-    "releaseDate": "2026-06-10"
+    "releaseDate": "2026-06-10",
+    "parsedTitle": "El día de la revelación",
+    "parsedYear": "2026"
   },
   {
     "title": "Guadalupe: Madre de la Humanidad",
@@ -23521,7 +23529,9 @@
       "Documental"
     ],
     "tmdbId": 1206089,
-    "runtime": 102
+    "runtime": 102,
+    "parsedTitle": "Guadalupe: Madre de la Humanidad",
+    "parsedYear": "2024"
   },
   {
     "title": "Los Diez Mandamientos",
@@ -23535,7 +23545,10 @@
       "Historia"
     ],
     "tmdbId": 6844,
-    "runtime": 231
+    "runtime": 231,
+    "parsedTitle": "Los Diez Mandamientos",
+    "parsedYear": "1956",
+    "releaseDate": "1956-11-08"
   },
   {
     "title": "Casablanca",
@@ -23549,7 +23562,10 @@
       "Romance"
     ],
     "tmdbId": 289,
-    "runtime": 102
+    "runtime": 102,
+    "parsedTitle": "Casablanca",
+    "parsedYear": "1943",
+    "releaseDate": "1943-01-15"
   },
   {
     "title": "Snoopy presenta: Hogar, dulce hogar",
@@ -23563,7 +23579,10 @@
       "Familia"
     ],
     "tmdbId": 1698575,
-    "runtime": 32
+    "runtime": 32,
+    "parsedTitle": "Snoopy presenta: Hogar, dulce hogar",
+    "parsedYear": "2026",
+    "releaseDate": "2026-07-30"
   },
   {
     "title": "Contracara",
@@ -23578,7 +23597,10 @@
       "Ciencia ficción"
     ],
     "tmdbId": 754,
-    "runtime": 138
+    "runtime": 138,
+    "parsedTitle": "Contracara",
+    "parsedYear": "1997",
+    "releaseDate": "1997-06-27"
   },
   {
     "title": "Hechizo de amor",
@@ -23593,7 +23615,10 @@
       "Comedia"
     ],
     "tmdbId": 6435,
-    "runtime": 104
+    "runtime": 104,
+    "parsedTitle": "Hechizo de amor",
+    "parsedYear": "1998",
+    "releaseDate": "1998-10-16"
   },
   {
     "title": "Hoppers: Operación castor",
@@ -23610,7 +23635,10 @@
       "Ciencia ficción"
     ],
     "tmdbId": 1327819,
-    "runtime": 105
+    "runtime": 105,
+    "parsedTitle": "Hoppers: Operación castor",
+    "parsedYear": "2026",
+    "releaseDate": "2026-03-04"
   },
   {
     "title": "Hombre de familia",
@@ -23626,6 +23654,47 @@
       "Fantasía"
     ],
     "tmdbId": 5994,
-    "runtime": 120
+    "runtime": 120,
+    "parsedTitle": "Hombre de familia",
+    "parsedYear": "2000",
+    "releaseDate": "2000-12-12"
+  },
+  {
+    "title": "Coyote vs. Acme",
+    "originalTitle": "Coyote vs. Acme",
+    "year": "2026",
+    "overview": "Luego de que los productos Acme le fallan demasiadas veces en su tenaz búsqueda del Correcaminos, Wile E. Coyote decide contratar a un abogado especializado en vallas publicitarias para demandar a Acme Corporation.",
+    "originalOverview": "Luego de que los productos Acme le fallan demasiadas veces en su tenaz búsqueda del Correcaminos, Wile E. Coyote decide contratar a un abogado especializado en vallas publicitarias para demandar a Acme Corporation.",
+    "poster": "img/posters/1204680.jpg",
+    "genres": [
+      "Comedia",
+      "Aventura",
+      "Familia",
+      "Animación"
+    ],
+    "tmdbId": 1204680,
+    "runtime": 103,
+    "parsedTitle": "Coyote vs. Acme",
+    "parsedYear": "2026",
+    "releaseDate": "2026-08-20"
+  },
+  {
+    "title": "Moana: Un mar de aventuras",
+    "originalTitle": "Moana",
+    "year": "2016",
+    "overview": "En la antigua Polinesia, cuando una terrible maldición del semidiós Maui llega a la isla de Moana, ella responde al llamado del océano para buscar al semidiós y arreglar las cosas.",
+    "originalOverview": "En la antigua Polinesia, cuando una terrible maldición del semidiós Maui llega a la isla de Moana, ella responde al llamado del océano para buscar al semidiós y arreglar las cosas.",
+    "poster": "img/posters/277834.jpg",
+    "genres": [
+      "Aventura",
+      "Comedia",
+      "Familia",
+      "Animación"
+    ],
+    "tmdbId": 277834,
+    "runtime": 107,
+    "parsedTitle": "Moana: Un mar de aventuras",
+    "parsedYear": "2016",
+    "releaseDate": "2016-10-13"
   }
 ]
