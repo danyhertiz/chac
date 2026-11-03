@@ -23696,5 +23696,20 @@
     "parsedTitle": "Moana: Un mar de aventuras",
     "parsedYear": "2016",
     "releaseDate": "2016-10-13"
+  },
+  {
+    "title": "Resident Evil: Noche cero",
+    "originalTitle": "Resident Evil",
+    "year": "2026",
+    "overview": "Un desafortunado mensajero, encargado de entregar un paquete a un hospital remoto, se ve atrapado en medio de un brote y debe luchar contra hordas de criaturas mutantes para sobrevivir.",
+    "originalOverview": "Un desafortunado mensajero, encargado de entregar un paquete a un hospital remoto, se ve atrapado en medio de un brote y debe luchar contra hordas de criaturas mutantes para sobrevivir.",
+    "poster": "img/posters/1423191.jpg",
+    "genres": [
+      "Terror",
+      "Ciencia ficción",
+      "Aventura"
+    ],
+    "tmdbId": 1423191,
+    "runtime": 95
   }
 ]
