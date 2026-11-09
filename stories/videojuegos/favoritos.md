@@ -219,6 +219,24 @@ En fin, el caso es que desde ese momento quedé fascinado por los juegos de Zeld
 
 ![Ocarina of Time Remake](img/historias/videojuegos/oot_re.jpg)
 
+<p style="text-align: right;">📅 9 de noviembre, 2026</p>
+
+Actualización.
+
+Al fin he jugado el remake de Ocarina of Time y fue una experiencia sumamente agradable. No sé cómo lo hacen, pero en Nintendo son expertos en explotar la nostalgia. Yo temía que le hicieran tantos cambios que ya se sintiera un juego totalmente distinto o, por el contrario, que quedara tan exacto al original que se sintiera como un simple port de la versión de 3DS. Pero quedó exactamente en medio de esas dos cosas. Se siente como estar jugando el ocarina por primera vez por los pequeños cambios que le hicieron, pero a la vez respetaron tanto el material original que no parece un juego diferente. No sé como describirlo, pero el juego superó mis expectativas.
+
+Cada escena del juego es digna de una captura para wallpaper o algo así. La dirección de arte es impecable. Y en cuanto al rediseño de la princesa Zelda, creo que es la mas bonita que han hecho hasta ahora. ☺️
+
+![Ocarina of Time Remake Link](img/historias/videojuegos/link.jpg)
+
+![Ocarina of Time Remake Zelda](img/historias/videojuegos/zelda.jpg)
+
+<div style="text-align: center; margin: 20px 0;">
+  <img src="img/historias/videojuegos/zelda_remake.webp" 
+       alt="Princesa Zelda"
+       style="width: 800px; max-width: 100%; height: auto; display: block; margin: 0 auto;">
+</div>
+
 ---
 ## Pragmata
 
