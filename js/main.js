@@ -285,6 +285,7 @@ const initializeSite = () => {
         mis_videos: 'sections/mis_videos.html',
         mis_episodios: 'sections/mis_episodios.html',
         mis_peliculas: 'sections/mis_peliculas.html',
+        best_games: 'sections/best_games.html',
         p_simulador: 'sections/p_simulador.html',
         p_traductordino: 'sections/p_traductordino.html',
         p_snake: 'sections/snake.html',
@@ -316,6 +317,16 @@ const initializeSite = () => {
             window.destroySnakeGame?.();
             window.destroyTetrisGame?.();
             mainContent.innerHTML = await response.text();
+            if (sectionName === 'best_games') {
+                mainContent.querySelectorAll('script').forEach((script) => {
+                    const executableScript = document.createElement('script');
+                    Array.from(script.attributes).forEach(({ name, value }) => {
+                        executableScript.setAttribute(name, value);
+                    });
+                    executableScript.textContent = script.textContent;
+                    script.replaceWith(executableScript);
+                });
+            }
             mainContent.classList.toggle('video-page-main', staticSections.has(sectionName));
             mainContent.classList.toggle('episode-page', sectionName === 'mis_episodios');
             mainContent.classList.toggle('movie-page-main', sectionName === 'mis_peliculas');

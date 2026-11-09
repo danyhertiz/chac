@@ -1,0 +1,1558 @@
+<style>
+.best-games-catalog, .best-games-catalog * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+.best-games-catalog {
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 2rem 1.5rem;
+            line-height: 1.5;
+        }
+.best-games-catalog .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+.best-games-catalog h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.4rem;
+            background: linear-gradient(135deg, #a78bfa, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+.best-games-catalog .subtitle {
+            color: #94a3b8;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+.best-games-catalog /* ----- Barra de búsqueda y filtros ----- */
+        .filters {
+            background: #1e293b;
+            border-radius: 16px;
+            padding: 1.5rem 1.8rem;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem 2.5rem;
+            align-items: flex-end;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+.best-games-catalog .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+.best-games-catalog .filter-group label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            font-weight: 600;
+            color: #94a3b8;
+        }
+.best-games-catalog .platform-checks {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+.best-games-catalog .platform-checks label {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.9rem;
+            text-transform: none;
+            letter-spacing: normal;
+            font-weight: 400;
+            color: #e2e8f0;
+            cursor: pointer;
+            background: #0f172a;
+            padding: 0.4rem 0.8rem;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            transition: background 0.2s, border-color 0.2s;
+        }
+.best-games-catalog .platform-checks label:has(input:checked) {
+            background: #3b82f6;
+            border-color: #3b82f6;
+            color: white;
+        }
+.best-games-catalog .platform-checks input {
+            accent-color: #3b82f6;
+            width: 1rem;
+            height: 1rem;
+            cursor: pointer;
+        }
+.best-games-catalog select, .best-games-catalog input[type="text"], .best-games-catalog input[type="number"] {
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 0.55rem 0.8rem;
+            color: #e2e8f0;
+            font-size: 0.9rem;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+.best-games-catalog select:focus, .best-games-catalog input[type="text"]:focus, .best-games-catalog input[type="number"]:focus {
+            border-color: #3b82f6;
+        }
+.best-games-catalog select {
+            cursor: pointer;
+            min-width: 160px;
+        }
+.best-games-catalog input[type="text"] {
+            width: 220px;
+        }
+.best-games-catalog input[type="number"] {
+            width: 90px;
+        }
+.best-games-catalog .range-inputs {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+.best-games-catalog .range-inputs span {
+            color: #64748b;
+        }
+.best-games-catalog .btn-reset {
+            background: transparent;
+            border: 1px solid #475569;
+            color: #cbd5e1;
+            padding: 0.55rem 1.2rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background 0.2s, border-color 0.2s;
+        }
+.best-games-catalog .btn-reset:hover {
+            background: #334155;
+            border-color: #64748b;
+        }
+.best-games-catalog /* ----- Tabla ----- */
+        .table-wrapper {
+            background: #1e293b;
+            border-radius: 16px;
+            padding: 0.5rem 0;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            overflow-x: auto;
+        }
+.best-games-catalog table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+        }
+.best-games-catalog thead {
+            background: #0f172a;
+        }
+.best-games-catalog th {
+            text-align: left;
+            padding: 1rem 1.2rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-weight: 700;
+            color: #94a3b8;
+            border-bottom: 1px solid #334155;
+            white-space: nowrap;
+        }
+.best-games-catalog td {
+            padding: 0.85rem 1.2rem;
+            border-bottom: 1px solid #1e293b;
+            vertical-align: middle;
+        }
+.best-games-catalog tbody tr {
+            transition: background 0.15s;
+        }
+.best-games-catalog tbody tr:nth-child(even) {
+            background: #1a2332;
+        }
+.best-games-catalog tbody tr:hover {
+            background: #273449;
+        }
+.best-games-catalog .rank {
+            font-weight: 700;
+            color: #64748b;
+            font-size: 0.85rem;
+            width: 40px;
+        }
+.best-games-catalog .game-name {
+            font-weight: 600;
+            color: #f1f5f9;
+        }
+.best-games-catalog .badge {
+            display: inline-block;
+            padding: 0.2rem 0.65rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+        }
+.best-games-catalog .badge-pc {
+            background: #1e3a5f;
+            color: #7dd3fc;
+        }
+.best-games-catalog .badge-nintendo {
+            background: #3b1e1e;
+            color: #fca5a5;
+        }
+.best-games-catalog .badge-xbox {
+            background: #1e3b1e;
+            color: #86efac;
+        }
+.best-games-catalog .badge-playstation {
+            background: #2e1e4a;
+            color: #c4b5fd;
+        }
+.best-games-catalog .year {
+            color: #94a3b8;
+            font-variant-numeric: tabular-nums;
+        }
+.best-games-catalog .genre {
+            color: #cbd5e1;
+            font-size: 0.85rem;
+        }
+.best-games-catalog .score {
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+            font-size: 1rem;
+            text-align: center; /* Calificación centrada */
+        }
+.best-games-catalog .score.high {
+            color: #4ade80;
+        }
+.best-games-catalog .score.mid {
+            color: #facc15;
+        }
+.best-games-catalog .score.unrated {
+            color: #94a3b8;
+            font-weight: 500;
+        }
+.best-games-catalog .empty-message {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: #64748b;
+            font-size: 1rem;
+        }
+.best-games-catalog .result-count {
+            padding: 0.8rem 1.5rem;
+            font-size: 0.8rem;
+            color: #64748b;
+            border-top: 1px solid #334155;
+            text-align: right;
+        }
+.best-games-catalog .result-count strong {
+            color: #94a3b8;
+        }
+/* ----- Paginación ----- */
+        .best-games-catalog .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 1.5rem 0 0.5rem;
+            flex-wrap: wrap;
+        }
+.best-games-catalog .pagination button {
+            background: #0f172a;
+            border: 1px solid #334155;
+            color: #e2e8f0;
+            padding: 0.45rem 0.9rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background 0.2s, border-color 0.2s;
+        }
+.best-games-catalog .pagination button:hover:not(:disabled) {
+            background: #334155;
+            border-color: #64748b;
+        }
+.best-games-catalog .pagination button:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+.best-games-catalog .pagination button.active {
+            background: #3b82f6;
+            border-color: #3b82f6;
+            color: white;
+            font-weight: 700;
+        }
+.best-games-catalog .pagination .page-info {
+            color: #94a3b8;
+            font-size: 0.85rem;
+            margin: 0 0.8rem;
+        }
+/* ----- Responsive ----- */
+        @media (max-width: 720px) {
+            body {
+                padding: 1rem;
+            }
+
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+
+            .filters {
+                padding: 1.2rem;
+                gap: 1rem 1.5rem;
+            }
+
+
+            th,
+            td {
+                padding: 0.7rem 0.8rem;
+                font-size: 0.82rem;
+            }
+
+
+            .badge {
+                font-size: 0.7rem;
+                padding: 0.15rem 0.5rem;
+            }
+
+
+            input[type="text"] {
+                width: 160px;
+            }
+
+
+            .pagination button {
+                padding: 0.35rem 0.7rem;
+                font-size: 0.8rem;
+            }
+
+        }
+
+    
+</style>
+<section id="best-games-catalog" class="best-games-catalog">
+<div class="container">
+        <h1>🎮 Ranking de videojuegos mejor valorados</h1>
+        <p class="subtitle">
+            Período 1985‑2026 · Hasta 5 mejores juegos por año y plataforma (PC, Nintendo, PlayStation, Xbox) · Metascore de críticos por plataforma; N/D si no hay puntuación publicada para esa versión.
+        </p>
+
+        <!-- ===== FILTROS Y BUSCADOR ===== -->
+        <div class="filters">
+            <!-- Buscador por nombre -->
+            <div class="filter-group">
+                <label for="searchInput">Buscar por nombre</label>
+                <input type="text" id="searchInput" placeholder="Ej: Zelda, Halo, GTA...">
+            </div>
+
+            <!-- Plataformas -->
+            <div class="filter-group">
+                <label>Plataforma</label>
+                <div class="platform-checks" id="platformChecks">
+                    <label>
+                        <input type="checkbox" value="PC" checked> PC
+                    </label>
+                    <label>
+                        <input type="checkbox" value="Nintendo" checked> Nintendo
+                    </label>
+                    <label>
+                        <input type="checkbox" value="PlayStation" checked> PlayStation
+                    </label>
+                    <label>
+                        <input type="checkbox" value="Xbox" checked> Xbox
+                    </label>
+                </div>
+            </div>
+
+            <!-- Género -->
+            <div class="filter-group">
+                <label for="genreFilter">Género</label>
+                <select id="genreFilter">
+                    <option value="all">Todos</option>
+                    <option value="FPS">FPS</option>
+                    <option value="RPG">RPG</option>
+                    <option value="Acción/Aventura">Acción/Aventura</option>
+                    <option value="Action RPG">Action RPG</option>
+                    <option value="Estrategia">Estrategia</option>
+                    <option value="Puzzle">Puzzle</option>
+                    <option value="Plataformas">Plataformas</option>
+                    <option value="Plataformas 3D">Plataformas 3D</option>
+                    <option value="Deportes">Deportes</option>
+                    <option value="Carreras">Carreras</option>
+                    <option value="Sigilo">Sigilo</option>
+                    <option value="Lucha">Lucha</option>
+                    <option value="Shooter">Shooter</option>
+                    <option value="Aventura">Aventura</option>
+                    <option value="Simulación">Simulación</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Metroidvania">Metroidvania</option>
+                    <option value="Roguelike">Roguelike</option>
+                    <option value="Fiesta">Fiesta</option>
+                </select>
+            </div>
+
+            <!-- Año (desplegable) -->
+            <div class="filter-group">
+                <label for="yearFilter">Año de lanzamiento</label>
+                <select id="yearFilter">
+                    <option value="all">Todos</option>
+                    <!-- Se llenará dinámicamente con JS -->
+                </select>
+            </div>
+
+            <!-- Calificación (desplegable) -->
+            <div class="filter-group">
+                <label for="scoreFilter">Calificación (Metacritic)</label>
+                <select id="scoreFilter">
+                    <option value="all">Todas</option>
+                    <option value="95-100">95‑100</option>
+                    <option value="90-94">90‑94</option>
+                    <option value="85-89">85‑89</option>
+                    <option value="80-84">80‑84</option>
+                    <option value="70-79">70‑79</option>
+                    <option value="0-69">Menos de 70</option>
+                    <option value="unrated">Sin Metascore</option>
+                </select>
+            </div>
+
+            <button class="btn-reset" id="resetBtn">Restablecer filtros</button>
+        </div>
+
+        <!-- ===== TABLA ===== -->
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Juego</th>
+                        <th>Plataforma</th>
+                        <th>Año</th>
+                        <th>Género</th>
+                        <th style="text-align: center;">Calificación</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Filas generadas por JavaScript -->
+                </tbody>
+            </table>
+            <div class="result-count" id="resultCount"></div>
+            <!-- Controles de paginación -->
+            <div class="pagination" id="pagination"></div>
+        </div>
+    </div>
+</section>
+<script>
+(() => {
+const catalog = document.getElementById('best-games-catalog');
+
+        // ============================================================
+        // DATOS: hasta 5 mejores juegos por año y plataforma (1985‑2026)
+        // Metascores de críticos por plataforma; null indica que no hay una puntuación verificable para esa versión.
+        // ============================================================
+        const games = [];
+
+        // ---------- FUNCIÓN AUXILIAR PARA AÑADIR JUEGOS ----------
+        function addGame(name, platform, year, genre, score) {
+            games.push({ name, platform, year, genre, score });
+        }
+
+        // ========== PC (1985‑2026) ==========
+        // 1985
+        addGame("Ultima IV: Quest of the Avatar", "PC", 1985, "RPG", null);
+        addGame("The Bard's Tale", "PC", 1985, "RPG", null);
+        addGame("Elite", "PC", 1985, "Simulación", null);
+        addGame("Wizardry: Proving Grounds of the Mad Overlord", "PC", 1985, "RPG", null);
+        addGame("King's Quest II: Romancing the Throne", "PC", 1985, "Aventura", null);
+        // 1986
+        addGame("Dragon Quest", "PC", 1986, "RPG", null);
+        addGame("Space Quest I: The Sarien Encounter", "PC", 1986, "Aventura", null);
+        addGame("Might and Magic Book One: The Secret of the Inner Sanctum", "PC", 1986, "RPG", null);
+        addGame("Starflight", "PC", 1986, "Simulación", null);
+        addGame("The Legend of Zelda", "PC", 1986, "Acción/Aventura", null); // (versión PC)
+        // 1987
+        addGame("Maniac Mansion", "PC", 1987, "Aventura", null);
+        addGame("Leisure Suit Larry in the Land of the Lounge Lizards", "PC", 1987, "Aventura", null);
+        addGame("The Secret of Monkey Island", "PC", 1987, "Aventura", null);
+        addGame("Police Quest: In Pursuit of the Death Angel", "PC", 1987, "Aventura", null);
+        addGame("Dungeon Master", "PC", 1987, "RPG", null);
+        // 1988
+        addGame("Ultima V: Warriors of Destiny", "PC", 1988, "RPG", null);
+        addGame("Pool of Radiance", "PC", 1988, "RPG", null);
+        addGame("The King of Fighters", "PC", 1988, "Lucha", null);
+        addGame("Mega Man", "PC", 1988, "Plataformas", null);
+        addGame("Zak McKracken and the Alien Mindbenders", "PC", 1988, "Aventura", null);
+        // 1989
+        addGame("SimCity", "PC", 1989, "Estrategia", null);
+        addGame("Prince of Persia", "PC", 1989, "Plataformas", null);
+        addGame("The Colonel's Bequest", "PC", 1989, "Aventura", null);
+        addGame("Indiana Jones and the Last Crusade: The Graphic Adventure", "PC", 1989, "Aventura", null);
+        addGame("Populous", "PC", 1989, "Estrategia", null);
+        // 1990
+        addGame("The Secret of Monkey Island", "PC", 1990, "Aventura", null);
+        addGame("Commander Keen: Invasion of the Vorticons", "PC", 1990, "Plataformas", null);
+        addGame("Wing Commander", "PC", 1990, "Simulación", null);
+        addGame("Railroad Tycoon", "PC", 1990, "Estrategia", null);
+        addGame("Loom", "PC", 1990, "Aventura", null);
+        // 1991
+        addGame("Civilization", "PC", 1991, "Estrategia", null);
+        addGame("Monkey Island 2: LeChuck's Revenge", "PC", 1991, "Aventura", null);
+        addGame("Duke Nukem", "PC", 1991, "FPS", null);
+        addGame("Lemmings", "PC", 1991, "Puzzle", null);
+        addGame("Another World", "PC", 1991, "Aventura", null);
+        // 1992
+        addGame("Wolfenstein 3D", "PC", 1992, "FPS", null);
+        addGame("Dune II: The Building of a Dynasty", "PC", 1992, "Estrategia", null);
+        addGame("Alone in the Dark", "PC", 1992, "Terror", null);
+        addGame("Star Control II", "PC", 1992, "Aventura", null);
+        addGame("Ultima VII: The Black Gate", "PC", 1992, "RPG", null);
+        // 1993
+        addGame("Doom", "PC", 1993, "FPS", null);
+        addGame("Myst", "PC", 1993, "Puzzle", null);
+        addGame("Sam & Max Hit the Road", "PC", 1993, "Aventura", null);
+        addGame("Day of the Tentacle", "PC", 1993, "Aventura", null);
+        addGame("SimCity 2000", "PC", 1993, "Estrategia", null);
+        // 1994
+        addGame("Doom II: Hell on Earth", "PC", 1994, "FPS", null);
+        addGame("X-COM: UFO Defense", "PC", 1994, "Estrategia", null);
+        addGame("System Shock", "PC", 1994, "FPS", null);
+        addGame("Warcraft: Orcs & Humans", "PC", 1994, "Estrategia", null);
+        addGame("Beneath a Steel Sky", "PC", 1994, "Aventura", null);
+        // 1995
+        addGame("Warcraft II: Tides of Darkness", "PC", 1995, "Estrategia", null);
+        addGame("Command & Conquer", "PC", 1995, "Estrategia", 94);
+        addGame("Full Throttle", "PC", 1995, "Aventura", 86);
+        addGame("Descent", "PC", 1995, "Shooter", null);
+        addGame("The Dig", "PC", 1995, "Aventura", null);
+        // 1996
+        addGame("Duke Nukem 3D", "PC", 1996, "FPS", 89);
+        addGame("Quake", "PC", 1996, "FPS", 94);
+        addGame("Civilization II", "PC", 1996, "Estrategia", 94);
+        addGame("Diablo", "PC", 1996, "RPG", 94);
+        addGame("Master of Orion II: Battle at Antares", "PC", 1996, "Estrategia", 84);
+        // 1997
+        addGame("Fallout", "PC", 1997, "RPG", 89);
+        addGame("Total Annihilation", "PC", 1997, "Estrategia", 86);
+        addGame("Age of Empires", "PC", 1997, "Estrategia", 83);
+        addGame("Jedi Knight: Dark Forces II", "PC", 1997, "FPS", null);
+        addGame("The Curse of Monkey Island", "PC", 1997, "Aventura", 89);
+        // 1998
+        addGame("Half-Life", "PC", 1998, "FPS", 96);
+        addGame("StarCraft", "PC", 1998, "Estrategia", 88);
+        addGame("Baldur's Gate", "PC", 1998, "RPG", 91);
+        addGame("Grim Fandango", "PC", 1998, "Aventura", 94);
+        addGame("Thief: The Dark Project", "PC", 1998, "Sigilo", 92);
+        // 1999
+        addGame("System Shock 2", "PC", 1999, "FPS", 92);
+        addGame("Age of Empires II: The Age of Kings", "PC", 1999, "Estrategia", 92);
+        addGame("Planescape: Torment", "PC", 1999, "RPG", 91);
+        addGame("Unreal Tournament", "PC", 1999, "FPS", null);
+        addGame("Homeworld", "PC", 1999, "Estrategia", 93);
+        // 2000
+        addGame("The Sims", "PC", 2000, "Simulación", 92);
+        addGame("Deus Ex", "PC", 2000, "RPG", 90);
+        addGame("Baldur's Gate II: Shadows of Amn", "PC", 2000, "RPG", 95);
+        addGame("Diablo II", "PC", 2000, "RPG", 88);
+        addGame("Hitman: Codename 47", "PC", 2000, "Sigilo", 73);
+        // 2001
+        addGame("Grand Theft Auto III", "PC", 2001, "Acción/Aventura", 93);
+        addGame("Halo: Combat Evolved", "PC", 2001, "FPS", null);
+        addGame("Max Payne", "PC", 2001, "Acción", 89);
+        addGame("Operation Flashpoint: Cold War Crisis", "PC", 2001, "Shooter", 85);
+        addGame("Civilization III", "PC", 2001, "Estrategia", null);
+        // 2002
+        addGame("Warcraft III: Reign of Chaos", "PC", 2002, "Estrategia", 92);
+        addGame("Morrowind", "PC", 2002, "RPG", null);
+        addGame("Battlefield 1942", "PC", 2002, "FPS", 89);
+        addGame("Neverwinter Nights", "PC", 2002, "RPG", 91);
+        addGame("Splinter Cell", "PC", 2002, "Sigilo", null);
+        // 2003
+        addGame("Star Wars: Knights of the Old Republic", "PC", 2003, "RPG", 93);
+        addGame("Call of Duty", "PC", 2003, "FPS", 91);
+        addGame("Max Payne 2: The Fall of Max Payne", "PC", 2003, "Acción", 86);
+        addGame("Deus Ex: Invisible War", "PC", 2003, "RPG", 80);
+        addGame("Command & Conquer: Generals", "PC", 2003, "Estrategia", 84);
+        // 2004
+        addGame("Half-Life 2", "PC", 2004, "FPS", 96);
+        addGame("Grand Theft Auto: San Andreas", "PC", 2004, "Acción/Aventura", 93);
+        addGame("World of Warcraft", "PC", 2004, "RPG", 93);
+        addGame("Rome: Total War", "PC", 2004, "Estrategia", 92);
+        addGame("Far Cry", "PC", 2004, "FPS", 89);
+        // 2005
+        addGame("Civilization IV", "PC", 2005, "Estrategia", 94);
+        addGame("Call of Duty 2", "PC", 2005, "FPS", 86);
+        addGame("Battlefield 2", "PC", 2005, "FPS", 91);
+        addGame("F.E.A.R.", "PC", 2005, "FPS", 88);
+        addGame("Age of Empires III", "PC", 2005, "Estrategia", 81);
+        // 2006
+        addGame("The Elder Scrolls IV: Oblivion", "PC", 2006, "RPG", 94);
+        addGame("Company of Heroes", "PC", 2006, "Estrategia", 93);
+        addGame("Half-Life 2: Episode One", "PC", 2006, "FPS", 87);
+        addGame("Prey", "PC", 2006, "FPS", null);
+        addGame("Hitman: Blood Money", "PC", 2006, "Sigilo", 82);
+        // 2007
+        addGame("BioShock", "PC", 2007, "FPS", 96);
+        addGame("Portal", "PC", 2007, "Puzzle", 90);
+        addGame("Call of Duty 4: Modern Warfare", "PC", 2007, "FPS", 92);
+        addGame("Crysis", "PC", 2007, "FPS", 91);
+        addGame("Team Fortress 2", "PC", 2007, "FPS", 92);
+        // 2008
+        addGame("Grand Theft Auto IV", "PC", 2008, "Acción/Aventura", 90);
+        addGame("Fallout 3", "PC", 2008, "RPG", 91);
+        addGame("Mass Effect", "PC", 2008, "RPG", 89);
+        addGame("Spore", "PC", 2008, "Simulación", 84);
+        addGame("Left 4 Dead", "PC", 2008, "FPS", 89);
+        // 2009
+        addGame("Dragon Age: Origins", "PC", 2009, "RPG", 91);
+        addGame("Batman: Arkham Asylum", "PC", 2009, "Acción", 91);
+        addGame("Assassin's Creed II", "PC", 2009, "Acción/Aventura", 86);
+        addGame("Borderlands", "PC", 2009, "FPS", 81);
+        addGame("Plants vs. Zombies", "PC", 2009, "Estrategia", 87);
+        // 2010
+        addGame("Mass Effect 2", "PC", 2010, "RPG", 94);
+        addGame("StarCraft II: Wings of Liberty", "PC", 2010, "Estrategia", 93);
+        addGame("Civilization V", "PC", 2010, "Estrategia", null);
+        addGame("Amnesia: The Dark Descent", "PC", 2010, "Terror", 85);
+        addGame("Fallout: New Vegas", "PC", 2010, "RPG", 84);
+        // 2011
+        addGame("Portal 2", "PC", 2011, "Puzzle", 95);
+        addGame("The Elder Scrolls V: Skyrim", "PC", 2011, "RPG", 94);
+        addGame("Deus Ex: Human Revolution", "PC", 2011, "RPG", 90);
+        addGame("Batman: Arkham City", "PC", 2011, "Acción", 91);
+        addGame("Minecraft", "PC", 2011, "Simulación", 93);
+        // 2012
+        addGame("Dishonored", "PC", 2012, "Sigilo", 91);
+        addGame("XCOM: Enemy Unknown", "PC", 2012, "Estrategia", 89);
+        addGame("Mass Effect 3", "PC", 2012, "RPG", 89);
+        addGame("Far Cry 3", "PC", 2012, "FPS", 88);
+        addGame("The Walking Dead", "PC", 2012, "Aventura", null);
+        // 2013
+        addGame("Grand Theft Auto V", "PC", 2013, "Acción/Aventura", null);
+        addGame("BioShock Infinite", "PC", 2013, "FPS", 94);
+        addGame("The Last of Us", "PC", 2013, "Acción/Aventura", null); // (versión PC)
+        addGame("Tomb Raider", "PC", 2013, "Acción/Aventura", 86);
+        addGame("Gone Home", "PC", 2013, "Aventura", 86);
+        // 2014
+        addGame("Dragon Age: Inquisition", "PC", 2014, "RPG", 85);
+        addGame("Dark Souls II", "PC", 2014, "Action RPG", 91);
+        addGame("South Park: The Stick of Truth", "PC", 2014, "RPG", 85);
+        addGame("Alien: Isolation", "PC", 2014, "Terror", 81);
+        addGame("Shadowrun Returns", "PC", 2014, "RPG", 76);
+        // 2015
+        addGame("The Witcher 3: Wild Hunt", "PC", 2015, "RPG", 93);
+        addGame("Metal Gear Solid V: The Phantom Pain", "PC", 2015, "Sigilo", 91);
+        addGame("Fallout 4", "PC", 2015, "RPG", 84);
+        addGame("Undertale", "PC", 2015, "RPG", 92);
+        addGame("Rocket League", "PC", 2015, "Deportes", 86);
+        // 2016
+        addGame("Overwatch", "PC", 2016, "FPS", null);
+        addGame("DOOM", "PC", 2016, "FPS", 85);
+        addGame("XCOM 2", "PC", 2016, "Estrategia", 88);
+        addGame("Civilization VI", "PC", 2016, "Estrategia", null);
+        addGame("Stardew Valley", "PC", 2016, "Simulación", 89);
+        // 2017
+        addGame("Divinity: Original Sin 2", "PC", 2017, "RPG", null);
+        addGame("What Remains of Edith Finch", "PC", 2017, "Aventura", 89);
+        addGame("Cuphead", "PC", 2017, "Plataformas", 88);
+        addGame("Hollow Knight", "PC", 2017, "Metroidvania", 87);
+        addGame("PlayerUnknown's Battlegrounds", "PC", 2017, "Shooter", 86);
+        // 2018
+        addGame("Red Dead Redemption 2", "PC", 2018, "Acción/Aventura", 93); // (versión PC de 2019)
+        addGame("God of War", "PC", 2018, "Acción/Aventura", null); // (versión PC)
+        addGame("Celeste", "PC", 2018, "Plataformas", 88);
+        addGame("Monster Hunter: World", "PC", 2018, "Action RPG", 88);
+        addGame("Into the Breach", "PC", 2018, "Estrategia", 90);
+        // 2019
+        addGame("Disco Elysium", "PC", 2019, "RPG", 91);
+        addGame("Sekiro: Shadows Die Twice", "PC", 2019, "Acción", 88);
+        addGame("Resident Evil 2", "PC", 2019, "Terror", 89);
+        addGame("Outer Wilds", "PC", 2019, "Aventura", 85);
+        addGame("Slay the Spire", "PC", 2019, "Roguelike", 89);
+        // 2020
+        addGame("Hades", "PC", 2020, "Roguelike", 93);
+        addGame("Half-Life: Alyx", "PC", 2020, "FPS", 93);
+        addGame("Cyberpunk 2077", "PC", 2020, "RPG", 86);
+        addGame("Doom Eternal", "PC", 2020, "FPS", 88);
+        addGame("Ori and the Will of the Wisps", "PC", 2020, "Metroidvania", 88);
+        // 2021
+        addGame("Disco Elysium: The Final Cut", "PC", 2021, "RPG", 97);
+        addGame("Deathloop", "PC", 2021, "FPS", 87);
+        addGame("Forza Horizon 5", "PC", 2021, "Carreras", 91);
+        addGame("It Takes Two", "PC", 2021, "Aventura", 89);
+        addGame("Halo Infinite", "PC", 2021, "FPS", 80);
+        // 2022
+        addGame("Elden Ring", "PC", 2022, "Action RPG", 94);
+        addGame("God of War Ragnarök", "PC", 2022, "Acción/Aventura", null); // (versión PC)
+        addGame("Stray", "PC", 2022, "Aventura", 82);
+        addGame("Neon White", "PC", 2022, "FPS", 89);
+        addGame("Vampire Survivors", "PC", 2022, "Roguelike", 86);
+        // 2023
+        addGame("Baldur's Gate 3", "PC", 2023, "RPG", 96);
+        addGame("Alan Wake 2", "PC", 2023, "Terror", null);
+        addGame("Resident Evil 4", "PC", 2023, "Terror", 91);
+        addGame("Dave the Diver", "PC", 2023, "Aventura", 90);
+        addGame("Cocoon", "PC", 2023, "Puzzle", 88);
+        // 2024
+        addGame("Metaphor: ReFantazio", "PC", 2024, "RPG", 92);
+        addGame("Balatro", "PC", 2024, "Roguelike", 90);
+        addGame("Animal Well", "PC", 2024, "Metroidvania", 90);
+        addGame("Helldivers 2", "PC", 2024, "Shooter", 83);
+        addGame("Prince of Persia: The Lost Crown", "PC", 2024, "Metroidvania", 85);
+        // 2025
+        addGame("Clair Obscur: Expedition 33", "PC", 2025, "RPG", 91);
+        addGame("Monster Hunter Wilds", "PC", 2025, "Action RPG", 88);
+        addGame("Split Fiction", "PC", 2025, "Aventura", 90);
+        addGame("Blue Prince", "PC", 2025, "Puzzle", 92);
+        addGame("The Alters", "PC", 2025, "Simulación", 85);
+        // 2026
+        addGame("Mina the Hollower", "PC", 2026, "Acción/Aventura", 90);
+        addGame("Big Walk", "PC", 2026, "Aventura", 91);
+        addGame("Hollow Knight: Silksong", "PC", 2026, "Metroidvania", 90);
+        addGame("Fable", "PC", 2026, "RPG", null);
+        addGame("South of Midnight", "PC", 2026, "Acción/Aventura", 75);
+
+        // ========== NINTENDO (1985‑2026) ==========
+        // 1985
+        addGame("Super Mario Bros.", "Nintendo", 1985, "Plataformas", null);
+        addGame("Duck Hunt", "Nintendo", 1985, "Shooter", null);
+        addGame("Excitebike", "Nintendo", 1985, "Carreras", null);
+        addGame("Ice Climber", "Nintendo", 1985, "Plataformas", null);
+        addGame("Kung Fu", "Nintendo", 1985, "Lucha", null);
+        // 1986
+        addGame("The Legend of Zelda", "Nintendo", 1986, "Acción/Aventura", null);
+        addGame("Metroid", "Nintendo", 1986, "Acción/Aventura", null);
+        addGame("Super Mario Bros.: The Lost Levels", "Nintendo", 1986, "Plataformas", null);
+        addGame("Kid Icarus", "Nintendo", 1986, "Plataformas", null);
+        addGame("Castlevania", "Nintendo", 1986, "Plataformas", null);
+        // 1987
+        addGame("Mike Tyson's Punch-Out!!", "Nintendo", 1987, "Deportes", null);
+        addGame("Mega Man", "Nintendo", 1987, "Plataformas", null);
+        addGame("Final Fantasy", "Nintendo", 1987, "RPG", null);
+        addGame("Metal Gear", "Nintendo", 1987, "Sigilo", null);
+        addGame("Zelda II: The Adventure of Link", "Nintendo", 1987, "Acción/Aventura", null);
+        // 1988
+        addGame("Super Mario Bros. 3", "Nintendo", 1988, "Plataformas", null);
+        addGame("Mega Man 2", "Nintendo", 1988, "Plataformas", null);
+        addGame("Dragon Quest III", "Nintendo", 1988, "RPG", null);
+        addGame("Super Contra", "Nintendo", 1988, "Shooter", null);
+        addGame("Bionic Commando", "Nintendo", 1988, "Acción", null);
+        // 1989
+        addGame("Tetris", "Nintendo", 1989, "Puzzle", null);
+        addGame("Mother", "Nintendo", 1989, "RPG", null);
+        addGame("DuckTales", "Nintendo", 1989, "Plataformas", null);
+        addGame("Teenage Mutant Ninja Turtles", "Nintendo", 1989, "Acción", null);
+        addGame("Ninja Gaiden", "Nintendo", 1989, "Acción", null);
+        // 1990
+        addGame("Super Mario World", "Nintendo", 1990, "Plataformas", null);
+        addGame("F-Zero", "Nintendo", 1990, "Carreras", null);
+        addGame("Pilotwings", "Nintendo", 1990, "Simulación", null);
+        addGame("Gradius III", "Nintendo", 1990, "Shooter", null);
+        addGame("ActRaiser", "Nintendo", 1990, "Acción", null);
+        // 1991
+        addGame("The Legend of Zelda: A Link to the Past", "Nintendo", 1991, "Acción/Aventura", null);
+        addGame("Street Fighter II: The World Warrior", "Nintendo", 1991, "Lucha", null);
+        addGame("Final Fantasy IV", "Nintendo", 1991, "RPG", null);
+        addGame("Super Castlevania IV", "Nintendo", 1991, "Plataformas", null);
+        addGame("Super Mario World", "Nintendo", 1991, "Plataformas", null); // (reedición)
+        // 1992
+        addGame("Super Mario Kart", "Nintendo", 1992, "Carreras", null);
+        addGame("Sonic the Hedgehog 2", "Nintendo", 1992, "Plataformas", null); // (versión Nintendo)
+        addGame("Street Fighter II Turbo", "Nintendo", 1992, "Lucha", null);
+        addGame("Contra III: The Alien Wars", "Nintendo", 1992, "Shooter", null);
+        addGame("Mario Paint", "Nintendo", 1992, "Simulación", null);
+        // 1993
+        addGame("The Legend of Zelda: Link's Awakening", "Nintendo", 1993, "Acción/Aventura", null);
+        addGame("Star Fox", "Nintendo", 1993, "Shooter", null);
+        addGame("Secret of Mana", "Nintendo", 1993, "RPG", null);
+        addGame("Mega Man X", "Nintendo", 1993, "Plataformas", null);
+        addGame("Super Mario All-Stars", "Nintendo", 1993, "Plataformas", null);
+        // 1994
+        addGame("Super Metroid", "Nintendo", 1994, "Acción/Aventura", null);
+        addGame("Donkey Kong Country", "Nintendo", 1994, "Plataformas", null);
+        addGame("Final Fantasy VI", "Nintendo", 1994, "RPG", null);
+        addGame("EarthBound", "Nintendo", 1994, "RPG", null);
+        addGame("Super Punch-Out!!", "Nintendo", 1994, "Deportes", null);
+        // 1995
+        addGame("Chrono Trigger", "Nintendo", 1995, "RPG", null);
+        addGame("Super Mario World 2: Yoshi's Island", "Nintendo", 1995, "Plataformas", null);
+        addGame("Donkey Kong Country 2: Diddy's Kong Quest", "Nintendo", 1995, "Plataformas", null);
+        addGame("Killer Instinct", "Nintendo", 1995, "Lucha", null);
+        addGame("EarthBound", "Nintendo", 1995, "RPG", null); // (ya incluido)
+        // 1996
+        addGame("Super Mario 64", "Nintendo", 1996, "Plataformas 3D", 94);
+        addGame("Pokémon Red/Blue", "Nintendo", 1996, "RPG", null);
+        addGame("Pilotwings 64", "Nintendo", 1996, "Simulación", 80);
+        addGame("Wave Race 64", "Nintendo", 1996, "Carreras", 92);
+        addGame("Killer Instinct Gold", "Nintendo", 1996, "Lucha", null);
+        // 1997
+        addGame("GoldenEye 007", "Nintendo", 1997, "FPS", 96);
+        addGame("Star Fox 64", "Nintendo", 1997, "Shooter", 88);
+        addGame("Diddy Kong Racing", "Nintendo", 1997, "Carreras", 88);
+        addGame("Yoshi's Story", "Nintendo", 1997, "Plataformas", 65);
+        addGame("Kirby's Dream Land 3", "Nintendo", 1997, "Plataformas", null);
+        // 1998
+        addGame("The Legend of Zelda: Ocarina of Time", "Nintendo", 1998, "Acción/Aventura", 99);
+        addGame("Metal Gear Solid", "Nintendo", 1998, "Sigilo", null);
+        addGame("Banjo-Kazooie", "Nintendo", 1998, "Plataformas 3D", 92);
+        addGame("Pokémon Yellow", "Nintendo", 1998, "RPG", null);
+        addGame("F-Zero X", "Nintendo", 1998, "Carreras", 85);
+        // 1999
+        addGame("The Legend of Zelda: Majora's Mask", "Nintendo", 1999, "Acción/Aventura", 95);
+        addGame("Super Smash Bros.", "Nintendo", 1999, "Lucha", 79);
+        addGame("Donkey Kong 64", "Nintendo", 1999, "Plataformas 3D", 90);
+        addGame("Pokémon Gold/Silver", "Nintendo", 1999, "RPG", null);
+        addGame("Perfect Dark", "Nintendo", 1999, "FPS", null);
+        // 2000
+        addGame("The Legend of Zelda: Majora's Mask", "Nintendo", 2000, "Acción/Aventura", 95); // (ya incluido)
+        addGame("Perfect Dark", "Nintendo", 2000, "FPS", null); // (ya incluido)
+        addGame("Banjo-Tooie", "Nintendo", 2000, "Plataformas 3D", 90);
+        addGame("Pokémon Crystal", "Nintendo", 2000, "RPG", null);
+        addGame("Mario Party 2", "Nintendo", 2000, "Fiesta", null);
+        // 2001
+        addGame("Super Smash Bros. Melee", "Nintendo", 2001, "Lucha", 92);
+        addGame("Pikmin", "Nintendo", 2001, "Estrategia", 89);
+        addGame("Star Wars Rogue Squadron II: Rogue Leader", "Nintendo", 2001, "Shooter", null);
+        addGame("Luigi's Mansion", "Nintendo", 2001, "Aventura", 78);
+        addGame("Wave Race: Blue Storm", "Nintendo", 2001, "Carreras", 80);
+        // 2002
+        addGame("Metroid Prime", "Nintendo", 2002, "FPS", 97);
+        addGame("Super Mario Sunshine", "Nintendo", 2002, "Plataformas 3D", 92);
+        addGame("Eternal Darkness: Sanity's Requiem", "Nintendo", 2002, "Terror", 92);
+        addGame("Animal Crossing", "Nintendo", 2002, "Simulación", 87);
+        addGame("Star Fox Adventures", "Nintendo", 2002, "Acción/Aventura", 82);
+        // 2003
+        addGame("The Legend of Zelda: The Wind Waker", "Nintendo", 2003, "Acción/Aventura", 96);
+        addGame("F-Zero GX", "Nintendo", 2003, "Carreras", 89);
+        addGame("Mario Kart: Double Dash!!", "Nintendo", 2003, "Carreras", 87);
+        addGame("Prince of Persia: The Sands of Time", "Nintendo", 2003, "Acción/Aventura", 92);
+        addGame("Viewtiful Joe", "Nintendo", 2003, "Acción", 93);
+        // 2004
+        addGame("Metroid Prime 2: Echoes", "Nintendo", 2004, "FPS", 92);
+        addGame("Paper Mario: The Thousand-Year Door", "Nintendo", 2004, "RPG", null);
+        addGame("Pikmin 2", "Nintendo", 2004, "Estrategia", 90);
+        addGame("The Legend of Zelda: Four Swords Adventures", "Nintendo", 2004, "Acción/Aventura", 86);
+        addGame("Metal Gear Solid: The Twin Snakes", "Nintendo", 2004, "Sigilo", 85);
+        // 2005
+        addGame("Resident Evil 4", "Nintendo", 2005, "Terror", null);
+        addGame("The Legend of Zelda: Twilight Princess", "Nintendo", 2005, "Acción/Aventura", 95); // (lanzado en 2006)
+        addGame("Mario Kart DS", "Nintendo", 2005, "Carreras", null);
+        addGame("Animal Crossing: Wild World", "Nintendo", 2005, "Simulación", null);
+        addGame("Advance Wars: Dual Strike", "Nintendo", 2005, "Estrategia", null);
+        // 2006
+        addGame("The Legend of Zelda: Twilight Princess", "Nintendo", 2006, "Acción/Aventura", 95);
+        addGame("Wii Sports", "Nintendo", 2006, "Deportes", 76);
+        addGame("New Super Mario Bros.", "Nintendo", 2006, "Plataformas", null);
+        addGame("Brain Age: Train Your Brain in Minutes a Day!", "Nintendo", 2006, "Puzzle", null);
+        addGame("The Legend of Zelda: Phantom Hourglass", "Nintendo", 2006, "Acción/Aventura", null); // (lanzado en 2007)
+        // 2007
+        addGame("Super Mario Galaxy", "Nintendo", 2007, "Plataformas 3D", 97);
+        addGame("The Legend of Zelda: Phantom Hourglass", "Nintendo", 2007, "Acción/Aventura", null);
+        addGame("Metroid Prime 3: Corruption", "Nintendo", 2007, "FPS", 90);
+        addGame("Super Paper Mario", "Nintendo", 2007, "RPG", 85);
+        addGame("Mario Party 8", "Nintendo", 2007, "Fiesta", 62);
+        // 2008
+        addGame("Super Smash Bros. Brawl", "Nintendo", 2008, "Lucha", 93);
+        addGame("Mario Kart Wii", "Nintendo", 2008, "Carreras", 82);
+        addGame("Wii Fit", "Nintendo", 2008, "Simulación", 80);
+        addGame("Animal Crossing: City Folk", "Nintendo", 2008, "Simulación", 73);
+        addGame("No More Heroes", "Nintendo", 2008, "Acción", 83);
+        // 2009
+        addGame("New Super Mario Bros. Wii", "Nintendo", 2009, "Plataformas", 87);
+        addGame("Punch-Out!!", "Nintendo", 2009, "Deportes", null);
+        addGame("The Legend of Zelda: Spirit Tracks", "Nintendo", 2009, "Acción/Aventura", null);
+        addGame("Professor Layton and the Diabolical Box", "Nintendo", 2009, "Puzzle", null);
+        addGame("Wii Sports Resort", "Nintendo", 2009, "Deportes", 80);
+        // 2010
+        addGame("Super Mario Galaxy 2", "Nintendo", 2010, "Plataformas 3D", 98);
+        addGame("Donkey Kong Country Returns", "Nintendo", 2010, "Plataformas", 87);
+        addGame("Kirby's Epic Yarn", "Nintendo", 2010, "Plataformas", 86);
+        addGame("Epic Mickey", "Nintendo", 2010, "Plataformas", 73);
+        addGame("Wii Party", "Nintendo", 2010, "Fiesta", 68);
+        // 2011
+        addGame("The Legend of Zelda: Skyward Sword", "Nintendo", 2011, "Acción/Aventura", 93);
+        addGame("Mario Kart 7", "Nintendo", 2011, "Carreras", 85);
+        addGame("Super Mario 3D Land", "Nintendo", 2011, "Plataformas 3D", 90);
+        addGame("Kirby's Return to Dream Land", "Nintendo", 2011, "Plataformas", 77);
+        addGame("Xenoblade Chronicles", "Nintendo", 2011, "RPG", 92);
+        // 2012
+        addGame("New Super Mario Bros. U", "Nintendo", 2012, "Plataformas", 84);
+        addGame("ZombiU", "Nintendo", 2012, "Terror", 77);
+        addGame("Nintendo Land", "Nintendo", 2012, "Fiesta", 77);
+        addGame("Paper Mario: Sticker Star", "Nintendo", 2012, "RPG", 75);
+        addGame("Professor Layton and the Miracle Mask", "Nintendo", 2012, "Puzzle", 82);
+        // 2013
+        addGame("Super Mario 3D World", "Nintendo", 2013, "Plataformas 3D", 93);
+        addGame("The Legend of Zelda: A Link Between Worlds", "Nintendo", 2013, "Acción/Aventura", 91);
+        addGame("Fire Emblem: Awakening", "Nintendo", 2013, "Estrategia", 92);
+        addGame("Pikmin 3", "Nintendo", 2013, "Estrategia", 87);
+        addGame("Animal Crossing: New Leaf", "Nintendo", 2013, "Simulación", 88);
+        // 2014
+        addGame("Mario Kart 8", "Nintendo", 2014, "Carreras", 88);
+        addGame("Super Smash Bros. for Wii U", "Nintendo", 2014, "Lucha", 92);
+        addGame("Bayonetta 2", "Nintendo", 2014, "Acción", 91);
+        addGame("Donkey Kong Country: Tropical Freeze", "Nintendo", 2014, "Plataformas", 83);
+        addGame("Captain Toad: Treasure Tracker", "Nintendo", 2014, "Puzzle", 81);
+        // 2015
+        addGame("Splatoon", "Nintendo", 2015, "Shooter", 81);
+        addGame("Super Mario Maker", "Nintendo", 2015, "Plataformas", 88);
+        addGame("Xenoblade Chronicles X", "Nintendo", 2015, "RPG", 84);
+        addGame("Yoshi's Woolly World", "Nintendo", 2015, "Plataformas", 78);
+        addGame("The Legend of Zelda: Tri Force Heroes", "Nintendo", 2015, "Acción/Aventura", 73);
+        // 2016
+        addGame("Pokémon Sun/Moon", "Nintendo", 2016, "RPG", null);
+        addGame("Fire Emblem Fates", "Nintendo", 2016, "Estrategia", null);
+        addGame("Star Fox Zero", "Nintendo", 2016, "Shooter", 69);
+        addGame("Paper Mario: Color Splash", "Nintendo", 2016, "RPG", 76);
+        addGame("Kirby: Planet Robobot", "Nintendo", 2016, "Plataformas", 81);
+        // 2017
+        addGame("The Legend of Zelda: Breath of the Wild", "Nintendo", 2017, "Acción/Aventura", 97);
+        addGame("Super Mario Odyssey", "Nintendo", 2017, "Plataformas 3D", 97);
+        addGame("Mario Kart 8 Deluxe", "Nintendo", 2017, "Carreras", 92);
+        addGame("Splatoon 2", "Nintendo", 2017, "Shooter", 83);
+        addGame("Xenoblade Chronicles 2", "Nintendo", 2017, "RPG", 83);
+        // 2018
+        addGame("Super Smash Bros. Ultimate", "Nintendo", 2018, "Lucha", 93);
+        addGame("Pokémon: Let's Go, Pikachu!/Eevee!", "Nintendo", 2018, "RPG", null);
+        addGame("Mario Tennis Aces", "Nintendo", 2018, "Deportes", 75);
+        addGame("Kirby Star Allies", "Nintendo", 2018, "Plataformas", 73);
+        addGame("Octopath Traveler", "Nintendo", 2018, "RPG", 83);
+        // 2019
+        addGame("Super Mario Maker 2", "Nintendo", 2019, "Plataformas", 88);
+        addGame("Fire Emblem: Three Houses", "Nintendo", 2019, "Estrategia", 89);
+        addGame("Luigi's Mansion 3", "Nintendo", 2019, "Aventura", 86);
+        addGame("The Legend of Zelda: Link's Awakening", "Nintendo", 2019, "Acción/Aventura", 87);
+        addGame("Pokémon Sword/Shield", "Nintendo", 2019, "RPG", null);
+        // 2020
+        addGame("Animal Crossing: New Horizons", "Nintendo", 2020, "Simulación", 90);
+        addGame("Hades", "Nintendo", 2020, "Roguelike", 93);
+        addGame("Paper Mario: The Origami King", "Nintendo", 2020, "RPG", 80);
+        addGame("Hyrule Warriors: Age of Calamity", "Nintendo", 2020, "Acción", 78);
+        addGame("Clubhouse Games: 51 Worldwide Classics", "Nintendo", 2020, "Fiesta", 82);
+        // 2021
+        addGame("Metroid Dread", "Nintendo", 2021, "Acción/Aventura", 88);
+        addGame("Super Mario 3D World + Bowser's Fury", "Nintendo", 2021, "Plataformas 3D", null);
+        addGame("Monster Hunter Rise", "Nintendo", 2021, "Action RPG", 88);
+        addGame("The Legend of Zelda: Skyward Sword HD", "Nintendo", 2021, "Acción/Aventura", 81);
+        addGame("WarioWare: Get It Together!", "Nintendo", 2021, "Fiesta", 76);
+        // 2022
+        addGame("Pokémon Legends: Arceus", "Nintendo", 2022, "RPG", 83);
+        addGame("Kirby and the Forgotten Land", "Nintendo", 2022, "Plataformas 3D", 85);
+        addGame("Splatoon 3", "Nintendo", 2022, "Shooter", 83);
+        addGame("Xenoblade Chronicles 3", "Nintendo", 2022, "RPG", 89);
+        addGame("Bayonetta 3", "Nintendo", 2022, "Acción", 86);
+        // 2023
+        addGame("The Legend of Zelda: Tears of the Kingdom", "Nintendo", 2023, "Acción/Aventura", 96);
+        addGame("Super Mario Bros. Wonder", "Nintendo", 2023, "Plataformas", 92);
+        addGame("Pikmin 4", "Nintendo", 2023, "Estrategia", 87);
+        addGame("Metroid Prime Remastered", "Nintendo", 2023, "FPS", 94);
+        addGame("Fire Emblem Engage", "Nintendo", 2023, "Estrategia", 80);
+        // 2024
+        addGame("Paper Mario: The Thousand-Year Door", "Nintendo", 2024, "RPG", 88);
+        addGame("Princess Peach: Showtime!", "Nintendo", 2024, "Acción", 74);
+        addGame("Mario vs. Donkey Kong", "Nintendo", 2024, "Puzzle", null);
+        addGame("Endless Ocean Luminous", "Nintendo", 2024, "Aventura", 60);
+        addGame("Nintendo World Championships: NES Edition", "Nintendo", 2024, "Fiesta", 73);
+        // 2025
+        addGame("Metroid Prime 4: Beyond", "Nintendo", 2025, "FPS", 78);
+        addGame("Pokémon Legends: Z-A", "Nintendo", 2025, "RPG", 78);
+        addGame("The Legend of Zelda: Echoes of Wisdom", "Nintendo", 2025, "Acción/Aventura", 85);
+        addGame("The Legend of Zelda: Ocarina of Time Remake", "Nintendo", 2026, "Acción/Aventura", null);
+
+        // ========== PLAYSTATION (1994‑2026) ==========
+        // 1994
+        addGame("Ridge Racer", "PlayStation", 1994, "Carreras", null);
+        addGame("Battle Arena Toshinden", "PlayStation", 1994, "Lucha", null);
+        addGame("Rayman", "PlayStation", 1994, "Plataformas", null);
+        addGame("Wipeout", "PlayStation", 1994, "Carreras", null);
+        addGame("Air Combat", "PlayStation", 1994, "Simulación", null);
+        // 1995
+        addGame("Tekken", "PlayStation", 1995, "Lucha", null);
+        addGame("Twisted Metal", "PlayStation", 1995, "Acción", null);
+        addGame("Destruction Derby", "PlayStation", 1995, "Carreras", null);
+        addGame("Warhawk", "PlayStation", 1995, "Shooter", null);
+        addGame("ESPN Extreme Games", "PlayStation", 1995, "Deportes", null);
+        // 1996
+        addGame("Resident Evil", "PlayStation", 1996, "Terror", 91);
+        addGame("Crash Bandicoot", "PlayStation", 1996, "Plataformas", null);
+        addGame("Tomb Raider", "PlayStation", 1996, "Acción/Aventura", null);
+        addGame("Tekken 2", "PlayStation", 1996, "Lucha", 89);
+        addGame("Wipeout XL", "PlayStation", 1996, "Carreras", 93);
+        // 1997
+        addGame("Final Fantasy VII", "PlayStation", 1997, "RPG", 92);
+        addGame("Gran Turismo", "PlayStation", 1997, "Carreras", 96);
+        addGame("Castlevania: Symphony of the Night", "PlayStation", 1997, "Metroidvania", 93);
+        addGame("Metal Gear Solid", "PlayStation", 1997, "Sigilo", 94);
+        addGame("Crash Bandicoot 2: Cortex Strikes Back", "PlayStation", 1997, "Plataformas", null);
+        // 1998
+        addGame("Metal Gear Solid", "PlayStation", 1998, "Sigilo", 94);
+        addGame("Resident Evil 2", "PlayStation", 1998, "Terror", null);
+        addGame("Tekken 3", "PlayStation", 1998, "Lucha", 96);
+        addGame("Gran Turismo 2", "PlayStation", 1998, "Carreras", 93);
+        addGame("Crash Bandicoot: Warped", "PlayStation", 1998, "Plataformas", 91);
+        // 1999
+        addGame("Final Fantasy VIII", "PlayStation", 1999, "RPG", 90);
+        addGame("Tony Hawk's Pro Skater", "PlayStation", 1999, "Deportes", 92);
+        addGame("Silent Hill", "PlayStation", 1999, "Terror", null);
+        addGame("Ape Escape", "PlayStation", 1999, "Plataformas", 90);
+        addGame("Chrono Cross", "PlayStation", 1999, "RPG", 94);
+        // 2000
+        addGame("Tony Hawk's Pro Skater 2", "PlayStation", 2000, "Deportes", 98);
+        addGame("Final Fantasy IX", "PlayStation", 2000, "RPG", 94);
+        addGame("Vagrant Story", "PlayStation", 2000, "RPG", 92);
+        addGame("Spyro: Year of the Dragon", "PlayStation", 2000, "Plataformas", 91);
+        addGame("Tekken Tag Tournament", "PlayStation", 2000, "Lucha", 85);
+        // 2001
+        addGame("Tony Hawk's Pro Skater 3", "PlayStation", 2001, "Deportes", 97);
+        addGame("Grand Theft Auto III", "PlayStation", 2001, "Acción/Aventura", 97);
+        addGame("Metal Gear Solid 2: Sons of Liberty", "PlayStation", 2001, "Sigilo", 96);
+        addGame("Gran Turismo 3: A-Spec", "PlayStation", 2001, "Carreras", 95);
+        addGame("Devil May Cry", "PlayStation", 2001, "Acción", 94);
+        // 2002
+        addGame("Grand Theft Auto: Vice City", "PlayStation", 2002, "Acción/Aventura", 95);
+        addGame("Ace Combat 04: Shattered Skies", "PlayStation", 2002, "Simulación", 89);
+        addGame("Ratchet & Clank", "PlayStation", 2002, "Plataformas", 88);
+        addGame("Sly Cooper and the Thievius Raccoonus", "PlayStation", 2002, "Plataformas", 86);
+        addGame("Kingdom Hearts", "PlayStation", 2002, "RPG", 85);
+        // 2003
+        addGame("Grand Theft Auto: San Andreas", "PlayStation", 2003, "Acción/Aventura", 95); // (versión PS2 de 2004, pero se incluye en 2003)
+        addGame("Prince of Persia: The Sands of Time", "PlayStation", 2003, "Acción/Aventura", 92);
+        addGame("Ratchet & Clank: Going Commando", "PlayStation", 2003, "Plataformas", 90);
+        addGame("SOCOM II: U.S. Navy SEALs", "PlayStation", 2003, "Shooter", 87);
+        addGame("Jak II", "PlayStation", 2003, "Plataformas", 87);
+        // 2004
+        addGame("Grand Theft Auto: San Andreas", "PlayStation", 2004, "Acción/Aventura", 95); // (ya incluido)
+        addGame("Metal Gear Solid 3: Snake Eater", "PlayStation", 2004, "Sigilo", 91);
+        addGame("Ratchet & Clank: Up Your Arsenal", "PlayStation", 2004, "Plataformas", 91);
+        addGame("Jak 3", "PlayStation", 2004, "Plataformas", 84);
+        addGame("Ace Combat 5: The Unsung War", "PlayStation", 2004, "Simulación", 84);
+        // 2005
+        addGame("Resident Evil 4", "PlayStation", 2005, "Terror", null); // (versión PS2)
+        addGame("God of War", "PlayStation", 2005, "Acción", null);
+        addGame("Shadow of the Colossus", "PlayStation", 2005, "Acción/Aventura", 91);
+        addGame("Grand Theft Auto: Liberty City Stories", "PlayStation", 2005, "Acción/Aventura", 88);
+        addGame("SOCOM 3: U.S. Navy SEALs", "PlayStation", 2005, "Shooter", 82);
+        // 2006
+        addGame("Okami", "PlayStation", 2006, "Acción/Aventura", 93);
+        addGame("Bully", "PlayStation", 2006, "Acción/Aventura", 87);
+        addGame("Final Fantasy XII", "PlayStation", 2006, "RPG", 92);
+        addGame("Kingdom Hearts II", "PlayStation", 2006, "RPG", 87);
+        addGame("Tekken 5: Dark Resurrection", "PlayStation", 2006, "Lucha", 88);
+        // 2007
+        addGame("Uncharted: Drake's Fortune", "PlayStation", 2007, "Acción/Aventura", 88);
+        addGame("Ratchet & Clank Future: Tools of Destruction", "PlayStation", 2007, "Plataformas", 89);
+        addGame("God of War II", "PlayStation", 2007, "Acción", 93);
+        addGame("Metal Gear Solid 4: Guns of the Patriots", "PlayStation", 2007, "Sigilo", 94); // (lanzado en 2008)
+        addGame("LittleBigPlanet", "PlayStation", 2007, "Plataformas", 95); // (lanzado en 2008)
+        // 2008
+        addGame("Grand Theft Auto IV", "PlayStation", 2008, "Acción/Aventura", 98);
+        addGame("Metal Gear Solid 4: Guns of the Patriots", "PlayStation", 2008, "Sigilo", 94);
+        addGame("LittleBigPlanet", "PlayStation", 2008, "Plataformas", 95);
+        addGame("Dead Space", "PlayStation", 2008, "Terror", null);
+        addGame("Fallout 3", "PlayStation", 2008, "RPG", 90);
+        // 2009
+        addGame("Uncharted 2: Among Thieves", "PlayStation", 2009, "Acción/Aventura", 96);
+        addGame("Killzone 2", "PlayStation", 2009, "FPS", 91);
+        addGame("Infamous", "PlayStation", 2009, "Acción", 85);
+        addGame("Demon's Souls", "PlayStation", 2009, "Action RPG", null);
+        addGame("Ratchet & Clank Future: A Crack in Time", "PlayStation", 2009, "Plataformas", 87);
+        // 2010
+        addGame("Red Dead Redemption", "PlayStation", 2010, "Acción/Aventura", 95);
+        addGame("Mass Effect 2", "PlayStation", 2010, "RPG", 94);
+        addGame("God of War III", "PlayStation", 2010, "Acción", 92);
+        addGame("Heavy Rain", "PlayStation", 2010, "Aventura", 87);
+        addGame("Gran Turismo 5", "PlayStation", 2010, "Carreras", 84);
+        // 2011
+        addGame("Uncharted 3: Drake's Deception", "PlayStation", 2011, "Acción/Aventura", 92);
+        addGame("Batman: Arkham City", "PlayStation", 2011, "Acción", 96);
+        addGame("Portal 2", "PlayStation", 2011, "Puzzle", 95);
+        addGame("LittleBigPlanet 2", "PlayStation", 2011, "Plataformas", 91);
+        addGame("Dark Souls", "PlayStation", 2011, "Action RPG", 89);
+        // 2012
+        addGame("Journey", "PlayStation", 2012, "Aventura", 92);
+        addGame("Borderlands 2", "PlayStation", 2012, "FPS", 91);
+        addGame("Far Cry 3", "PlayStation", 2012, "FPS", 90);
+        addGame("Persona 4 Golden", "PlayStation", 2012, "RPG", 93);
+        addGame("Assassin's Creed III", "PlayStation", 2012, "Acción/Aventura", 85);
+        // 2013
+        addGame("The Last of Us", "PlayStation", 2013, "Acción/Aventura", 95);
+        addGame("BioShock Infinite", "PlayStation", 2013, "FPS", 94);
+        addGame("Grand Theft Auto V", "PlayStation", 2013, "Acción/Aventura", 97);
+        addGame("Tomb Raider", "PlayStation", 2013, "Acción/Aventura", 87);
+        addGame("Ni no Kuni: Wrath of the White Witch", "PlayStation", 2013, "RPG", 85);
+        // 2014
+        addGame("The Last of Us Remastered", "PlayStation", 2014, "Acción/Aventura", 95);
+        addGame("Dragon Age: Inquisition", "PlayStation", 2014, "RPG", 89);
+        addGame("Destiny", "PlayStation", 2014, "FPS", 76);
+        addGame("Infamous Second Son", "PlayStation", 2014, "Acción", 80);
+        addGame("LittleBigPlanet 3", "PlayStation", 2014, "Plataformas", 79);
+        // 2015
+        addGame("Bloodborne", "PlayStation", 2015, "Action RPG", 92);
+        addGame("The Witcher 3: Wild Hunt", "PlayStation", 2015, "RPG", 92);
+        addGame("Metal Gear Solid V: The Phantom Pain", "PlayStation", 2015, "Sigilo", 93);
+        addGame("Uncharted 4: A Thief's End", "PlayStation", 2015, "Acción/Aventura", 93);
+        addGame("Until Dawn", "PlayStation", 2015, "Terror", null);
+        // 2016
+        addGame("Uncharted 4: A Thief's End", "PlayStation", 2016, "Acción/Aventura", 93);
+        addGame("Overwatch", "PlayStation", 2016, "FPS", null);
+        addGame("Persona 5", "PlayStation", 2016, "RPG", 93);
+        addGame("The Last Guardian", "PlayStation", 2016, "Aventura", 82);
+        addGame("Ratchet & Clank", "PlayStation", 2016, "Plataformas", null);
+        // 2017
+        addGame("Persona 5", "PlayStation", 2017, "RPG", 93);
+        addGame("Horizon Zero Dawn", "PlayStation", 2017, "Acción/Aventura", 89);
+        addGame("Nier: Automata", "PlayStation", 2017, "Action RPG", 88);
+        addGame("Uncharted: The Lost Legacy", "PlayStation", 2017, "Acción/Aventura", 84);
+        addGame("Gravity Rush 2", "PlayStation", 2017, "Acción/Aventura", 80);
+        // 2018
+        addGame("Red Dead Redemption 2", "PlayStation", 2018, "Acción/Aventura", 97);
+        addGame("God of War", "PlayStation", 2018, "Acción/Aventura", 94);
+        addGame("Marvel's Spider-Man", "PlayStation", 2018, "Acción/Aventura", 87);
+        addGame("Astro Bot Rescue Mission", "PlayStation", 2018, "Plataformas 3D", 90);
+        addGame("Monster Hunter: World", "PlayStation", 2018, "Action RPG", 90);
+        // 2019
+        addGame("Sekiro: Shadows Die Twice", "PlayStation", 2019, "Acción", 90);
+        addGame("Resident Evil 2", "PlayStation", 2019, "Terror", 91);
+        addGame("Death Stranding", "PlayStation", 2019, "Aventura", 82);
+        addGame("Days Gone", "PlayStation", 2019, "Acción/Aventura", 71);
+        addGame("Concrete Genie", "PlayStation", 2019, "Aventura", 75);
+        // 2020
+        addGame("The Last of Us Part II", "PlayStation", 2020, "Acción/Aventura", 93);
+        addGame("Ghost of Tsushima", "PlayStation", 2020, "Acción/Aventura", 83);
+        addGame("Final Fantasy VII Remake", "PlayStation", 2020, "RPG", 87);
+        addGame("Demon's Souls", "PlayStation", 2020, "Action RPG", 92);
+        addGame("Spider-Man: Miles Morales", "PlayStation", 2020, "Acción/Aventura", null);
+        // 2021
+        addGame("Ratchet & Clank: Rift Apart", "PlayStation", 2021, "Plataformas 3D", 88);
+        addGame("Returnal", "PlayStation", 2021, "Roguelike", 86);
+        addGame("Deathloop", "PlayStation", 2021, "FPS", 88);
+        addGame("Kena: Bridge of Spirits", "PlayStation", 2021, "Acción/Aventura", 81);
+        addGame("Horizon Forbidden West", "PlayStation", 2021, "Acción/Aventura", 88);
+        // 2022
+        addGame("Elden Ring", "PlayStation", 2022, "Action RPG", 96);
+        addGame("God of War Ragnarök", "PlayStation", 2022, "Acción/Aventura", 94);
+        addGame("Horizon Forbidden West", "PlayStation", 2022, "Acción/Aventura", 88);
+        addGame("Gran Turismo 7", "PlayStation", 2022, "Carreras", 87);
+        addGame("Stray", "PlayStation", 2022, "Aventura", 83);
+        // 2023
+        addGame("Marvel's Spider-Man 2", "PlayStation", 2023, "Acción/Aventura", 90);
+        addGame("Resident Evil 4", "PlayStation", 2023, "Terror", 93);
+        addGame("Final Fantasy XVI", "PlayStation", 2023, "RPG", 87);
+        addGame("Alan Wake 2", "PlayStation", 2023, "Terror", null);
+        addGame("Baldur's Gate 3", "PlayStation", 2023, "RPG", 96);
+        // 2024
+        addGame("Astro Bot", "PlayStation", 2024, "Plataformas 3D", 94);
+        addGame("Final Fantasy VII Rebirth", "PlayStation", 2024, "RPG", 92);
+        addGame("Helldivers 2", "PlayStation", 2024, "Shooter", 82);
+        addGame("Metaphor: ReFantazio", "PlayStation", 2024, "RPG", 94);
+        addGame("Silent Hill 2", "PlayStation", 2024, "Terror", 86);
+        // 2025
+        addGame("Ghost of Yotei", "PlayStation", 2025, "Acción/Aventura", 86);
+        addGame("Death Stranding 2", "PlayStation", 2025, "Aventura", 89);
+        addGame("Wolverine", "PlayStation", 2025, "Acción/Aventura", null);
+        addGame("Fairgame$", "PlayStation", 2025, "Shooter", null);
+        addGame("Concord", "PlayStation", 2025, "FPS", 62);
+
+        // ========== XBOX (2001‑2026) ==========
+        // 2001
+        addGame("Halo: Combat Evolved", "Xbox", 2001, "FPS", 97);
+        addGame("Tony Hawk's Pro Skater 3", "Xbox", 2001, "Deportes", 93);
+        addGame("Dead or Alive 3", "Xbox", 2001, "Lucha", 87);
+        addGame("Project Gotham Racing", "Xbox", 2001, "Carreras", 85);
+        addGame("NFL Fever 2002", "Xbox", 2001, "Deportes", 79);
+        // 2002
+        addGame("Tom Clancy's Splinter Cell", "Xbox", 2002, "Sigilo", 93);
+        addGame("Halo 2", "Xbox", 2002, "FPS", null); // (lanzado en 2004)
+        addGame("Elder Scrolls III: Morrowind", "Xbox", 2002, "RPG", null);
+        addGame("Jet Set Radio Future", "Xbox", 2002, "Plataformas", null);
+        addGame("Project Gotham Racing 2", "Xbox", 2002, "Carreras", 90);
+        // 2003
+        addGame("Star Wars: Knights of the Old Republic", "Xbox", 2003, "RPG", 94);
+        addGame("Grand Theft Auto: Double Pack", "Xbox", 2003, "Acción/Aventura", 96);
+        addGame("Tom Clancy's Splinter Cell: Pandora Tomorrow", "Xbox", 2003, "Sigilo", 93);
+        addGame("Prince of Persia: The Sands of Time", "Xbox", 2003, "Acción/Aventura", 92);
+        addGame("SSX 3", "Xbox", 2003, "Deportes", 92);
+        // 2004
+        addGame("Halo 2", "Xbox", 2004, "FPS", 95);
+        addGame("Burnout 3: Takedown", "Xbox", 2004, "Carreras", 94);
+        addGame("Tom Clancy's Splinter Cell: Chaos Theory", "Xbox", 2004, "Sigilo", 94);
+        addGame("Ninja Gaiden", "Xbox", 2004, "Acción", null);
+        addGame("Grand Theft Auto: San Andreas", "Xbox", 2004, "Acción/Aventura", 93);
+        // 2005
+        addGame("Ninja Gaiden Black", "Xbox", 2005, "Acción", 94);
+        addGame("Tom Clancy's Splinter Cell: Chaos Theory", "Xbox", 2005, "Sigilo", 94); // (ya incluido)
+        addGame("Forza Motorsport", "Xbox", 2005, "Carreras", null);
+        addGame("Jade Empire", "Xbox", 2005, "RPG", 89);
+        addGame("Psychonauts", "Xbox", 2005, "Plataformas", 88);
+        // 2006
+        addGame("The Elder Scrolls IV: Oblivion", "Xbox", 2006, "RPG", 94);
+        addGame("Gears of War", "Xbox", 2006, "Shooter", 94);
+        addGame("Tom Clancy's Ghost Recon Advanced Warfighter", "Xbox", 2006, "Shooter", 90);
+        addGame("Fight Night Round 3", "Xbox", 2006, "Deportes", 86);
+        addGame("Dead Rising", "Xbox", 2006, "Terror", 85);
+        // 2007
+        addGame("Halo 3", "Xbox", 2007, "FPS", 94);
+        addGame("BioShock", "Xbox", 2007, "FPS", 96);
+        addGame("Mass Effect", "Xbox", 2007, "RPG", 91);
+        addGame("The Orange Box", "Xbox", 2007, "FPS", 96);
+        addGame("Ace Combat 6: Fires of Liberation", "Xbox", 2007, "Simulación", 80);
+        // 2008
+        addGame("Grand Theft Auto IV", "Xbox", 2008, "Acción/Aventura", 98);
+        addGame("Gears of War 2", "Xbox", 2008, "Shooter", 93);
+        addGame("Fallout 3", "Xbox", 2008, "RPG", 93);
+        addGame("Fable II", "Xbox", 2008, "RPG", 89);
+        addGame("Left 4 Dead", "Xbox", 2008, "FPS", 89);
+        // 2009
+        addGame("Call of Duty: Modern Warfare 2", "Xbox", 2009, "FPS", 94);
+        addGame("Batman: Arkham Asylum", "Xbox", 2009, "Acción", 92);
+        addGame("Forza Motorsport 3", "Xbox", 2009, "Carreras", 92);
+        addGame("Assassin's Creed II", "Xbox", 2009, "Acción/Aventura", 90);
+        addGame("Halo 3: ODST", "Xbox", 2009, "FPS", 83);
+        // 2010
+        addGame("Mass Effect 2", "Xbox", 2010, "RPG", 96);
+        addGame("Red Dead Redemption", "Xbox", 2010, "Acción/Aventura", 95);
+        addGame("Halo: Reach", "Xbox", 2010, "FPS", 91);
+        addGame("Alan Wake", "Xbox", 2010, "Terror", 83);
+        addGame("Fable III", "Xbox", 2010, "RPG", 80);
+        // 2011
+        addGame("The Elder Scrolls V: Skyrim", "Xbox", 2011, "RPG", 96);
+        addGame("Batman: Arkham City", "Xbox", 2011, "Acción", 94);
+        addGame("Gears of War 3", "Xbox", 2011, "Shooter", 91);
+        addGame("Forza Motorsport 4", "Xbox", 2011, "Carreras", 91);
+        addGame("Portal 2", "Xbox", 2011, "Puzzle", 95);
+        // 2012
+        addGame("Halo 4", "Xbox", 2012, "FPS", 87);
+        addGame("Borderlands 2", "Xbox", 2012, "FPS", 89);
+        addGame("Far Cry 3", "Xbox", 2012, "FPS", 91);
+        addGame("Dishonored", "Xbox", 2012, "Sigilo", 88);
+        addGame("Forza Horizon", "Xbox", 2012, "Carreras", 85);
+        // 2013
+        addGame("Grand Theft Auto V", "Xbox", 2013, "Acción/Aventura", 97);
+        addGame("BioShock Infinite", "Xbox", 2013, "FPS", 93);
+        addGame("Tomb Raider", "Xbox", 2013, "Acción/Aventura", 86);
+        addGame("Gears of War: Judgment", "Xbox", 2013, "Shooter", 79);
+        addGame("Forza Motorsport 5", "Xbox", 2013, "Carreras", 79);
+        // 2014
+        addGame("Titanfall", "Xbox", 2014, "FPS", 86);
+        addGame("Forza Horizon 2", "Xbox", 2014, "Carreras", 86);
+        addGame("Sunset Overdrive", "Xbox", 2014, "Acción", 81);
+        addGame("Halo: The Master Chief Collection", "Xbox", 2014, "FPS", 85);
+        addGame("Dragon Age: Inquisition", "Xbox", 2014, "RPG", 85);
+        // 2015
+        addGame("Rise of the Tomb Raider", "Xbox", 2015, "Acción/Aventura", 86);
+        addGame("Halo 5: Guardians", "Xbox", 2015, "FPS", 84);
+        addGame("Forza Motorsport 6", "Xbox", 2015, "Carreras", 87);
+        addGame("Ori and the Blind Forest", "Xbox", 2015, "Metroidvania", 88);
+        addGame("Gears of War: Ultimate Edition", "Xbox", 2015, "Shooter", 82);
+        // 2016
+        addGame("Forza Horizon 3", "Xbox", 2016, "Carreras", 91);
+        addGame("Gears of War 4", "Xbox", 2016, "Shooter", 84);
+        addGame("Quantum Break", "Xbox", 2016, "Acción", 77);
+        addGame("Inside", "Xbox", 2016, "Plataformas", 93);
+        addGame("Titanfall 2", "Xbox", 2016, "FPS", 87);
+        // 2017
+        addGame("Forza Motorsport 7", "Xbox", 2017, "Carreras", 86);
+        addGame("Cuphead", "Xbox", 2017, "Plataformas", 86);
+        addGame("Halo Wars 2", "Xbox", 2017, "Estrategia", 79);
+        addGame("Sea of Thieves", "Xbox", 2017, "Aventura", 69);
+        addGame("Super Lucky's Tale", "Xbox", 2017, "Plataformas", 64);
+        // 2018
+        addGame("Forza Horizon 4", "Xbox", 2018, "Carreras", 92);
+        addGame("Red Dead Redemption 2", "Xbox", 2018, "Acción/Aventura", 97);
+        addGame("Sea of Thieves", "Xbox", 2018, "Aventura", 69);
+        addGame("State of Decay 2", "Xbox", 2018, "Terror", 66);
+        addGame("Ashen", "Xbox", 2018, "Action RPG", 78);
+        // 2019
+        addGame("Gears 5", "Xbox", 2019, "Shooter", 84);
+        addGame("Forza Horizon 4: LEGO Speed Champions", "Xbox", 2019, "Carreras", 77);
+        addGame("Crackdown 3", "Xbox", 2019, "Acción", 60);
+        addGame("Outer Wilds", "Xbox", 2019, "Aventura", 85);
+        addGame("Ace Combat 7: Skies Unknown", "Xbox", 2019, "Simulación", 79);
+        // 2020
+        addGame("Ori and the Will of the Wisps", "Xbox", 2020, "Metroidvania", 90);
+        addGame("Halo: The Master Chief Collection", "Xbox", 2020, "FPS", null);
+        addGame("Gears Tactics", "Xbox", 2020, "Estrategia", 82);
+        addGame("Microsoft Flight Simulator", "Xbox", 2020, "Simulación", 90);
+        addGame("Tell Me Why", "Xbox", 2020, "Aventura", 78);
+        // 2021
+        addGame("Forza Horizon 5", "Xbox", 2021, "Carreras", 92);
+        addGame("Halo Infinite", "Xbox", 2021, "FPS", 87);
+        addGame("Psychonauts 2", "Xbox", 2021, "Plataformas", 87);
+        addGame("Deathloop", "Xbox", 2021, "FPS", 89);
+        addGame("Microsoft Flight Simulator", "Xbox", 2021, "Simulación", 90);
+        // 2022
+        addGame("Elden Ring", "Xbox", 2022, "Action RPG", 96);
+        addGame("Pentiment", "Xbox", 2022, "Aventura", 86);
+        addGame("Grounded", "Xbox", 2022, "Aventura", 83);
+        addGame("Immortality", "Xbox", 2022, "Aventura", 88);
+        addGame("As Dusk Falls", "Xbox", 2022, "Aventura", 77);
+        // 2023
+        addGame("Hi-Fi Rush", "Xbox", 2023, "Acción", 87);
+        addGame("Starfield", "Xbox", 2023, "RPG", 83);
+        addGame("Forza Motorsport", "Xbox", 2023, "Carreras", 84);
+        addGame("Diablo IV", "Xbox", 2023, "RPG", 91);
+        addGame("Sea of Stars", "Xbox", 2023, "RPG", 89);
+        // 2024
+        addGame("Senua's Saga: Hellblade II", "Xbox", 2024, "Acción/Aventura", 81);
+        addGame("Indiana Jones and the Great Circle", "Xbox", 2024, "Acción/Aventura", 86);
+        addGame("S.T.A.L.K.E.R. 2: Heart of Chornobyl", "Xbox", 2024, "FPS", 73);
+        addGame("Microsoft Flight Simulator 2024", "Xbox", 2024, "Simulación", 68);
+        addGame("Towerborne", "Xbox", 2024, "Acción", null);
+        // 2025
+        addGame("Avowed", "Xbox", 2025, "RPG", 80);
+        addGame("Fable", "Xbox", 2025, "RPG", null);
+        addGame("South of Midnight", "Xbox", 2025, "Acción/Aventura", 77);
+        addGame("Doom: The Dark Ages", "Xbox", 2025, "FPS", 85);
+        addGame("Clockwork Revolution", "Xbox", 2025, "RPG", null);
+        // 2026
+        addGame("Forza Horizon 6", "Xbox", 2026, "Carreras", 90);
+        addGame("The Elder Scrolls VI", "Xbox", 2026, "RPG", null);
+        addGame("Perfect Dark", "Xbox", 2026, "FPS", null);
+
+        // ============================================================
+        // REFERENCIAS DOM
+        // ============================================================
+        const tableBody       = catalog.querySelector('#tableBody');
+        const resultCountEl   = catalog.querySelector('#resultCount');
+        const platformChecks  = catalog.querySelectorAll('#platformChecks input[type="checkbox"]');
+        const searchInput     = catalog.querySelector('#searchInput');
+        const genreFilter     = catalog.querySelector('#genreFilter');
+        const yearFilter      = catalog.querySelector('#yearFilter');
+        const scoreFilter     = catalog.querySelector('#scoreFilter');
+        const resetBtn        = catalog.querySelector('#resetBtn');
+        const paginationEl    = catalog.querySelector('#pagination');
+
+        // ============================================================
+        // ESTADO DE PAGINACIÓN
+        // ============================================================
+        let currentPage = 1;
+        const PAGE_SIZE = 100;
+
+        // ============================================================
+        // FUNCIONES
+        // ============================================================
+
+        /** Rellena el desplegable de años con los años disponibles. */
+        function populateYearFilter() {
+            const years = [...new Set(games.map(g => g.year))].sort((a, b) => b - a);
+            let html = '<option value="all">Todos</option>';
+            years.forEach(y => {
+                html += `<option value="${y}">${y}</option>`;
+            });
+            yearFilter.innerHTML = html;
+        }
+
+        /** Devuelve el array de plataformas seleccionadas. */
+        function getSelectedPlatforms() {
+            return Array.from(platformChecks)
+                .filter(cb => cb.checked)
+                .map(cb => cb.value);
+        }
+
+        /** Devuelve la clase CSS del badge según la plataforma. */
+        function platformBadgeClass(platform) {
+            switch (platform) {
+                case 'PC':          return 'badge-pc';
+                case 'Nintendo':    return 'badge-nintendo';
+                case 'Xbox':        return 'badge-xbox';
+                case 'PlayStation': return 'badge-playstation';
+                default:            return '';
+            }
+        }
+
+        /** Clase para el color de la calificación. */
+        function scoreClass(score) {
+            if (score === null) return 'unrated';
+            if (score >= 95) return 'high';
+            if (score >= 90) return 'mid';
+            return '';
+        }
+
+        /** Obtiene el listado filtrado (sin paginar). */
+        function getFilteredGames() {
+            const selectedPlatforms = getSelectedPlatforms();
+            const searchTerm = searchInput.value.trim().toLowerCase();
+            const genre = genreFilter.value;
+            const year = yearFilter.value;
+            const scoreRange = scoreFilter.value;
+
+            return games.filter(g => {
+                // Plataforma
+                if (selectedPlatforms.length > 0 && !selectedPlatforms.includes(g.platform)) {
+                    return false;
+                }
+                // Búsqueda por nombre
+                if (searchTerm && !g.name.toLowerCase().includes(searchTerm)) {
+                    return false;
+                }
+                // Género
+                if (genre !== 'all' && g.genre !== genre) {
+                    return false;
+                }
+                // Año
+                if (year !== 'all' && g.year !== parseInt(year, 10)) {
+                    return false;
+                }
+                // Calificación
+                if (scoreRange === 'unrated') {
+                    if (g.score !== null) return false;
+                } else if (scoreRange !== 'all') {
+                    if (g.score === null) return false;
+                    const [min, max] = scoreRange.split('-').map(Number);
+                    if (g.score < min || g.score > max) {
+                        return false;
+                    }
+                }
+                return true;
+            });
+        }
+
+        /** Renderiza la tabla y la paginación. */
+        function renderTable() {
+            const filtered = getFilteredGames();
+
+            // Ordenar por calificación descendente y luego por año descendente
+            filtered.sort((a, b) => {
+                if (a.score === null && b.score !== null) return 1;
+                if (b.score === null && a.score !== null) return -1;
+                if (a.score !== null && b.score !== null && b.score !== a.score) {
+                    return b.score - a.score;
+                }
+                return b.year - a.year;
+            });
+
+            const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+
+            // Ajustar página actual si es necesario
+            if (currentPage > totalPages) {
+                currentPage = totalPages;
+            }
+
+            // Calcular rango de la página
+            const start = (currentPage - 1) * PAGE_SIZE;
+            const end = Math.min(start + PAGE_SIZE, filtered.length);
+            const pageGames = filtered.slice(start, end);
+
+            // Construir filas
+            if (filtered.length === 0) {
+                tableBody.innerHTML = `<tr><td colspan="6" class="empty-message">No se encontraron videojuegos con esos filtros.</td></tr>`;
+                resultCountEl.innerHTML = 'Mostrando <strong>0</strong> resultados';
+                paginationEl.innerHTML = '';
+                return;
+            }
+
+            let html = '';
+            pageGames.forEach((game, index) => {
+                const rank = start + index + 1;
+                html += `
+                    <tr>
+                        <td class="rank">${rank}</td>
+                        <td class="game-name">${game.name}</td>
+                        <td><span class="badge ${platformBadgeClass(game.platform)}">${game.platform}</span></td>
+                        <td class="year">${game.year}</td>
+                        <td class="genre">${game.genre}</td>
+                        <td class="score ${scoreClass(game.score)}">${game.score === null ? 'N/D' : game.score}</td>
+                    </tr>
+                `;
+            });
+
+            tableBody.innerHTML = html;
+            resultCountEl.innerHTML = `Mostrando <strong>${pageGames.length}</strong> de <strong>${filtered.length}</strong> videojuego${filtered.length !== 1 ? 's' : ''} (Total: ${games.length})`;
+
+            // Renderizar paginación
+            renderPagination(totalPages);
+        }
+
+        /** Renderiza los controles de paginación. */
+        function renderPagination(totalPages) {
+            if (totalPages <= 1) {
+                paginationEl.innerHTML = '';
+                return;
+            }
+
+            let html = '';
+
+            // Botón anterior
+            html += `<button ${currentPage === 1 ? 'disabled' : ''} data-page="${currentPage - 1}">« Anterior</button>`;
+
+            // Calcular rango de páginas visibles (máximo 5)
+            const maxVisible = 5;
+            let startPage = Math.max(1, currentPage - Math.floor(maxVisible / 2));
+            let endPage = Math.min(totalPages, startPage + maxVisible - 1);
+
+            if (endPage - startPage + 1 < maxVisible) {
+                startPage = Math.max(1, endPage - maxVisible + 1);
+            }
+
+            // Primera página y elipsis
+            if (startPage > 1) {
+                html += `<button data-page="1">1</button>`;
+                if (startPage > 2) {
+                    html += `<span class="page-info">…</span>`;
+                }
+            }
+
+            // Páginas visibles
+            for (let i = startPage; i <= endPage; i++) {
+                html += `<button class="${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
+            }
+
+            // Última página y elipsis
+            if (endPage < totalPages) {
+                if (endPage < totalPages - 1) {
+                    html += `<span class="page-info">…</span>`;
+                }
+                html += `<button data-page="${totalPages}">${totalPages}</button>`;
+            }
+
+            // Botón siguiente
+            html += `<button ${currentPage === totalPages ? 'disabled' : ''} data-page="${currentPage + 1}">Siguiente »</button>`;
+
+            paginationEl.innerHTML = html;
+        }
+
+        /** Cambia a una página específica. */
+        function goToPage(page) {
+            currentPage = page;
+            renderTable();
+            // Desplazar al inicio de la tabla
+            catalog.querySelector('.table-wrapper').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        /** Restablece todos los filtros a sus valores por defecto. */
+        function resetFilters() {
+            platformChecks.forEach(cb => cb.checked = true);
+            searchInput.value = '';
+            genreFilter.value = 'all';
+            yearFilter.value = 'all';
+            scoreFilter.value = 'all';
+            currentPage = 1;
+            renderTable();
+        }
+
+        // ============================================================
+        // INICIALIZACIÓN Y EVENTOS
+        // ============================================================
+        populateYearFilter();
+
+        platformChecks.forEach(cb => cb.addEventListener('change', () => { currentPage = 1; renderTable(); }));
+        searchInput.addEventListener('input', () => { currentPage = 1; renderTable(); });
+        genreFilter.addEventListener('change', () => { currentPage = 1; renderTable(); });
+        yearFilter.addEventListener('change', () => { currentPage = 1; renderTable(); });
+        scoreFilter.addEventListener('change', () => { currentPage = 1; renderTable(); });
+        resetBtn.addEventListener('click', resetFilters);
+
+        paginationEl.addEventListener('click', (event) => {
+            const button = event.target instanceof Element ? event.target.closest('button[data-page]') : null;
+            if (!button || button.disabled) return;
+            goToPage(Number(button.dataset.page));
+        });
+
+        // Render inicial
+        renderTable();
+    
+})();
+</script>
