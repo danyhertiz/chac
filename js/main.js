@@ -21,21 +21,22 @@ const initializeSite = () => {
         }
     }
 
-    const emojiContainer = document.createElement('div');
-    emojiContainer.className = 'emoji-container';
-    document.body.prepend(emojiContainer);
+    const snowContainer = document.createElement('div');
+    snowContainer.className = 'snow-container';
+    snowContainer.setAttribute('aria-hidden', 'true');
+    document.body.prepend(snowContainer);
 
-    const emojiChars = ['🎮', '💾', '🎵', '🛸'];
+    const snowflakeChars = ['❄', '❅', '❆'];
     for (let index = 0; index < 50; index += 1) {
-        const emoji = document.createElement('div');
-        emoji.className = 'emoji-flake';
-        emoji.textContent = emojiChars[Math.floor(Math.random() * emojiChars.length)];
-        emoji.style.fontSize = `${Math.random() * 20 + 10}px`;
-        emoji.style.left = `${Math.random() * 100}%`;
-        emoji.style.animationDuration = `${Math.random() * 10 + 10}s`;
-        emoji.style.animationDelay = `${Math.random() * 10}s`;
-        emoji.style.setProperty('--horizontal-drift', `${(Math.random() - 0.5) * 200}px`);
-        emojiContainer.appendChild(emoji);
+        const snowflake = document.createElement('div');
+        snowflake.className = 'snowflake';
+        snowflake.textContent = snowflakeChars[Math.floor(Math.random() * snowflakeChars.length)];
+        snowflake.style.fontSize = `${Math.random() * 20 + 10}px`;
+        snowflake.style.left = `${Math.random() * 100}%`;
+        snowflake.style.animationDuration = `${Math.random() * 10 + 10}s`;
+        snowflake.style.animationDelay = `${Math.random() * 10}s`;
+        snowflake.style.setProperty('--horizontal-drift', `${(Math.random() - 0.5) * 200}px`);
+        snowContainer.appendChild(snowflake);
     }
 
     const menu = document.querySelector('.side-menu');
