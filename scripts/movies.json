@@ -23710,6 +23710,62 @@
       "Aventura"
     ],
     "tmdbId": 1423191,
-    "runtime": 95
+    "runtime": 95,
+    "parsedTitle": "Resident Evil: Noche cero",
+    "parsedYear": "2026",
+    "releaseDate": "2026-09-16"
+  },
+  {
+    "title": "Una creación del Señor",
+    "originalTitle": "Something the Lord Made",
+    "year": "2004",
+    "overview": "En Baltimore, en los años 40, el doctor Alfred Blalock (Alan Rickman) y su ayudante Vivien Thomas (Mos Def) trabajaban para encontrar una técnica revolucionaria que garantizaría el éxito de las operaciones de corazón en \"bebés azules\". A pesar de ser colegas, pertenecían a mundos muy distintos: Blalock, blanco y rico, era el jefe de cirugía del Hospital Johns Hopkins; Thomas, en cambio, era un hábil carpintero, negro y pobre. Mientras estos hombres abrían nuevos y espectaculares caminos en el campo de la medicina, las presiones sociales amenazaban con destruir tanto su trabajo como su amistad.",
+    "originalOverview": "En Baltimore, en los años 40, el doctor Alfred Blalock (Alan Rickman) y su ayudante Vivien Thomas (Mos Def) trabajaban para encontrar una técnica revolucionaria que garantizaría el éxito de las operaciones de corazón en \"bebés azules\". A pesar de ser colegas, pertenecían a mundos muy distintos: Blalock, blanco y rico, era el jefe de cirugía del Hospital Johns Hopkins; Thomas, en cambio, era un hábil carpintero, negro y pobre. Mientras estos hombres abrían nuevos y espectaculares caminos en el campo de la medicina, las presiones sociales amenazaban con destruir tanto su trabajo como su amistad.",
+    "poster": "img/posters/20544.jpg",
+    "genres": [
+      "Película de TV",
+      "Drama"
+    ],
+    "tmdbId": 20544,
+    "runtime": 110,
+    "parsedTitle": "Una creación del Señor",
+    "parsedYear": "2004",
+    "releaseDate": "2004-05-30"
+  },
+  {
+    "title": "El Árbol Mágico",
+    "originalTitle": "The Magic Faraway Tree",
+    "year": "2026",
+    "overview": "Polly, Tim, y sus tres hijos son una familia moderna que se ve obligada a mudarse a la remota campiña inglesa. Poco después de su llegada, los niños descubren un árbol mágico y a sus extraordinarios y excéntricos habitantes.",
+    "originalOverview": "Polly, Tim, y sus tres hijos son una familia moderna que se ve obligada a mudarse a la remota campiña inglesa. Poco después de su llegada, los niños descubren un árbol mágico y a sus extraordinarios y excéntricos habitantes.",
+    "poster": "img/posters/1140521.jpg",
+    "genres": [
+      "Aventura",
+      "Familia",
+      "Fantasía"
+    ],
+    "tmdbId": 1140521,
+    "runtime": 110,
+    "parsedTitle": "El Árbol Mágico",
+    "parsedYear": "2026",
+    "releaseDate": "2026-03-26"
+  },
+  {
+    "title": "La Odisea",
+    "originalTitle": "The Odyssey",
+    "year": "2026",
+    "overview": "Odiseo, el legendario rey de Ítaca, emprende un largo y peligroso viaje de regreso a casa tras la guerra de Troya. A lo largo de su travesía, se ve obligado a enfrentarse a los caprichos de los dioses, a monstruos mitológicos y a pruebas que ponen a prueba su astucia y su humanidad hasta el límite.",
+    "originalOverview": "Odiseo, el legendario rey de Ítaca, emprende un largo y peligroso viaje de regreso a casa tras la guerra de Troya. A lo largo de su travesía, se ve obligado a enfrentarse a los caprichos de los dioses, a monstruos mitológicos y a pruebas que ponen a prueba su astucia y su humanidad hasta el límite.",
+    "poster": "img/posters/1368337.jpg",
+    "genres": [
+      "Aventura",
+      "Acción",
+      "Fantasía"
+    ],
+    "tmdbId": 1368337,
+    "runtime": 173,
+    "parsedTitle": "La Odisea",
+    "parsedYear": "2026",
+    "releaseDate": "2026-07-15"
   }
 ]

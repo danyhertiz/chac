@@ -151,16 +151,20 @@ async function processManualMatches() {
         continue;
       }
 
+      const releaseDate = data.release_date || data.first_air_date || "";
       const movieObject = {
         title: data.title || data.name,
         originalTitle: data.original_title || data.original_name,
-        year: (data.release_date || data.first_air_date || "").split("-")[0],
+        year: releaseDate.split("-")[0],
         overview: data.overview || "",
         originalOverview: data.overview || "",
         poster: await downloadPoster(data.poster_path, normalizedId),
         genres: transformGenres(data.genres),
         tmdbId: data.id,
-        runtime: data.runtime || (data.episode_run_time ? data.episode_run_time[0] : null) || null
+        runtime: data.runtime || (data.episode_run_time ? data.episode_run_time[0] : null) || null,
+        parsedTitle: data.title || data.name || "",
+        parsedYear: releaseDate.split("-")[0],
+        releaseDate
       };
 
       existingMovies.push(movieObject);
