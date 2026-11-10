@@ -23767,5 +23767,21 @@
     "parsedTitle": "La Odisea",
     "parsedYear": "2026",
     "releaseDate": "2026-07-15"
+  },
+  {
+    "title": "Vértigo 2: Punto muerto",
+    "originalTitle": "Fall 2: Deadpoint",
+    "year": "2026",
+    "overview": "Tras sobrevivir a una experiencia extrema, un nuevo grupo de jóvenes se enfrenta a un desafío aún más peligroso en un entorno remoto en Tailandia. A cientos de metros de altura, sin escapatoria y con condiciones impredecibles, deberán luchar contra el miedo, el tiempo y sus propios límites para sobrevivir.",
+    "originalOverview": "Tras sobrevivir a una experiencia extrema, un nuevo grupo de jóvenes se enfrenta a un desafío aún más peligroso en un entorno remoto en Tailandia. A cientos de metros de altura, sin escapatoria y con condiciones impredecibles, deberán luchar contra el miedo, el tiempo y sus propios límites para sobrevivir.",
+    "poster": "img/posters/1101412.jpg",
+    "genres": [
+      "Suspense"
+    ],
+    "tmdbId": 1101412,
+    "runtime": 98,
+    "parsedTitle": "Vértigo 2: Punto muerto",
+    "parsedYear": "2026",
+    "releaseDate": "2026-09-01"
   }
 ]
