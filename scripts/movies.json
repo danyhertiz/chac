@@ -23783,5 +23783,23 @@
     "parsedTitle": "Vértigo 2: Punto muerto",
     "parsedYear": "2026",
     "releaseDate": "2026-09-01"
+  },
+  {
+    "title": "Street Fighter: La última batalla",
+    "originalTitle": "Street Fighter",
+    "year": "1994",
+    "overview": "En una inexpugnable fortaleza el renegado señor de la guerra General Bison (Raul Julia) mantiene a 63 rehenes, a los que matará si no recibe un desorbitado rescate de 20.000 millones de dólares. El coronel Guile (Jean-Claude Van Damme) y una docena de hombres, héroes multiétnicos, tratarán de localizar y liberar a los secuestrados...",
+    "originalOverview": "En una inexpugnable fortaleza el renegado señor de la guerra General Bison (Raul Julia) mantiene a 63 rehenes, a los que matará si no recibe un desorbitado rescate de 20.000 millones de dólares. El coronel Guile (Jean-Claude Van Damme) y una docena de hombres, héroes multiétnicos, tratarán de localizar y liberar a los secuestrados...",
+    "poster": "img/posters/11667.jpg",
+    "genres": [
+      "Acción",
+      "Ciencia ficción",
+      "Aventura"
+    ],
+    "tmdbId": 11667,
+    "runtime": 102,
+    "parsedTitle": "Street Fighter: La última batalla",
+    "parsedYear": "1994",
+    "releaseDate": "1994-12-23"
   }
 ]
