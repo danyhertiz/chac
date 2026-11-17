@@ -23801,5 +23801,22 @@
     "parsedTitle": "Street Fighter: La última batalla",
     "parsedYear": "1994",
     "releaseDate": "1994-12-23"
+  },
+  {
+    "title": "Snoopy presenta: 12 días de Snoopy",
+    "originalTitle": "Snoopy Presents: 12 Days of Snoopy",
+    "year": "2026",
+    "overview": "Ansioso por salir de la lista negra de Santa, Snoopy se esfuerza por ser el beagle más amable del pueblo.",
+    "originalOverview": "Ansioso por salir de la lista negra de Santa, Snoopy se esfuerza por ser el beagle más amable del pueblo.",
+    "poster": "img/posters/1780407.jpg",
+    "genres": [
+      "Animación",
+      "Familia"
+    ],
+    "tmdbId": 1780407,
+    "runtime": 33,
+    "parsedTitle": "Snoopy presenta: 12 días de Snoopy",
+    "parsedYear": "2026",
+    "releaseDate": "2026-11-12"
   }
 ]
